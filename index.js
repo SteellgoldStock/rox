@@ -37,5 +37,3 @@ exports.client.on("ready", () => {
 });
 
 exports.client.login(botconfig.token);
-
-//ssss
