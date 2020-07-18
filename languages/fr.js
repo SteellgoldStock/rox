@@ -10,6 +10,13 @@ const languageData = {
     LANGUAGE_NO_EXIST: prefix.prefixNo + "Cette langue n'existe pas!",
     MISSING_ARGUMENTS: prefix.prefixNo + "Vous avez oublié des arguments à votre commande",
 
+    // AUTOROLE
+    NO_ROLE_SET: prefix.prefixNo + "Votre serveur n'a pas de rôle configuré, il est impossible d'activer l'autorole, veuillez utiliser `!joinRole [on] [roleId]`",
+    AUTO_ROLE_ENABLE: (roleId) => prefix.prefixOk + "Vous avez activé l'autorole dans votre serveur, le rôle est <@" + roleId + ">",
+    AUTO_ROLE_DISABLE: prefix.prefixOk + "Vous avez désactivé l'autorole dans votre serveur",
+
+    AUTO_ROLE_ALREADY_ENABLE: (pr) =>  prefix.prefixOk + `L'autorole est déjà activé utilisez \`${pr}joinRole off\` pour le désactivé`,
+    AUTO_ROLE_ALREADY_DISABLE: (pr) =>  prefix.prefixOk + `L'autorole est déjà désactivé utilisez \`${pr}joinRole on\` pour l'activer`,
 
     // Help text
     HELP_EMBED_TITLE: "Livre d'aide",

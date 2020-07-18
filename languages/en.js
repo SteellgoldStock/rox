@@ -5,10 +5,18 @@ const languageData = {
     MAINTENANCE_MESSAGE: (reason) => "The bot is currently under maintenance for the reason `" + reason + "`",
     LANGUAGE_UPDATED: prefix.prefixOk + "Bot language updated!",
     PREFIX_UPDATED: (np) => prefix.prefixOk + "Your prefix updated in `" + `${np}` + "`",
-    MISSING_LANGUAGE: prefix.prefixNo + "You must specify a valid language! (english or french)",
+    MISSING_LANGUAGE: prefix.prefixNo + "You must specify a valid language! (en or fr)",
     HELLO: "Hello!",
     LANGUAGE_NO_EXIST: prefix.prefixNo + "This langage doesn't exist!",
     MISSING_ARGUMENTS: prefix.prefixNo + "You have missed arguments",
+
+    // AUTOROLE
+    NO_ROLE_SET: (pr) => prefix.prefixNo + "Your server don't have a role configured, so is was impossible active the autorole, please use " + `${pr}joinRole [on] [roleId]`,
+    AUTO_ROLE_ENABLE: (roleId) => prefix.prefixOk + "You have been actived the autorole in your server, the role is <@&" + roleId + ">",
+    AUTO_ROLE_DISABLE: prefix.prefixOk + "You have been disable the autorole in your server",
+
+    AUTO_ROLE_ALREADY_ENABLE: (pr) =>  prefix.prefixOk + `The autorole is already enable use \`${pr}joinRole off\` for disable it`,
+    AUTO_ROLE_ALREADY_DISABLE: (pr) =>  prefix.prefixOk + `The autorole is already disable use \`${pr}joinRole on\` for enable it`,
 
     // Help text
     HELP_EMBED_TITLE: "Help document",

@@ -9,9 +9,9 @@ client.on('message',message => {
     const prefix = db["prefix"];
 
     if(message.content.startsWith(prefix + "prefix")){
-        const newPrefix = message.content.split(" ")[0];
+        const newPrefix = message.content.split(" ")[1];
 
-        const guildLanguage = db["lang"] || "en";
+        const guildLanguage = db["lang"];
         const language = require(`../../languages/${guildLanguage}`);
 
         if(!newPrefix){
@@ -19,7 +19,7 @@ client.on('message',message => {
         }
 
         db["prefix"] = newPrefix;
-        fs.writeFileSync("database/guilds/" + message.guild.id + ".json", JSON.stringify(guildLanguages), "utf-8");
+        fs.writeFileSync("database/guilds/" + message.guild.id + ".json", JSON.stringify(db), "utf-8");
 
         message.channel.send(language("PREFIX_UPDATED",newPrefix));
     }
