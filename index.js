@@ -15,9 +15,10 @@ exports.client.on("ready", () => {
 
     setInterval(async () => {
         const statuslist = [
+            `Temporary Privated Bot `,
             `discord.gg/BWrjRz2 `,
             `${exports.client.guilds.size} servers `,
-            `${exports.client.users.size - 1} users `,
+            `${exports.client.users.size} users `,
         ];
         const random = Math.floor(Math.random() * statuslist.length);
 
