@@ -11,7 +11,7 @@ client.on('guildCreate',guild => {
         embed.setFooter(config.footerEmbed)
         guild.channels.find(`name`,`general`).send(embed);
 
-        var jsonData = `{name:${guild.name}, lang:"en", prefix:"!"}`;
+        var jsonData = `{"name":"${guild.name}","lang":"en","prefix":"!"}`;
         
         var jsonObj = JSON.parse(jsonData);
         console.log(jsonObj);
@@ -19,7 +19,7 @@ client.on('guildCreate',guild => {
         var jsonContent = JSON.stringify(jsonObj);
         console.log(jsonContent);
         
-        fs.writeFile("database/guilds/" + guild.id, jsonContent + ".json", 'utf8', function (err) {
+        fs.writeFile("database/guilds/" + guild.id + ".json", jsonContent, 'utf8', function (err) {
             if (err) {
                 console.log("An error occured while writing JSON Object to File.");
                 return console.log(err);
