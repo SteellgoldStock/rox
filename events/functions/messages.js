@@ -1,9 +1,11 @@
 const Discord = require('discord.js');
 const config = require('./../../servers/config');
-const { client, guildLanguages, guildPrefixs, botConf } = require('../../index');
+const { client, botConf } = require('../../index');
+const fs = require('fs');
 
 exports.inMaintenance = async(message) => {
-    const guildLanguage = guildLanguages[message.guild.id] || "en";
+    let db = JSON.parse(fs.readFileSync("database/guilds/" + message.guild.id + ".json", "utf8"));
+    const guildLanguage = db["lang"] || "en";
     const language = require(`../../languages/${guildLanguage}`);
     message.channel.send(language("MAINTENANCE_MESSAGE", botConf["maintenanceReason"]));
 }
