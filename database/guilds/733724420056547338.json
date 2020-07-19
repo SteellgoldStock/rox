@@ -1,1 +1,1 @@
-{"name":"Rox the bot","lang":"fr","prefix":"!","eventMsg":false,"autoRole":true,"joinChannelId":0,"quitChannelId":0,"autoRoleId":"733852518232096839"}
+{"name":"Rox the Bot","lang":"fr","prefix":"!","eventMsg":true,"autoRole":true,"joinChannelId":"general","quitChannelId":"general","joinMsg":"Welcome {mention} to {serverName}, thanks to you, we're now {users} users on discord.","quitMsg":"Good bye {mention}, we're now {users} users."}

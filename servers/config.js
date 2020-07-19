@@ -1,9 +1,10 @@
-exports.prefixOk = "(<:redstone:733792362530340924>) ";
-exports.prefixNo = "(<:gunpowder:733792362635198587>) ";
+exports.prefixOk = "(<:lime_dye:734443784762425435>) ";
+exports.prefixNo = "(<:gray_dye:734443784506704004>) ";
 exports.prefixFox = "<:fox3:733851923165478953> ";
 exports.helpBook = "<:bookHelp:733997148927950869> ";
 exports.helpSettings = "<:helpInfo:733998945184776226> ";
 exports.helpInformations = "<:helpSettings:733998945499349033> ";
+exports.prefixMap = "<:maap:734447871440715776> ";
 
 var date = new Date();
 exports.footerEmbed = "Rox 1.0 • " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " - " + date.getHours() + "h" + date.getMinutes() + "m";
