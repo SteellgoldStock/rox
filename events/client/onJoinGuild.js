@@ -16,14 +16,24 @@ client.on('guildCreate',guild => {
             "name":"${guild.name}",
             "lang": "en",
             "prefix": "!",
-            "eventMsg": false,
+            
             "autoRole": false,
-            "autoRoleId": "0",
-            "joinChannelId": "0",
-            "quitChannelId": "0",
-            "joinMsg": "0",
-            "adminRole": "0",
-            "modRole": "0"
+            "autoRoleId": 0,
+            
+            "joinChannelId": 0,
+            "quitChannelId": 0,
+            "joinMsg": 0,
+            "quitMsg": 0,
+            
+            "adminRole": 0,
+            "modRole": 0,
+            
+            "xpStatus": false,
+            "xpByLevel": 500,
+            "doubleXp": false,
+            
+            "preniumAccess": false,
+            "betaAccess": false
         }`;
 
         var jsonObj = JSON.parse(jsonData);

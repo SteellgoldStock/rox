@@ -11,6 +11,14 @@ client.on('message',message => {
     const language = require(`../../../languages/${db["lang"]}.js`);
 
     if (message.content.startsWith(prefix + "invite")) {
+        if(botConf.maintenance == true){
+            const config = require("./../../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         return message.channel.send(language("INVITE", "https://discord.gg/Rnq9959","https://discord.gg/Rnq9959"));
     }
 });

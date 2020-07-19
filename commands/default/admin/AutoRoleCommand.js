@@ -11,6 +11,14 @@ client.on('message',message => {
     const language = require(`../../../languages/${db["lang"]}.js`);
 
     if (message.content.startsWith(prefix + "joinRole")) {
+        if(botConf.maintenance == true){
+            const config = require("./../../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         let status = message.content.split(" ")[1];
         let roleId = message.content.split(" ")[2];
 

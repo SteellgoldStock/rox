@@ -9,6 +9,14 @@ client.on('message',message => {
     const prefix = db["prefix"];
 
     if(message.content.startsWith(prefix + "prefix")){
+        if(botConf.maintenance == true){
+            const config = require("./../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         const newPrefix = message.content.split(" ")[1];
 
         const guildLanguage = db["lang"];

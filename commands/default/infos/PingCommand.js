@@ -11,6 +11,14 @@ client.on('message',message => {
     const language = require(`../../../languages/${db["lang"]}.js`);
 
     if (message.content.startsWith(prefix + "ping")) {
+        if(botConf.maintenance == true){
+            const config = require("./../../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         return message.channel.send(language("PING", client.ping));
     }
 });

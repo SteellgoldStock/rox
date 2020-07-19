@@ -13,6 +13,14 @@ client.on('message',message => {
     const language = require(`../../languages/${guildLanguage}`);
 
     if(message.content.startsWith(prefix + "help")) {
+        if(botConf.maintenance == true){
+            const config = require("./../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         let embed = new Discord.RichEmbed()
         embed.setTitle(config.helpBook + language("HELP_EMBED_TITLE"))
         embed.setDescription(language("HELP_EMBED_DESCRIPTION"))

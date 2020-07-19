@@ -1,1 +1,1 @@
-{"name":"Rox the Bot","lang":"fr","prefix":"!","eventMsg":true,"autoRole":true,"joinChannelId":"general","quitChannelId":"general","joinMsg":"Welcome {mention} to {serverName}, thanks to you, we're now {users} users on discord.","quitMsg":"Good bye {mention}, we're now {users} users."}
+{"name":"Rox the Bot","lang":"en","prefix":"!","autoRole":false,"autoRoleId":0,"joinChannelId":0,"quitChannelId":0,"joinMsg":0,"quitMsg":0,"adminRole":0,"modRole":0,"xpStatus":false,"xpByLevel":500,"doubleXp":false,"preniumAccess":false,"betaAccess":false}

@@ -4,5 +4,6 @@ const config = require('../../servers/config');
 const fs = require('fs');
 
 client.on('guildDelete',guild => {
-    // fs.unlinkSync("database/guilds/" + guild.id + ".json")
-});
+
+    }
+);

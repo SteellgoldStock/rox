@@ -11,6 +11,14 @@ client.on('message',message => {
     const language = require(`../../../languages/${db["lang"]}.js`);
 
     if (message.content.startsWith(prefix + "left")) {
+        if(botConf.maintenance == true){
+            const config = require("./../../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         if(prefixs.teamMemberIds.includes(message.author.id)){
             message.channel.send(language("LEFT",message.author.username))
             client.guilds.get(message.guild.id).leave()

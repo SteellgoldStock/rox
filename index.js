@@ -6,6 +6,7 @@ const colors = require("colors");
 
 const config = require("./servers/config");
 const botconfig = require("./servers/bot-info.json");
+exports.botConf = require("./servers/bot-info.json");
 const fs = require("fs");
 
 require('./events/registry');
@@ -15,8 +16,6 @@ exports.client.on("ready", () => {
 
     setInterval(async () => {
         const statuslist = [
-            `Temporary Privated Bot `,
-            `discord.gg/BWrjRz2 `,
             `${exports.client.guilds.size} servers `,
             `${exports.client.users.size} users `,
         ];
@@ -34,7 +33,7 @@ exports.client.on("ready", () => {
         catch (error) {
             console.error(error);
         }
-    }, 5000);
+    }, 3000);
 });
 
 exports.client.login(botconfig.token);

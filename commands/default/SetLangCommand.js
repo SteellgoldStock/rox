@@ -11,6 +11,14 @@ client.on('message',message => {
     const langages = ["en", "fr"]
 
     if(message.content.startsWith(prefix + "lang")){
+        if(botConf.maintenance == true){
+            const config = require("./../../servers/config");
+            if(!config.teamMemberIds.includes(message.author.id)){
+                messages.inMaintenance(message);
+                return;
+            }
+        }
+
         const newLanguageName = message.content.split(" ")[1];
         const guildLanguage = db["lang"];
         const language = require(`../../languages/${guildLanguage}`);
