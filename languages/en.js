@@ -2,6 +2,7 @@ const prefix = require('../servers/config');
 const fs = require('fs');
 
 const languageData = {
+    WARNING_PRENIUM: prefix.warning + ": is configurable\n\n",
     PING: (ms) => `:ping_pong: Bot's latency: ${ms}ms`,
     INVITE: prefix.prefixMap + `Oh.. do you want invite me ? Here's an invitation, thank you very much : **discord.gg/Rnq9959**, here is a link to the support server in case of bugs, ideas or others **discord.gg/Rnq9959**`,
     MAINTENANCE_MESSAGE: (reason) => "The bot is currently under maintenance for the reason `" + reason + "`",
@@ -20,6 +21,11 @@ const languageData = {
 
     CC_EXIST: (pr) => `This command already exist, please choose a other name or delete with \`${pr}customCmds del [commandName]\``,
     CC_NOT_EXIST: (pr) => `This command not exist, if you want to add it use \`${pr}customCmds add [commandName] [messageContent]\``,
+    CC_DELETED: (cmd) => `You have successfully deleted the \`${cmd}\` command`,
+    CC_ADD: (cmd) => `You have added the command \`${cmd}\``,
+    CC_UPDATED: (msgSend) => `You have changed the message given by the command in \`${msgSend}\``,
+    CC_MAX: (haveCC) => `You have reached the limit of persolanized commands you can have for the moment ` + "**(" + haveCC + "/15)**" + `, we have set a limit on the time to optimize our servers, an improvement of the bot will be made, or we will increase the limit and add a "version" prenium :star: of the bot to disable this limit, and have other advantages`,
+    CC_SEND_LIMIT: (haveCC) => `You have created an order without the prenium option, you have **` + haveCC + `** commands out of **15** maximum, in the future, we'll increase the commands limit without the prenium option.`,
 
     // TRANSLATE
     TRANSLATED_TEXT: (te) => `I have translated your request, here is the result of your translation in ` + te + " :flag_" + te + ":",
@@ -52,7 +58,32 @@ const languageData = {
 
     // CONFIG MSGS EVENT
     JOIN_MSG_HELP: (p) => `To configure the welcome message, execute the command \`${p}joinMsg [on/off] [channelName] [msg]\` you can use some tags to diversify your message: \n\n- \`{mention}\` to ping the user\n- \`{username}\` to display only the username\n- \`{users}\` to display the number of people on your discord\n- \`{serverName}\` to display the name of the server.`,
-    JOIN_MSG_MISSING_ARGUMENTS: (p) => `You have missed arguments, if you want help with this commande use \`${p}joinMsg help\``
+    JOIN_MSG_MISSING_ARGUMENTS: (p) => `You have missed arguments, if you want help with this commande use \`${p}joinMsg help\``,
+
+    // PRENIUM EMBED
+    PRENIUM_WARNING: "All the litigations opened on PayPal, will be sanctioned by a black list of the bot, no orders coming from you will be able to be carried out, or even of your server if the insistence is strong",
+    PRENIUM_SKILLS_USER: "User benefits",
+    PRENIUM_SKILLS_SERVER: "Benefits of the chosen server",
+
+
+
+    // MINI
+    USER: "User",
+    SERVER: "Server",
+
+    ALREADY_PRENIUM: (us) => "Wow, " + us + " you are a user of the prenium, access your advantages in the help page of the bot, a category will be displayed automatically, the orders will be usable only for you",
+    // BENEFITS
+    PRENIUM_USER_BENEFIT_1: "**×** When you talk, your messages automatically turn into an embed, this option unfortunately has a cooldown of 3 seconds before each embed, if the reload is not finished, the message will be in plain text form." + prefix.warning,
+    PRENIUM_USER_BENEFIT_2: "**×** Being able to choose a background for xp gauges" + prefix.warning,
+    PRENIUM_USER_BENEFIT_3: "**×** Prenium role on the bot's discord server",
+    PRENIUM_USER_BENEFIT_4: "**×** People with the prenium can use the commands even when the bot is under maintenance.",
+    PRENIUM_USER_BENEFIT_5: "**×** You can change the server to which you have assigned the prenium",
+
+    PRENIUM_SERVER_BENEFIT_1: "**×** In the ranking of servers with the most xp, display an emoji " + prefix.prefixPrenium + " to highlight the server",
+    PRENIUM_SERVER_BENEFIT_2: "**×** To be able to activate **Rox Beta** on its server" + prefix.warning,
+    PRENIUM_SERVER_BENEFIT_3: "**×** Add as many custom commands as you like",
+
+    REFUND: "__No refund is possible__"
 };
 
 const translate = (key, ...args) => {

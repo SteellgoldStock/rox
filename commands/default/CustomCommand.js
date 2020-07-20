@@ -16,16 +16,16 @@ client.on('message',message => {
         exports.commandName = prop;
 
         if (message.content.startsWith(prefix + exports.commandName)) {
-            if(botConf.maintenance == true){
+            if (botConf.maintenance == true) {
                 const config = require("../../servers/config");
-                if(!config.teamMemberIds.includes(message.author.id)){
+                if (!config.teamMemberIds.includes(message.author.id)) {
                     messages.inMaintenance(message);
                     return;
                 }
             }
 
             if (Object.keys(dbC).includes(exports.commandName)) {
-                String.prototype.allReplace = function(obj) {
+                String.prototype.allReplace = function (obj) {
                     var retStr = this;
                     for (var x in obj) {
                         retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
@@ -34,7 +34,15 @@ client.on('message',message => {
                 };
 
                 const args = message.content.slice(prefix.length).trim().split(/ +/g);
-                message.channel.send(dbC[prop].allReplace({'{mention}': "<@" + message.author.id + ">",'{serverName}': message.guild.name,'{username}': message.author.username,'{sayMessage}':args.slice(1).join(" ")}));
+                const date = new Date();
+                message.channel.send(dbC[prop].allReplace(
+                    {
+                        '{mention}': "<@" + message.author.id + ">",
+                        '{serverName}': message.guild.name,
+                        '{username}': message.author.username,
+                        '{sayMessage}': args.slice(1).join(" "),
+                        '{users}': message.guild.memberCount,
+                    }))
             } else {
 
             }

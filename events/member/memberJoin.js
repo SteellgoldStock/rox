@@ -15,10 +15,10 @@ client.on('guildMemberAdd',member => {
 client.on('guildMemberAdd',member => {
     let db = JSON.parse(fs.readFileSync("database/guilds/" + member.guild.id + ".json", "utf8"));
 
-    if(db["eventMsg"] == true){
+    if(db["eventMsg"] == true) {
         const channelId = db["joinChannelId"];
 
-        String.prototype.allReplace = function(obj) {
+        String.prototype.allReplace = function (obj) {
             var retStr = this;
             for (var x in obj) {
                 retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
@@ -26,6 +26,11 @@ client.on('guildMemberAdd',member => {
             return retStr;
         };
 
-        member.guild.channels.find(`name`, db["joinChannelId"]).send(db["joinMsg"].allReplace({'{mention}': "<@" + member.user.id + ">",'{username}': member.user.username, '{serverName}':member.guild.name, '{users}':member.guild.memberCount}));
+        member.guild.channels.find(`name`, db["joinChannelId"]).send(db["joinMsg"].allReplace({
+            '{mention}': "<@" + member.id + ">",
+            '{serverName}': member.guild.name,
+            '{username}': member.user.username,
+            '{users}': member.guild.memberCount
+        }))
     }
 });

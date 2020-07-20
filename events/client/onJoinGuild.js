@@ -33,12 +33,19 @@ client.on('guildCreate',guild => {
             "doubleXp": false,
             
             "preniumAccess": false,
-            "betaAccess": false
+            "betaAccess": false,
+            
+            "countCC": 0,
+            "limitCC": 15
         }`;
 
+        var jsonDataCC = `{}`;
+
         var jsonObj = JSON.parse(jsonData);
+        var jsonObjCC = JSON.parse(jsonDataCC);
 
         var jsonContent = JSON.stringify(jsonObj);
+        var jsonContentCC = JSON.stringify(jsonObjCC);
         fs.writeFile("database/guilds/" + guild.id + ".json", jsonContent, 'utf8', function (err) {
             if (err) {
                 console.log("An error occured while writing JSON Object to File.");
@@ -46,6 +53,14 @@ client.on('guildCreate',guild => {
             }
 
             console.log("Création du fichier " + guild.id + ".json - pour le serveur : " + guild.name);
+        });
+        fs.writeFile("database/guildsCommands/" + guild.id + ".json", jsonContentCC, 'utf8', function (err) {
+            if (err) {
+                console.log("An error occured while writing JSON Object to File.");
+                return console.log(err);
+            }
+
+            console.log("Création du fichier de commandes " + guild.id + ".json - pour le serveur : " + guild.name);
         });
     }
 });
