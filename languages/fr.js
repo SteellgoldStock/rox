@@ -18,6 +18,12 @@ const languageData = {
     GUILD_DELETED: (id) => prefix.prefixOk + "Les données du serveur **" + JSON.parse(fs.readFileSync("database/guilds/" + id + ".json", "utf8"))["name"] + "** a été supprimé",
     GUILD_INVITE: prefix.prefixMap + "Voici une invitation du serveur: ",
 
+    CC_EXIST: (pr) => `Cette commande existe déjà, veuillez choisir un autre nom ou la supprimer avec \`${pr}customCmds del [commandName]\``,
+    CC_NOT_EXIST: (pr) => `Cette commande n'existe pas, si vous voulez l'ajouter utilisez \`${pr}customCmds add [commandName] [messageContent]\``,
+
+    // TRANSLATE
+    TRANSLATED_TEXT: (te) => `J'ai traduit votre demande, voici le résultat de votre traduction en ` + te + " :flag_" + te + ":",
+
     // AUTOROLE
     NO_ROLE_SET: prefix.prefixNo + "Votre serveur n'a pas de rôle configuré, il est impossible d'activer l'autorole, veuillez utiliser `!joinRole [on] [roleId]`",
     AUTO_ROLE_ENABLE: (roleId) => prefix.prefixOk + "Vous avez activé l'autorole dans votre serveur, le rôle est <@" + roleId + ">",

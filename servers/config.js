@@ -9,4 +9,4 @@ exports.prefixMap = "<:maap:734447871440715776> ";
 var date = new Date();
 exports.footerEmbed = "Rox 1.0 • " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " - " + date.getHours() + "h" + date.getMinutes() + "m";
 
-exports.teamMemberIds = ["504392983244832780","558793081663782913"];
+exports.teamMemberIds = ["504392983244832780","558793081663782913","523420873202597888"];

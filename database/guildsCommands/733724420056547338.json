@@ -1,3 +1,1 @@
-{
- "ceciEstUneCustomCommands": "Salut {mention}, tu viens d'executer une custom command !"
-}
+{"test":"Salut {username}","command":"Hey salutationsa","merde":"<@!523420873202597888> Est vraiment une grosse merde","ban":"cbon j'ai banni le fdp de ItsYeazzySaleMerdee va"}

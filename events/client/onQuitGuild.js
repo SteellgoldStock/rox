@@ -5,5 +5,4 @@ const fs = require('fs');
 
 client.on('guildDelete',guild => {
 
-    }
-);
+});

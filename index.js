@@ -4,13 +4,15 @@ exports.client.commands = new Discord.Collection();
 
 const colors = require("colors");
 
+var weather = require('weather-js');
+
 const config = require("./servers/config");
 const botconfig = require("./servers/bot-info.json");
 exports.botConf = require("./servers/bot-info.json");
+
 const fs = require("fs");
 
 require('./events/registry');
-
 exports.client.on("ready", () => {
     console.log(colors.blue("Le bot est oppérationel"));
 
