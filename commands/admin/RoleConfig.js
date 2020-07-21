@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     }
 
     fs.writeFileSync("database/guilds/base/" + message.guild.id + ".json", JSON.stringify(db), "utf-8");
-    return await messages.sendMsg(message,message.guild.id,language("ROLES_UPDATED"),message.guild.name);
+    return await messages.sendMsg(message,message.guild.id,language("UPDATED"),message.guild.name);
 }
 
 exports.help = {
