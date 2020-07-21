@@ -20,143 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/commands/admin/RoleConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/gold/ServerActivate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/client/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/client/emojis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/listener/eventsRegister.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/joinGuild.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/collection/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/collection/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/collection/dist/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/collection/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/collection/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/License" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/lib/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/lib/form_data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/lib/populate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/@discordjs/form-data/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/browser.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.umd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/dist/abort-controller.umd.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/polyfill.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/abort-controller/polyfill.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/bench.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/abort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/defer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/iterate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/readable_asynckit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/readable_parallel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/readable_serial.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/readable_serial_ordered.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/streamify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/lib/terminator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/parallel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/serial.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/serialOrdered.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/asynckit/stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/combined-stream/License" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/combined-stream/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/combined-stream/lib/combined_stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/combined-stream/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/combined-stream/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/delayed-stream/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/delayed-stream/License" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/delayed-stream/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/delayed-stream/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/delayed-stream/lib/delayed_stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/delayed-stream/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/dist/event-target-shim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/dist/event-target-shim.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/dist/event-target-shim.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/dist/event-target-shim.mjs.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/dist/event-target-shim.umd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/dist/event-target-shim.umd.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/event-target-shim/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-db/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-db/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-db/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-db/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-db/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-db/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-types/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-types/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-types/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/mime-types/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/lib/index.es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/lib/index.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/node-fetch/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/core/FFmpeg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/core/VolumeTransformer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/core/WebmBase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/core/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/opus/OggDemuxer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/opus/Opus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/opus/WebmDemuxer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/opus/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/util/Constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/util/loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/vorbis/WebmDemuxer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/src/vorbis/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/typings/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/typings/opus.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/prism-media/typings/vorbis.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/setimmediate/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/setimmediate/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/setimmediate/setImmediate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/AUTHORS.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/nacl-fast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/nacl-fast.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/nacl.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/nacl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/nacl.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/tweetnacl/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/buffer-util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/event-target.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/extension.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/limiter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/permessage-deflate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/receiver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/sender.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/websocket-server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/lib/websocket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nouveau/node_modules/ws/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,16 +56,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\node_modules" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\lang" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\node_modules" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\nouveau\database" />
     </key>
   </component>
@@ -203,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595323944193</updated>
       <workItem from="1595323954368" duration="944000" />
+      <workItem from="1595325029322" duration="19015000" />
     </task>
     <servers />
   </component>
@@ -219,5 +104,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595339578450">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595339578450" />
   </component>
 </project>
