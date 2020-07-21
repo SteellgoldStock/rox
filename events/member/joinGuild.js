@@ -12,11 +12,11 @@ client.on('guildMemberAdd',(member) =>{
         };
     }
     if (!db[member.id]) db[member.id] = {
-        prenium: false,
-        serverUp: null
+        xp: 0,
+        level: 0
     };
 
-    fs.writeFile("./database/guilds/" + member.guild.id + ".json", JSON.stringify(db), (x) => {
+    fs.writeFile("./database/guilds/xp/" + member.guild.id + ".json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
     });
     fs.writeFile("./database/users/users.json", JSON.stringify(dbu), (x) => {

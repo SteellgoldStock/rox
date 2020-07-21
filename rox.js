@@ -10,6 +10,7 @@ exports.client.on('ready', () => {
     loadCommand("./commands/fun/")
     loadCommand("./commands/admin/")
     loadCommand("./commands/gold/")
+    loadCommand("./commands/xp/")
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {

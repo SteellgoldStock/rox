@@ -13,11 +13,11 @@ exports.sendMsg = async(message, id,text, guildName) => {
     }
 
 
-    let embed = new Discord.RichEmbed()
-    embed.setTitle(getTitle(db,guildName))
-    embed.setDescription(text)
-    embed.setThumbnail(getImg(db))
-    embed.setColor("#7b6d36")
+    let embed = new Discord.MessageEmbed()
+    .setTitle(getTitle(db,guildName))
+    .setDescription(text)
+    .setThumbnail(getImg(db))
+    .setColor("#7b6d36")
 
     return message.channel.send(embed);
 }
