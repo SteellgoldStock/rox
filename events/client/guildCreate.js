@@ -14,6 +14,8 @@ client.on('guildCreate',(guild) =>{
         "joinMsg":false,
         "joinText":null,
         "quitText":null,
+        "joinChannel":null,
+        "quitChannel":null,
 
         "adminRole":null,
         "modRole":null,
@@ -23,8 +25,18 @@ client.on('guildCreate',(guild) =>{
         "embedTitle":null,
 
         "autoRole":false,
-        "autoRoleName":null
+        "autoRoleName":null,
+        
+        "sysXp":false,
+        "xpByLevel":500,
+        "maxLevel":5,
+        "logsMsg":null,
+        "levelUpMsg":null,
+        
+        "limitCC":null,
+        "countCC":null
     }`;
+
     var xpJson = `{}`;
     var ccJson = `{}`;
 

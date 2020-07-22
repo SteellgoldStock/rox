@@ -10,13 +10,28 @@ const languageData = {
     ALREADY_ACTIVED: `This server has already been activated.`,
     ACTIVE_USED: `You have already actived a server`,
     MISSED_ARGUMENTS: `You have missed arguments`,
+    CHANNEL_NOT_EXIST: `This channel not exist`,
 
     // HELP MSG
+    // ROLES
     ROLES_TYPE_HELP: (prefix) => `You forgot the argument \`type\` here is a help to better explain how the command works: \`${prefix}roles [adminRole/modRole] [Role name]\``,
     ROLES_ROLE_HELP: (prefix) => `You forgot the argument \`role\` here is a help to better explain how the command works: \`${prefix}roles [adminRole/modRole] [Role name]\``,
     ROLE_NOT_EXIST: (role) => `The role \`${role}\` is not exist`,
     ROLES_TYPE_LIST: (action) => `The type \`${action}\` not exist, use \`adminRole\` or \`modRole\``,
+    ROLES_AUTOROLE_USE: (prefix) => `You forgot the argument \`action\` here is a help to better explain how the command works: \`${prefix}autoRole [config/status]\``,
+    ROLES_AUTOROLE_USE_2: (prefix) => `You forgot the argument \`status\` here is a help to better explain how the command works: \`${prefix}autoRole status [on/off]\``,
+    ROLES_AUTOROLE_USE_3: (prefix) => `You forgot the argument \`role\` here is a help to better explain how the command works: \`${prefix}autoRole config [Role name]\``,
+    // XP
+    XP_TYPE_HELP: (prefix) => `You forgot the argument \`type\` here is a help to better explain how to command works: \`${prefix}xpconf [status/xplevel/maxlevel/logsChannel/upMsg]\``,
+    XP_TYPE_STATUS: (prefix) => `You forgot the argument \`status\` here is a help to better explain how to command works: \`${prefix}xpconf status [on/off]\``,
 
+    // JOIN & QUIT
+    JQ_ARGS: (prefix) => `You forgot the argument \`param\` here is a help to better explain how to command works: \`${prefix}jqconf [join/quit] [channel/msg/status]\``,
+    JQ_CHANNEL: (prefix) => `You forgot the argument \`channelName\` here is a help to better explain how to command works: \`${prefix}jqconf [join/quit] channel [Channel Name]\``,
+    JQ_MSG: (prefix) => `You forgot the argument \`msg\` here is a help to better explain how to command works: \`${prefix}jqconf [join/quit] channel [msg]\` you can use use \`${prefix}jqconf tags\` tags to set in your msg`,
+    JQ_STATUS: (prefix) => `You forgot the argument \`status\` here is a help to better explain how to command works: \`${prefix}jqconf [join/quit] status [on/off]\``,
+
+    // EMBED
     EMBED_CONF_OPTION: `You have missed the argument \`option\` here is the list of options avaible, \`[config/status]\``,
     EMBED_CONF_OPTION_ARGS: `You have missed the argument \`param\` here is the list of parameters avaible, \`[title/imgUrl]\``,
     EMBED_CONF_OPTION_STATUS: `You have missed the argument \`status\` here is the list of status avaible, \`[on/off]\``,

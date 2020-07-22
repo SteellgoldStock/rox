@@ -11,6 +11,8 @@ exports.client.on('ready', () => {
     loadCommand("./commands/admin/")
     loadCommand("./commands/gold/")
     loadCommand("./commands/xp/")
+    loadCommand("./commands/team/")
+    loadCommand("./commands/xp/admin/")
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
@@ -18,11 +20,13 @@ exports.client.on('ready', () => {
 
             let jsfile = files.filter(f => f.split(".").pop() === "js")
             if (jsfile.length <= 0) {
+                console.log(exports.colors.red("(ERR) No commands found in " + path));
                 return;
             }
 
             jsfile.forEach((f, i) => {
                 let props = require(`${path}${f}`);
+                console.log(exports.colors.green("(OK) Command " + exports.colors.gray(f) + " in " + exports.colors.gray(path) +" has been loaded"));
                 exports.client.commands.set(props.help.name, props);
             });
         });
@@ -32,5 +36,5 @@ exports.client.on('ready', () => {
 })
 
 exports.client.login(exports.botConfg.token).then(
-    console.log(exports.colors.rainbow("Rox Bot is connected to Discord with 1 servers where is the bot, and 7 total users with all members of the discord"))
+    console.log(exports.colors.blue("(INFO) Rox Bot is connected to Discord"))
 );

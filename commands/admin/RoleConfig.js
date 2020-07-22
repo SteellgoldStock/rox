@@ -17,11 +17,11 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
         return await messages.sendMsg(message,message.guild.id,language("ROLES_TYPE_LIST",action),message.guild.name);
     }
 
+    let role = message.guild.roles.cache.find(r => r.name === `${arole}`);
     if(!arole){
         return await messages.sendMsg(message,message.guild.id,language("ROLES_ROLE_HELP",db["prefix"]),message.guild.name)
     }
 
-    let role = message.guild.roles.cache.find(r => r.name === `${arole}`);
     if(!role){
         return await messages.sendMsg(message,message.guild.id,language("ROLE_NOT_EXIST",arole),message.guild.name);
     }

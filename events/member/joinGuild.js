@@ -16,6 +16,16 @@ client.on('guildMemberAdd',(member) =>{
         level: 0
     };
 
+    let dbSrv = JSON.parse(fs.readFileSync("database/guilds/base/" + member.guild.id + ".json", "utf8"));
+    if(dbSrv["autoRole"] == true){
+        let role = member.guild.roles.cache.find(r => r.name === `${dbSrv["autoRoleName"]}`);
+        member.roles.add(role.id);
+    }
+
+    if(dbSrv["joinMsg"] == true){
+
+    }
+
     fs.writeFile("./database/guilds/xp/" + member.guild.id + ".json", JSON.stringify(db), (x) => {
         if (x) console.error(x)
     });
