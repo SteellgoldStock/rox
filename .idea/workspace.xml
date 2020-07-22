@@ -20,21 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/admin/AutoRole.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/admin/JoinQuit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/xp/admin/SysXp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/RoleConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/RoleConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/joinGuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/joinGuild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/admin/JoinQuit.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/JoinQuit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +91,7 @@
       <workItem from="1595325029322" duration="20651000" />
       <workItem from="1595352437997" duration="639000" />
       <workItem from="1595357182975" duration="6959000" />
-      <workItem from="1595411395969" duration="13026000" />
+      <workItem from="1595411395969" duration="13905000" />
     </task>
     <servers />
   </component>

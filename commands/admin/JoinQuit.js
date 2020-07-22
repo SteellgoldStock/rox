@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
                 case "channel":
                     if(!args[2]){ return await messages.sendMsg(message,message.guild.id,language("JQ_CHANNEL",db["prefix"]),message.guild.name); }
                     var channel = message.guild.channels.cache.find(channel => channel.name === args[2])
-                    if(!channel){ return await messages.sendMsg(message,message.guild.id,language("JQ_CHANNEL",db["prefix"]),message.guild.name); }
+                    if(!channel){ return await messages.sendMsg(message,message.guild.id,language("CHANNEL_NOT_EXIST",db["prefix"]),message.guild.name); }
 
                     db["joinChannel"] = args[2];
                     db["joinMsg"] = true;
@@ -58,7 +58,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
                 case "channel":
                     if(!args[2]){ return await messages.sendMsg(message,message.guild.id,language("JQ_CHANNEL",db["prefix"]),message.guild.name); }
                     var quitchannel = message.guild.channels.cache.find(channel => channel.name === args[2])
-                    if(!quitchannel){ return await messages.sendMsg(message,message.guild.id,language("JQ_CHANNEL",db["prefix"]),message.guild.name); }
+                    if(!quitchannel){ return await messages.sendMsg(message,message.guild.id,language("CHANNEL_NOT_EXIST",db["prefix"]),message.guild.name); }
 
                     db["quitChannel"] = args[2];
                     db["quitMsg"] = true;
