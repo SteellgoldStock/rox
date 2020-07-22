@@ -7,6 +7,7 @@ exports.messages = require("./functions/messages");
 exports.client.commands = new Discord.Collection();
 
 exports.client.on('ready', () => {
+    loadCommand("./commands/")
     loadCommand("./commands/fun/")
     loadCommand("./commands/admin/")
     loadCommand("./commands/gold/")

@@ -19,7 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="" />
+    <list default="true" id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/commands/admin/CustomCommandManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/admin/Lang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/admin/Prefix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/admin/ServerName.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/CustomCommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/quitGuild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/joinGuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/joinGuild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +80,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\node_modules" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\nouveau\database" />
@@ -88,7 +106,7 @@
       <workItem from="1595325029322" duration="20651000" />
       <workItem from="1595352437997" duration="639000" />
       <workItem from="1595357182975" duration="6959000" />
-      <workItem from="1595411395969" duration="13933000" />
+      <workItem from="1595411395969" duration="25522000" />
     </task>
     <servers />
   </component>
@@ -112,10 +130,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595339578450" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1595430205665">
+    <state x="456" y="198" key="run.anything.popup" timestamp="1595439785769">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595430205665" />
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595439785769" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595421204070">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

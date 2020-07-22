@@ -17,9 +17,34 @@ exports.sendMsg = async(message, id,text, guildName) => {
     .setTitle(getTitle(db,guildName))
     .setDescription(text)
     .setThumbnail(getImg(db))
-    .setColor("#7b6d36")
+    .setColor("#b38a5d")
 
     return message.channel.send(embed);
+}
+
+exports.sendEvMsg = async(channel, id,text, guildName) => {
+    let db = JSON.parse(fs.readFileSync("database/guilds/base/" + id + ".json", "utf8"));
+
+    if (!db["prenium"] == "prenium") {
+        return channel.send(text);
+    }
+
+    if (!db["msgEmbed"] == true) {
+        return channel.send(text);
+    }
+
+
+    let embed = new Discord.MessageEmbed()
+        .setTitle(getTitle(db,guildName))
+        .setDescription(text)
+        .setThumbnail(getImg(db))
+        .setColor("#b38a5d")
+
+    return channel.send(embed);
+}
+
+exports.sendErrorMsg = async(channel, text) => {
+    return channel.send("```" + text + "```");
 }
 
 function getTitle(db, serverName) {
