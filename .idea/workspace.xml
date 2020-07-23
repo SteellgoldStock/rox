@@ -20,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/lang/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/lang/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/lang/jp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/lang/troll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/xp/Stats.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/xpSystem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Lang.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/users/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/node-fetch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/node-fetch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/lang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/events/member" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,6 +73,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\lang" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\xp" />
@@ -102,7 +101,7 @@
       <workItem from="1595352437997" duration="639000" />
       <workItem from="1595357182975" duration="6959000" />
       <workItem from="1595411395969" duration="25721000" />
-      <workItem from="1595496947096" duration="4402000" />
+      <workItem from="1595496947096" duration="22841000" />
     </task>
     <servers />
   </component>
@@ -126,10 +125,14 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595339578450" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1595439785769">
+    <state x="23" y="289" key="FileDocumentManager.FileCacheConflict" timestamp="1595517832468">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595439785769" />
+    <state x="23" y="289" key="FileDocumentManager.FileCacheConflict/0.0.1600.870@0.0.1600.870" timestamp="1595517832468" />
+    <state x="456" y="198" key="run.anything.popup" timestamp="1595522955351">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595522955351" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595421204070">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
