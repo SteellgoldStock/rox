@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
     if(!args[0]){ return await messages.sendMsg(message,message.guild.id,language("LANG_LIST"),message.guild.name); }
 
-    const actions = ["fr","en"];
+    const actions = ["fr","en",'es','jp','it',`troll`];
     if(!actions.includes(args[0])){ return await messages.sendMsg(message,message.guild.id,language("LANG_LIST"),message.guild.name); }
 
     db["lang"] = args[0];

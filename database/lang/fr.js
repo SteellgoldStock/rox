@@ -3,7 +3,7 @@ const languageData = {
     MENTION_BOT: (prefix, username) => `Grrr ${username}, if you want to pet me do \`${prefix}rub\` if you want to know what I'm capable of, execute the command. \`${prefix}help\``,
 
     // ERROR MSG
-    LANG_LIST: "Voici la liste des langues disponibles: `fr`, `en`,`es(BIENTÔT)`",
+    LANG_LIST: "Voici la liste des langues disponibles: `fr`, `en`,`es`,`jp`,`it`",
     NOT_GUILD: `Désolé, vous ne pouvez pas utiliser les commandes dans les messages privés`,
     NOT_PRENIUM_GUILD: `Désolé, cette guilde n'a pas de prenium`,
     PERMISSION_DENIED: `Vous n'avez pas la permission d'utiliser cette commande, demandez à une personne plus haut placée que vous de vous aider`,
@@ -20,8 +20,8 @@ const languageData = {
     // ROLES
     ROLES_TYPE_HELP: (prefix) => `Vous avez oublié l'argument \`type\` voici une aide pour mieux expliquer le fonctionnement de la commande: \`${prefix}roles [adminRole/modRole] [Role name]\``,
     ROLES_ROLE_HELP: (prefix) => `Vous avez oublié l'argument \`role\` voici une aide pour mieux expliquer le fonctionnement de la commande: \`${prefix}roles [adminRole/modRole] [Role name]\``,
-    ROLE_NOT_EXIST: (role) => `The role \`${role}\` is not exist`,
-    ROLES_TYPE_LIST: (action) => `The type \`${action}\` not exist, use \`adminRole\` or \`modRole\``,
+    ROLE_NOT_EXIST: (role) => `Le rôle \`${role}\` n'existe pas`,
+    ROLES_TYPE_LIST: (action) => `L'option \`${action}\` n'existe pas, utilisez \`adminRole\` ou \`modRole\``,
     ROLES_AUTOROLE_USE: (prefix) => `Vous avez oublié l'argument \`action\` voici une aide pour mieux expliquer le fonctionnement de la commande: \`${prefix}autoRole [config/status]\``,
     ROLES_AUTOROLE_USE_2: (prefix) => `Vous avez oublié l'argument \`status\` voici une aide pour mieux expliquer le fonctionnement de la commande: \`${prefix}autoRole status [on/off]\``,
     ROLES_AUTOROLE_USE_3: (prefix) => `Vous avez oublié l'argument \`role\` voici une aide pour mieux expliquer le fonctionnement de la commande: \`${prefix}autoRole config [Role name]\``,
