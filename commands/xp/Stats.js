@@ -14,7 +14,6 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     const key = `${message.guild.id}-${message.author.id}`;
 
     exports.maxLevel = db["maxLevel"];
-    exports.maxXp = db["xpByLevel"];
 
     try {
             placeholder.set(key, {
@@ -42,6 +41,8 @@ async function profile(message) {
         if (!result.ok) new Error('Failed to get the avatar!');
         const avatar = await result.buffer();
 
+        let MaxXp = level * 100 + 300
+
         const name = member.displayName.length > 30 ? member.displayName.substring(0, 17) + '...'
             : member.displayName;
 
@@ -67,7 +68,7 @@ async function profile(message) {
             .addText(name, 285, 54)
             .addText(`Level: ${level} / ${exports.maxLevel}`, 84, 157)
             .setTextAlign('left')
-            .addText(`XP: ${points} / ${exports.maxXp}`, 241, 136)
+            .addText(`XP: ${points} / ${MaxXp}`, 241, 136)
             .toBuffer();
     } catch (error) {
         await messages.sendErrorMsg(message.channel,`${error.message}`);
