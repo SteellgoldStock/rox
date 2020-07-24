@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
     dbu[message.author.id].background = args;
     fs.writeFileSync("database/users/users.json", JSON.stringify(dbu), "utf-8");
-    return await messages.sendMsg(message,message.guild.id,language("ACTIVED_SERVER"),message.guild.name)
+    return await messages.sendMsg(message,message.guild.id,language("UPDATED"),message.guild.name)
 }
 
 }
