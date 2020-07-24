@@ -21,54 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/AutoRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/AutoRole.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/CustomCommandManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/CustomCommandManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/EmbedMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/EmbedMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/JoinQuit.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/JoinQuit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Lang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Prefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/RoleConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/RoleConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/ServerName.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/ServerName.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/fun/lovecalc.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/lovecalc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/gold/ServerActivate.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/ServerActivate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/gold/customBackroundXP.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/customBackroundXP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Ban.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Kick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Mute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Purge.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Purge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Warn.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Warn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/admin/SysXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/SysXp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/es.disable" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/es.disable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/it.disable" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/it.disable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/jp.disable" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/jp.disable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/troll.disable" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/troll.disable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users/users.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/listener/eventsRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/listener/eventsRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/CustomCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/CustomCommand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/joinGuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/joinGuild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/quitGuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/quitGuild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/xpSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/xpSystem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/cookies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/getProxyFromURI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/har.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/hawk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/multipart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/oauth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/querystring.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/redirect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/lib/tunnel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.staging/request-1a9a99ad/request.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595600322295</updated>
-      <workItem from="1595600326120" duration="19407000" />
+      <workItem from="1595600326120" duration="22213000" />
     </task>
     <servers />
   </component>
