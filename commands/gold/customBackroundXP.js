@@ -6,9 +6,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     let user = dbu[message.author.id];
     if(!user.prenium == true) return await messages.sendMsg(message,message.guild.id,language("NOT_PRENIUM"),message.guild.name);
 
-    let image = new Image();
-
-    image.src = args;
+    dbu[message.author.id].background = args;
 
 }
 
