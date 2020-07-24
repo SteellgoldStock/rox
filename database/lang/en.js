@@ -52,6 +52,11 @@ const languageData = {
     MUTED: (username) => `You are mute ${username} forever with success`,
     TMUTED: (username) => `You are tempmute ${username} for ${time} with success`,
 
+    BAN_NO_MENTION: "Please enter a user mention",
+    BAN_NO_USER: "This user doesn't exist in this guild",
+    BAN_IMPOSSIBLE: "I cannot ban this user",
+    SUCCESS_BAN: (user, reason, moderator) => `${moderator} has banned ${user} for ${reason}`,
+
     // CUSTOM COMMANDS
     CC_ARGUMENTS: (prefix) => `You forgot the argument \`type\` here is a help to better explain how to command works: \`${prefix}custcmds [add/del/update] [command name]\` and \`[message] for add & update\`, you can use use \`${prefix}custcmds tags\` the command will give you different tags that you can place if you shouaitez it in your message`,
 
