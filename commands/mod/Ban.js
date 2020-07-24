@@ -7,7 +7,8 @@ let banned = message.guild.member(message.mentions.users.cache.first() || messag
 let reasonV = args.slice(1,100);
 
 if(!message.member.hasPermission("BAN_MEMBERS")) return await messages.sendMsg(message,message.guild.id,language("PERMISSION_DENIED"),message.guild.name);
-if(!banned) return message.channel.send("𝐂𝐞 𝐣𝐨𝐮𝐞𝐮𝐫 𝐧'𝐞𝐱𝐢𝐬𝐭𝐞 𝐩𝐚𝐬 !");
+if(!banned) return await messages.sendMsg(message,message.guild.id,language("PLAYER_NOT_EXIST", args[0]),message.guild.name);
+
 if(!reason){
 
 message.guild.member(banned).ban();
