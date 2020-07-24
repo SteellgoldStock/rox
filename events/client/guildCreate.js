@@ -27,9 +27,7 @@ client.on('guildCreate',(guild) =>{
         "autoRole":false,
         "autoRoleName":null,
         
-        "sysXp":false,
-        "xpByLevel":500,
-        "maxLevel":5,
+        "sysXp":false
         "logsMsg":null,
         "levelUpMsg":null,
         
