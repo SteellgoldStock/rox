@@ -13,8 +13,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     if(!message.guild) return;;
     const key = `${message.guild.id}-${message.author.id}`;
 
-    exports.maxLevel = db["maxLevel"];
-    exports.maxXp = db["xpByLevel"];
+
 
     try {
             placeholder.set(key, {
@@ -65,9 +64,9 @@ async function profile(message) {
             .setTextFont('18pt Klavika Regular')
             .setColor('#FFFFFF')
             .addText(name, 285, 54)
-            .addText(`Level: ${level} / ${exports.maxLevel}`, 84, 157)
+            .addText(`Level: ${level}`, 84, 157)
             .setTextAlign('left')
-            .addText(`XP: ${points} / ${exports.maxXp}`, 241, 136)
+            .addText(`XP: ${points}`, 241, 136)
             .toBuffer();
     } catch (error) {
         await messages.sendErrorMsg(message.channel,`${error.message}`);

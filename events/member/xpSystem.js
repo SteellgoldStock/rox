@@ -24,6 +24,7 @@ client.on("message", message => {
         };
      
         if(dbXp[message.author.id].time <= Date.now()){
+            if(message.channel.name == "spam"){ return; }
             executeCode(dbXp,message,db);
         }
 
@@ -35,8 +36,9 @@ async function executeCode(dbXp, message, db) {
     dbXp[message.author.id].xp++;
     dbXp[message.author.id].time = time;
     let userInfo = dbXp[message.author.id];
+    let MaxXp = userInfo.level * 100 + 300
 
-    if (userInfo.xp >= 1000) {
+    if (userInfo.xp >= MaxXp) {
         userInfo.level++
         userInfo.xp = 0
         messages.sendMsg(message, message.guild.id, db["levelUpMsg"].allReplace({
