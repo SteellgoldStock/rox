@@ -36,7 +36,7 @@ async function executeCode(dbXp, message, db) {
     dbXp[message.author.id].time = time;
     let userInfo = dbXp[message.author.id];
 
-    if (userInfo.xp >= db["xpByLevel"]) {
+    if (userInfo.xp >= 1000) {
         userInfo.level++
         userInfo.xp = 0
         messages.sendMsg(message, message.guild.id, db["levelUpMsg"].allReplace({
