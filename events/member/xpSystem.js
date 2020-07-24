@@ -15,7 +15,7 @@ client.on("message", message => {
     let db = JSON.parse(fs.readFileSync("database/guilds/base/" + message.guild.id + ".json", "utf8"));
     let dbXp = JSON.parse(fs.readFileSync("database/guilds/xp/" + message.guild.id + ".json", "utf8"));
     
-    if(db["sysXp"] == true){
+    if(db["sysXp"] == true) {
         // NON-EXIST
         if (!dbXp[message.author.id]) dbXp[message.author.id] = {
             xp: 0,
@@ -23,11 +23,10 @@ client.on("message", message => {
         };
 
         let cooldown = new Set();
-
-        if(cooldown.has(message.author.id + " - " + message.guild.id)) return ;
-
-        else{
-            if(message.content.startsWith(db["prefix"]))
+        if (cooldown.has(message.author.id + " - " + message.guild.id)) {
+            return;
+        }else{
+            if(message.content.startsWith(db["prefix"])) return;
             cooldown.add(message.author.id + " - " + message.guild.id);
             setTimeout(() => {cooldown.delete(message.author.id + " - " + message.guild.id)}, 20000);
             dbXp[message.author.id].xp + 2;
