@@ -15,7 +15,8 @@ client.on('guildMemberAdd',(member) =>{
     if (!dbu[member.id]) {
         dbu[member.id] = {
             prenium: false,
-            serverUp: null
+            serverUp: null,
+            background: null
 
         };
     }
