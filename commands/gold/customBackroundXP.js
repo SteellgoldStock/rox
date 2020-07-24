@@ -1,22 +1,27 @@
 const Discord = require("discord.js");
 const { client, botConfg, fs, colors,messages} = require("../../rox");
 
+let request = require(`request`);
+
+function download(url){
+    request.get(url)
+        .on('error', console.error)
+        .pipe(fs.createWriteStream('database/users/backgrounds/' + message.author.id + ".png"));
+}
+
+function isImg(msgAttach) {
+    var url = msgAttach.url;
+    return url.indexOf("png", url.length - "png".length) !== -1;
+}
+
 module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC, dbXp, language) => {
-    if(message.attachments.first()){//checks if an attachment is sent
-        if(message.attachments.first().filename === `png`){//Download only png (customize this)
-            download(message.attachments.first().url);//Function I will show later
+    if(message.attachments.first()){
+        if(isImg(message.attachments.first())){
+            download(message.attachments.first().url);
+        }else{
+            message.channel.send("not img")
         }
     }
-
-    /**
-    let dbu = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
-    let user = dbu[message.author.id];
-    if (!user.gold == true) return await messages.sendMsg(message, message.guild.id, language("NOT_PRENIUM"), message.guild.name);
-
-    dbu[message.author.id].background = args;
-    fs.writeFileSync("database/users/users.json", JSON.stringify(dbu), "utf-8");
-    return await messages.sendMsg(message, message.guild.id, language("UPDATED"), message.guild.name)
-     **/
 }
 
 exports.help = {
