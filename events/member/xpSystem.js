@@ -36,11 +36,10 @@ async function executeCode(dbXp, message, db) {
     dbXp[message.author.id].xp++;
     dbXp[message.author.id].time = time;
     let userInfo = dbXp[message.author.id];
-    let MaxXp = userInfo.level * 100 + 300
+    let MaxXp = userInfo.level * 150
 
     if (userInfo.xp >= MaxXp) {
         userInfo.level++
-        userInfo.xp = 0
         messages.sendMsg(message, message.guild.id, db["levelUpMsg"].allReplace({
             "{mention}": "<@" + message.author.id + ">",
             "{username}": message.author.name,
