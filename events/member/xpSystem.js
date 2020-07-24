@@ -14,6 +14,7 @@ client.on("message", message => {
 
     let db = JSON.parse(fs.readFileSync("database/guilds/base/" + message.guild.id + ".json", "utf8"));
     let dbXp = JSON.parse(fs.readFileSync("database/guilds/xp/" + message.guild.id + ".json", "utf8"));
+    let dbU = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
     
     if(db["sysXp"] == true) {
         // NON-EXIST
@@ -25,21 +26,32 @@ client.on("message", message => {
      
         if(dbXp[message.author.id].time <= Date.now()){
             if(message.channel.name == "spam"){ return; }
-            executeCode(dbXp,message,db);
+            executeCode(dbXp,message,db, dbU);
         }
 
     }
 });
 
-async function executeCode(dbXp, message, db) {
+async function executeCode(dbXp, message, db, dbU) {
     time = Date.now() + 5000;
-    dbXp[message.author.id].xp++;
+    if(!dbU.includes(message.author.id)){ return; }
+    if(dbU[message.author.id].gold == true && db["gold"] == true){
+        dbXp[message.author.id].xp + 10;
+    }else if(dbU[message.author.id].gold == true && db["gold"] == false){
+        dbXp[message.author.id].xp + 5;
+    }else if(dbU[message.author.id].gold == false && db["gold"] == true){
+        dbXp[message.author.id].xp + 5;
+    }else{
+        dbXp[message.author.id].xp + 2;
+    }
+
     dbXp[message.author.id].time = time;
     let userInfo = dbXp[message.author.id];
     let MaxXp = userInfo.level * 150 + userInfo.level * 35
 
     if (userInfo.xp >= MaxXp) {
         userInfo.level++
+
         messages.sendMsg(message, message.guild.id, db["levelUpMsg"].allReplace({
             "{mention}": "<@" + message.author.id + ">",
             "{username}": message.author.name,

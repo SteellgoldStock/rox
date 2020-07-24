@@ -21,7 +21,7 @@ client.on('guildMemberAdd',(member) =>{
     }
     if (!db[member.id]) db[member.id] = {
         xp: 0,
-        level: 0
+        level: 1
     };
 
     let dbSrv = JSON.parse(fs.readFileSync("database/guilds/base/" + member.guild.id + ".json", "utf8"));
