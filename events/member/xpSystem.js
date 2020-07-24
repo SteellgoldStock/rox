@@ -22,9 +22,13 @@ client.on("message", message => {
             level: 0
         };
 
-        date = [];
-        if(date[message.guild.id][message.author.id] && date[message.guild.id][message.author.id].length && date[message.guild.id][message.author.id] <= Date.now){
-            date.unset([message.guild.id][message.author.id]);
+        let cooldown = new Set();
+
+        if(cooldown.has(message.author.id + " - " + message.guild.id)) return ;
+
+        else{
+            cooldown.add(message.author.id + " - " + message.guild.id);
+            setTimeout(() => {cooldown.delete(message.author.id + " - " + message.guild.id)}, 20000);
             dbXp[message.author.id].xp++;
             let userInfo = dbXp[message.author.id];
 
@@ -43,26 +47,6 @@ client.on("message", message => {
                 if (x) console.error(x)
             });
 
-            return date[message.guild.id][message.author.id] = Date.now + 60;
-        } else if (!date[message.guild.id][message.author.id] && !date[message.guild.id][message.author.id].length){
-            dbXp[message.author.id].xp++;
-            let userInfo = dbXp[message.author.id];
-
-            if(userInfo.xp >= db["xpByLevel"]) {
-                userInfo.level++
-                userInfo.xp = 0
-                messages.sendMsg(message,message.guild.id,db["levelUpMsg"].allReplace({
-                    "{mention}": "<@" + message.author.id + ">",
-                    "{username}": message.author.name,
-                    "{guildName}": message.guild.name,
-                    "{level}": userInfo.level
-                }))
-            }
-
-            fs.writeFile("./database/guilds/xp/" + message.guild.id + ".json", JSON.stringify(dbXp), (x) => {
-                if (x) console.error(x)
-            });
-            return date[message.guild.id][message.author.id] = Date.now + 60;
         }
     }
 });
