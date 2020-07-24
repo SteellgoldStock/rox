@@ -27,9 +27,10 @@ client.on("message", message => {
         if(cooldown.has(message.author.id + " - " + message.guild.id)) return ;
 
         else{
+            if(message.content.startsWith(db["prefix"]))
             cooldown.add(message.author.id + " - " + message.guild.id);
             setTimeout(() => {cooldown.delete(message.author.id + " - " + message.guild.id)}, 20000);
-            dbXp[message.author.id].xp++;
+            dbXp[message.author.id].xp + 2;
             let userInfo = dbXp[message.author.id];
 
             if(userInfo.xp >= db["xpByLevel"]) {
