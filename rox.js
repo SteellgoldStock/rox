@@ -13,6 +13,7 @@ exports.client.on('ready', () => {
     loadCommand("./commands/xp/")
     loadCommand("./commands/team/")
     loadCommand("./commands/xp/admin/")
+    loadCommand("./commands/mod/")
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
