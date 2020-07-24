@@ -20,7 +20,7 @@ client.on("message", message => {
         // NON-EXIST
         if (!dbXp[message.author.id]) dbXp[message.author.id] = {
             xp: 0,
-            level: 0,
+            level: 1,
             time: Date.now()
         };
      
@@ -37,9 +37,7 @@ async function executeCode(dbXp, message, db, dbU) {
     if(!dbU.includes(message.author.id)){ return; }
     if(dbU[message.author.id].gold == true && db["gold"] == true){
         dbXp[message.author.id].xp + 10;
-    }else if(dbU[message.author.id].gold == true && db["gold"] == false){
-        dbXp[message.author.id].xp + 5;
-    }else if(dbU[message.author.id].gold == false && db["gold"] == true){
+    }else if((dbU[message.author.id].gold == true && db["gold"] == false) || (dbU[message.author.id].gold == false && db["gold"] == true)){
         dbXp[message.author.id].xp + 5;
     }else{
         dbXp[message.author.id].xp + 2;
