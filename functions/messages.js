@@ -18,6 +18,8 @@ exports.sendMsg = async(message, id,text, guildName) => {
     .setDescription(text)
     .setThumbnail(getImg(db))
     .setColor("#b38a5d")
+    .setTimestamp()
+    .setFooter(client.username, client.avatarURL);
 
     return message.channel.send(embed);
 }
@@ -39,6 +41,9 @@ exports.sendEvMsg = async(channel, id,text, guildName) => {
         .setDescription(text)
         .setThumbnail(getImg(db))
         .setColor("#b38a5d")
+        .setTimestamp()
+        .setFooter(client.username, client.avatarURL);
+
 
     return channel.send(embed);
 }
@@ -75,6 +80,9 @@ exports.sendCCTags = async(channel, id, lang) => {
             "`{usersoff}`:" + lang("USERS_OFFLINE") + "\n" +
             "`{sayMessage}`:" + lang("SAY_MESSAGE"))
         .setColor("#b38a5d")
+        .setTimestamp()
+        .setFooter(client.username, client.avatarURL);
+
 
     return channel.send(embed);
 }
@@ -90,6 +98,9 @@ exports.sendJQTags = async(channel, id, lang) => {
             "`{userson}`:" + lang("USERS_ONLINE") + "\n" +
             "`{usersoff}`:" + lang("USERS_OFFLINE"))
         .setColor("#b38a5d")
+        .setTimestamp()
+        .setFooter(client.username, client.avatarURL);
+
 
     return channel.send(embed);
 }
