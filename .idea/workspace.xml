@@ -21,16 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/AutoRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/AutoRole.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/admin/CustomCommandManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/CustomCommandManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/EmbedMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/EmbedMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/admin/JoinQuit.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/JoinQuit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Lang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Prefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/RoleConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/RoleConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/ServerName.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/ServerName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/ccommands/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/CustomCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/CustomCommand.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/messages.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595600322295</updated>
-      <workItem from="1595600326120" duration="2001000" />
+      <workItem from="1595600326120" duration="3439000" />
     </task>
     <servers />
   </component>

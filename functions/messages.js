@@ -63,13 +63,32 @@ function getImg(db) {
     }
 }
 
-exports.sendTags = async(channel, id, lang) => {
+exports.sendCCTags = async(channel, id, lang) => {
     let embed = new Discord.MessageEmbed()
-        .setTitle("Tags")
         .addField("Custom Commands - Tags",
             "`{mention}`:" + lang("MENTION") + "\n" +
-            "`{username}`:" + lang("MENTION"))
-        .setThumbnail(getImg(db))
+            "`{username}`:" + lang("USERNAME") + "\n" +
+            "`{userid}`:" + lang("USER_ID") + "\n" +
+            "`{servername}`:" + lang("SERVER_NAME") + "\n" +
+            "`{users}`:" + lang("USERS") + "\n" +
+            "`{userson}`:" + lang("USERS_ONLINE") + "\n" +
+            "`{usersoff}`:" + lang("USERS_OFFLINE") + "\n" +
+            "`{sayMessage}`:" + lang("SAY_MESSAGE"))
+        .setColor("#b38a5d")
+
+    return channel.send(embed);
+}
+
+exports.sendJQTags = async(channel, id, lang) => {
+    let embed = new Discord.MessageEmbed()
+        .addField("Join & Quit - Tags",
+            "`{mention}`:" + lang("MENTION") + "\n" +
+            "`{username}`:" + lang("USERNAME") + "\n" +
+            "`{userid}`:" + lang("USER_ID") + "\n" +
+            "`{servername}`:" + lang("SERVER_NAME") + "\n" +
+            "`{users}`:" + lang("USERS") + "\n" +
+            "`{userson}`:" + lang("USERS_ONLINE") + "\n" +
+            "`{usersoff}`:" + lang("USERS_OFFLINE"))
         .setColor("#b38a5d")
 
     return channel.send(embed);

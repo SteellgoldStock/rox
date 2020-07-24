@@ -28,6 +28,8 @@ client.on('message',message => {
                         '{username}': message.author.username,
                         '{sayMessage}': args.slice(1).join(" "),
                         '{users}': message.guild.memberCount,
+                        '{userson}': message.guild.memberCount.online,
+                        '{usersoff}': message.guild.memberCount.offline,
                     }))
             } else {
 

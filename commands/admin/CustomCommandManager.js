@@ -8,10 +8,13 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
     if(!args[0]){ return await messages.sendMsg(message,message.guild.id,language("CC_ARGUMENTS",db["prefix"]),message.guild.name); }
 
-    const actions = ["add","del","update"];
+    const actions = ["add","del","update","tags"];
     if(!actions.includes(args[0])){ return await messages.sendMsg(message,message.guild.id,language("CC_ARGUMENTS",db["prefix"]),message.guild.name); }
 
     switch (args[0]) {
+        case "tags":
+            return await messages.sendCCTags(message.channel,message.guild.id,language)
+            break;
         case "add":
             if(!args[1]){ return await messages.sendMsg(message,message.guild.id,language("CC_ARGUMENTS",db["prefix"]),message.guild.name); }
             if (Object.keys(dbC).includes(args[1])) {

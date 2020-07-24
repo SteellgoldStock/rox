@@ -50,13 +50,14 @@ const languageData = {
     CC_ARGUMENTS: (prefix) => `Vous avez oublié l'argument \`type\` voici une aide pour mieux expliquer le fonctionnement de la commande: \`${prefix}custcmds [add/del/update] [command name]\` et \`[message] pour add et update\`, vous pouvez utilisé \`${prefix}custcmds tags\` la commande vous donnera différents tags que vous pourrez placer si vous le shouaitez dans votre message`,
 
     // TAGS
-    MENTION: "The tag mentions the member",
-    USERNAME: "The tags display the name of this member",
-    USER_ID: "The tag displays the id of the member",
-    SERVER_NAME: "The tag display the name",
-    USERS: "The tag displays the number of people on the server",
-    USERS_ONLINE: "the tag displays the number of people online on the discord",
-    USERS_OFFLINE: "the tag displays the number of people offline on the discord",
+    MENTION: "Le tag mentionne le membre",
+    USERNAME: "Le tag affiche le nom de ce membre",
+    USER_ID: "Le tag affiche l'id du membre",
+    SERVER_NAME: "Le tag affiche affiche le nom du serveur",
+    USERS: "le tag affiche le nombre de personnes sur le serveur",
+    USERS_ONLINE: "le tag affiche le nombre de personnes en ligne sur la discorde",
+    USERS_OFFLINE: "le tag affiche le nombre de personnes hors ligne sur la discorde",
+    SAY_MESSAGE: "Il affiche le message que le joueur met après la commande"
 };
 
 const translate = (key, ...args) => {

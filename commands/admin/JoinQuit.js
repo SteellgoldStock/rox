@@ -8,9 +8,12 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
     let event = args[0];
 
-    if(!["join","quit"].includes(args[0])){ return await messages.sendMsg(message,message.guild.id,language("JQ_ARGS",db["prefix"]),message.guild.name); }
+    if(!["join","quit","tags"].includes(args[0])){ return await messages.sendMsg(message,message.guild.id,language("JQ_ARGS",db["prefix"]),message.guild.name); }
 
     switch (event) {
+        case "tags":
+            return await messages.sendJQTags(message.channel,message.guild.id,language)
+            break;
         case "join":
             if(!args[1]){ return await messages.sendMsg(message,message.guild.id,language("JQ_ARGS",db["prefix"]),message.guild.name); }
             if(!["channel","msg","status"].includes(args[1])){ return await messages.sendMsg(message,message.guild.id,language("JQ_ARGS",db["prefix"]),message.guild.name); }
