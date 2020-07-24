@@ -20,10 +20,10 @@ client.on("message", message => {
         // NON-EXIST
         if (!dbXp[message.author.id]) dbXp[message.author.id] = {
             xp: 0,
-            level: 1,
+            level: 0,
             time: Date.now()
         };
-     
+
         if(dbXp[message.author.id].time <= Date.now()){
             if(message.channel.name == "spam"){ return; }
             executeCode(dbXp,message,db, dbU);
@@ -34,14 +34,7 @@ client.on("message", message => {
 
 async function executeCode(dbXp, message, db, dbU) {
     time = Date.now() + 5000;
-    if(dbU[message.author.id].gold == true && db["gold"] == true){
-        dbXp[message.author.id].xp + 10;
-    }else if((dbU[message.author.id].gold == true && db["gold"] == false) || (dbU[message.author.id].gold == false && db["gold"] == true)){
-        dbXp[message.author.id].xp + 5;
-    }else{
-        dbXp[message.author.id].xp + 2;
-    }
-
+    dbXp[message.author.id].xp = dbXp[message.author.id].xp + 2;
     dbXp[message.author.id].time = time;
     let userInfo = dbXp[message.author.id];
     let MaxXp = userInfo.level * 150 + userInfo.level * 35
@@ -54,7 +47,7 @@ async function executeCode(dbXp, message, db, dbU) {
             "{username}": message.author.name,
             "{guildName}": message.guild.name,
             "{level}": userInfo.level
-        }))
+        }),message.guild.name)
     }
 
     fs.writeFile("./database/guilds/xp/" + message.guild.id + ".json", JSON.stringify(dbXp), (x) => {
