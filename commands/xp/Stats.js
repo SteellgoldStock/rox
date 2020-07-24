@@ -13,11 +13,17 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     if(!message.guild) return;;
     const key = `${message.guild.id}-${message.author.id}`;
 
+    Canvas.registerFont('font/Heroes.ttf', {"family": "Heroes"})
 
+    if (!dbXp[message.author.id]) dbXp[message.author.id] = {
+        xp: 0,
+        level: 0,
+        time: Date.now()
+    };
 
     try {
             placeholder.set(key, {
-                user: message.author.id, guild: message.guild.id, points: dbXp[message.author.id].xp, level: dbXp[message.author.id].level
+                user: message.author.id, guild: message.guild.id, xp: dbXp[message.author.id].xp, level: dbXp[message.author.id].level
             });
 
             const buffer = await profile(message, placeholder.get(key),dbXp);
@@ -34,7 +40,7 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 async function profile(message) {
     const key = `${message.guild.id}-${message.author.id}`;
     const member = message.member;
-    const {level, points} = placeholder.get(key);
+    const {level, xp} = placeholder.get(key);
 
     try {
         const result = await fetch(member.user.displayAvatarURL({ format: 'jpg' }));
@@ -57,20 +63,24 @@ async function profile(message) {
             .addCircularImage(avatar, 85, 90, 64)
             .save()
             .createBeveledClip(10, 139, 150, 30, 0)
-            .setColor('#494949')
+            .setColor('#404040')
             .fill()
             .restore()
             .setTextAlign('center')
-            .setTextFont('18pt Klavika Regular')
+            .setTextFont('16pt Heroes')
             .setColor('#FFFFFF')
             .addText(name, 285, 54)
             .addText(`Level: ${level}`, 84, 157)
             .setTextAlign('left')
-            .addText(`XP: ${points}`, 241, 136)
+            .addText(`XP: ${kFormatter(xp)}`, 241, 136)
             .toBuffer();
     } catch (error) {
         await messages.sendErrorMsg(message.channel,`${error.message}`);
     }
+}
+
+function kFormatter(num) {
+    return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
 }
 
 exports.help = {
