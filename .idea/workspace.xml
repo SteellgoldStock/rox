@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="test oush">
+    <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/xp/admin/SysXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/admin/SysXp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/xpSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/xpSystem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
@@ -30,125 +19,36 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ezUVxCfTDeF6S9oyBNDOoGcr99" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1f8WhofjZdpRV9MEOSMoqN23Gmg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/events/member" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\lang" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\xp" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\node_modules" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\node_modules" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\nouveau\database" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1f04ed81-c6bd-4e03-8984-cfadba0ac336" name="Default Changelist" comment="" />
-      <created>1595323944193</created>
+      <changelist id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="" />
+      <created>1595600322295</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1595323944193</updated>
-      <workItem from="1595323954368" duration="944000" />
-      <workItem from="1595325029322" duration="20651000" />
-      <workItem from="1595352437997" duration="639000" />
-      <workItem from="1595357182975" duration="6959000" />
-      <workItem from="1595411395969" duration="25721000" />
-      <workItem from="1595496947096" duration="28687000" />
-      <workItem from="1595542179808" duration="2840000" />
-      <workItem from="1595589814823" duration="950000" />
+      <updated>1595600322295</updated>
+      <workItem from="1595600326120" duration="48000" />
     </task>
-    <task id="LOCAL-00001" summary="test push">
-      <created>1595590342407</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1595590342407</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="test oush" />
-    <option name="LAST_COMMIT_MESSAGE" value="test oush" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595339578450">
-      <screen x="0" y="0" width="1600" height="870" />
-    </state>
-    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595339578450" />
-    <state x="23" y="289" key="FileDocumentManager.FileCacheConflict" timestamp="1595517832468">
-      <screen x="0" y="0" width="1600" height="870" />
-    </state>
-    <state x="23" y="289" key="FileDocumentManager.FileCacheConflict/0.0.1600.870@0.0.1600.870" timestamp="1595517832468" />
-    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595590600677">
-      <screen x="0" y="0" width="1600" height="870" />
-    </state>
-    <state x="609" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.870@0.0.1600.870" timestamp="1595590600677" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1595522955351">
-      <screen x="0" y="0" width="1600" height="870" />
-    </state>
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595522955351" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595421204070">
-      <screen x="0" y="0" width="1600" height="870" />
-    </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1595421204070" />
   </component>
 </project>

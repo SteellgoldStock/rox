@@ -19,34 +19,35 @@ client.on("message", message => {
         // NON-EXIST
         if (!dbXp[message.author.id]) dbXp[message.author.id] = {
             xp: 0,
-            level: 0
+            level: 0,
+            time: Date.now()
         };
-
-        let cooldown = new Set();
-        if (cooldown.has(message.author.id + " - " + message.guild.id)) {
-            return;
-        }else{
-            if(message.content.startsWith(db["prefix"])) return;
-            cooldown.add(message.author.id + " - " + message.guild.id);
-            setTimeout(() => {cooldown.delete(message.author.id + " - " + message.guild.id)}, 20000);
-            dbXp[message.author.id].xp + 2;
-            let userInfo = dbXp[message.author.id];
-
-            if(userInfo.xp >= db["xpByLevel"]) {
-                userInfo.level++
-                userInfo.xp = 0
-                messages.sendMsg(message,message.guild.id,db["levelUpMsg"].allReplace({
-                    "{mention}": "<@" + message.author.id + ">",
-                    "{username}": message.author.name,
-                    "{guildName}": message.guild.name,
-                    "{level}": userInfo.level
-                }))
-            }
-
-            fs.writeFile("./database/guilds/xp/" + message.guild.id + ".json", JSON.stringify(dbXp), (x) => {
-                if (x) console.error(x)
-            });
-
+     
+        if(dbXp[message.author.id].time <= Date.now()){
+            executeCode(dbXp,message,db);
         }
+
     }
 });
+
+async function executeCode(dbXp, message, db) {
+    time = Date.now() + 5000;
+    dbXp[message.author.id].xp++;
+    dbXp[message.author.id].time = time;
+    let userInfo = dbXp[message.author.id];
+
+    if (userInfo.xp >= db["xpByLevel"]) {
+        userInfo.level++
+        userInfo.xp = 0
+        messages.sendMsg(message, message.guild.id, db["levelUpMsg"].allReplace({
+            "{mention}": "<@" + message.author.id + ">",
+            "{username}": message.author.name,
+            "{guildName}": message.guild.name,
+            "{level}": userInfo.level
+        }))
+    }
+
+    fs.writeFile("./database/guilds/xp/" + message.guild.id + ".json", JSON.stringify(dbXp), (x) => {
+        if (x) console.error(x)
+    });
+}

@@ -36,5 +36,5 @@ exports.client.on('ready', () => {
 })
 
 exports.client.login(exports.botConfg.token).then(
-    console.log(exports.colors.blue("(INFO) Rox Bot is connected to Discord"))
+    console.log(exports.colors.blue(Date.now() + " (INFO) Rox Bot is connected to Discord"))
 );

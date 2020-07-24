@@ -9,7 +9,6 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     let type = args[0];
     let value = args[1];
 
-    console.log(type);
     if (!type) {
         return await messages.sendMsg(message, message.guild.id, language("XP_TYPE_HELP", db["prefix"]), message.guild.name)
     }
