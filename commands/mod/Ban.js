@@ -23,11 +23,6 @@ return messages.sendMsg(message,message.guild.id,language("BANNED", banned.usern
 
 }
 
-let reasonV = args.slice(1,100);
-
-message.guild.member(banned).ban(reason);
-return messages.sendMsg(message,message.guild.id,language("BANNED", banned.username),message.guild.name);
-
 }
 
 exports.help = {
