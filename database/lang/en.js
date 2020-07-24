@@ -46,6 +46,12 @@ const languageData = {
     CC_ADD: (command) => `You have added the command \`${command}\``,
     CC_DELETED: (command) => `You have deleted the command \`${command}\``,
 
+    // Mod MSG
+    BANNED: (username) => `You are ban ${username} with success`,
+    KICKED: (username) => `You are kick ${username} with success`,
+    MUTED: (username) => `You are mute ${username} forever with success`,
+    TMUTED: (username) => `You are tempmute ${username} for ${time} with success`,
+
     // CUSTOM COMMANDS
     CC_ARGUMENTS: (prefix) => `You forgot the argument \`type\` here is a help to better explain how to command works: \`${prefix}custcmds [add/del/update] [command name]\` and \`[message] for add & update\`, you can use use \`${prefix}custcmds tags\` the command will give you different tags that you can place if you shouaitez it in your message`,
 
