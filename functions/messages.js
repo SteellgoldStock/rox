@@ -62,3 +62,15 @@ function getImg(db) {
         return db["embedImg"];
     }
 }
+
+exports.sendTags = async(channel, id, lang) => {
+    let embed = new Discord.MessageEmbed()
+        .setTitle("Tags")
+        .addField("Custom Commands - Tags",
+            "`{mention}`:" + lang("MENTION") + "\n" +
+            "`{username}`:" + lang("MENTION"))
+        .setThumbnail(getImg(db))
+        .setColor("#b38a5d")
+
+    return channel.send(embed);
+}

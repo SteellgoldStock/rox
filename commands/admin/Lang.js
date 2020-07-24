@@ -20,5 +20,5 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
 exports.help = {
     name: "lang",
-    type: "manage"
+    type: "admin"
 }

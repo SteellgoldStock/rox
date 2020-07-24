@@ -100,5 +100,5 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
 exports.help = {
     name: "jqconf",
-    type: "fun"
+    type: "admin"
 }

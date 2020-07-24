@@ -69,5 +69,5 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
 
 exports.help = {
     name: "embedconf",
-    type: "fun"
+    type: "admin"
 }
