@@ -5,8 +5,9 @@ exports.client = new Discord.Client();
 exports.botConfg = require("./config/client/config.json");
 exports.messages = require("./functions/messages");
 exports.client.commands = new Discord.Collection();
+const mysql = require('mysql');
 
-exports.client.on('ready', () => {
+/** exports.client.on('ready', () => {
     loadCommand("./commands/")
     loadCommand("./commands/admin/")
     loadCommand("./commands/gold/")
@@ -34,8 +35,22 @@ exports.client.on('ready', () => {
     }
 
     require('./events/listener/eventsRegister');
-})
+}) **/
 
-exports.client.login(exports.botConfg.token).then(
-    console.log(exports.colors.blue(Date.now() + " (INFO) Rox Bot is connected to Discord"))
-);
+exports.database = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'rox',
+    password : 'NAYT/x76(|5m;4nvw7E;',
+    database : 'rox'
+});
+
+exports.database.connect(function(err) {
+    if (err) {
+        console.error('Error in the connection: ' + err.stack);
+        return;
+    }
+
+    console.log('Connected to the Rox Database with id :  ' + exports.database.threadId);
+});
+
+exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxIcqg.Q_H6caapjiGjo-zoxYbq6vMstKU");
