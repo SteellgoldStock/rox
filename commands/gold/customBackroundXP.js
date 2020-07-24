@@ -7,6 +7,9 @@ module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC
     if(!user.prenium == true) return await messages.sendMsg(message,message.guild.id,language("NOT_PRENIUM"),message.guild.name);
 
     dbu[message.author.id].background = args;
+    fs.writeFileSync("database/users/users.json", JSON.stringify(dbu), "utf-8");
+    return await messages.sendMsg(message,message.guild.id,language("ACTIVED_SERVER",message.guild.name,db["prefix"]),message.guild.name)
+}
 
 }
 
