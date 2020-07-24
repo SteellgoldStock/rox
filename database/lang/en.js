@@ -3,7 +3,7 @@ const languageData = {
     MENTION_BOT: (prefix, username) => `Grrr ${username}, if you want to pet me do \`${prefix}rub\` if you want to know what I'm capable of, execute the command. \`${prefix}help\``,
 
     // ERROR MSG
-    LANG_LIST: "Here is the list of avaible langs: `fr`, `en`,`es`,`jp`,`it`,`troll`",
+    LANG_LIST: "Here is the list of avaible langs: `fr`, `en`,`es``",
     NOT_GUILD: `Sorry, you can't use commands in privates messages`,
     NOT_PRENIUM_GUILD: `Sorry, this guild doesn't have a prenium`,
     PERMISSION_DENIED: `You do not have permission to use this command, ask someone higher up than you to help you`,

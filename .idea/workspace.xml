@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/canvas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/admin/SysXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/admin/SysXp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/base/733724420056547338.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/guilds/xp/733724420056547338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rox.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/xpSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/xpSystem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/es.disable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/it.disable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/jp.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/jp.disable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/troll.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/troll.disable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -44,11 +62,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595600322295</updated>
-      <workItem from="1595600326120" duration="48000" />
+      <workItem from="1595600326120" duration="393000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
