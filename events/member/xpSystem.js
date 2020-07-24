@@ -34,7 +34,6 @@ client.on("message", message => {
 
 async function executeCode(dbXp, message, db, dbU) {
     time = Date.now() + 5000;
-    if(!dbU.includes(message.author.id)){ return; }
     if(dbU[message.author.id].gold == true && db["gold"] == true){
         dbXp[message.author.id].xp + 10;
     }else if((dbU[message.author.id].gold == true && db["gold"] == false) || (dbU[message.author.id].gold == false && db["gold"] == true)){
