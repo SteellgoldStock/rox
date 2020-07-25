@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const {colors, client, fs, botConfg, database} = require('./../../rox')
 
 client.on('guildCreate',(guild) =>{
-    const list = client.guilds.cache.get(guild.id);
 
+    /** SERVER **/
     var postServer  = {
         name: guild.name,
         lang: "en",
@@ -34,13 +34,14 @@ client.on('guildCreate',(guild) =>{
         countCC: 0,
         limitCC: 15
     };
-
-
     
     database.query('INSERT INTO servers SET ?', postServer, function (error, results, fields) {
         if (error) throw error;
     });
 
+    /** USERS XP BY SERVER **/
+
+    const list = client.guilds.cache.get(guild.id);
     list.members.cache.forEach(member => exports.id = member.id);
 
     var postXp  = {

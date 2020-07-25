@@ -22,7 +22,6 @@
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595600322295</updated>
       <workItem from="1595600326120" duration="22213000" />
-      <workItem from="1595672938566" duration="6374000" />
+      <workItem from="1595672938566" duration="6466000" />
     </task>
     <servers />
   </component>
