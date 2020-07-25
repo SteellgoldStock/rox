@@ -2,7 +2,9 @@ const Discord = require('discord.js');
 const {colors, client, fs, botConfg, database} = require('./../../rox')
 
 client.on('guildCreate',(guild) =>{
-    var post  = {
+    const list = client.guilds.cache.get(guild.id);
+
+    var postServer  = {
         name: guild.name,
         lang: "en",
         prefix: "!",
@@ -10,17 +12,13 @@ client.on('guildCreate',(guild) =>{
         isBeta: 0,
 
         // CONFIG - QUIT & JOIN
-        joinMsg: 0,
-        quitMsg: 0,
         joinText: "Welcome to {mention} in {servername}",
         quitText: "No.. {username} has leaved {servername}",
-        joinChannel: "none",
-        quitChannel: "none",
+        announceChannel: "none",
 
         // CONFIG - ROLES
         adminRole: "none",
         modRole: "none",
-        autoRole: 0,
         autoRoleName: "none",
 
         // CONFIG - EMBED ( GOLD SERVER )
@@ -30,7 +28,6 @@ client.on('guildCreate',(guild) =>{
 
         // CONFIG - XP SYSTEM
         sysXp: 0,
-        sysLogsChannel: "none",
         levelUpMsg: "Well done soldier, you've passed level {level}",
 
         // CONFIG - CUSTOM CMDS
@@ -38,8 +35,23 @@ client.on('guildCreate',(guild) =>{
         limitCC: 15
     };
 
-    var query = database.query('INSERT INTO servers SET ?', post, function (error, results, fields) {
+
+    
+    database.query('INSERT INTO servers SET ?', postServer, function (error, results, fields) {
         if (error) throw error;
     });
-    console.log(query.sql);
+
+    list.members.cache.forEach(member => exports.id = member.id);
+
+    var postXp  = {
+        guildid: guild.id,
+        userid: exports.id,
+        xp: 0,
+        level: 1
+    };
+
+    database.query('INSERT INTO xp_system SET ?', postXp, function (error, results, fields) {
+        if (error) throw error;
+    });
+
 })

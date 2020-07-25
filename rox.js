@@ -40,14 +40,7 @@ exports.database = mysql.createConnection({
     host     : 'localhost',
     user     : 'rox',
     password : 'NAYT/x76(|5m;4nvw7E;',
-    database : 'rox_servers'
-});
-
-exports.databaseServers = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'rox',
-    password : 'NAYT/x76(|5m;4nvw7E;',
-    database : 'rox_xp_servers'
+    database : 'rox'
 });
 
 require('./events/listener/eventsRegister');
