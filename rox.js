@@ -13,10 +13,31 @@ exports.database = mysql.createConnection({
     database : 'rox'
 });
 
-require('./events/listener/eventsRegister');
 exports.database.connect(function(err) {
     if (err) { return console.error('Error in the connection: ' + err.stack); }
     console.log(exports.colors.green('Connected to the Rox Database with id :  ' + exports.database.threadId));
 });
+
+exports.client.on('ready', () => {
+    function loadCommand(path)  {
+        exports.fs.readdir(path, (err, files) => {
+            if (err) console.log(err);
+
+            let jsfile = files.filter(f => f.split(".").pop() === "js")
+            if (jsfile.length <= 0) {
+                console.log(exports.colors.red("(ERR) No commands found in " + path));
+                return;
+            }
+
+            jsfile.forEach((f, i) => {
+                let props = require(`${path}${f}`);
+                console.log(exports.colors.green("(OK) Command " + exports.colors.gray(f) + " in " + exports.colors.gray(path) +" has been loaded"));
+                exports.client.commands.set(props.help.name, props);
+            });
+        });
+    }
+
+    require('./events/listener/eventsRegister');
+})
 
 exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxIcqg.Q_H6caapjiGjo-zoxYbq6vMstKU");

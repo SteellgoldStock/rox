@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const {colors, client, fs, botConfg, database} = require('./../../rox')
+const {colors, client, fs, database} = require('./../../rox')
 
 client.on('guildCreate',(guild) => {
     client.guilds.cache.get("733724420056547338").channels.cache.get("736586588783640636").send("Nouveau serveur: **" + guild.name + "**");
