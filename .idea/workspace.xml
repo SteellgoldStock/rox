@@ -22,6 +22,7 @@
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/font" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/functions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,11 +55,12 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -72,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1595600322295</updated>
       <workItem from="1595600326120" duration="22213000" />
-      <workItem from="1595672938566" duration="6466000" />
+      <workItem from="1595672938566" duration="13571000" />
     </task>
     <servers />
   </component>
@@ -92,6 +94,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595691357012">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595691357011" />
     <state x="301" y="79" key="SettingsEditor" timestamp="1595681824275">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -100,9 +106,9 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595682750846" />
-    <state x="463" y="182" key="search.everywhere.popup" timestamp="1595605403081">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595689572013">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1595605403081" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1595689572013" />
   </component>
 </project>
