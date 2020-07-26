@@ -20,16 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settings/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Prefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/messages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +87,7 @@
       <updated>1595600322295</updated>
       <workItem from="1595600326120" duration="22213000" />
       <workItem from="1595672938566" duration="21245000" />
-      <workItem from="1595775541663" duration="13741000" />
+      <workItem from="1595775541663" duration="13992000" />
     </task>
     <servers />
   </component>
