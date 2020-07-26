@@ -1,31 +1,33 @@
-const { client, colors, botConfg, fs, messages, database,dataGet} = require("../../rox");
+const { client, colors, botConfg, fs, database,dataGet} = require("../../rox");
 
 client.on("message", message => {
     if (!message.guild) return;
 
-    let sql = `SELECT * FROM servers`;
+    let sql = `SELECT * FROM servers WHERE guildid = ${message.guild.id}`;
     database.query(sql, (error, results, fields) => {
         if (error) {
             return console.error(error.message);
         }
 
-        exports.prefix = results[0].prefix;
-        exports.dataServer = results[0];
-        console.log(exports.prefix)
+        const prefix = results[0].prefix
+        const dataServer = results[0];
+
+        const language = require('../../database/lang/' + dataServer.lang)
+
+        if (message.content.indexOf(prefix) !== 0) return;
+
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+
+        const cmd = client.commands.get(command);
+        if (!cmd) return;
+
+        switch (cmd.help.type)
+        {
+            default:
+                cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                break;
+        }
+
     });
-
-    if (message.content.indexOf(exports.prefix) !== 0) return;
-
-    const args = message.content.slice(exports.prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-
-    const cmd = client.commands.get(command);
-    if (!cmd) return;
-
-    switch (cmd.help.type)
-    {
-        default:
-            cmd.run(client, message, args, fs, colors, database, exports.dataServer);
-            break;
-    }
 });
