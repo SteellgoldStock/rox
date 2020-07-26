@@ -20,21 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/users/backgrounds/504392983244832780.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/refonte/Leaderboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/refonte/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/client/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/client/emojis.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Prefix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/settings/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Prefix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/listener/eventsRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/listener/eventsRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/Bubblegum.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/Chunck.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/Whitney.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/refonte/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/refonte/Stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/messages.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,17 +47,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1f8WhofjZdpRV9MEOSMoqN23Gmg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/events/member" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/lang" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,14 +73,15 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\lang" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -96,7 +95,8 @@
       <option name="presentableId" value="Default" />
       <updated>1595600322295</updated>
       <workItem from="1595600326120" duration="22213000" />
-      <workItem from="1595672938566" duration="21180000" />
+      <workItem from="1595672938566" duration="21245000" />
+      <workItem from="1595775541663" duration="13741000" />
     </task>
     <servers />
   </component>
@@ -115,10 +115,14 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595713956367">
+    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595784915186">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
+    <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595784915186" />
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595713956367" />
     <state x="301" y="79" key="SettingsEditor" timestamp="1595681824275">
       <screen x="0" y="0" width="1600" height="870" />
