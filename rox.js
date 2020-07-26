@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 exports.fs = require('fs');
 exports.colors = require("colors");
 exports.client = new Discord.Client();
-exports.messages = require("./functions/messages");
+exports.msg = require("./functions/msg");
 exports.client.commands = new Discord.Collection();
 const mysql = require('mysql');
 
@@ -19,6 +19,9 @@ exports.database.connect(function(err) {
 });
 
 exports.client.on('ready', () => {
+    loadCommand('./commands/basic/');
+    loadCommand('./commands/settings/');
+
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
             if (err) console.log(err);
