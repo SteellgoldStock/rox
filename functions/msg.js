@@ -7,3 +7,7 @@ exports.sendMsg = async(text, message, dataServer = null) => {
 
     message.channel.send(language(text));
 }
+
+exports.sendMsgA = async(text, message, dataServer = null) => {
+    message.channel.send(text);
+}
