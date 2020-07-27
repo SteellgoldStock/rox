@@ -3,20 +3,13 @@ const { client, botConfg, fs, colors,messages} = require("../../rox");
 
 const { Canvas } = require('canvas-constructor');
 const { MessageAttachment } = require('discord.js');
-const { resolve, join } = require('path');
 const fetch = require('node-fetch');
-const fsn = require('fs-nextra');
-const { Image } = require('image-js');
 var path = require('path');
-
-const imageUrlRegex = /\?size=2048$/g;
-const placeholder = new Map();
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
 
     Canvas.registerFont('font/Heroes.ttf', {"family": "Heroes"})
-    Canvas.registerFont('font/Reality.otf', {"family": "Reality"})
 
     let sql = `SELECT * FROM goldUsers WHERE userid = ${message.author.id}`;
     database.query(sql, function (error, results, fields) {
@@ -53,6 +46,7 @@ async function profile(message, database) {
         } else if (results.length > 0) {
             exports.level = results[0].level;
             exports.xp = results[0].xp;
+            exports.maxXp = results[0].level * 150 + results[0].level * 35;
         } else {
 
         }
@@ -85,7 +79,7 @@ async function profile(message, database) {
         .setTextFont('16pt Heroes')
         .setColor('#FFFFFF')
         .addText(name, 285, 54)
-        .addText(`LEVEL: ${exports.level}`, 84, 157)
+        .addText(`Level: ${exports.level}`, 84, 157)
         .setTextAlign('left')
         .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
         .toBuffer();
@@ -99,6 +93,7 @@ async function profileGold(message, database) {
         } else if (results.length > 0) {
             exports.level = results[0].level;
             exports.xp = results[0].xp;
+            exports.maxXp = results[0].level * 150 + results[0].level * 35;
         } else {
 
         }
@@ -130,7 +125,7 @@ async function profileGold(message, database) {
         .setTextFont('16pt Heroes')
         .setColor('#FFFFFF')
         .addText(name, 285, 54)
-        .addText(`LEVEL: ${exports.level}`, 84, 157)
+        .addText(`Level: ${exports.level}`, 84, 157)
         .setTextAlign('left')
         .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
         .toBuffer();

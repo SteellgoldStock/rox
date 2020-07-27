@@ -20,16 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/504392983244832780.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/gold/Background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/onJoin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/onLeave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/font/Epilogue.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/font/Murden.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/font/Rollenzo.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/504392983244832780.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users/backgrounds/504392983244832780.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/users/backgrounds/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/messageXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageXp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -63,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/gold" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/events/member" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,10 +77,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\settings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

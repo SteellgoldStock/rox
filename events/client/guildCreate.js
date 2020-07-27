@@ -27,7 +27,7 @@ client.on('guildCreate',(guild) => {
                 // CONFIG - ROLES
                 adminRole: "none",
                 modRole: "none",
-                autoRoleName: "none",
+                autoRole: "none",
 
                 // CONFIG - EMBED ( GOLD SERVER )
                 msgEmbed: 0,

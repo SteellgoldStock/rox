@@ -26,29 +26,24 @@ client.on("message", message => {
                 }
 
                 let MaxXp = resultsXp[0].level * 150 + resultsXp[0].level * 35
+                console.log(MaxXp)
 
                 if (resultsXp[0].xp >= MaxXp) {
-                    messages.sendMsg(message, message.guild.id, results[0].levelUpMsg.allReplace({
+                    const toAddLvl = resultsXp[0].level;
+                    let sqladdlvl = `UPDATE servers_xp SET level=${toAddLvl} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                    database.query(sqladdlvl);
+
+                    msg.sendMsgA(results[0].levelUpMsg.allReplace({
                         "{mention}": "<@" + message.author.id + ">",
                         "{username}": message.author.name,
                         "{guildName}": message.guild.name,
-                        "{level}": userInfo.level
-                    }),message.guild.name)
+                        "{level}": resultsXp[0].level
+                    }),message)
                 }
 
-                let time = [];
-                
-                if(time[message.author.id]) return time[message.author.id] = Date.now();
-                
-                if(time[message.author.id] <= Date.now()){
-                
-                    const toAdd = resultsXp[0].xp;
-                    let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
-                    database.query(sqladd);
-                    
-                    time[message.author.id] = Date.now() + 5000;
-                    
-                }      
+                const toAdd = resultsXp[0].xp;
+                let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                database.query(sqladd);
             });
         }
     });
