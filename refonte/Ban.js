@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const { client, botConfg, fs, colors,messages} = require("../rox");
 
-module.exports.run = async (client, message, args, fs, botConfg, colors, db, dbC, dbXp, language) => {
-    if (!message.member.roles.cache.find(r => r.name === db["adminRole"]) || !message.member.roles.cache.find(r => r.name === db["modRole"])) {
-        return await messages.sendMsg(message, message.guild.id, language("PERMISSION_DENIED"), message.guild.name);
+module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
+    if (!message.member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)) {
+        return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
 
     const user = message.mentions.users.first();
