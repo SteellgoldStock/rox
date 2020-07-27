@@ -22,6 +22,7 @@ exports.client.on('ready', () => {
     loadCommand('./commands/basic/');
     loadCommand('./commands/settings/');
     loadCommand('./commands/xp/');
+    loadCommand('./commands/mod/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
