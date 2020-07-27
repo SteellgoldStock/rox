@@ -5,6 +5,7 @@ const languageData = {
     MAXIMUM_VALUE: "You cannot use more than 3 characters, symbols, or letters in your prefix, exemple `rox!` is not allowed, but `r!` is allowed, and you can again add 1 character",
     HELP_UNKNOW_COMMAND: (command) => `The command command \`!${command}\` not exist`,
     LANG_NOT_FOUND: (lang, langs) => "The lang `" + lang + "` not found please, set a valid lang " + langs,
+    NOT_YOURSELF: "You can't ban yourself",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
@@ -23,14 +24,12 @@ const languageData = {
     /** BAN **/
     SUCCESS_BAN: (user, reason) => `You are success ban ${user} for ${reason}`,
     BAN_IMPOSSIBLE: "You can't ban",
-    NOT_YOU: "You can't ban yourself",
     BAN_NO_USER: "The user is Not valid",
     
     /** KICK **/
     SUCCESS_KICK: (user, reason) => `You are success kick ${user} for ${reason}`,
     KICK_IMPOSSIBLE: "You can't kick",
-    NOT_YOU: "You can't kick yourself",
-    BAN_NO_USER: "The user is Not valid"
+    KICK_NO_USER: "The user is Not valid"
     
 };
 
