@@ -5,6 +5,7 @@ const languageData = {
     MAXIMUM_VALUE: "You cannot use more than 3 characters, symbols, or letters in your prefix, exemple `rox!` is not allowed, but `r!` is allowed, and you can again add 1 character",
     HELP_UNKNOW_COMMAND: (command) => `The command command \`!${command}\` not exist`,
     LANG_NOT_FOUND: (lang, langs) => "The lang `" + lang + "` not found please, set a valid lang " + langs,
+    NOT_YOURSELF: "You can't ban yourself",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
@@ -18,7 +19,18 @@ const languageData = {
     HELP_CC_FIELD: (serverName) => "Customs Command (**" + serverName + "**)",
     HELP_GOLD_USER_FIELD: "Gold User benefits",
     HELP_GOLD_SERVER_FIELD: "Gold Server benefits",
-    HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> To help you better you can use the \`${prefix}help [command]\` to get the uses, arguments, description all that can help you to use the bot`
+    HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> To help you better you can use the \`${prefix}help [command]\` to get the uses, arguments, description all that can help you to use the bot`,
+    
+    /** BAN **/
+    SUCCESS_BAN: (user, reason) => `You are success ban ${user} for ${reason}`,
+    BAN_IMPOSSIBLE: "You can't ban",
+    BAN_NO_USER: "The user is Not valid",
+    
+    /** KICK **/
+    SUCCESS_KICK: (user, reason) => `You are success kick ${user} for ${reason}`,
+    KICK_IMPOSSIBLE: "You can't kick",
+    KICK_NO_USER: "The user is Not valid"
+    
 };
 
 const translate = (key, ...args) => {
