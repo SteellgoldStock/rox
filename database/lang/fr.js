@@ -5,6 +5,7 @@ const languageData = {
     MAXIMUM_VALUE: "Vous ne pouvez pas utiliser plus de 3 caractères, symboles ou lettres dans votre prefix, par exemple `rox!` n'est pas autorisé, par contre `r!` est autorisé, et vous pouvez ajouter encore 1 caractère",
     HELP_UNKNOW_COMMAND: (command) => `La commande \`!${command}\` n'existe pas`,
     LANG_NOT_FOUND: (lang, langs) => "La langue `" + lang + "` n'a pas été trouvé s'il vous plaît, définissez une langue valide " + langs,
+    NOT_YOURSELF: "Tu ne peux pas te ban",
 
     /** SUCCESS **/
     UPDATED: "Vos modifications ont été enregistrées",
@@ -14,7 +15,7 @@ const languageData = {
     HELP_MOD_FIELD: "Commande de modérateurs",
     HELP_FUN_FIELD: "Commandes fun",
     HELP_XP_FIELD: "Système d'XP",
-        HELP_BASIC_FIELD: "Commandes essentiels",
+    HELP_BASIC_FIELD: "Commandes essentiels",
     HELP_CC_FIELD: (serverName) => "Commandes personnalisées (**" + serverName + "**)",
     HELP_GOLD_USER_FIELD: "Avantages de Gold User",
     HELP_GOLD_SERVER_FIELD: "Avantages de Gold Server",
@@ -23,14 +24,12 @@ const languageData = {
     /** BAN **/
     SUCCESS_BAN: (user, reason) => `Tu as réussi à ban ${user} pour ${reason}`,
     BAN_IMPOSSIBLE: "Tu ne peux pas ban",
-    NOT_YOU: "Tu ne peux pas te ban",
     BAN_NO_USER: "L'utilisateur est invalid",
     
     /** KICK **/
-    SUCCESS_KICK: (user, reason) => `You are success kick ${user} for ${reason}`,
-    KICK_IMPOSSIBLE: "You can't kick",
-    NOT_YOU: "You can't kick yourself",
-    BAN_NO_USER: "The user is Not valid"
+    SUCCESS_KICK: (user, reason) => `Tu as réussi à kick ${user} pour ${reason}`,
+    KICK_IMPOSSIBLE: "Tu ne peux pas kick",
+    KICK_NO_USER: "L'utilisateur est invalid"
     
 };
 
