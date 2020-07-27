@@ -40,8 +40,13 @@ async function profile(message, database) {
 
     const name = member.displayName.length > 30 ? member.displayName.substring(0, 17) + '...'
         : member.displayName;
+    
+    let image = new Image();
+    image.src = `database/users/backgrounds/${message.author.id}.png`;
 
     return new Canvas(400, 180)
+        .getContext('2d')
+        .drawImage(image, 0, 0)
         .setColor('#7289DA')
         .addRect(84, 0, 316, 180)
         .setColor("#2C2F33")
