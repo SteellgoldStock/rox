@@ -22,15 +22,16 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         .ban({
                             reason: reason,
                         })
+
                         .then(() => {
                             var info = {
                                 userid: member.id,
-                                usernameWhenP: member.tag,
+                                usernameWhenP: member.user.username + "#" + member.user.discriminator,
                                 modid: message.author.id,
-                                usernameModWhenP: message.author.tag,
+                                usernameModWhenP: message.author.username + "#" + message.author.discriminator,
                                 guildid: message.guild.id,
                                 guildNameWhenP: message.guild.name,
-                                type: "Ban",
+                                type: "ban",
                                 reason: reason
 
                             };
