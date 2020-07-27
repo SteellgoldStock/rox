@@ -72,5 +72,5 @@ function kFormatter(num) {
 }
 
 exports.help = {
-    name: 'xp',
+    name: 'leaderboard',
 };
