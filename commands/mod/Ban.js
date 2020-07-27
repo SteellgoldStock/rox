@@ -25,7 +25,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         .then(() => {
                             var info = {
                                 userid: member.id,
-                                usernameWhenP: member.tag,
+                                usernameWhenP: member.user.tag,
                                 modid: message.author.id,
                                 usernameModWhenP: message.author.tag,
                                 guildid: message.guild.id,
