@@ -24,6 +24,12 @@ const languageData = {
     SUCCESS_BAN: (user, reason) => `You are success ban ${user} for ${reason}`,
     BAN_IMPOSSIBLE: "You can't ban",
     NOT_YOU: "You can't ban yourself",
+    BAN_NO_USER: "The user is Not valid",
+    
+    /** KICK **/
+    SUCCESS_KICK: (user, reason) => `You are success kick ${user} for ${reason}`,
+    KICK_IMPOSSIBLE: "You can't kick",
+    NOT_YOU: "You can't kick yourself",
     BAN_NO_USER: "The user is Not valid"
     
 };
