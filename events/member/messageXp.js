@@ -36,7 +36,7 @@ client.on("message", message => {
                     }),message.guild.name)
                 }
                 
-                if(time[message.author.id].time =< Date.now()){
+                if(time[message.author.id].time <= Date.now()){
                 
                     const toAdd = resultsXp[0].xp;
                     let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
