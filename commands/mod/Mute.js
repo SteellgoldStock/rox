@@ -18,17 +18,27 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (member) {
             if (member.id !== message.member.id) {
                 if (!member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)) {
-                    member
-                        .kick({
-                            reason: reason,
-                        })
-                        .then(() => {
-                            return msg.sendMsgA(language("SUCCESS_KICK", message.author.username, member.username, reason), message, dataServer)
-                        })
-                        .catch(err => {
-                            msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
-                            return console.error(err);
+                    const role = message.guild.roles.cache.find(role => role.name === 'MUTE');
+                    if(!message.guild.roles.cache.find(role => role.name === 'MUTE')){
+
+                        message.guild.roles.create({data: {name: "MUTE"}});
+
+                        message.guild.channels.forEach(channel =>{
+
+                            channel.updateOverwrite(role, { SEND_MESSAGES: false });
+
                         });
+
+                    }
+                        if(!member.roles.cache.some(role => role.name === 'MUTE')) return msg.sendMsgA(language("ALREADY_MUTE", member.username), message, dataServer)
+                            member.roles.add(role)
+                                .then(() => {
+                                    return msg.sendMsgA(language("SUCCESS_MUTE", message.author.username, member.username, reason), message, dataServer)
+                                })
+                                .catch(err => {
+                                    msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
+                                    return console.error(err);
+                                });
                 } else {
                     return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
                 }
@@ -44,5 +54,5 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 }
 
 exports.help = {
-    name: "kick"
+    name: "mute"
 }

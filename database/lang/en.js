@@ -22,19 +22,19 @@ const languageData = {
     HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> To help you better you can use the \`${prefix}help [command]\` to get the uses, arguments, description all that can help you to use the bot`,
 
     // Moderations commands messages
-    TMUTED: (username) => `You are tempmute ${username} for ${time} with success`,
-    BANNED: (username) => `You have banned ${username} with success`,
-    KICKED: (username) => `You have kick ${username} with success`,
-    MUTED: (username) => `You have muted ${username} forever with success`,
     PUNISH_Y: `You can't punish yourself`,
 
     PU_NO_MENTION: "Please enter a user mention",
     PU_NO_USER: "This user doesn't exist in this guild",
     PU_IMPOSSIBLE: "I cannot punish this user",
-    SUCCESS_BAN: (user, reason, moderator) => `${moderator} has banned ${user} for ${reason}`,
-    SUCCESS_KICK: (user, reason, moderator) => `${moderator} has kick ${user} for ${reason}`,
-    SUCCESS_MUTE: (user, reason, moderator) => `${moderator} has mute ${user} for ${reason}`,
-    SUCCESS_TMUTE: (user, reason, moderator, timem) => `${moderator} has tempmute ${user} for ${reason} while ${timem}`,
+    SUCCESS_BAN: (moderator,user, reason) => `${moderator} has banned ${user} for ${reason}`,
+    SUCCESS_KICK: (moderator,user, reason) => `${moderator} has kick ${user} for ${reason}`,
+    SUCCESS_MUTE: (moderator,user, reason) => `${moderator} has mute ${user} for ${reason}`,
+    SUCCESS_TMUTE: (moderator,user, reason, time) => `${moderator} has tempmute ${user} for ${reason} while ${time}`,
+    SUCCESS_UNMUTE: (moderator,user) => `${moderator} has unmute ${user}`,
+    ALREADY_MUTE: (user) => `${user} is already mute`,
+    NO_TIME: "Argument time is not a number",
+    NO_MUTE: (user) => `${user} is not mute`,
 };
 
 const translate = (key, ...args) => {

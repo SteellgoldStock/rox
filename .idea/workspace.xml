@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/mod/Unmute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Kick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/messageXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageXp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,16 +36,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1f8WhofjZdpRV9MEOSMoqN23Gmg" />
   <component name="ProjectLevelVcsManager">
@@ -94,6 +111,9 @@
       <workItem from="1595775541663" duration="26598000" />
       <workItem from="1595807910789" duration="81000" />
       <workItem from="1595841249667" duration="14895000" />
+      <workItem from="1595861806049" duration="2367000" />
+      <workItem from="1595864682449" duration="87000" />
+      <workItem from="1595865375704" duration="480000" />
     </task>
     <servers />
   </component>
@@ -125,6 +145,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1595681824275" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1595863962020">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1595863962020" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

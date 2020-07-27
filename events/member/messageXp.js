@@ -35,8 +35,8 @@ client.on("message", message => {
                         "{level}": userInfo.level
                     }),message.guild.name)
                 }
-                
-                time = [];
+
+                let time = [];
                 
                 if(time[message.author.id]) return time[message.author.id] = Date.now();
                 

@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const member = message.guild.member(user);
 
         if (member) {
-            if (member.id !== message.member.id) {
+            if (member.id !== message.author.id) {
                 if (!member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)) {
                     member
                         .ban({
@@ -24,6 +24,22 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         })
                         .then(() => {
                             return msg.sendMsgA(language("SUCCESS_BAN", message.author.username,member.username, reason), message, dataServer)
+
+                            var info = {
+                                userid: member.id,
+                                usernameWhenP: member.tag,
+                                modid: message.author.id,
+                                usernameModWhenP: message.author.tag,
+                                guildid: message.guild.id,
+                                guildNameWhenP: message.guild.name,
+                                type: "Ban",
+                                reason: reason
+
+                            };
+
+                            database.query('INSERT INTO mod SET ?', info, function (error, results, fields) {
+                                if (error) throw error;
+                            });
                         })
                         .catch(err => {
                             msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
