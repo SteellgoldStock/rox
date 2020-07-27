@@ -10,6 +10,9 @@ trap finish SIGINT
 
 while (( running )); do
     cd ../
+    rm -rf Rox/
+    mkdir Rox
+    cd Rox
     sudo git clone ROx:UnknowG/Rox.git
     node rox.js
     echo "Restarting server on crash.."
