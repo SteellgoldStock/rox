@@ -9,7 +9,8 @@ finish()
 trap finish SIGINT
 
 while (( running )); do
-    title="Test";
+    cd ../
+    sudo git clone ROx:UnknowG/Rox.git
     node rox.js
     echo "Restarting server on crash.."
     sleep 5
