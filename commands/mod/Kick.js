@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return await msg.sendMsg("PU_NO_USER", message, dataServer);
         }
     } else {
-        return await msg.sendMsg("PU_NO_MENTION", message.guild.name);
+        return await msg.sendMsg("PU_NO_MENTION", message,dataServer);
     }
 }
 
