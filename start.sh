@@ -13,4 +13,3 @@ while (( running )); do
     echo "Restarting server on crash.."
     sleep 5
 done
-# sudo git clone ROx:UnknowG/Rox.git
