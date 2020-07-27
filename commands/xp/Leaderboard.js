@@ -45,7 +45,7 @@ async function profile(message, database) {
         : member.displayName;
 
     return new Canvas(400, 180)
-        .addImage(path.join("database/users/backgrounds/back.png"), 0,0,400,180)
+        .addImage(path.join("database/users/backgrounds/504392983244832780.png"), 0,0,400,180)
         .addRect(84, 0, 316, 180)
         .setColor("#2C2F33")
         .addRect(169, 26, 231, 46)
