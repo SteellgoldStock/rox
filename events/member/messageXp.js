@@ -36,17 +36,17 @@ client.on("message", message => {
                     }),message.guild.name)
                 }
                 
-                if(time[message.author.id].time <= Date.now()){
+                time = [];
+                
+                if(time[message.author.id]) return time[message.author.id] = Date.now();
+                
+                if(time[message.author.id] <= Date.now()){
                 
                     const toAdd = resultsXp[0].xp;
                     let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                     database.query(sqladd);
                     
-                    time[message.author.id] = {
-                    
-                        time: Date.now() + 5000
-                        
-                    };
+                    time[message.author.id] = Date.now() + 5000;
                     
                 }      
             });
