@@ -38,7 +38,6 @@ client.on("message", message => {
 
                 const toAdd = resultsXp[0].xp;
                 let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
-                console.log(sqladd)
                 database.query(sqladd);
             });
         }
