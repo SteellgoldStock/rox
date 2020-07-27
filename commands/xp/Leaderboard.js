@@ -5,6 +5,8 @@ const { Canvas } = require('canvas-constructor');
 const { MessageAttachment } = require('discord.js');
 const { resolve, join } = require('path');
 const fetch = require('node-fetch');
+const fsn = require('fs-nextra');
+const { Image } = require('image-js');
 
 const imageUrlRegex = /\?size=2048$/g;
 const placeholder = new Map();
@@ -38,16 +40,13 @@ async function profile(message, database) {
     if (!result.ok) new Error('Failed to get the avatar!');
     const avatar = await result.buffer();
 
-    const name = member.displayName.length > 30 ? member.displayName.substring(0, 17) + '...'
+    const name = member.displayName.length > 9 ? member.displayName.substring(0, 17) + '...'
         : member.displayName;
-    
-    let image = new Image();
-    image.src = `database/users/backgrounds/${message.author.id}.png`;
+
+    let image = await Image.load('database/users/backgrounds/504392983244832780.png')
 
     return new Canvas(400, 180)
-        .getContext('2d')
-        .drawImage(image, 0, 0)
-        .setColor('#7289DA')
+        .addImage(image, 400,180)
         .addRect(84, 0, 316, 180)
         .setColor("#2C2F33")
         .addRect(169, 26, 231, 46)
