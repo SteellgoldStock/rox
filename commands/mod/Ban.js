@@ -42,7 +42,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             
         } else {
             
-            return await msg.sendMsg("BAN_No_USER", message, dataServer);
+            return await msg.sendMsg("BAN_NO_USER", message, dataServer);
             
         }
     } else {
