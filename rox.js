@@ -21,6 +21,7 @@ exports.database.connect(function(err) {
 exports.client.on('ready', () => {
     loadCommand('./commands/basic/');
     loadCommand('./commands/settings/');
+    loadCommand('./commands/xp/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {

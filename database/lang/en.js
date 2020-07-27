@@ -4,6 +4,7 @@ const languageData = {
     MISSED_ARGUMENTS: "You missed someone's arguments, please try again.",
     MAXIMUM_VALUE: "You cannot use more than 3 characters, symbols, or letters in your prefix, exemple `rox!` is not allowed, but `r!` is allowed, and you can again add 1 character",
     HELP_UNKNOW_COMMAND: (command) => `The command command \`!${command}\` not exist`,
+    LANG_NOT_FOUND: (lang, langs) => "The lang `" + lang + "` not found please, set a valid lang " + langs,
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",

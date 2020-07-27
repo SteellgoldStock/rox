@@ -20,10 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/commands/settings/Lang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/xp/Leaderboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users/backgrounds/504392983244832780.png" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/backgrounds/504392983244832780.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/lang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/settings" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,6 +75,7 @@
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\settings" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\lang" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\functions" />
@@ -90,7 +94,8 @@
       <updated>1595600322295</updated>
       <workItem from="1595600326120" duration="22213000" />
       <workItem from="1595672938566" duration="21245000" />
-      <workItem from="1595775541663" duration="19088000" />
+      <workItem from="1595775541663" duration="26598000" />
+      <workItem from="1595807910789" duration="81000" />
     </task>
     <servers />
   </component>
@@ -126,9 +131,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595682750846" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595689572013">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595807716849">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595807716849" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1595689572013" />
   </component>
 </project>
