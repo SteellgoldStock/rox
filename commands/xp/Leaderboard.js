@@ -7,6 +7,7 @@ const { resolve, join } = require('path');
 const fetch = require('node-fetch');
 const fsn = require('fs-nextra');
 const { Image } = require('image-js');
+var path = require('path');
 
 const imageUrlRegex = /\?size=2048$/g;
 const placeholder = new Map();
@@ -43,10 +44,8 @@ async function profile(message, database) {
     const name = member.displayName.length > 9 ? member.displayName.substring(0, 17) + '...'
         : member.displayName;
 
-    let image = await Image.load('database/users/backgrounds/504392983244832780.png')
-
     return new Canvas(400, 180)
-        .addImage(image, 400,180)
+        .addImage(path.join("database/users/backgrounds/back.png"), 0,0,400,180)
         .addRect(84, 0, 316, 180)
         .setColor("#2C2F33")
         .addRect(169, 26, 231, 46)
