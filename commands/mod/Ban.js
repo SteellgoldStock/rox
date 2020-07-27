@@ -24,6 +24,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 })
                 .then(() => {
                     return msg.sendMsg("SUCCESS_BAN", message, dataServer);
+                        msg.sendMsgA(language("SUCCESS_BAN",member.username, reason),message,dataServer)}
                 })
                 .catch(err => {
                     msg.sendMsg("BAN_IMPOSSIBLE", message, dataServer);
