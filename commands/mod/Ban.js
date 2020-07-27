@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     reason: reason,
                 })
                 .then(() => {
-                    return msg.sendMsgA(language("SUCCESS_BAN",member.username, reason),message,dataServer)}
+                    return msg.sendMsgA(language("SUCCESS_BAN",member.username, reason),message,dataServer)
                 })
                 .catch(err => {
                     msg.sendMsg("BAN_IMPOSSIBLE", message, dataServer);
@@ -33,6 +33,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 } else {
                     
                     return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
+
+                }
                     
             } else {
             
