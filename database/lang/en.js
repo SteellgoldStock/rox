@@ -31,10 +31,10 @@ const languageData = {
     SUCCESS_KICK: (moderator,user, reason) => `${moderator} has kick ${user} for ${reason}`,
     SUCCESS_MUTE: (moderator,user, reason) => `${moderator} has mute ${user} for ${reason}`,
     SUCCESS_TMUTE: (moderator,user, reason, time) => `${moderator} has tempmute ${user} for ${reason} while ${time}`,
-    SUCCESS_UNMUTE: (moderator,user) => `${moderator} has unmute ${user}`,
-    ALREADY_MUTE: (user) => `${user} is already mute`,
-    NO_TIME: "Argument time is not a number",
-    NO_MUTE: (user) => `${user} is not mute`,
+    SUCCESS_UNMUTE: (moderator,user) => `${moderator} has unmuted ${user}`,
+    ALREADY_MUTE: (user) => `${user} This person is already muted`,
+    NO_TIME: "You must specify numbers, not letters.",
+    NO_MUTE: (user) => `${user} This person is currently not being silenced`,
 };
 
 const translate = (key, ...args) => {
