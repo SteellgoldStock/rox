@@ -35,10 +35,20 @@ client.on("message", message => {
                         "{level}": userInfo.level
                     }),message.guild.name)
                 }
-
-                const toAdd = resultsXp[0].xp;
-                let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
-                database.query(sqladd);
+                
+                if(time[message.author.id].time =< Date.now()){
+                
+                    const toAdd = resultsXp[0].xp;
+                    let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                    database.query(sqladd);
+                    
+                    time[message.author.id] = {
+                    
+                        time: Date.now() + 5000
+                        
+                    };
+                    
+                }      
             });
         }
     });
