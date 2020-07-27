@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { client, botConfg, fs, colors,messages} = require("../rox");
+const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)) {
@@ -55,7 +55,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return await msg.sendMsg("PU_NO_USER", message, dataServer);
         }
     } else {
-        return await messages.sendMsg(message, message.guild.id, language("PU_NO_MENTION"), message.guild.name);
+        return await msg.sendMsg("PU_NO_MENTION", message.guild.name);
     }
 }
 
