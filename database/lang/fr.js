@@ -18,7 +18,20 @@ const languageData = {
     HELP_CC_FIELD: (serverName) => "Commandes personnalisées (**" + serverName + "**)",
     HELP_GOLD_USER_FIELD: "Avantages de Gold User",
     HELP_GOLD_SERVER_FIELD: "Avantages de Gold Server",
-    HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> Pour mieux vous aider, vous pouvez utiliser \`${prefix}help [command]\` pour obtenir l'usage de la commande, les arguments, la description tout ce qui peut vous aider à utiliser le bot`
+    HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> Pour mieux vous aider, vous pouvez utiliser \`${prefix}help [command]\` pour obtenir l'usage de la commande, les arguments, la description tout ce qui peut vous aider à utiliser le bot`,
+    
+    /** BAN **/
+    SUCCESS_BAN: (user, reason) => `Tu as réussi à ban ${user} pour ${reason}`,
+    BAN_IMPOSSIBLE: "Tu ne peux pas ban",
+    NOT_YOU: "Tu ne peux pas te ban",
+    BAN_NO_USER: "L'utilisateur est invalid",
+    
+    /** KICK **/
+    SUCCESS_KICK: (user, reason) => `You are success kick ${user} for ${reason}`,
+    KICK_IMPOSSIBLE: "You can't kick",
+    NOT_YOU: "You can't kick yourself",
+    BAN_NO_USER: "The user is Not valid"
+    
 };
 
 const translate = (key, ...args) => {
