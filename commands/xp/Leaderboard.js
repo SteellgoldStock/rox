@@ -34,41 +34,37 @@ async function profile(message, database) {
         }
     });
 
-    try {
-        const result = await fetch(member.user.displayAvatarURL({ format: 'png' }));
-        if (!result.ok) new Error('Failed to get the avatar!');
-        const avatar = await result.buffer();
+    const result = await fetch(member.user.displayAvatarURL({format: 'png'}));
+    if (!result.ok) new Error('Failed to get the avatar!');
+    const avatar = await result.buffer();
 
-        const name = member.displayName.length > 30 ? member.displayName.substring(0, 17) + '...'
-            : member.displayName;
+    const name = member.displayName.length > 30 ? member.displayName.substring(0, 17) + '...'
+        : member.displayName;
 
-        return new Canvas(400, 180)
-            .setColor('#7289DA')
-            .addRect(84, 0, 316, 180)
-            .setColor("#2C2F33")
-            .addRect(169, 26, 231, 46)
-            .addRect(224, 108, 176, 46)
-            .setShadowColor('rgba(22, 22, 22, 1)')
-            .setShadowOffsetY(5)
-            .setShadowBlur(10)
-            .addCircle(84, 90, 62)
-            .addCircularImage(avatar, 85, 90, 64)
-            .save()
-            .createBeveledClip(10, 139, 150, 30, 0)
-            .setColor('#404040')
-            .fill()
-            .restore()
-            .setTextAlign('center')
-            .setTextFont('16pt Heroes')
-            .setColor('#FFFFFF')
-            .addText(name, 285, 54)
-            .addText(`Level: ${exports.level}`, 84, 157)
-            .setTextAlign('left')
-            .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
-            .toBuffer();
-    } catch (error) {
-        console.log(error.message)
-    }
+    return new Canvas(400, 180)
+        .setColor('#7289DA')
+        .addRect(84, 0, 316, 180)
+        .setColor("#2C2F33")
+        .addRect(169, 26, 231, 46)
+        .addRect(224, 108, 176, 46)
+        .setShadowColor('rgba(22, 22, 22, 1)')
+        .setShadowOffsetY(5)
+        .setShadowBlur(10)
+        .addCircle(84, 90, 62)
+        .addCircularImage(avatar, 85, 90, 64)
+        .save()
+        .createBeveledClip(10, 139, 150, 30, 0)
+        .setColor('#404040')
+        .fill()
+        .restore()
+        .setTextAlign('center')
+        .setTextFont('16pt Heroes')
+        .setColor('#FFFFFF')
+        .addText(name, 285, 54)
+        .addText(`Level: ${exports.level}`, 84, 157)
+        .setTextAlign('left')
+        .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
+        .toBuffer();
 }
 
 function kFormatter(num) {
@@ -76,5 +72,5 @@ function kFormatter(num) {
 }
 
 exports.help = {
-    name: 'leaderboard',
+    name: 'xp',
 };
