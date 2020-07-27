@@ -26,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/mod/Unmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unmute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

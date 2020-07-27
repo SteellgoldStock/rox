@@ -23,8 +23,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             reason: reason,
                         })
                         .then(() => {
-                            return msg.sendMsgA(language("SUCCESS_BAN", message.author.username,member.username, reason), message, dataServer)
-
                             var info = {
                                 userid: member.id,
                                 usernameWhenP: member.tag,
@@ -40,6 +38,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             database.query('INSERT INTO mod SET ?', info, function (error, results, fields) {
                                 if (error) throw error;
                             });
+
+                            return msg.sendMsgA(language("SUCCESS_BAN", message.author.username,member.user.username, reason), message, dataServer)
                         })
                         .catch(err => {
                             msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);

@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     if(member.roles.cache.some(role => role.name === 'MUTE')) return msg.sendMsgA(language("NO_MUTE", member.username), message, dataServer)
                         member.roles.remove(role)
                         .then(() => {
-                            return msg.sendMsgA(language("SUCCESS_UNMUTE", message.author.username,member.username), message, dataServer)
+                            return msg.sendMsgA(language("SUCCESS_UNMUTE", message.author.username,member.user.username), message, dataServer)
                         })
                         .catch(err => {
                             msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
