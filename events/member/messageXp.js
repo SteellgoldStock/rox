@@ -36,6 +36,8 @@ client.on("message", message => {
                     }),message.guild.name)
                 }
                 
+                time = [];
+                
                 if(time[message.author.id].time <= Date.now()){
                 
                     const toAdd = resultsXp[0].xp;
