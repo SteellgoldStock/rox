@@ -14,22 +14,41 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const member = message.guild.member(user);
 
         if (member) {
-            member
+            if(member.id !== message.member.id){
+                
+                if(!member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)){
+                
+                    member
                 .ban({
                     reason: reason,
                 })
                 .then(() => {
-                    return messages.sendMsg(message,message.guild.id,language("SUCCESS_BAN",member.user.username,reason,message.author.username),message.guild.name);
+                    return msg.sendMsg("SUCCESS_BAN", message, dataServer);
                 })
                 .catch(err => {
-                    meessages.sendMsg(message,message.guild.id,language("BAN_IMPOSSIBLE"),message.guild.name);
+                    msg.sendMsg("BAN_IMPOSSIBLE", message, dataServer);
                     return console.error(err);
                 });
+                    
+                } else {
+                    
+                    return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
+                    
+            } else {
+            
+                return await msg.sendMsg("NOT_YOU", message, dataServer);
+               
+            }
+            
         } else {
-            return await messages.sendMsg(message,message.guild.id,language("BAN_NO_USER"),message.guild.name);
+            
+            return await msg.sendMsg("BAN_No_USER", message, dataServer);
+            
         }
     } else {
+        
         return await messages.sendMsg(message,message.guild.id,language("BAN_NO_MENTION"),message.guild.name);
+        
     }
 }
 
