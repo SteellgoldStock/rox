@@ -20,17 +20,21 @@ const languageData = {
     HELP_GOLD_USER_FIELD: "Gold User benefits",
     HELP_GOLD_SERVER_FIELD: "Gold Server benefits",
     HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> To help you better you can use the \`${prefix}help [command]\` to get the uses, arguments, description all that can help you to use the bot`,
-    
-    /** BAN **/
-    SUCCESS_BAN: (user, reason) => `You are success ban ${user} for ${reason}`,
-    BAN_IMPOSSIBLE: "You can't ban",
-    BAN_NO_USER: "The user is Not valid",
-    
-    /** KICK **/
-    SUCCESS_KICK: (user, reason) => `You are success kick ${user} for ${reason}`,
-    KICK_IMPOSSIBLE: "You can't kick",
-    KICK_NO_USER: "The user is Not valid"
-    
+
+    // Moderations commands messages
+    TMUTED: (username) => `You are tempmute ${username} for ${time} with success`,
+    BANNED: (username) => `You have banned ${username} with success`,
+    KICKED: (username) => `You have kick ${username} with success`,
+    MUTED: (username) => `You have muted ${username} forever with success`,
+    PUNISH_Y: `You can't punish yourself`,
+
+    PU_NO_MENTION: "Please enter a user mention",
+    PU_NO_USER: "This user doesn't exist in this guild",
+    PU_IMPOSSIBLE: "I cannot punish this user",
+    SUCCESS_BAN: (user, reason, moderator) => `${moderator} has banned ${user} for ${reason}`,
+    SUCCESS_KICK: (user, reason, moderator) => `${moderator} has kick ${user} for ${reason}`,
+    SUCCESS_MUTE: (user, reason, moderator) => `${moderator} has mute ${user} for ${reason}`,
+    SUCCESS_TMUTE: (user, reason, moderator, timem) => `${moderator} has tempmute ${user} for ${reason} while ${timem}`,
 };
 
 const translate = (key, ...args) => {

@@ -20,11 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/users/backgrounds/504392983244832780.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/font/Reality.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Leaderboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageXp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Kick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/refonte/Kick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/refonte/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/refonte/fr.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
       <workItem from="1595672938566" duration="21245000" />
       <workItem from="1595775541663" duration="26598000" />
       <workItem from="1595807910789" duration="81000" />
-      <workItem from="1595841249667" duration="12496000" />
+      <workItem from="1595841249667" duration="13386000" />
     </task>
     <servers />
   </component>
