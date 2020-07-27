@@ -6,9 +6,13 @@ const languageData = {
     HELP_UNKNOW_COMMAND: (command) => `The command command \`!${command}\` not exist`,
     LANG_NOT_FOUND: (lang, langs) => "The lang `" + lang + "` not found please, set a valid lang " + langs,
     NOT_YOURSELF: "You can't ban yourself",
+    NOT_IMG: `You didn't send an image, try again`,
+    NOT_GOLD_USER: "You are not a Rox Gold user",
+    NOT_GOLD_SERVER: "This server don't have Rox Gold",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
+    DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command ${prefix}level`,
 
     /** EMBED **/
     HELP_ADMIN_FIELD: "Administrator",
@@ -23,7 +27,6 @@ const languageData = {
 
     // Moderations commands messages
     PUNISH_Y: `You can't punish yourself`,
-
     PU_NO_MENTION: "Please enter a user mention",
     PU_NO_USER: "This user doesn't exist in this guild",
     PU_IMPOSSIBLE: "I cannot punish this user",

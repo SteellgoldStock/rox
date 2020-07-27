@@ -22,25 +22,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         .ban({
                             reason: reason,
                         })
-
                         .then(() => {
-                            var info = {
-                                userid: member.id,
-                                usernameWhenP: member.user.username + "#" + member.user.discriminator,
-                                modid: message.author.id,
-                                usernameModWhenP: message.author.username + "#" + message.author.discriminator,
-                                guildid: message.guild.id,
-                                guildNameWhenP: message.guild.name,
-                                type: "ban",
-                                reason: reason
-
-                            };
-
-                            database.query('INSERT INTO mod SET ?', info, function (error, results, fields) {
-                                if (error) throw error;
-                            });
-
-                            return msg.sendMsgA(language("SUCCESS_BAN", message.author.username,member.user.username, reason), message, dataServer)
+                            return msg.sendMsgA(language("SUCCESS_BAN", message.author.username, member.user.username, reason), message, dataServer)
                         })
                         .catch(err => {
                             msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
@@ -56,7 +39,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return await msg.sendMsg("PU_NO_USER", message, dataServer);
         }
     } else {
-        return await msg.sendMsg("PU_NO_MENTION", message,dataServer);
+        return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
     }
 }
 
