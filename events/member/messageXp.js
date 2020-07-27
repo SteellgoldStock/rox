@@ -25,6 +25,8 @@ client.on("message", message => {
                     return console.error(error.message);
                 }
 
+                const time = [];
+
                 let MaxXp = resultsXp[0].level * 150 + resultsXp[0].level * 35
 
                 if (resultsXp[0].xp >= MaxXp) {
@@ -43,7 +45,6 @@ client.on("message", message => {
                     database.query(sqladd);
                     
                     time[message.author.id] = {
-                    
                         time: Date.now() + 5000
                         
                     };
