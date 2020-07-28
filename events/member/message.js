@@ -24,7 +24,7 @@ client.on("message", message => {
             if (error) {
                 return false;
             } else if (results.length > 0) {
-                return message.channel.send("Vous êtes blacklist du bot CHEH") // Message a edit via en.js 
+                return message.channel.send("Vous êtes blacklist du bot CHEH") // Message a edit via en.js
             } else {
                 const cmd = client.commands.get(command);
                 if (!cmd) return;

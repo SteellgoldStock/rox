@@ -23,8 +23,8 @@ client.on('guildMemberAdd', member => {
             }
         }
 
-        if (!results[0].announceChannel == "false") {
-            const channel = client.channels.cache.get(results[0].announceChannel)
+        if (results[0].announceChannel !== "false") {
+            const channel = client.channels.cache.get(`${results[0].announceChannel}`)
 
             channel.send(results[0].joinText.allReplace({
                 "{mention}": "<@" + member.id + ">",
