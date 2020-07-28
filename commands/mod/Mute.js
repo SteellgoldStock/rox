@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const member = message.guild.member(user);
 
         if (member) {
-            if (member.id !== message.member.id) {
+            if (member.id !== message.author.id) {
                 if(!member.roles.cache.has(dataServer.adminRole) || !member.roles.cache.has(dataServer.modRole)) {
                     const role = message.guild.roles.cache.find(role => role.name === 'MUTE');
                     if(!message.guild.roles.cache.find(role => role.name === 'MUTE')){
@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         });
 
                     }
-                        if(!member.roles.cache.find(role => role.name === 'MUTE')) return msg.sendMsgA(language("ALREADY_MUTE", member.username), message, dataServer)
+                        if(!member.roles.cache.find(role => role.name === 'MUTE')) return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer)
                             member.roles.add(role)
                                 .then(() => {
                                     return msg.sendMsgA(language("SUCCESS_MUTE", message.author.username, member.user.username, reason), message, dataServer)
