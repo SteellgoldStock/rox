@@ -10,6 +10,9 @@ const languageData = {
     NOT_GOLD_USER: "You are not a Rox Gold user",
     NOT_GOLD_SERVER: "This server don't have Rox Gold",
     IS_NAME_ALREADY: "The server as already this name, please try another",
+    CHANNELS_ARGS: "You did not enter a valid value, here are the available values: `logs`, `joinquit`",
+    MENTION_CHANNEL: "You didn't mention any channels",
+    MENTION_ROLE: "You didn't mention any role",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
