@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const {colors, client, fs, database} = require('./../../rox')
 
 client.on('guildCreate',(guild) => {
-    client.guilds.cache.get("733724420056547338").channels.cache.get("736586588783640636").send("Nouveau serveur: **" + guild.name + "**");
+    client.guilds.cache.get("733724420056547338").channels.cache.get("737651263612911672").send("Nouveau serveur: **" + guild.name + "**");
 
     /** SERVER **/
     database.query(`SELECT * FROM servers WHERE guildid = ${guild.id}`, function (error, results, fields) {
@@ -22,7 +22,7 @@ client.on('guildCreate',(guild) => {
                 // CONFIG - QUIT & JOIN
                 joinText: "Welcome to {mention} in {servername}",
                 quitText: "No.. {username} has leaved {servername}",
-                announceChannel: "none",
+                announceChannel: "false",
 
                 // CONFIG - ROLES
                 adminRole: "none",
@@ -61,7 +61,7 @@ client.on('guildCreate',(guild) => {
                 } else if (results.length > 0) {
                     return false;
                 } else {
-                    client.guilds.cache.get("733724420056547338").channels.cache.get("736586588783640636").send('Nouvelle donnée d\'xp pour l\'utilisateur **' + member.user.username + '** sur le serveur: **' + guild.name + "**");
+                    client.guilds.cache.get("733724420056547338").channels.cache.get("737651263612911672").send('Nouvelle donnée d\'xp pour l\'utilisateur **' + member.user.username + '** sur le serveur: **' + guild.name + "**");
 
                     var postXp = {
                         guildid: guild.id,
