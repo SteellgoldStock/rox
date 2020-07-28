@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const embed = new Discord.MessageEmbed()
             .setTitle("Rox • Help")
             .setDescription(language("HELP_DESCRIPTION",dataServer.prefix))
-            .addField(language("HELP_ADMIN_FIELD"),"`prefix`,`lang`")
+            .addField(language("HELP_ADMIN_FIELD"),"`prefix`,`lang`,`channels`,`roles`")
             .addField(language("HELP_MOD_FIELD"),"`kick`,`ban`,`mute`,`tempmute`,`unmute`,`warn`,`warns`,`delwarn`,`purge`")
             .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`")
             .addField(language("HELP_BASIC_FIELD"),"`help`")

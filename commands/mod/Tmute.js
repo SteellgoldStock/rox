@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if (!message.member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)) {
+    if(!message.member.roles.cache.has(dataServer.adminRole) || !message.member.roles.cache.has(dataServer.modRole)) {
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
 
@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
             if (member) {
                 if (member.id !== message.member.id) {
-                    if (!member.roles.cache.find(r => r.name === dataServer.adminRole) || !message.member.roles.cache.find(r => r.name === dataServer.modRole)) {
+                    if(!message.member.roles.cache.has(dataServer.adminRole) || !message.member.roles.cache.has(dataServer.modRole)) {
                         const role = message.guild.roles.cache.find(role => role.name === 'MUTE');
                         if(!message.guild.roles.cache.find(role => role.name === 'MUTE')){
                             message.guild.roles.create({data: {name: "MUTE"}});

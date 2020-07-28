@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { client, database, msg, colors, fs} = require("../../rox");
 const langs = ["fr","en","es"]
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if(!message.member.roles.cache.find(r => r.name === dataServer.adminRole)){
+    if(!message.member.roles.cache.has(dataServer.adminRole)){
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
 
