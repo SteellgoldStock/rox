@@ -9,6 +9,7 @@ const languageData = {
     NOT_IMG: `You didn't send an image, try again, only \`.png\` is allowed, if your picture is \`.jpg\` you can just rename the extension \`.jpg\` by \`.png\``,
     NOT_GOLD_USER: "You are not a Rox Gold user",
     NOT_GOLD_SERVER: "This server don't have Rox Gold",
+    IS_NAME_ALREADY: "The server as already this name, please try another",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",

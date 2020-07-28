@@ -11,7 +11,6 @@ String.prototype.allReplace = function (obj) {
 client.on("message", message => {
     if (!message.guild) return;
     if (message.author.bot) return;
-    if (message.guild.id == 699343389291839900) return;
 
     let sql = `SELECT * FROM servers WHERE guildid = ${message.guild.id}`;
     database.query(sql, (error, results, fields) => {

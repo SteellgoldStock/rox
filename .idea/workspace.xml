@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/commands/team/Leave.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/messageXp.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageXp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/onJoin.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onJoin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/onLeave.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onLeave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/events/member" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,19 +68,19 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\settings" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
   </component>
@@ -98,7 +99,7 @@
       <workItem from="1595775541663" duration="26598000" />
       <workItem from="1595807910789" duration="81000" />
       <workItem from="1595841249667" duration="14895000" />
-      <workItem from="1595935968267" duration="8497000" />
+      <workItem from="1595935968267" duration="15142000" />
     </task>
     <servers />
   </component>
@@ -126,14 +127,23 @@
     </state>
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595784915186" />
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595713956367" />
-    <state x="301" y="79" key="SettingsEditor" timestamp="1595681824275">
+    <state x="658" y="204" key="FileChooserDialogImpl" timestamp="1595953569998">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
+    <state x="658" y="204" key="FileChooserDialogImpl/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953569998" />
+    <state x="301" y="79" key="SettingsEditor" timestamp="1595953599724">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="301" y="79" key="SettingsEditor/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953599724" />
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1595681824275" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.870@0.0.1600.870" timestamp="1595850430535" />
+    <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595953598638">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953598638" />
     <state x="456" y="198" key="run.anything.popup" timestamp="1595682750846">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

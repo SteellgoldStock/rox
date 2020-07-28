@@ -4,6 +4,11 @@ exports.colors = require("colors");
 exports.client = new Discord.Client();
 exports.msg = require("./functions/msg");
 exports.client.commands = new Discord.Collection();
+exports.team = [
+    "504392983244832780",
+    "558793081663782913",
+    "354170113294991364"
+]
 const mysql = require('mysql');
 
 exports.database = mysql.createConnection({
@@ -19,11 +24,31 @@ exports.database.connect(function(err) {
 });
 
 exports.client.on('ready', () => {
+    /* STATUS */
+    setInterval(async () => {
+        const statuslist = [
+            `Support Server: discord.gg/mC8UKrA`,
+            `${exports.client.guilds.cache.size} servers`,
+            `${exports.client.users.cache.size} users`,
+        ];
+        const random = Math.floor(Math.random() * statuslist.length);
+
+        try {
+            await exports.client.user.setActivity(`${statuslist[random]} • v0.1`);
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }, 3000);
+
+    /* COMMANDS LOADER */
     loadCommand('./commands/basic/');
     loadCommand('./commands/settings/');
     loadCommand('./commands/xp/');
     loadCommand('./commands/mod/');
+    loadCommand('./commands/admin/');
     loadCommand('./commands/gold/');
+    loadCommand('./commands/team/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
