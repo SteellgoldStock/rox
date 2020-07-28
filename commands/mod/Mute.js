@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         });
 
                     }
-                        if(!member.roles.cache.some(role => role.name === 'MUTE')) return msg.sendMsgA(language("ALREADY_MUTE", member.username), message, dataServer)
+                        if(!member.roles.cache.find(role => role.name === 'MUTE')) return msg.sendMsgA(language("ALREADY_MUTE", member.username), message, dataServer)
                             member.roles.add(role)
                                 .then(() => {
                                     return msg.sendMsgA(language("SUCCESS_MUTE", message.author.username, member.user.username, reason), message, dataServer)
