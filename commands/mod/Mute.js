@@ -17,16 +17,12 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         if (member) {
             if (member.id !== message.member.id) {
-                if(!message.member.roles.cache.has(dataServer.adminRole) || !message.member.roles.cache.has(dataServer.modRole)) {
+                if(!member.roles.cache.has(dataServer.adminRole) || !member.roles.cache.has(dataServer.modRole)) {
                     const role = message.guild.roles.cache.find(role => role.name === 'MUTE');
                     if(!message.guild.roles.cache.find(role => role.name === 'MUTE')){
-
                         message.guild.roles.create({data: {name: "MUTE"}});
-
-                        message.guild.channels.forEach(channel =>{
-
+                        message.guild.channels.forEach(channel => {
                             channel.updateOverwrite(role, { SEND_MESSAGES: false });
-
                         });
 
                     }

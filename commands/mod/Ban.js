@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         if (member) {
             if (member.id !== message.author.id) {
-                if(!message.member.roles.cache.has(dataServer.adminRole) || !message.member.roles.cache.has(dataServer.modRole)) {
+                if(!member.roles.cache.has(dataServer.adminRole) || !member.roles.cache.has(dataServer.modRole)) {
                     member
                         .ban({
                             reason: reason,

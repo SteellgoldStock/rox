@@ -21,8 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/onJoin.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onJoin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/onLeave.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onLeave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Kick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Unmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unmute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +98,7 @@
       <workItem from="1595775541663" duration="26598000" />
       <workItem from="1595807910789" duration="81000" />
       <workItem from="1595841249667" duration="14895000" />
-      <workItem from="1595935968267" duration="19134000" />
+      <workItem from="1595935968267" duration="19565000" />
     </task>
     <servers />
   </component>
