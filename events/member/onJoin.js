@@ -17,7 +17,7 @@ client.on('guildMemberAdd', member => {
         }
 
         if (results[0].autoRole !== "none") {
-            let role = member.guild.roles.cache.find(r => r.name === results[0].autoRole);
+            let role = member.guild.roles.cache.get(results[0].autoRole);
             if (role) {
                 member.roles.add(role)
             }
@@ -25,12 +25,13 @@ client.on('guildMemberAdd', member => {
 
         if (results[0].announceChannel !== "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
-
-            channel.send(results[0].joinText.allReplace({
-                "{mention}": "<@" + member.id + ">",
-                "{username}": member.user.username,
-                "{guildName}": member.guild.name
-            }));
+            if(channel){
+                channel.send(results[0].joinText.allReplace({
+                    "{mention}": "<@" + member.id + ">",
+                    "{username}": member.user.username,
+                    "{guildName}": member.guild.name
+                }))
+            }
         }
 
         database.query(`SELECT * FROM servers_xp WHERE userid = ${member.id} AND guildid = ${member.guild.id}`, function (error, resultsXP, fields) {

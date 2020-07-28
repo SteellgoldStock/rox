@@ -19,16 +19,12 @@ client.on('guildMemberRemove', member => {
         if (results[0].announceChannel !== "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
-                console.log("le channel existe")
-            }else{
-                console.log("le channel existe pas")
+                channel.send(results[0].quitText.allReplace({
+                    "{mention}": "<@" + member.id + ">",
+                    "{username}": member.user.username,
+                    "{guildName}": member.guild.name
+                }))
             }
-
-            channel.send(results[0].quitText.allReplace({
-                "{mention}": "<@" + member.id + ">",
-                "{username}": member.user.username,
-                "{guildName}": member.guild.name
-            }))
         }
     });
 });
