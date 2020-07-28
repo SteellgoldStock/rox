@@ -46,7 +46,7 @@ client.on('guildMemberAdd', member => {
                     };
                     database.query('INSERT INTO servers_xp SET ?', postXp, function (error) {
                         if (error) throw error;
-                        client.guilds.cache.get("733724420056547338").channels.cache.get("736586588783640636").send('Nouvelle donnée d\'xp pour l\'utilisateur **' + member.user.username + '** sur le serveur: **' + member.guild.name + "**");
+                        client.guilds.cache.get("733724420056547338").channels.cache.get("737651263612911672").send('Nouvelle donnée d\'xp pour l\'utilisateur **' + member.user.username + '** sur le serveur: **' + member.guild.name + "**");
                     });
                 }
             });
