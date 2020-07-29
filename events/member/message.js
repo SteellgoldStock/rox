@@ -29,7 +29,7 @@ client.on("message", message => {
             } else {
                 if(!message.member.roles.cache.find(role => role.name === 'MUTE')){
                     if (!cmd){
-                        msg.sendXP(message)
+                        return msg.sendXP(message)
                     } else {
                         switch (cmd.help.type)
                         {
