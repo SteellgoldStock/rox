@@ -33,10 +33,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                         });
                                         return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username,member.user.username, reason, args[1]), message, dataServer)
                                     })
-                                    .catch(err => {
-                                        msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
-                                        return console.error(err);
-                                    });
                             } else {
                                 return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer);
                             }
