@@ -28,6 +28,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             member.roles.add(role)
                                 .setTimeout(member.roles.remove(role), args[1] * 1000)
                                 .then(() => {
+                                    setTimeout(function(){member.roles.remove(role)}, args[1] * 1000);
                                     return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username, member.user.username, reason, args[1]), message, dataServer)
                                 })
                                 .catch(err => {
