@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
-      <change beforePath="$PROJECT_DIR$/commands/team/Eval.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/team/Eval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/users/gold.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/gold/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/gold/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/team" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,15 +73,15 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />

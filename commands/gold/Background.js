@@ -26,6 +26,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             break;
 
         case "img":
+            if(!args[1]) return msg.sendMsg("NOT_IMG",message,dataServer);
             let sql = `SELECT * FROM goldUsers WHERE userid = ${message.author.id}`;
             database.query(sql, function (error, results, fields) {
                 if (error) {

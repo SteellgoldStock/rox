@@ -18,7 +18,7 @@ const languageData = {
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
-    DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command ${prefix}level`,
+    DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command \`${prefix}level\``,
 
     /** EMBED **/
     HELP_ADMIN_FIELD: "Administrator",

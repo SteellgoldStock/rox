@@ -114,6 +114,7 @@ async function image(message, database) {
         .setShadowBlur(10)
         .addCircle(84, 90, 62)
         .addCircularImage(avatar, 85, 90, 64)
+        .addImage(path.join(`database/users/gold.png`), 12,40,36,36)
         .save()
         .createBeveledClip(10, 139, 150, 30, 0)
         .setColor('#36393F')
