@@ -43,11 +43,10 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                         setTimeout(function () {
                                             member.roles.remove(role);
                                             message.guild.channels.cache.forEach((channel) => {
-                                                if(channel.type === 'text'){
-                                                    channel.updateOverwrite(member.user, { SEND_MESSAGES: true });
-                                                }else if(channel.type === 'voice'){
-                                                    channel.updateOverwrite(member.user, { SPEAK: true });
-                                                    channel.updateOverwrite(member.user, { VIEW_CHANNEL: true });
+                                                if (channel.type === 'text') {
+                                                    channel.permissionOverwrites.get(member.user.id).delete();
+                                                } else if (channel.type === 'voice') {
+                                                    channel.permissionOverwrites.get(member.user.id).delete();
                                                 }else{
 
                                                 }
