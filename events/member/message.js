@@ -19,6 +19,7 @@ client.on("message", message => {
 
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
+        const cmd = client.commands.get(command);
 
         database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
             if (error) {
@@ -26,18 +27,17 @@ client.on("message", message => {
             } else if (results.length > 0) {
                 return message.channel.send("Vous êtes blacklist du bot CHEH") // Message a edit via en.js
             } else {
-                const cmd = client.commands.get(command);
-                if (!cmd) return;
-
                 if(!message.member.roles.cache.find(role => role.name === 'MUTE')){
-
-                    switch (cmd.help.type)
-                    {
-                        default:
-                            cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                            break;
+                    if (!cmd){
+                        msg.sendXP(message)
+                    } else {
+                        switch (cmd.help.type)
+                        {
+                            default:
+                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                                break;
+                        }
                     }
-
                 } else {
                     message.delete();
                 }
