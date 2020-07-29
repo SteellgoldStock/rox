@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
-      <change afterPath="$PROJECT_DIR$/commands/team/Reload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/team/Restart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/team/Test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/gold/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/gold/Background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settings/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Lang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/team" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,30 +72,17 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -121,6 +100,7 @@
       <workItem from="1595807910789" duration="81000" />
       <workItem from="1595841249667" duration="14895000" />
       <workItem from="1595935968267" duration="19565000" />
+      <workItem from="1596026825307" duration="468000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -129,7 +109,98 @@
       <option name="project" value="LOCAL" />
       <updated>1596011586817</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test">
+      <created>1596012017415</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596012017415</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test">
+      <created>1596012465448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596012465448</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Test">
+      <created>1596012868722</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596012868722</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Test">
+      <created>1596014660281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596014660281</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test">
+      <created>1596015092696</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596015092696</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Test">
+      <created>1596015315231</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596015315231</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Test">
+      <created>1596029199785</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596029199785</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test">
+      <created>1596029376628</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596029376628</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Test">
+      <created>1596029734317</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596029734317</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Test">
+      <created>1596029893592</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1596029893592</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Test">
+      <created>1596029974226</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1596029974226</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Test">
+      <created>1596030095406</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1596030095406</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Test">
+      <created>1596030213405</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1596030213405</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,19 +233,27 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="658" y="204" key="FileChooserDialogImpl/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953569998" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1596026866137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596026866137" />
     <state x="301" y="79" key="SettingsEditor" timestamp="1595953599724">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953599724" />
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1595681824275" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596011588999">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596030214809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596011588999" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596030214809" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.870@0.0.1600.870" timestamp="1595850430535" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596026845551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596026845551" />
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595953598638">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
