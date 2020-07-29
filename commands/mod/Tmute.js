@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (user){
             if (member){
                 if (member.user.id !== message.author.id){
-                    if(Number.isInteger(args[1])){
+                    if(Number.isInteger(Number(args[1]))){
                         if (!reason){
                             let reason = "No reason";
                         }
