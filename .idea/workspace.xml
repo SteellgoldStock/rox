@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +102,7 @@
       <workItem from="1595841249667" duration="14895000" />
       <workItem from="1595935968267" duration="19565000" />
       <workItem from="1596026825307" duration="468000" />
+      <workItem from="1596033037353" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -221,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596031952594</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Test">
+      <created>1596032880646</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1596032880646</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +259,10 @@
     </state>
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595784915186" />
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.870@0.0.1600.870" timestamp="1595713956367" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1596032884819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596032884819" />
     <state x="658" y="204" key="FileChooserDialogImpl" timestamp="1595953569998">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -263,10 +276,10 @@
     </state>
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953599724" />
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1595681824275" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596031954012">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596032885650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596031954012" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596032885650" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

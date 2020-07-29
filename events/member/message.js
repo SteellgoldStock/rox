@@ -1,4 +1,4 @@
-const { client, colors, botConfg, fs, database} = require("../../rox");
+const { client, colors, botConfg, fs, database, msg} = require("../../rox");
 
 client.on("message", message => {
     if (!message.guild) return;
