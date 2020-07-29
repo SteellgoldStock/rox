@@ -19,6 +19,18 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             message.guild.roles.create({data: {name: "MUTE"}});
                         }
                         if (member.roles.cache.find(role => role.name === 'MUTE')) {
+                            message.guild.channels.cache.forEach((channel) => {
+                                if(channel.type === 'text'){
+                                    console.log(channel.name)
+                                    channel.updateOverwrite(member.user, { SEND_MESSAGES: true });
+                                }else if(channel.type === 'voice'){
+                                    console.log(channel.name)
+                                    channel.updateOverwrite(member.user, { SPEAK: true });
+                                    channel.updateOverwrite(member.user, { VIEW_CHANNEL: true });
+                                }else{
+
+                                }
+                            });
                             member.roles.remove(role)
                                 .then(() => {
                                     return msg.sendMsgA(language("SUCCESS_UNMUTE", message.author.username, member.user.username), message, dataServer)
