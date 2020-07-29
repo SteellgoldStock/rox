@@ -27,6 +27,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             if (!member.roles.cache.find(role => role.name === 'MUTE')) {
                                 message.guild.channels.cache.forEach((channel) => {
                                     if(channel.type === 'text'){
+                                        console.log(channel.name)
                                         channel.updateOverwrite(member.user, { SEND_MESSAGES: false });
                                     }else if(channel.type === 'voice'){
                                         channel.updateOverwrite(member.user, { SPEAK: false });
