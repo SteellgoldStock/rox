@@ -20,5 +20,5 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 }
 
 exports.help = {
-    name: "leave",
+    name: "eval",
 }
