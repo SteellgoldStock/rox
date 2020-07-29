@@ -62,6 +62,10 @@ const languageData = {
     NO_MUTE: (user) => `${user} This person is currently not being silenced`,
 
     BLACKLISTED: "Sorry, but I can't let you use the bot. You're blacklisted.",
+
+    // FUN
+    CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
+    CHOICE_DONE: "I'm answering it."
 };
 
 const translate = (key, ...args) => {
