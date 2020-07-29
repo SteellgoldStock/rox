@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if(message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)){
+    if (message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)) {
         const user = message.mentions.users.first();
         let reason = args.slice(1).join(" ");
         const member = message.guild.member(user);
@@ -19,6 +19,15 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             message.guild.roles.create({data: {name: "MUTE"}});
                         }
                         if (member.roles.cache.find(role => role.name === 'MUTE')) {
+                            message.guild.channels.cache.forEach((channel) => {
+                                if (channel.type === 'text') {
+                                    channel.permissionOverwrites.get(member.user.id).delete();
+                                } else if (channel.type === 'voice') {
+                                    channel.permissionOverwrites.get(member.user.id).delete();
+                                } else {
+
+                                }
+                            });
                             member.roles.remove(role)
                                 .then(() => {
                                     return msg.sendMsgA(language("SUCCESS_UNMUTE", message.author.username, member.user.username), message, dataServer)
