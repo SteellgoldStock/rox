@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
+      <change afterPath="$PROJECT_DIR$/commands/team/Reload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/team/Restart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/team/Test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/users/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Kick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Unmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unmute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/gold/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/gold/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/settings/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Lang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/team" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -77,17 +80,30 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />

@@ -13,6 +13,8 @@ const languageData = {
     CHANNELS_ARGS: "You did not enter a valid value, here are the available values: `logs`, `joinquit`",
     MENTION_CHANNEL: "You didn't mention any channels",
     MENTION_ROLE: "You didn't mention any role",
+    ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, and `img`",
+    ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: [Colors](https://colors.rox.wtf)",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
