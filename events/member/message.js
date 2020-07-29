@@ -29,11 +29,17 @@ client.on("message", message => {
                 const cmd = client.commands.get(command);
                 if (!cmd) return;
 
-                switch (cmd.help.type)
-                {
-                    default:
-                        cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                        break;
+                if(!message.member.roles.cache.find(role => role.name === 'MUTE')){
+
+                    switch (cmd.help.type)
+                    {
+                        default:
+                            cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                            break;
+                    }
+
+                } else {
+                    message.delete();
                 }
             }
         });

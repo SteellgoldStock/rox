@@ -21,9 +21,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         if (member.roles.cache.find(role => role.name === 'MUTE')) {
                             member.roles.remove(role)
                                 .then(() => {
-                                    message.guild.channels.cache.forEach(channel => {
-                                        channel.overwritePermissions(member.user.id, { SEND_MESSAGES: true, ADD_REACTIONS: true});
-                                    });
                                     return msg.sendMsgA(language("SUCCESS_UNMUTE", message.author.username, member.user.username), message, dataServer)
                                 })
                                 .catch(err => {

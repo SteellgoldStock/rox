@@ -24,13 +24,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                                 member.roles.add(role)
                                     .then(() => {
-                                        setTimeout(function(){member.roles.remove(role); message.guild.channels.cache.forEach(channel => {
-                                            channel.overwritePermissions(member.user.id, { SEND_MESSAGES: false, ADD_REACTIONS: false});
-                                        });}, args[1] * 1000)
-
-                                        message.guild.channels.cache.forEach(channel => {
-                                            channel.overwritePermissions(member.user.id, { SEND_MESSAGES: false, ADD_REACTIONS: false});
-                                        });
+                                        setTimeout(function(){member.roles.remove(role);}, args[1] * 1000)
                                         return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username,member.user.username, reason, args[1]), message, dataServer)
                                     })
                             } else {

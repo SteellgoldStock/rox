@@ -23,9 +23,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         if (!member.roles.cache.find(role => role.name === 'MUTE')) {
                             member.roles.add(role)
                                 .then(() => {
-                                    message.guild.channels.cache.forEach(channel => {
-                                        channel.overwritePermissions(member.user.id, { SEND_MESSAGES: false, ADD_REACTIONS: false});
-                                    });
                                     return msg.sendMsgA(language("SUCCESS_MUTE", message.author.username, member.user.username, reason), message, dataServer)
                                 })
                                 .catch(err => {
