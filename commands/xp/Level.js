@@ -12,33 +12,51 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     Canvas.registerFont('font/Heroes.ttf', {"family": "Heroes"})
 
     let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
-    if(!db[message.author.id]){
-        db[message.author.id] = {type:"color",color:`BF5E45`}
-        fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
-        await send(db[message.author.id].type,message,database, db)
-    }else{
-        await send(db[message.author.id].type,message,database, db)
+
+    if(message.mentions.users.first()){
+
+        let member = message.guild.member(message.mentions.users.first()).user;
+
+        if(!db[member.id]){
+            db[member.id] = {type:"color",color:`BF5E45`}
+            fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
+            await send(db[member.id].type,message,database, db, member)
+        }else{
+            await send(db[member.id].type,message,database, db, member)
+        }
+
+    } else {
+
+        let member = message.author;
+
+        if(!db[member.id]){
+            db[member.id] = {type:"color",color:`BF5E45`}
+            fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
+            await send(db[member.id].type,message,database, db, member)
+        }else{
+            await send(db[member.id].type,message,database, db, member)
+        }
     }
 }
 
-async function send(option, message, database, db){
+async function send(option, message, database, db, member){
+
     if(option == "img"){
-        const buffer = await image(message, database);
-        const filename = `${message.author.id}.png`;
+        const buffer = await image(message, database, member);
+        const filename = `${member.id}.png`;
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
     }else{
-        const buffer = await color(message, database, db);
-        const filename = `${message.author.id}.png`;
+        const buffer = await color(message, database, db, member);
+        const filename = `${message.id}.png`;
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
     }
 }
 
-async function color(message, database, db) {
-    const member = message.member;
+async function color(message, database, db, member) {
 
-    database.query(`SELECT * FROM servers_xp WHERE guildid=${message.guild.id} AND userid=${message.author.id}`, function (error, results, fields) {
+    database.query(`SELECT * FROM servers_xp WHERE guildid=${message.guild.id} AND userid=${member.id}`, function (error, results, fields) {
         if (error) {
             return false;
         } else if (results.length > 0) {
@@ -50,7 +68,7 @@ async function color(message, database, db) {
         }
     });
 
-    const result = await fetch(member.user.displayAvatarURL({format: 'png'}));
+    const result = await fetch(member.displayAvatarURL({format: 'png'}));
     if (!result.ok) new Error('Failed to get the avatar!');
     const avatar = await result.buffer();
 
@@ -58,7 +76,7 @@ async function color(message, database, db) {
         : member.displayName;
 
     return new Canvas(400, 180)
-        .setColor("#" + db[message.author.id].color)
+        .setColor("#" + db[member.id].color)
         .addRect(84, 0, 316, 180)
         .setColor("#36393F")
         .addRect(169, 26, 231, 46)
@@ -82,10 +100,9 @@ async function color(message, database, db) {
         .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
         .toBuffer();
 }
-async function image(message, database) {
-    const member = message.member;
+async function image(message, database, member) {
 
-    database.query(`SELECT * FROM servers_xp WHERE guildid=${message.guild.id} AND userid=${message.author.id}`, function (error, results, fields) {
+    database.query(`SELECT * FROM servers_xp WHERE guildid=${message.guild.id} AND userid=${member.id}`, function (error, results, fields) {
         if (error) {
             return false;
         } else if (results.length > 0) {
@@ -105,7 +122,7 @@ async function image(message, database) {
         : member.displayName;
 
     return new Canvas(400, 180)
-        .addImage(path.join(`database/users/backgrounds/${message.author.id}.png`), 84, 0, 316, 180)
+        .addImage(path.join(`database/users/backgrounds/${member.id}.png`), 84, 0, 316, 180)
         .setColor("#36393F")
         .addRect(169, 26, 231, 46)
         .addRect(224, 108, 176, 46)
