@@ -72,8 +72,8 @@ async function color(message, database, db, member) {
     if (!result.ok) new Error('Failed to get the avatar!');
     const avatar = await result.buffer();
 
-    const name = member.displayName.length > 9 ? member.displayName.substring(0, 17) + '...'
-        : member.displayName;
+    const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
+        : member.username;
 
     return new Canvas(400, 180)
         .setColor("#" + db[member.id].color)
@@ -114,12 +114,12 @@ async function image(message, database, member) {
         }
     });
 
-    const result = await fetch(member.user.displayAvatarURL({format: 'png'}));
+    const result = await fetch(member.displayAvatarURL({format: 'png'}));
     if (!result.ok) new Error('Failed to get the avatar!');
     const avatar = await result.buffer();
 
-    const name = member.displayName.length > 9 ? member.displayName.substring(0, 17) + '...'
-        : member.displayName;
+    const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
+        : member.username;
 
     return new Canvas(400, 180)
         .addImage(path.join(`database/users/backgrounds/${member.id}.png`), 84, 0, 316, 180)
