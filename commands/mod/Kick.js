@@ -3,7 +3,7 @@ const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     let reason;
-    if (!message.member.roles.cache.has(dataServer.modRole) || !message.member.roles.cache.has(dataServer.adminRole)) {
+    if (message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)) {
         const user = message.mentions.users.first();
         let reasons = args.slice(1).join(" ");
         const member = message.guild.member(user);

@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             .setTitle("Rox • Help")
             .setDescription(language("HELP_DESCRIPTION",dataServer.prefix))
             .addField(language("HELP_ADMIN_FIELD"),"`prefix`,`lang`,`channels`,`roles`")
-            .addField(language("HELP_MOD_FIELD"),"`kick`,`ban`,`mute`,`tempmute`,`unmute`,`warn`,`warns`,`delwarn`,`purge`")
+            .addField(language("HELP_MOD_FIELD"),"`kick`,`ban`,`mute`,`tempmute`,`unmute`,`warn`,`warns`,`unwarn`,`purge`")
             .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`")
             .addField(language("HELP_BASIC_FIELD"),"`help`")
             .addField(language("HELP_CC_FIELD",message.guild.name),"liste des commandes custom du serveur a faire")

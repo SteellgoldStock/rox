@@ -26,6 +26,11 @@ const languageData = {
     HELP_FUN_FIELD: "Fun",
     HELP_XP_FIELD: "XP System",
     HELP_BASIC_FIELD: "Basics",
+
+    WARN_TITLE: "Warns of ",
+    WARNS_REASON_FIELD: "Reason: ",
+    WARNS_MOD_FIELD: "Moderator: ",
+
     HELP_CC_FIELD: (serverName) => "Customs Command (**" + serverName + "**)",
     HELP_GOLD_USER_FIELD: "Gold User benefits",
     HELP_GOLD_SERVER_FIELD: "Gold Server benefits",
@@ -34,10 +39,15 @@ const languageData = {
     // Moderations commands messages
     PUNISH_Y: `You can't punish yourself`,
     PU_NO_MENTION: "Please enter a user mention",
+    PU_NO_REASON: "Please enter a reason",
+    PU_NO_ID: "Please enter a valid id",
+    PU_NO_ID_USER: (user) => `This ID is not appropriate for ${user}, please look in the ${user} warning list and check the correct ID`,
     PU_NO_USER: "This user doesn't exist in this guild",
     PU_IMPOSSIBLE: "I cannot punish this user",
     SUCCESS_BAN: (moderator,user, reason) => `${moderator} has banned ${user} for ${reason}`,
     SUCCESS_KICK: (moderator,user, reason) => `${moderator} has kick ${user} for ${reason}`,
+    SUCCESS_WARN: (moderator,user, reason) => `${moderator} has warned ${user} for ${reason}`,
+    SUCCESS_UNWARN: (moderator,user) => `${moderator} has unwarned ${user}`,
     SUCCESS_MUTE: (moderator,user, reason) => `${moderator} has mute ${user} for ${reason}`,
     SUCCESS_TMUTE: (moderator,user, reason, time) => `${moderator} has tempmuted ${user} for ${reason} while ${time}`,
     SUCCESS_UNMUTE: (moderator,user) => `${moderator} has unmuted ${user}`,

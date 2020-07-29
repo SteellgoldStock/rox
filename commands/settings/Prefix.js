@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     }
 
     if(!args[0]){ return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer)}
-    if(args[0].length >= 3){ return await msg.sendMsg("MAXIMUM_VALUE",message,dataServer)}
+    if(args[0].length >= 4){ return await msg.sendMsg("MAXIMUM_VALUE",message,dataServer)}
 
     var sql = `UPDATE servers SET prefix = '${args[0]}' WHERE guildid = '${message.guild.id}'`;
     database.query(sql, function (err) {

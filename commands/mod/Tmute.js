@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
+const ms = require("ms");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     let reason;

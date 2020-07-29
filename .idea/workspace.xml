@@ -20,11 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
-      <change afterPath="$PROJECT_DIR$/database/users/gold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/mod/Unwarn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/mod/Warns.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/gold/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/gold/Background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Kick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/mod/Warn.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Warn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/settings/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Prefix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/users/gold.png" beforeDir="false" afterPath="$PROJECT_DIR$/database/users/gold.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/mod" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -77,11 +84,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\mod" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
@@ -312,10 +319,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595682750846" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1595807716849">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1596044818219">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595807716849" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596044818219" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1595689572013" />
   </component>
 </project>
