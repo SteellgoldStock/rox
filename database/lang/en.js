@@ -16,6 +16,12 @@ const languageData = {
     ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, and `img`",
     ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: [Colors](https://colors.rox.wtf)",
 
+    INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
+    INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
+    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit` or `logs`",
+
+    MISSED_TEXT: (prefix, type) => `You have missed the text, you can add a differents tags to diversify your text, use the \`${prefix}tags ${type}\` to see the avaible tags`,
+
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
     DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command \`${prefix}level\``,
@@ -54,6 +60,8 @@ const languageData = {
     ALREADY_MUTE: (user) => `${user} This person is already muted`,
     NO_TIME: "You must specify numbers, not letters.",
     NO_MUTE: (user) => `${user} This person is currently not being silenced`,
+
+    BLACKLISTED: "Sorry, but I can't let you use the bot. You're blacklisted.",
 };
 
 const translate = (key, ...args) => {

@@ -1,12 +1,11 @@
 const Discord = require("discord.js");
 const { client, database, msg, colors, fs} = require("../../rox");
-const langs = ["fr","en","es"]
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if(!message.member.roles.cache.has(dataServer.adminRole) || message.member.hasPermission('ADMINISTRATOR')){
+    if(!message.member.roles.cache.has(dataServer.adminRole) || !message.member.hasPermission('ADMINISTRATOR')){
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
 
-    if(!args[0]){ return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer)}
+    if(!args[0]){ return await msg.sendMsg("INVALID_ARGS_ROLES",message,dataServer)}
     const mentionedRole = message.mentions.roles.first();
 
     switch (args[0]) {
@@ -26,7 +25,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             await msg.sendMsg("UPDATED",message,dataServer);
             break;
         default:
-            await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer)
+            await msg.sendMsg("INVALID_ARGS_ROLES",message,dataServer)
             break;
     }
 }

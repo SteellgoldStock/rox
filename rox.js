@@ -49,6 +49,7 @@ exports.client.on('ready', () => {
     loadCommand('./commands/admin/');
     loadCommand('./commands/gold/');
     loadCommand('./commands/team/');
+    loadCommand('./commands/fun/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
