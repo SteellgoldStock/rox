@@ -18,7 +18,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                }
 
                if(message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)){
-
                    member.ban({ reason: reason})
                        .then(() => {
                            return msg.sendMsgA(language("SUCCESS_BAN", message.author.username, member.user.username, reason), message, dataServer)
@@ -27,29 +26,17 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                            msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
                            return console.error(err);
                        });
-
                } else {
-
                    return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
-
                }
-
            } else {
-
                return await msg.sendMsg("PUNISH_Y", message, dataServer);
-
            }
-
         } else {
-
             return await msg.sendMsg("PU_NO_USER", message, dataServer);
-
         }
-
     } else {
-
         return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
-
     }
 }
 
