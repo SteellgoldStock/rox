@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
+      <change afterPath="$PROJECT_DIR$/commands/team/Eval.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/team/Restart.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/team/Restart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/team" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,16 +74,29 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
