@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (user) {
             if (member) {
                 if (member.user.id !== message.author.id) {
-                    if (Number.isInteger(Number(args[1]))) {
+                    if (!args[1]) {
                         if (!reasons) {
                             reason = "No reason";
                         } else {
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                     .then(() => {
                                         setTimeout(function () {
                                             member.roles.remove(role);
-                                        }, args[1] * 1000)
+                                        }, ms(args[1]))
                                         return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username, member.user.username, reason, args[1]), message, dataServer)
                                     })
                             } else {
