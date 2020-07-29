@@ -30,14 +30,13 @@ client.on("message", message => {
                 if (!message.member.roles.cache.find(role => role.name === 'MUTE')) {
                     if (!cmd) {
                         let sql = `SELECT * FROM servers WHERE guildid = ${message.guild.id}`;
-                        database.query(sql, (error, results, fields) => {
+                        database.query(`SELECT * FROM servers WHERE guildid = ${message.guild.id}`, (error, results, fields) => {
                             if (error) {
                                 return console.error(error.message);
                             }
 
                             if (results[0].sysXp === 1) {
-                                let sqlselect = `SELECT * FROM servers_xp WHERE guildid = ${message.guild.id} AND userid = ${message.author.id}`;
-                                database.query(sqlselect, (error, resultsXp, fields) => {
+                                database.query(`SELECT * FROM servers_xp WHERE guildid = ${message.guild.id} AND userid = ${message.author.id}`, (error, resultsXp, fields) => {
                                     if (error) {
                                         return console.error(error.message);
                                     }
