@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/team/Restart.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/team/Restart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,15 +73,15 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\201.8538.31\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\font" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\gold" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
   </component>
