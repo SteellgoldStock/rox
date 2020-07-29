@@ -20,18 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
-      <change afterPath="$PROJECT_DIR$/commands/admin/Messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Cat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Dog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Memes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/fun/8ball.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/fun/AchivementMc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/fun/ChallengeMc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/fun/Choice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Channels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Roles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/fun/Memes.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/Memes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
