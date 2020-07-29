@@ -4,7 +4,7 @@ const { client, botConfg, fs, colors,msg} = require("../../rox");
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
 
     const user = message.mentions.users.first();
-    const reason = args.slice(1).join(" ");
+    let reason = args.slice(1).join(" ");
     const member = message.guild.member(user);
 
     if (user){
@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                if (!reason){
 
-                   const reason = "No reason";
+                   let reason = "No reason";
 
                }
 

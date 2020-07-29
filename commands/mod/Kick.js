@@ -2,26 +2,26 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if(!message.member.roles.cache.has(dataServer.adminRole) || !message.member.roles.cache.has(dataServer.modRole)) {
-        return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
-    }
 
     const user = message.mentions.users.first();
-    const reason = args.slice(1).join(" ");
-    if (!reason) {
-        const reason = "No reason"
-    }
+    let reason = args.slice(1).join(" ");
+    const member = message.guild.member(user);
 
-    if (user) {
-        const member = message.guild.member(user);
+    if (user){
 
-        if (member) {
-            if (member.id !== message.member.id) {
-                if(!member.roles.cache.has(dataServer.adminRole) || !member.roles.cache.has(dataServer.modRole)) {
-                    member
-                        .kick({
-                            reason: reason,
-                        })
+        if (member){
+
+            if (member.user.id !== message.author.id){
+
+                if (!reason){
+
+                    let reason = "No reason";
+
+                }
+
+                if(message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)){
+
+                    member.kick({ reason: reason})
                         .then(() => {
                             return msg.sendMsgA(language("SUCCESS_KICK", message.author.username, member.user.username, reason), message, dataServer)
                         })
@@ -29,17 +29,29 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
                             return console.error(err);
                         });
+
                 } else {
+
                     return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
+
                 }
+
             } else {
+
                 return await msg.sendMsg("PUNISH_Y", message, dataServer);
+
             }
+
         } else {
+
             return await msg.sendMsg("PU_NO_USER", message, dataServer);
+
         }
+
     } else {
-        return await msg.sendMsg("PU_NO_MENTION", message,dataServer);
+
+        return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
+
     }
 }
 
