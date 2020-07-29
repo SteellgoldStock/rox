@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                     if(!message.guild.roles.cache.find(role => role.name === 'MUTE')){
                         message.guild.roles.create({data: {name: "MUTE"}});
-                        message.guild.channels.forEach(channel => {
+                        message.guild.channels.cache.forEach(channel => {
                             channel.updateOverwrite(role, { SEND_MESSAGES: false });
                         });
 
