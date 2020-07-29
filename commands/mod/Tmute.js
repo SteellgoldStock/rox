@@ -2,30 +2,35 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if(message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)){
+    let reason;
+    if (message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)) {
         const user = message.mentions.users.first();
-        let reason = args.slice(2).join(" ");
+        let reasons = args.slice(2).join(" ");
         const member = message.guild.member(user);
         const role = message.guild.roles.cache.find(role => role.name === 'MUTE');
 
-        if (user){
-            if (member){
-                if (member.user.id !== message.author.id){
-                    if(Number.isInteger(Number(args[1]))){
-                        if (!reason){
-                            let reason = "No reason";
+        if (user) {
+            if (member) {
+                if (member.user.id !== message.author.id) {
+                    if (Number.isInteger(Number(args[1]))) {
+                        if (!reasons) {
+                            reason = "No reason";
+                        } else {
+                            reason = reasons;
                         }
 
-                        if(message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)){
-                            if(!message.guild.roles.cache.find(role => role.name === 'MUTE')){
+                        if (message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) {
+                            if (!message.guild.roles.cache.find(role => role.name === 'MUTE')) {
                                 message.guild.roles.create({data: {name: "MUTE"}});
                             }
-                            if(!member.roles.cache.find(role => role.name === 'MUTE')){
+                            if (!member.roles.cache.find(role => role.name === 'MUTE')) {
 
                                 member.roles.add(role)
                                     .then(() => {
-                                        setTimeout(function(){member.roles.remove(role);}, args[1] * 1000)
-                                        return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username,member.user.username, reason, args[1]), message, dataServer)
+                                        setTimeout(function () {
+                                            member.roles.remove(role);
+                                        }, args[1] * 1000)
+                                        return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username, member.user.username, reason, args[1]), message, dataServer)
                                     })
                             } else {
                                 return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer);

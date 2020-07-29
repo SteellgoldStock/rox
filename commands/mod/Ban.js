@@ -2,16 +2,19 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
+    let reason;
     if(!message.member.roles.cache.has(dataServer.modRole) || !message.member.roles.cache.has(dataServer.adminRole)){
         const user = message.mentions.users.first();
-        let reason = args.slice(1).join(" ");
+        let reasons = args.slice(1).join(" ");
         const member = message.guild.member(user);
 
         if (user){
             if (member){
                 if (member.user.id !== message.author.id){
-                    if (!reason){
-                        let reason = "No reason";
+                    if (!reasons){
+                        reason = "No reason";
+                    } else{
+                        reason = reasons;
                     }
 
                     if(message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)){
