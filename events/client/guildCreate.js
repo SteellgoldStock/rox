@@ -85,8 +85,6 @@ client.on('guildCreate',(guild) => {
 async function sendWelcMsg(guild){
     const channel = guild.channels.cache.filter(c => c.type === 'text').find(x => x.position == 0);
     const channel1 = guild.channels.cache.filter(c => c.type === 'text').find(x => x.position == 1);
-    const channel2 = guild.channels.cache.filter(c => c.type === 'text').find(x => x.position == 2);
-    const channel3 = guild.channels.cache.filter(c => c.type === 'text').find(x => x.position == 3);
 
     let embed = new Discord.MessageEmbed()
         .setTitle("Hello !")
@@ -98,6 +96,4 @@ async function sendWelcMsg(guild){
         .setFooter('Rox • v0.1',client.user.avatarURL())
     channel.send(embed)
     channel1.send(embed)
-    channel2.send(embed)
-    channel3.send(embed)
 }

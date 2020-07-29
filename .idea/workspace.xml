@@ -21,14 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Channels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Roles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Unmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unmute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Unwarn.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unwarn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Warn.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Warn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Warns.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Warns.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
