@@ -2,9 +2,7 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if (!message.member.roles.cache.has(dataServer.modRole) || !message.member.roles.cache.has(dataServer.adminRole)) {
-        return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
-    }
+    if(message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)) return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
 
     const user = message.mentions.users.first();
     let reason = args.slice(1).join(" ");
@@ -24,6 +22,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     if (member.roles.cache.find(role => role.name === 'MUTE')) {
                         member.roles.remove(role)
                             .then(() => {
+                                message.guild.channels.cache.forEach(channel => {
+                                    channel.overwritePermissions(member.user.id, { SEND_MESSAGES: true, ADD_REACTIONS: true});
+                                });
                                 return msg.sendMsgA(language("SUCCESS_UNMUTE", message.author.username, member.user.username), message, dataServer)
                             })
                             .catch(err => {
