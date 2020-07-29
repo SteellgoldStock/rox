@@ -11,33 +11,31 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
     Canvas.registerFont('font/Heroes.ttf', {"family": "Heroes"})
 
-    let sql = `SELECT * FROM goldUsers WHERE userid = ${message.author.id}`;
-    database.query(sql, function (error, results, fields) {
-        if (error) {
-            return false;
-        } else if (results.length > 0) {
-            send(true,message, database)
-        } else {
-            send(false,message, database)
-        }
-    });
+    let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
+    if(!db[message.author.id]){
+        db[message.author.id] = {type:"color",color:`BF5E45`}
+        fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
+        await send(db[message.author.id].type,message,database, db)
+    }else{
+        await send(db[message.author.id].type,message,database, db)
+    }
 }
 
-async function send(option, message, database){
-    if(option == true){
-        const buffer = await profileGold(message, database);
+async function send(option, message, database, db){
+    if(option == "img"){
+        const buffer = await image(message, database);
         const filename = `${message.author.id}.png`;
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
     }else{
-        const buffer = await profile(message, database);
+        const buffer = await color(message, database, db);
         const filename = `${message.author.id}.png`;
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
     }
 }
 
-async function profile(message, database) {
+async function color(message, database, db) {
     const member = message.member;
 
     database.query(`SELECT * FROM servers_xp WHERE guildid=${message.guild.id} AND userid=${message.author.id}`, function (error, results, fields) {
@@ -60,7 +58,7 @@ async function profile(message, database) {
         : member.displayName;
 
     return new Canvas(400, 180)
-        .setColor("#7289da")
+        .setColor("#" + db[message.author.id].color)
         .addRect(84, 0, 316, 180)
         .setColor("#36393F")
         .addRect(169, 26, 231, 46)
@@ -84,7 +82,7 @@ async function profile(message, database) {
         .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
         .toBuffer();
 }
-async function profileGold(message, database) {
+async function image(message, database) {
     const member = message.member;
 
     database.query(`SELECT * FROM servers_xp WHERE guildid=${message.guild.id} AND userid=${message.author.id}`, function (error, results, fields) {
