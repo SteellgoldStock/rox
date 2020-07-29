@@ -15,8 +15,6 @@ client.on("message", message => {
 
         const language = require('../../database/lang/' + dataServer.lang)
 
-        if (message.content.indexOf(prefix) !== 0) return;
-
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
         const cmd = client.commands.get(command);
@@ -63,7 +61,11 @@ client.on("message", message => {
                             }
                         });
                     } else {
+
+                        if (message.content.indexOf(prefix) !== 0) return;
+
                         switch (cmd.help.type) {
+
                             default:
                                 cmd.run(client, message, args, fs, colors, database, dataServer, language);
                                 break;
