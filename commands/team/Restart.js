@@ -5,9 +5,10 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     if(!team.includes(message.author.id)){
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
-    return await message.channel.send("I'm going to go restart, please be patient")
-        .then(client.destroy())
-        .then(client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxIcqg.Q_H6caapjiGjo-zoxYbq6vMstKU"));
+    return await message.channel.send("I'm going to go restart, please be patient").then(m => {
+        client.destroy()
+        client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxIcqg.Q_H6caapjiGjo-zoxYbq6vMstKU");
+    });
 }
 
 exports.help = {
