@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const { client, botConfg, fs, colors, msg, database} = require("../../rox");
+const path = require("path")
 
 let request = require(`request`);
 
@@ -26,13 +27,12 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             break;
 
         case "img":
-            if(!args[1]) return msg.sendMsg("NOT_IMG",message,dataServer);
             let sql = `SELECT * FROM goldUsers WHERE userid = ${message.author.id}`;
             database.query(sql, function (error, results, fields) {
                 if (error) {
                     return console.log(error);
                 } else if (results.length > 0) {
-                    if(isImg(message.attachments.first())){
+                    if(path.extname(message.attachments.first().url) == ".png" || path.extname(message.attachments.first().url) == ".jpg" || path.extname(message.attachments.first().url) == ".jpeg"){
                         let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
                         if(!db[message.author.id]){db[message.author.id] = {type:"img",color:null}}else{
                             db[message.author.id].type = "img";
@@ -64,9 +64,9 @@ async function download(url,id){
         .pipe(fs.createWriteStream('database/users/backgrounds/' + id + ".png"));
 }
 
-async function isImg(msgAttach) {
+function attachIsImage(msgAttach) {
     var url = msgAttach.url;
-    return url.indexOf("png", url.length - "png".length) !== -1;
+    return url.indexOf("png" || "jpg", url.length - "png".length) !== -1;
 }
 
 exports.help = {

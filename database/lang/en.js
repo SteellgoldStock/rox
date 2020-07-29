@@ -6,7 +6,7 @@ const languageData = {
     HELP_UNKNOW_COMMAND: (command) => `The command command \`!${command}\` not exist`,
     LANG_NOT_FOUND: (lang, langs) => "The lang `" + lang + "` not found please, set a valid lang " + langs,
     NOT_YOURSELF: "You can't ban yourself",
-    NOT_IMG: `You didn't send an image, try again, only \`.png\` is allowed, if your picture is \`.jpg\` you can just rename the extension \`.jpg\` by \`.png\``,
+    NOT_IMG: `You didn't send an image, try again, only \`.png\` is supported for now, wait a update please for set a other image extensin, so you can replace your image extension by \`.png\` example your file named \`myImage.jpg\` you can rename in \`myImage.png\``,
     NOT_GOLD_USER: "You are not a Rox Gold user",
     NOT_GOLD_SERVER: "This server don't have Rox Gold",
     IS_NAME_ALREADY: "The server as already this name, please try another",
