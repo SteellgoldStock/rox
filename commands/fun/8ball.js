@@ -15,26 +15,9 @@ const fr = {
     "RESPONSE_9": "non.",
     "RESPONSE_10": "les pronostics ne sont pas très bons."
 }
-const en = {
-    "DESCRIPTION": "I'm telling you the truth!",
-    "ERR_QUESTION": "You have to enter a question to ask me!",
-    "RESPONSE_1": "I'm sure of it.",
-    "RESPONSE_2": "it's definitely safe.",
-    "RESPONSE_3": "yes, definitely.",
-    "RESPONSE_4": "better not tell you now.",
-    "RESPONSE_5": "ask again later.",
-    "RESPONSE_6": "don't count on it.",
-    "RESPONSE_7": "I don't think.",
-    "RESPONSE_8": "my sources say no.",
-    "RESPONSE_9": "no.",
-    "RESPONSE_10": "outlook not so good."
-}
 
-module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if(!args[0]){ return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer)}
-
-    const answerNO = parseInt(Math.floor(Math.random() * 10), 10);
-    switch (answerNO){
+const test = {
+        /*switch (answerNO){
         case 1:
             if(dataServer.lang == "fr"){
                 await message.reply(fr.RESPONSE_1);
@@ -105,7 +88,29 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 await message.reply(en.RESPONSE_10);
             }
             break;
-    }
+    }*/
+}
+const en = {
+    "DESCRIPTION": "I'm telling you the truth!",
+    "ERR_QUESTION": "You have to enter a question to ask me!",
+    "RESPONSE_1": "I'm sure of it.",
+    "RESPONSE_2": "it's definitely safe.",
+    "RESPONSE_3": "yes, definitely.",
+    "RESPONSE_4": "better not tell you now.",
+    "RESPONSE_5": "ask again later.",
+    "RESPONSE_6": "don't count on it.",
+    "RESPONSE_7": "I don't think.",
+    "RESPONSE_8": "my sources say no.",
+    "RESPONSE_9": "no.",
+    "RESPONSE_10": "outlook not so good."
+}
+
+module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
+    if(!args[0]){ return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer)}
+
+    const answerNO = parseInt(Math.floor(Math.random() * 10), 10);
+
+    return await msg.sendMsg(`RESPONSE_${answerNO}`, message, dataServer);
 }
 
 
