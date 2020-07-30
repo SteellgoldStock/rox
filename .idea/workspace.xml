@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
-      <change afterPath="$PROJECT_DIR$/commands/fun/8ball.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/AchivementMc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/ChallengeMc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Choice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/fun/Memes.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/Memes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/gold/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/gold/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,11 +306,11 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953598638" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1596046879619">
+    <state x="456" y="198" key="run.anything.popup" timestamp="1596066881772">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596046879619" />
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1595682750846" />
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1596066881772" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1596044818219">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

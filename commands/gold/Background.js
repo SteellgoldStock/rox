@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const { client, botConfg, fs, colors, msg, database} = require("../../rox");
 const path = require("path")
 
+const axios = require('axios') //you can use any http client
+const tf = require('@tensorflow/tfjs-node')
+const nsfw = require('nsfwjs')
+
 let request = require(`request`);
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
@@ -33,7 +37,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     return console.log(error);
                 } else if (results.length > 0) {
                     if(path.extname(message.attachments.first().url) == ".png" || path.extname(message.attachments.first().url) == ".jpg" || path.extname(message.attachments.first().url) == ".jpeg"){
-                        let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
+                        fn(message.attachments.first().url)
+
+                        /**let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
                         if(!db[message.author.id]){db[message.author.id] = {type:"img",color:null}}else{
                             db[message.author.id].type = "img";
                         }
@@ -41,6 +47,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                         download(message.attachments.first().url, message.author.id);
                         return msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
+                         **/
                     }else{
                         return msg.sendMsg("NOT_IMG",message,dataServer)
                     }
@@ -67,6 +74,19 @@ async function download(url,id){
 function attachIsImage(msgAttach) {
     var url = msgAttach.url;
     return url.indexOf("png" || "jpg", url.length - "png".length) !== -1;
+}
+
+async function fn(url) {
+    const pic = await axios.get(url, {
+        responseType: 'arraybuffer',
+    })
+
+    const model = await nsfw.load()
+    const image = await tf.node.decodeImage(pic.data,3)
+    const predictions = await model.classify(image)
+    image.dispose()
+    console.log(predictions)
+    console.log(predictions)
 }
 
 exports.help = {
