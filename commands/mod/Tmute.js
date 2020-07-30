@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             reason = reasons;
                         }
 
-                        if (message.member.roles.cache.has(dataServer.adminRole)  &&  message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole) || message.member.roles.cache.has(dataServer.modRole) && (message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole))) {
+                        if (message.member.roles.cache.has(dataServer.adminRole)  &&  message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole) || (!message.member.roles.cache.has(dataServer.adminRole) && message.member.roles.cache.has(dataServer.modRole)) && (message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole))) {
 
                             return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
 
