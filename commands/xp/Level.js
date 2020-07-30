@@ -79,7 +79,7 @@ async function color(message, database, db, member) {
 
     const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
         : member.username;
-    if (exports.gold.length > 0){
+    if (exports.gold === member.id){
 
         return new Canvas(400, 180)
             .setColor("#" + db[member.id].color)
