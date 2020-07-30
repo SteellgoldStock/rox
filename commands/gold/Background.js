@@ -154,7 +154,7 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
                 if(!db[member.id]){
                     db[member.id] = {type:"color",color:`BF5E45`}
                 }else{
-                    db[member.id].type = "color";
+
                 }
 
                 fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
