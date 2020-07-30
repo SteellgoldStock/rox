@@ -67,7 +67,21 @@ const languageData = {
 
     // FUN
     CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
-    CHOICE_DONE: "I'm answering it."
+    CHOICE_DONE: "I'm answering it.",
+
+    // 8BALL
+    DESCRIPTION: "I'm telling you the truth!",
+    ERR_QUESTION: "You have to enter a question to ask me!",
+    RESPONSE_1: "I'm sure of it.",
+    RESPONSE_2: "it's definitely safe.",
+    RESPONSE_3: "yes, definitely.",
+    RESPONSE_4: "better not tell you now.",
+    RESPONSE_5: "ask again later.",
+    RESPONSE_6: "don't count on it.",
+    RESPONSE_7: "I don't think.",
+    RESPONSE_8: "my sources say no.",
+    RESPONSE_9: "no.",
+    RESPONSE_10: "outlook not so good.",
 };
 
 const translate = (key, ...args) => {
