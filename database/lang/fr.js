@@ -95,8 +95,8 @@ const languageData = {
 
     // EMBED CONF
     INVALID_ARGUMENT_EMBECONF: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `config` or `status`",
-    INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
-    INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
+    INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
+    INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
 };
 
 const translate = (key, ...args) => {

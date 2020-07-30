@@ -10,9 +10,12 @@ exports.sendMsg = async(text, message, dataServer = null) => {
 
     if(dataServer.msgEmbed !== 0){
         let embed = new Discord.MessageEmbed()
-            embed.setTitle(dataServer.embedTitle + exports.pversion)
+            embed.setTitle(dataServer.embedTitle)
             embed.setDescription(language(text))
+            embed.setThumbnail(dataServer.embedImgURL)
             embed.setColor(dataServer.embedColor)
+            embed.setTimestamp()
+            embed.setFooter('Rox • ' + msg.version,client.user.avatarURL())
         message.channel.send(embed);
     }else{
         message.channel.send(language(text));

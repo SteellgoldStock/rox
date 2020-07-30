@@ -34,7 +34,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 break;
             case "status":
                 if (!args[1]) {
-                    return await msg.sendMsgA(language("INVALID_ARGUMENT_EMBECONF_1", dataServer.prefix, "jq"), message, dataServer)
+                    return await msg.sendMsg("INVALID_ARGUMENT_EMBECONF_1", message, dataServer)
                 }
 
                 switch (args[1]) {
@@ -47,9 +47,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         await msg.sendMsg("UPDATED", message, dataServer);
                         break;
                 }
-                break;
-            default:
-                await msg.sendMsg("INVALID_ARGS_TEXTS", message, dataServer)
                 break;
         }
     } else {
@@ -81,13 +78,15 @@ async function update(type, text, guildid){
             break;
 
         case "on":
-            var on = `UPDATE servers SET embedColor = 1 WHERE guildid = '${guildid}'`;
+            console.log("on")
+            var on = `UPDATE servers SET msgEmbed = 1 WHERE guildid = '${guildid}'`;
             database.query(on, function (err) {
                 if (err) throw err;
             });
             break;
 
         case "off":
+            console.log("off")
             var off = `UPDATE servers SET msgEmbed = 0 WHERE guildid = '${guildid}'`;
             database.query(off, function (err) {
                 if (err) throw err;
