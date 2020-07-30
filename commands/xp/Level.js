@@ -27,9 +27,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if(!db[member.id]){
             db[member.id] = {type:"color",color:`BF5E45`}
             fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
-            await send(db[member.id].type,message,database, db, member)
+            await send(db[member.id].type,message,database, db, member, dataServer)
         }else{
-            await send(db[member.id].type,message,database, db, member)
+            await send(db[member.id].type,message,database, db, member, dataServer)
         }
     }
 }
