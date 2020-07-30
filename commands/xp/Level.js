@@ -27,9 +27,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if(!db[member.id]){
             db[member.id] = {type:"color",color:`BF5E45`}
             fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
-            await send(db[member.id].type,message,database, db, member)
+            await send(db[member.id].type,message,database, db, member, dataServer)
         }else{
-            await send(db[member.id].type,message,database, db, member)
+            await send(db[member.id].type,message,database, db, member, dataServer)
         }
     }
 }
@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 async function send(option, message, database, db, member, dataServer){
 
     if(option == "img"){
-        const buffer = await image(message, database, member, dataServer);
+        const buffer = await image(message, database, member);
         const filename = `${member.id}.png`;
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
@@ -192,7 +192,8 @@ async function color(message, database, db, member, dataServer) {
 
     }
 }
-async function image(message, database, member, dataServer) {
+
+async function image(message, database, member) {
 
     database.query(`SELECT * FROM goldUsers WHERE userid = ${member.id}`, function (error, results, fields) {
         if (error) {
@@ -222,65 +223,6 @@ async function image(message, database, member, dataServer) {
 
     const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
         : member.username;
-
-    if(dataServer.isGold === 1){
-
-        if (exports.gold === member.id){
-
-            return new Canvas(400, 180)
-                .addImage(path.join(`database/users/backgrounds/${message.guild.id}.png`), 84, 0, 316, 180)
-                .setColor("#36393F")
-                .addRect(169, 26, 231, 46)
-                .addRect(224, 108, 176, 46)
-                .setShadowColor('rgba(22, 22, 22, 1)')
-                .setShadowOffsetY(5)
-                .setShadowBlur(10)
-                .addCircle(84, 90, 62)
-                .addCircularImage(avatar, 85, 90, 64)
-                .addImage(path.join(`database/users/gold.png`), 12,40,36,36)
-                .save()
-                .createBeveledClip(10, 139, 150, 30, 0)
-                .setColor('#36393F')
-                .fill()
-                .restore()
-                .setTextAlign('center')
-                .setTextFont('12pt Heroes')
-                .setColor('#FFFFFF')
-                .addText(name, 285, 54)
-                .addText(`Level: ${exports.level}`, 84, 157)
-                .setTextAlign('left')
-                .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
-                .toBuffer();
-
-        } else {
-
-            return new Canvas(400, 180)
-                .addImage(path.join(`database/users/backgrounds/${message.guild.id}.png`), 84, 0, 316, 180)
-                .setColor("#36393F")
-                .addRect(169, 26, 231, 46)
-                .addRect(224, 108, 176, 46)
-                .setShadowColor('rgba(22, 22, 22, 1)')
-                .setShadowOffsetY(5)
-                .setShadowBlur(10)
-                .addCircle(84, 90, 62)
-                .addCircularImage(avatar, 85, 90, 64)
-                .save()
-                .createBeveledClip(10, 139, 150, 30, 0)
-                .setColor('#36393F')
-                .fill()
-                .restore()
-                .setTextAlign('center')
-                .setTextFont('12pt Heroes')
-                .setColor('#FFFFFF')
-                .addText(name, 285, 54)
-                .addText(`Level: ${exports.level}`, 84, 157)
-                .setTextAlign('left')
-                .addText(`XP: ${kFormatter(exports.xp)}`, 241, 136)
-                .toBuffer();
-
-        }
-
-    } else {
 
         if (exports.gold === member.id){
 
@@ -341,8 +283,6 @@ async function image(message, database, member, dataServer) {
             fs.writeFileSync("database/users/users.json", JSON.stringify(dbi), "utf-8");
 
         }
-
-    }
 }
 
 function kFormatter(num) {
