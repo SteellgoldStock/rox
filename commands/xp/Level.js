@@ -5,7 +5,6 @@ const { Canvas } = require('canvas-constructor');
 const { MessageAttachment } = require('discord.js');
 const fetch = require('node-fetch');
 var path = require('path');
-const star = [];
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
@@ -43,7 +42,7 @@ async function send(option, message, database, db, member){
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
     }else{
-        const buffer = await color(message, database, db, member, star[message.author.id].asStar);
+        const buffer = await color(message, database, db, member);
         const filename = `${message.id}.png`;
         const Attach = new MessageAttachment(buffer, filename);
         await message.channel.send(Attach);
