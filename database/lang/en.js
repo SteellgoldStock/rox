@@ -14,7 +14,7 @@ const languageData = {
     MENTION_CHANNEL: "You didn't mention any channels",
     MENTION_ROLE: "You didn't mention any role",
     ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, and `img`",
-    ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: [Colors](https://colors.rox.wtf)",
+    ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: https://colors.rox.wtf",
 
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
