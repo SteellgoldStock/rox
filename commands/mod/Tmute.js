@@ -20,7 +20,12 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             reason = reasons;
                         }
 
-                        if ((message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || (message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)))) {
+                        if (message.member.roles.cache.has(dataServer.adminRole)  &&  message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole) || message.member.roles.cache.has(dataServer.modRole) && (message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole))) {
+
+                            return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
+
+                        } else {
+
                             if (!message.guild.roles.cache.find(role => role.name === 'MUTE')) {
                                 message.guild.roles.create({data: {name: "MUTE"}});
                             }
@@ -58,8 +63,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             } else {
                                 return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer);
                             }
-                        } else {
-                            return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
                         }
                     } else {
                         return await msg.sendMsg("NO_TIME", message, dataServer);
