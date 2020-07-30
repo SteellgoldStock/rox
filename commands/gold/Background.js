@@ -36,6 +36,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 if (error) {
                     return console.log(error);
                 } else if (results.length > 0) {
+                    if(!message.attachments.first()){ return msg.sendMsg("NOT_IMG",message,dataServer) }
+
                     if(path.extname(message.attachments.first().url) == ".png" || path.extname(message.attachments.first().url) == ".jpg" || path.extname(message.attachments.first().url) == ".jpeg"){
                         msg.sendMsg("CHECK_PICTURE",message,dataServer)
                         fn(message.attachments.first().url,msg,language,message.attachments.first(),message, dataServer,message.id, message.channel.id)
