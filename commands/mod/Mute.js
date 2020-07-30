@@ -18,36 +18,39 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         reason = reasons;
                     }
 
-                    if ((message.member.roles.cache.has(dataServer.adminRole) && !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)) || (message.member.roles.cache.has(dataServer.modRole) && (!message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || !message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole)))) {
-                        if (!message.guild.roles.cache.find(role => role.name === 'MUTE')) {
-                            message.guild.roles.create({data: {name: "MUTE"}});
-                        }
+                    if (message.member.roles.cache.has(dataServer.adminRole)  &&  message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole) || message.member.roles.cache.has(dataServer.modRole) && (message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole))) {
 
-                        if (!member.roles.cache.find(role => role.name === 'MUTE')) {
-                            message.guild.channels.cache.forEach((channel) => {
-                                if(channel.type === 'text'){
-                                    channel.updateOverwrite(member.user, { SEND_MESSAGES: false });
-                                }else if(channel.type === 'voice'){
-                                    channel.updateOverwrite(member.user, { SPEAK: false });
-                                    channel.updateOverwrite(member.user, { VIEW_CHANNEL: false });
-                                }else{
+                            return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
 
-                                }
-                            });
-                            member.roles.add(role)
-                                .then(() => {
-                                    return msg.sendMsgA(language("SUCCESS_MUTE", message.author.username, member.user.username, reason), message, dataServer)
-                                })
-                                .catch(err => {
-                                    msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
-                                    return console.error(err);
-                                });
                         } else {
-                            return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer);
+
+                            if (!message.guild.roles.cache.find(role => role.name === 'MUTE')) {
+                                message.guild.roles.create({data: {name: "MUTE"}});
+                            }
+
+                            if (!member.roles.cache.find(role => role.name === 'MUTE')) {
+                                message.guild.channels.cache.forEach((channel) => {
+                                    if(channel.type === 'text'){
+                                        channel.updateOverwrite(member.user, { SEND_MESSAGES: false });
+                                    }else if(channel.type === 'voice'){
+                                        channel.updateOverwrite(member.user, { SPEAK: false });
+                                        channel.updateOverwrite(member.user, { VIEW_CHANNEL: false });
+                                    }else{
+
+                                    }
+                                });
+                                member.roles.add(role)
+                                    .then(() => {
+                                        return msg.sendMsgA(language("SUCCESS_MUTE", message.author.username, member.user.username, reason), message, dataServer)
+                                    })
+                                    .catch(err => {
+                                        msg.sendMsg("PU_IMPOSSIBLE", message, dataServer);
+                                        return console.error(err);
+                                    });
+                            } else {
+                                return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer);
+                            }
                         }
-                    } else {
-                        return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
-                    }
                 } else {
                     return await msg.sendMsg("PUNISH_Y", message, dataServer);
                 }
