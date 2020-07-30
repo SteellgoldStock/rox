@@ -8,9 +8,11 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
         }
 
-        if (mentionUser.roles.cache.has(dataServer.modRole) || mentionUser.roles.cache.has(dataServer.adminRole)) {
+        if (message.member.roles.cache.has(dataServer.adminRole)  &&  message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole) || (!message.member.roles.cache.has(dataServer.adminRole) && message.member.roles.cache.has(dataServer.modRole)) && (message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole))) {
+
             return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
-        }
+
+        } else {
 
         const reason = args.slice(1).join(" ");
         if (!reason) {
@@ -29,6 +31,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         });
 
         return await msg.sendMsgA(language("SUCCESS_WARN", message.author.username, mentionUser.user.username, reason), message, dataServer);
+
+        }
+
     } else {
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
