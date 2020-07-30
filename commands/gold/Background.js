@@ -151,10 +151,10 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
 
             } else {
 
-                if(!db[member.user.id]){
-                    db[member.user.id] = {type:"img",color:null}
+                if(!db[member.id]){
+                    db[member.id] = {type:"img",color:null}
                 }else{
-                    db[member.user.id].type = "img";
+                    db[member.id].type = "img";
                 }
 
                 fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
@@ -163,7 +163,7 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
         });
     });
 
-    await download(message.attachments.first().url, message.guild.id);
+    download(message.attachments.first().url, message.guild.id);
     return await msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
 }
 

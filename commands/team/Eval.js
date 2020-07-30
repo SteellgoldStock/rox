@@ -13,7 +13,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         if (typeof evaled !== 'string') evaled = require('util').inspect(evaled);
 
-        await message.channel.send(clean(evaled), { code: 'xl' });
+            message.channel.send(clean(evaled), { code: 'xl' });
+
     } catch (err) {
         await message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
