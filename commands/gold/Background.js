@@ -37,17 +37,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     return console.log(error);
                 } else if (results.length > 0) {
                     if(path.extname(message.attachments.first().url) == ".png" || path.extname(message.attachments.first().url) == ".jpg" || path.extname(message.attachments.first().url) == ".jpeg"){
-                        fn(message.attachments.first().url)
-
-                        /**let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
-                        if(!db[message.author.id]){db[message.author.id] = {type:"img",color:null}}else{
-                            db[message.author.id].type = "img";
-                        }
-                        fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
-
-                        download(message.attachments.first().url, message.author.id);
-                        return msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
-                         **/
+                        msg.sendMsg("CHECK_PICTURE",message,dataServer)
+                        fn(message.attachments.first().url,msg,language,message.attachments.first(),message, dataServer,message.id, message.channel.id)
                     }else{
                         return msg.sendMsg("NOT_IMG",message,dataServer)
                     }
@@ -76,7 +67,7 @@ function attachIsImage(msgAttach) {
     return url.indexOf("png" || "jpg", url.length - "png".length) !== -1;
 }
 
-async function fn(url) {
+async function fn(url, msg, language, attachement, message, dataServer, msgId, chaId) {
     const pic = await axios.get(url, {
         responseType: 'arraybuffer',
     })
@@ -85,8 +76,26 @@ async function fn(url) {
     const image = await tf.node.decodeImage(pic.data,3)
     const predictions = await model.classify(image)
     image.dispose()
-    console.log(predictions)
-    console.log(predictions)
+
+    if(predictions[0].className == "Hentai" || predictions[0].className == "Porn"){
+        if(predictions[0].probability >= 0.5000000000000000){
+            client.channels.cache.get(chaId).messages.fetch(msgId).then(message => message.delete())
+
+            return await msg.sendMsg("PICTURE_NOT_ALLOWED",message,dataServer)
+        }
+    }
+
+    let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
+     if(!db[message.author.id]){
+         db[message.author.id] = {type:"img",color:null}
+     }else{
+         db[message.author.id].type = "img";
+     }
+
+     fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
+
+     await download(message.attachments.first().url, message.author.id);
+     return msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
 }
 
 exports.help = {

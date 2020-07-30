@@ -62,6 +62,8 @@ const languageData = {
     NO_MUTE: (user) => `${user} This person is currently not being silenced`,
 
     BLACKLISTED: "Sorry, but I can't let you use the bot. You're blacklisted.",
+    PICTURE_NOT_ALLOWED: `Your picture is not allowed please choose a other`,
+    CHECK_PICTURE: "Please be patient we are checking the image",
 
     // FUN
     CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
