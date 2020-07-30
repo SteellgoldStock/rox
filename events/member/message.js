@@ -32,9 +32,23 @@ client.on("message", message => {
                                 return console.error(error.message);
                             }
 
+                            const msg = parseInt(resultsXp[0].messagesCount) + parseInt("1")
+                            let sqladdMSg = `UPDATE servers_xp SET messagesCount=${msg} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                            database.query(sqladdMSg);
+
                             let MaxXp = resultsXp[0].level * 150 + resultsXp[0].level * 35
 
                             if (resultsXp[0].xp >= MaxXp) {
+                                /** SERVEUR **/
+                                let toAddSrvXp = dataServer.xp;
+                                let sqladdXpSrv = `UPDATE servers SET xp=${toAddSrvXp} + 15 WHERE guildid = ${message.guild.id}`
+                                database.query(sqladdXpSrv);
+                                let MaxXpSrv = dataServer.level * 150 + dataServer.level * 35
+                                if (dataServer.xp >= MaxXpSrv) {
+                                    msg.sendMsg("LEVEL_SERVER_UP", message, dataServer)
+                                }
+
+                                /** USER **/
                                 let toAddLvl = resultsXp[0].level;
                                 let sqladdlvl = `UPDATE servers_xp SET level=${toAddLvl} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                                 database.query(sqladdlvl);

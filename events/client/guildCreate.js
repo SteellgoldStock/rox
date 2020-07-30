@@ -45,7 +45,10 @@ client.on('guildCreate',(guild) => {
 
                 // CONFIG - CUSTOM CMDS
                 countCC: 0,
-                limitCC: 15
+                limitCC: 15,
+
+                level: 1,
+                xp: 0
             };
 
             database.query('INSERT INTO servers SET ?', postServer, function (error, results, fields) {
@@ -70,7 +73,8 @@ client.on('guildCreate',(guild) => {
                         guildid: guild.id,
                         userid: member.id,
                         xp: 0,
-                        level: 1
+                        level: 1,
+                        messagesCount: 0
                     };
 
                     database.query('INSERT INTO servers_xp SET ?', postXp, function (error, results, fields) {
