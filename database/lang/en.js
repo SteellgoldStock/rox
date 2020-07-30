@@ -68,6 +68,7 @@ const languageData = {
     // FUN
     CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
     CHOICE_DONE: "I'm answering it.",
+    DOOR_OPEN: "The door's wide open for you",
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `The server as level up, you can see your level with \`${prefix}server\`, use \`${prefix}server top\` to see your level compared to other servers using Rox`,

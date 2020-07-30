@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
     }
 
-    message.channel.send("la commande a été reload")
+    message.channel.send("niké mouk")
 }
 
 exports.help = {

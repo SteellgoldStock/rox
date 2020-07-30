@@ -44,7 +44,8 @@ client.on('guildMemberAdd', member => {
                     guildid: member.guild.id,
                     userid: member.id,
                     xp: 0,
-                    level: 1
+                    level: 1,
+                    messagesCount: 0
                 };
                 database.query('INSERT INTO servers_xp SET ?', postXp, function (error) {
                     if (error) throw error;

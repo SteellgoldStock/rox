@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="Test">
+      <change afterPath="$PROJECT_DIR$/commands/fun/Door.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/team/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/team/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/onJoin.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onJoin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,16 +77,16 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\mod" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
   </component>
   <component name="RunManager">
@@ -120,7 +123,7 @@
       <workItem from="1595935968267" duration="19565000" />
       <workItem from="1596026825307" duration="468000" />
       <workItem from="1596033037353" duration="306000" />
-      <workItem from="1596107103169" duration="3457000" />
+      <workItem from="1596107103169" duration="6690000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
