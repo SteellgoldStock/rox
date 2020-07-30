@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { client, database, msg, colors, fs} = require("../../rox");
-const langs = ["fr","en","es"]
+const langs = ["fr","en"]
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if(!message.member.roles.cache.has(dataServer.adminRole)){
@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     }
 
     if(!args[0]){ return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer)}
-    if(!langs.includes(args[0])){ return await msg.sendMsgA(language("LANG_NOT_FOUND",args[0],"fr, en, es"),message,dataServer)}
+    if(!langs.includes(args[0])){ return await msg.sendMsgA(language("LANG_NOT_FOUND",args[0],"fr, en"),message,dataServer)}
 
     var sql = `UPDATE servers SET lang = '${args[0]}' WHERE guildid = '${message.guild.id}'`;
     database.query(sql, function (err) {
