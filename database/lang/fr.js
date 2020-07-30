@@ -70,7 +70,7 @@ const languageData = {
     // FUN
     CHOICE_PROGRESS: "Je suis entrain de choisir... hmm est difficile",
     CHOICE_DONE: "Je réponds...",
-    DOOR_OPEN: "La porte est grande ouverte pour vous",
+    DOOR_OPEN: "3ème porte à gauche, au fond tu couloir, c'est la sortie",
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `Niveau supérieur du serveur, vous pouvez voir le niveau du serveur avec \`${prefix}server\`, utilisez \`${prefix}server top\` pour voir votre niveau par rapport aux autres serveurs utilisant Rox`,
@@ -97,6 +97,8 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `config` or `status`",
     INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
     INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
+    IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
+    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`
 };
 
 const translate = (key, ...args) => {

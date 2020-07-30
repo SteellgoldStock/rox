@@ -8,16 +8,22 @@ exports.sendMsg = async(text, message, dataServer = null) => {
     const guildLanguage = dataServer.lang;
     const language = require(`../database/lang/${guildLanguage}`);
 
-    if(dataServer.msgEmbed !== 0){
-        let embed = new Discord.MessageEmbed()
+    if (dataServer.isGold !== 0) {
+        if (dataServer.msgEmbed !== 0) {
+            let embed = new Discord.MessageEmbed()
             embed.setTitle(dataServer.embedTitle)
             embed.setDescription(language(text))
-            embed.setThumbnail(dataServer.embedImgURL)
+
+                embed.setThumbnail(dataServer.embedImgURL)
+
             embed.setColor(dataServer.embedColor)
             embed.setTimestamp()
-            embed.setFooter('Rox • ' + exports.version,client.user.avatarURL())
-        message.channel.send(embed);
-    }else{
+            embed.setFooter('Rox • ' + exports.version, client.user.avatarURL())
+            message.channel.send(embed);
+        } else {
+            message.channel.send(language(text));
+        }
+    } else {
         message.channel.send(language(text));
     }
 }

@@ -21,10 +21,12 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     case "title":
                         await update("title", args.slice(2).join(" "), message.guild.id);
                         await msg.sendMsg("UPDATED", message, dataServer);
+                        await msg.sendMsgA(language("IMG_TITLE_DISABLE",dataServer.prefix), message, dataServer);
                         break;
                     case "imgUrl":
                         await update("url", args.slice(2).join(" "), message.guild.id);
                         await msg.sendMsg("UPDATED", message, dataServer);
+                        await msg.sendMsgA(language("IMG_URL_DISABLE",dataServer.prefix), message, dataServer);
                         break;
                     case "color":
                         await update("color", args.slice(2).join(" "), message.guild.id);
