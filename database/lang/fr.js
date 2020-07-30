@@ -1,5 +1,6 @@
 const languageData = {
     /** Errors **/
+    TEAM_NOT: "Cette commande ne peut être utilisée que par un utilisateur au sein de l'équipe",
     PERMISSION_DENIED: "Vous n'avez pas la permission d'utiliser cette commande",
     MISSED_ARGUMENTS: "Vous avez oublié des arguments, réessayez s'il vous plaît.",
     MAXIMUM_VALUE: "Vous ne pouvez pas utiliser plus de 3 caractères, symboles ou lettres dans votre préfixe, par exemple `rox!` n'est pas autorisée, mais `r!` est autorisé, et vous pouvez à nouveau ajouter 1 caractère",
@@ -16,6 +17,7 @@ const languageData = {
     ARGS_BACKGROUND: "L'argument, n'est pas valable, ceux qui existent sont `color`, `img` and `Server`",
     ARGS_BACKGROUND_1: "Vous devez entrer un code couleur valide, vous pouvez utiliser ce générateur: https://colors.rox.wtf",
 
+    INVALID_ARGS_BLACKLIST: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `add` or `remove`",
     INVALID_ARGS_ROLES: "Vous devez saisir un type de rôle valide, les rôles disponibles à configurer sont: `adminRole`, `modRole` ou `autoRole`",
     INVALID_ARGS_TEXTS: "Vous devez entrer un type de texte valide, les textes disponibles à configurer sont: `joinText`, `quitText` ou `lvlUpText`",
     INVALID_ARGS_CHANNELS: "Vous devez entrer un type de chaîne valide, les chaînes disponibles à configurer sont is: `joinquit` ou `logs`",
@@ -86,6 +88,10 @@ const languageData = {
     RESPONSE_8: "Mes sources disent que non.",
     RESPONSE_9: "Non.",
     RESPONSE_10: "Les perspectives ne sont pas si bonnes.",
+
+    // TEAM
+    BLACKLIST_ADD: "Tu as ajouté ce membre dans la blacklist",
+    BLACKLIST_REMOVE: "Tu as supprimé ce membre de la blacklist",
 };
 
 const translate = (key, ...args) => {

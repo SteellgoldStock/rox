@@ -52,6 +52,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         case "server":
             if(dataServer.isGold === 1) {
+
+                if (message.member.roles.cache.has(dataServer.adminRole) || message.member.hasPermission('ADMINISTRATOR')) {
                     if(!message.attachments.first()){ return msg.sendMsg("NOT_IMG",message,dataServer) }
 
                     if(path.extname(message.attachments.first().url) == ".png" || path.extname(message.attachments.first().url) == ".jpg" || path.extname(message.attachments.first().url) == ".jpeg"){
@@ -61,8 +63,11 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         return msg.sendMsg("NOT_IMG",message,dataServer)
                     }
                 } else {
-                    return msg.sendMsg("NOT_GOLD_SERVER",message,dataServer)
+                    return msg.sendMsg("PERMISSION_DENIED",message,dataServer)
                 }
+            } else {
+                return msg.sendMsg("NOT_GOLD_SERVER",message,dataServer)
+            }
             break
     }
 }

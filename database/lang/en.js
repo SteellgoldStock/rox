@@ -1,5 +1,6 @@
 const languageData = {
     /** Errors **/
+    TEAM_NOT: "This command can be used only by a user in a team",
     PERMISSION_DENIED: "You don't have permission to use this command",
     MISSED_ARGUMENTS: "You missed someone's arguments, please try again.",
     MAXIMUM_VALUE: "You cannot use more than 3 characters, symbols, or letters in your prefix, exemple `rox!` is not allowed, but `r!` is allowed, and you can again add 1 character",
@@ -13,9 +14,10 @@ const languageData = {
     CHANNELS_ARGS: "You did not enter a valid value, here are the available values: `logs`, `joinquit`",
     MENTION_CHANNEL: "You didn't mention any channels",
     MENTION_ROLE: "You didn't mention any role",
-    ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, `img` and `Server`",
+    ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, `img` and `server`",
     ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: https://colors.rox.wtf",
 
+    INVALID_ARGS_BLACKLIST: "You must enter a valid option type, the avaibles option to config is: `add` or `remove`",
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
     INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit` or `logs`",
@@ -86,6 +88,10 @@ const languageData = {
     RESPONSE_8: "my sources say no.",
     RESPONSE_9: "no.",
     RESPONSE_10: "outlook not so good.",
+
+    // TEAM
+    BLACKLIST_ADD: "You have add this member in blacklist",
+    BLACKLIST_REMOVE: "You have remove this member in blacklist",
 };
 
 const translate = (key, ...args) => {
