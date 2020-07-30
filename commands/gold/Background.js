@@ -140,7 +140,7 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
 
     let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
 
-    message.guild.users.cache.forEach(member => {
+    message.guild.members.cache.forEach(member => {
 
         database.query(`SELECT * FROM goldUsers WHERE userid = ${member.user.id}`, function (error, results, fields) {
             if (error) {
