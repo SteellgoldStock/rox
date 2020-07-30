@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         msg.sendMsg("PU_NO_MENTION",message,dataServer);
     }
 
-    message.channel.send(language("DOOR_OPEN") +  "**"+member.user.username+"**");
+    message.channel.send(language("DOOR_OPEN") +  " **"+member.username+"**");
 }
 
 
