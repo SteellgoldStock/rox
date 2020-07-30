@@ -4,6 +4,7 @@ exports.colors = require("colors");
 exports.client = new Discord.Client();
 exports.msg = require("./functions/msg");
 exports.client.commands = new Discord.Collection();
+exports.version = " • Rox v0.1";
 exports.team = [
     "504392983244832780",
     "558793081663782913",
