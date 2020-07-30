@@ -1,7 +1,7 @@
 const languageData = {
     /** Errors **/
     PERMISSION_DENIED: "Vous n'avez pas la permission d'utiliser cette commande",
-    MISSED_ARGUMENTS: "Vous avez oubliez des arguments, réessayez s'il vous plaît.",
+    MISSED_ARGUMENTS: "Vous avez oublié des arguments, réessayez s'il vous plaît.",
     MAXIMUM_VALUE: "Vous ne pouvez pas utiliser plus de 3 caractères, symboles ou lettres dans votre préfixe, par exemple `rox!` n'est pas autorisée, mais `r!` est autorisé, et vous pouvez à nouveau ajouter 1 caractère",
     HELP_UNKNOW_COMMAND: (command) => `La commande \`!${command}\` n'existe pas`,
     LANG_NOT_FOUND: (lang, langs) => "La langue `" + lang + "` n'a pas été trouvé s'il vous plaît, définissez une langue valide " + langs,
@@ -85,7 +85,7 @@ const languageData = {
     RESPONSE_7: "Je ne le pense pas.",
     RESPONSE_8: "Mes sources disent que non.",
     RESPONSE_9: "Non.",
-    RESPONSE_10: "les perspectives ne sont pas si bonnes.",
+    RESPONSE_10: "Les perspectives ne sont pas si bonnes.",
 };
 
 const translate = (key, ...args) => {
