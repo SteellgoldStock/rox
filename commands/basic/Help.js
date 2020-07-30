@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             // .addField(language("HELP_GOLD_SERVER_FIELD",message.guild.name),"`embedconf`")
             .setThumbnail(client.user.avatarURL())
             .setTimestamp()
-            .setFooter('Rox • v0.1',client.user.avatarURL())
+            .setFooter('Rox • ' + msg.version,client.user.avatarURL())
 
         message.channel.send(embed)
     }else{

@@ -92,6 +92,11 @@ const languageData = {
     // TEAM
     BLACKLIST_ADD: "You have add this member in blacklist",
     BLACKLIST_REMOVE: "You have remove this member in blacklist",
+
+    // EMBED CONF
+    INVALID_ARGUMENT_EMBECONF: "You must enter a valid option type, the avaibles option to config is: `config` or `status`",
+    INVALID_ARGUMENT_EMBECONF_0: "You must enter a valid option type, the avaibles option to config is: `on` or `off`",
+    INVALID_ARGUMENT_EMBECONF_1: "You must enter a valid option type, the avaibles option to config is: `title`, `color` or `imgUrl`",
 };
 
 const translate = (key, ...args) => {
