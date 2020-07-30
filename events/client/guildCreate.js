@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const {colors, client, fs, database} = require('./../../rox')
+const {colors, client, fs, database, msg} = require('./../../rox')
 
 client.on('guildCreate',(guild) => {
     client.guilds.cache.get("733724420056547338").channels.cache.get("737651263612911672").send("Nouveau serveur: **" + guild.name + "**");
@@ -97,7 +97,7 @@ async function sendWelcMsg(guild){
         .addField("<:berry:737050710528753766> Support","For help join our discord by clicking [here](https://discord.gg/Yee8dWA), or use `!help`")
         .addField("<a:config:738108401208262738> Configuration","To start using the bot, configure one role as admin and another one as moderator, with the command `!roles` which is only usable by roles admins, and people with `ADMINISTRATOR` permission")
         .setTimestamp()
-        .setFooter('Rox • v0.1',client.user.avatarURL())
+        .setFooter('Rox • ' + msg.version,client.user.avatarURL())
     channel.send(embed)
     channel1.send(embed)
 }
