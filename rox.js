@@ -7,7 +7,8 @@ exports.client.commands = new Discord.Collection();
 exports.team = [
     "504392983244832780",
     "558793081663782913",
-    "354170113294991364"
+    "354170113294991364",
+    "595309912842829855"
 ]
 const mysql = require('mysql');
 
@@ -27,7 +28,6 @@ exports.client.on('ready', () => {
     /* STATUS */
     setInterval(async () => {
         const statuslist = [
-            `Support Server: discord.gg/mC8UKrA`,
             `${exports.client.guilds.cache.size} servers`,
             `${exports.client.users.cache.size} users`,
         ];

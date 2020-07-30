@@ -16,14 +16,14 @@ client.on('guildMemberAdd', member => {
             return console.error(error.message);
         }
 
-        if (results[0].autoRole !== "none") {
+        if (!results[0].autoRole == "none") {
             let role = member.guild.roles.cache.get(results[0].autoRole);
             if (role) {
                 member.roles.add(role)
             }
         }
 
-        if (results[0].announceChannel !== "false") {
+        if (!results[0].announceChannel == "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
                 channel.send(results[0].joinText.allReplace({

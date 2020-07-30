@@ -16,7 +16,7 @@ client.on('guildMemberRemove', member => {
             return console.error(error.message);
         }
 
-        if (results[0].announceChannel !== "false") {
+        if (!results[0].announceChannel == "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
                 channel.send(results[0].quitText.allReplace({

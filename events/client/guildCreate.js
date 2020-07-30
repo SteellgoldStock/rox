@@ -16,7 +16,6 @@ client.on('guildCreate',(guild) => {
 
 
             var postServer = {
-                name: guild.name,
                 guildid: guild.id,
                 lang: "en",
                 prefix: "!",
@@ -37,6 +36,7 @@ client.on('guildCreate',(guild) => {
                 // CONFIG - EMBED ( GOLD SERVER )
                 msgEmbed: 0,
                 embedImgURL: "none",
+                embedColor: "none",
                 embedTitle: "none",
 
                 // CONFIG - XP SYSTEM
