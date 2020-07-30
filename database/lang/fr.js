@@ -13,7 +13,7 @@ const languageData = {
     CHANNELS_ARGS: "Vous n'avez pas saisi de valeur valide, voici les valeurs disponibles: `logs`, `joinquit`",
     MENTION_CHANNEL: "Vous n'avez mentionné aucun salons",
     MENTION_ROLE: "Vous n'avez mentionné aucun rôle",
-    ARGS_BACKGROUND: "L'argument, n'est pas valable, ceux qui existent sont `color`, and `img`",
+    ARGS_BACKGROUND: "L'argument, n'est pas valable, ceux qui existent sont `color`, `img` and `Server`",
     ARGS_BACKGROUND_1: "Vous devez entrer un code couleur valide, vous pouvez utiliser ce générateur: https://colors.rox.wtf",
 
     INVALID_ARGS_ROLES: "Vous devez saisir un type de rôle valide, les rôles disponibles à configurer sont: `adminRole`, `modRole` ou `autoRole`",

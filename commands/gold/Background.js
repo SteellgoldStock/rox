@@ -137,18 +137,29 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
 
     message.guild.users.cache.forEach(member => {
 
-        if(!db[member.user.id]){
-            db[member.user.id] = {type:"img",color:null}
-        }else{
-            db[member.user.id].type = "img";
-        }
+        database.query(`SELECT * FROM goldUsers WHERE userid = ${member.user.id}`, function (error, results, fields) {
+            if (error) {
+                return console.log(error);
+            } else if (results.length > 0) {
 
-        fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
 
+
+            } else {
+
+                if(!db[member.user.id]){
+                    db[member.user.id] = {type:"img",color:null}
+                }else{
+                    db[member.user.id].type = "img";
+                }
+
+                fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
+
+            }
+        });
     });
 
     await download(message.attachments.first().url, message.guild.id);
-    return msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
+    return await msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
 }
 
 exports.help = {
