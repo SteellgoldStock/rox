@@ -69,6 +69,9 @@ const languageData = {
     CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
     CHOICE_DONE: "I'm answering it.",
 
+    // SERVER
+    LEVEL_SERVER_UP: (prefix) => `The server as level up, you can see your level with \`${prefix}server\`, use \`${prefix}server top\` to see your level compared to other servers using Rox`,
+
     // 8BALL
     DESCRIPTION: "I'm telling you the truth!",
     ERR_QUESTION: "You have to enter a question to ask me!",
