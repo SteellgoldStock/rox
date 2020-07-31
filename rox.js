@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 exports.fs = require('fs');
 exports.colors = require("colors");
-exports.client = new Discord.Client();
+exports.client = new Discord.Client({disableEveryone: true});
 exports.msg = require("./functions/msg");
 exports.client.commands = new Discord.Collection();
 exports.team = [
@@ -9,7 +9,11 @@ exports.team = [
     "558793081663782913",
     "354170113294991364",
     "595309912842829855"
-]
+];
+
+exports.servers = {};
+exports.ytdl = require("ytdl-core");
+
 const mysql = require('mysql');
 
 exports.database = mysql.createConnection({
@@ -50,6 +54,7 @@ exports.client.on('ready', () => {
     loadCommand('./commands/gold/');
     loadCommand('./commands/team/');
     loadCommand('./commands/fun/');
+    loadCommand('./commands/music/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {

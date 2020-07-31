@@ -99,7 +99,15 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
     INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
-    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`
+    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`,
+
+    // MUSC
+    MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
+    MUSIC_PLAY: (name) => "J'ai commencé à jouer **"+name+"**",
+    MUSIC_SKIP: (name) => "Je saute la musique à **"+name+"**",
+    MUSIC_STOP: "J'ai arrêté la musique",
+    MUSIC_DISCONNECT: "Je suis déconnecté du salon vocal car aucune musique n'a été trouvée",
+    MUSIC_NO_VOICE: "Veuillez d'abord entrer dans un salon vocal",
 };
 
 const translate = (key, ...args) => {

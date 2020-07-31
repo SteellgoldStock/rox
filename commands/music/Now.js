@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { client, database, msg, colors, fs, team} = require("../../rox");
+const { client, database, msg, colors, fs, team, queue, ytdl} = require("../../rox");
 const { MessageAttachment } = require('discord.js');
 const got = require('got');
 

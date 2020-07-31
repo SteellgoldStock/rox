@@ -99,7 +99,15 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF_0: "You must enter a valid option type, the avaibles option to config is: `on` or `off`",
     INVALID_ARGUMENT_EMBECONF_1: "You must enter a valid option type, the avaibles option to config is: `title`, `color` or `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `To disable the image use the command \`${prefix}embed config imgUrl\` without text following`,
-    IMG_TITLE_DISABLE: (prefix) => `To disable the title use the command \`${prefix}embed config title\` without text following`
+    IMG_TITLE_DISABLE: (prefix) => `To disable the title use the command \`${prefix}embed config title\` without text following`,
+
+    // MUSC
+    MUSIC_NO_LINK: "Please, enter a valid link to a youtube video",
+    MUSIC_PLAY: (name) => "I started the playing of **"+name+"**",
+    MUSIC_SKIP: (name) => "I skip the music to **"+name+"**",
+    MUSIC_STOP: "I stopped the music",
+    MUSIC_DISCONNECT: "I'm disconnect to the voice, because no voice found",
+    MUSIC_NO_VOICE: "Please enter to in a voice channel first",
 };
 
 const translate = (key, ...args) => {
