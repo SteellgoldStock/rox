@@ -20,24 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Function Level">
-      <change afterPath="$PROJECT_DIR$/commands/fun/Ascii.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/music/Pause.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/music/Resume.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/music/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/music/Volume.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Embed.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Embed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/music/Now.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Queue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/music/Play.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Play.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/music/Skip.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Skip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/music/Stop.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Stop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/onJoin.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onJoin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/onLeave.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onLeave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,26 +85,13 @@
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a7a947e3-2f8d-41a2-9cc6-85ca3fb29d81" name="Default Changelist" comment="" />
+      <changelist id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Function Level" />
       <created>1595600322295</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -136,6 +106,7 @@
       <workItem from="1596033037353" duration="306000" />
       <workItem from="1596107103169" duration="10243000" />
       <workItem from="1596120516565" duration="12356000" />
+      <workItem from="1596229830171" duration="1092000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
