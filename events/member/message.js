@@ -32,8 +32,8 @@ client.on("message", message => {
                                 return console.error(error.message);
                             }
 
-                            const msg = parseInt(resultsXp[0].messagesCount) + parseInt("1")
-                            let sqladdMSg = `UPDATE servers_xp SET messagesCount=${msg} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                            const msgToAdd = parseInt(resultsXp[0].messagesCount) + parseInt("1")
+                            let sqladdMSg = `UPDATE servers_xp SET messagesCount=${msgToAdd} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                             database.query(sqladdMSg);
 
                             let MaxXp = resultsXp[0].level * 150 + resultsXp[0].level * 35
