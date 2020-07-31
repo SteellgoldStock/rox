@@ -83,21 +83,21 @@ async function color(message, database, db, member, dataServer) {
 
         if (exports.gold === member.id){
 
-            addImageGold(message.guild.id)
+            addImageGold(message.guild.id, avatar, name)
 
         } else {
 
-            addImage(message.guild.id)
+            addImage(message.guild.id, avatar, name)
 
         }
 
     } else if (exports.gold === member.id){
 
-        addColorGold(member.id, db)
+        addColorGold(member.id, db, avatar, name)
 
     } else {
 
-        addColor(member.id, db)
+        addColor(member.id, db, avatar, name)
 
     }
 }
@@ -135,7 +135,7 @@ async function image(message, database, member, db) {
 
     if (exports.gold === member.id){
 
-        addImageGold(member.id);
+        addImageGold(member.id, avatar, name);
 
     } else {
 
@@ -143,7 +143,7 @@ async function image(message, database, member, db) {
         dbi[member.id] = {type:"color",color:`BF5E45`};
         fs.writeFileSync("database/users/users.json", JSON.stringify(dbi), "utf-8");
 
-        addColor(member.id, db);
+        addColor(member.id, db, avatar, name);
 
 
     }
@@ -154,10 +154,10 @@ function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
 }
 
-function addColor(id, db) {
+function addColor(id, db, avatar, name) {
 
     return new Canvas(400, 180)
-        .setColor("#" + db[member.id].color)
+        .setColor("#" + db[id].color)
         .addRect(84, 0, 316, 180)
         .setColor("#36393F")
         .addRect(169, 26, 231, 46)
@@ -182,10 +182,10 @@ function addColor(id, db) {
         .toBuffer();
 }
 
-function addColorGold(id, db) {
+function addColorGold(id, db, avatar, name) {
 
     return new Canvas(400, 180)
-        .setColor("#" + db[member.id].color)
+        .setColor("#" + db[id].color)
         .addRect(84, 0, 316, 180)
         .setColor("#36393F")
         .addRect(169, 26, 231, 46)
@@ -211,7 +211,7 @@ function addColorGold(id, db) {
         .toBuffer();
 }
 
-function addImage(id) {
+function addImage(id, avatar, name) {
 
     return new Canvas(400, 180)
         .addImage(path.join(`database/users/backgrounds/${id}.png`), 84, 0, 316, 180)
@@ -238,7 +238,7 @@ function addImage(id) {
         .toBuffer();
 }
 
-function addImageGold(id) {
+function addImageGold(id, avatar, name) {
 
     return new Canvas(400, 180)
         .addImage(path.join(`database/users/backgrounds/${id}.png`), 84, 0, 316, 180)
