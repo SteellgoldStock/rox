@@ -71,7 +71,7 @@ const languageData = {
     CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
     CHOICE_DONE: "I'm answering it.",
     DOOR_OPEN: "Third door on the left, at the end of the corridor, it's the exit",
-    DOOR_TEAM_NOT: "You can't take a member of Rox's development team out, or there won't be any more news.. :-|",
+    DOOR_TEAM_NOT: "You can't take a member of Rox's development team out, or there won't be any more news.. 🤔",
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `The server as level up, you can see your level with \`${prefix}server\`, use \`${prefix}server top\` to see your level compared to other servers using Rox`,
@@ -101,13 +101,31 @@ const languageData = {
     IMG_URL_DISABLE: (prefix) => `To disable the image use the command \`${prefix}embed config imgUrl\` without text following`,
     IMG_TITLE_DISABLE: (prefix) => `To disable the title use the command \`${prefix}embed config title\` without text following`,
 
+    LIMIT_CARA: "Please, enter a other value, this exceeds 2000 caraters",
+
     // MUSC
-    MUSIC_NO_LINK: "Please, enter a valid link to a youtube video",
-    MUSIC_PLAY: (name) => "I started the playing of **"+name+"**",
-    MUSIC_SKIP: (name) => "I skip the music to **"+name+"**",
-    MUSIC_STOP: "I stopped the music",
-    MUSIC_DISCONNECT: "I'm disconnect to the voice, because no voice found",
     MUSIC_NO_VOICE: "Please enter to in a voice channel first",
+    MUSC_ALREADY_CONNECTED: "I'm already connected to a voice channel",
+    MUSC_NOT_CONNECTED: "I'm not connected to a voice channel",
+    MUSIC_NO_LINK: "Please, enter a valid link to a youtube video",
+    MUSIC_NO_QUEUE: (name) => "**" + name + "** don't have musics in queue",
+    MUSIC_LEAVE_CHANNEL: (name) => "I'm leave the channel **" + name + "**",
+    MUSIC_NOT_SAME_CHANNEL: "If you want stop the music, connect in the same channel where is the bot",
+    MUSIC_QUEUE_ADD: (name, username) => "I'm added to the queue **" + name + "** request by **" + username + "**",
+    MUSIC_CHANGE: (name, username) => "I'm playing **" + name + "** request by **" + username + "**",
+    MUSIC_NOW_PLAY: "Now playing",
+    MUSIC_REQUEST: "Requested by",
+    MUSIC_QUEUE: "Queue",
+    MUSIC_SKIP_VOTE_AV: (requi) => "You already voted to skip, " + requi + " required vote to skip the song",
+    MUSIC_VOTE_SKIP_VOTED: (requi) => "Successfully voted to a music skip, " + requi + " required vote to skip the song",
+    MUSIC_SKIP: "I'm skipped the song !",
+    MUSIC_VOLUME_LIMIT: "Please give a number greater than 0 and less than 500",
+    MUSIC_VOLUME_SET: (volume, songName) => "You have set the volume to **" + volume + "** to the song **" + songName + "**",
+    MUSIC_CHOOSE: "Send the number do you want to choose your music",
+    MUSIC_PAUSE: (prefix, name) => "Successfuly paused the music, use " + `${prefix}resume` + " to resume the music",
+    MUSIC_ALREADY_PAUSE: (prefix, name) => "This music is already paused, use " + `${prefix}resume` + " to resume the music",
+    MUSIC_RESUME: (prefix, name) => "Successfuly resume the music, use " + `${prefix}pause` + " to pause the music",
+    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music"
 };
 
 const translate = (key, ...args) => {

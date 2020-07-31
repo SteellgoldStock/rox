@@ -8,11 +8,12 @@ exports.team = [
     "504392983244832780",
     "558793081663782913",
     "354170113294991364",
-    "595309912842829855"
 ];
 
-exports.servers = {};
-exports.ytdl = require("ytdl-core");
+const active = new Map();
+exports.ops = {
+    active: active
+}
 
 const mysql = require('mysql');
 

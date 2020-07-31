@@ -71,7 +71,7 @@ const languageData = {
     CHOICE_PROGRESS: "Je suis entrain de choisir... hmm est difficile",
     CHOICE_DONE: "Je réponds...",
     DOOR_OPEN: "3ème porte à gauche, au fond tu couloir, c'est la sortie",
-    DOOR_TEAM_NOT: "Tu ne peut pas faire sortir un membre de l'équipe du développement de Rox, sinon il n'y aura plus de nouveautées :-|",
+    DOOR_TEAM_NOT: "Tu ne peut pas faire sortir un membre de l'équipe du développement de Rox, sinon il n'y aura plus de nouveautées 🤔",
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `Niveau supérieur du serveur, vous pouvez voir le niveau du serveur avec \`${prefix}server\`, utilisez \`${prefix}server top\` pour voir votre niveau par rapport aux autres serveurs utilisant Rox`,
@@ -100,14 +100,6 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
     IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`,
-
-    // MUSC
-    MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
-    MUSIC_PLAY: (name) => "J'ai commencé à jouer **"+name+"**",
-    MUSIC_SKIP: (name) => "Je saute la musique à **"+name+"**",
-    MUSIC_STOP: "J'ai arrêté la musique",
-    MUSIC_DISCONNECT: "Je suis déconnecté du salon vocal car aucune musique n'a été trouvée",
-    MUSIC_NO_VOICE: "Veuillez d'abord entrer dans un salon vocal",
 };
 
 const translate = (key, ...args) => {

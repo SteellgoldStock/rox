@@ -29,5 +29,22 @@ exports.sendMsg = async(text, message, dataServer = null) => {
 }
 
 exports.sendMsgA = async(text, message, dataServer = null) => {
-    message.channel.send(text);
+    if (dataServer.isGold !== 0) {
+        if (dataServer.msgEmbed !== 0) {
+            let embed = new Discord.MessageEmbed()
+            embed.setTitle(dataServer.embedTitle)
+            embed.setDescription(text)
+
+            embed.setThumbnail(dataServer.embedImgURL)
+
+            embed.setColor(dataServer.embedColor)
+            embed.setTimestamp()
+            embed.setFooter('Rox • ' + exports.version, client.user.avatarURL())
+            message.channel.send(embed);
+        } else {
+            message.channel.send(text);
+        }
+    } else {
+        message.channel.send(text);
+    }
 }

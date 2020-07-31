@@ -80,7 +80,6 @@ async function update(type, text, guildid){
             break;
 
         case "on":
-            console.log("on")
             var on = `UPDATE servers SET msgEmbed = 1 WHERE guildid = '${guildid}'`;
             database.query(on, function (err) {
                 if (err) throw err;
@@ -88,7 +87,6 @@ async function update(type, text, guildid){
             break;
 
         case "off":
-            console.log("off")
             var off = `UPDATE servers SET msgEmbed = 0 WHERE guildid = '${guildid}'`;
             database.query(off, function (err) {
                 if (err) throw err;
