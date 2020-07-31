@@ -71,6 +71,7 @@ const languageData = {
     CHOICE_PROGRESS: "Je suis entrain de choisir... hmm est difficile",
     CHOICE_DONE: "Je réponds...",
     DOOR_OPEN: "3ème porte à gauche, au fond tu couloir, c'est la sortie",
+    DOOR_TEAM_NOT: "Tu ne peut pas faire sortir un membre de l'équipe du développement de Rox, sinon il n'y aura plus de nouveautées :-|",
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `Niveau supérieur du serveur, vous pouvez voir le niveau du serveur avec \`${prefix}server\`, utilisez \`${prefix}server top\` pour voir votre niveau par rapport aux autres serveurs utilisant Rox`,
