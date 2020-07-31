@@ -83,21 +83,21 @@ async function color(message, database, db, member, dataServer) {
 
         if (exports.gold === member.id){
 
-            addImageGold(message.guild.id, avatar, name)
+            await addImageGold(message.guild.id, member)
 
         } else {
 
-            addImage(message.guild.id, avatar, name)
+            await addImage(message.guild.id, member)
 
         }
 
     } else if (exports.gold === member.id){
 
-        addColorGold(member.id, db, avatar, name)
+        await addColorGold(member.id, db, member)
 
     } else {
 
-        addColor(member.id, db, avatar, name)
+        await addColor(member.id, db, member)
 
     }
 }
@@ -135,7 +135,7 @@ async function image(message, database, member, db) {
 
     if (exports.gold === member.id){
 
-        addImageGold(member.id, avatar, name);
+        await addImageGold(member.id, member);
 
     } else {
 
@@ -143,7 +143,7 @@ async function image(message, database, member, db) {
         dbi[member.id] = {type:"color",color:`BF5E45`};
         fs.writeFileSync("database/users/users.json", JSON.stringify(dbi), "utf-8");
 
-        addColor(member.id, db, avatar, name);
+        await addColor(member.id, db, member);
 
 
     }
@@ -154,7 +154,14 @@ function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
 }
 
-function addColor(id, db, avatar, name) {
+async function addColor(id, db, member) {
+
+    const result = await fetch(member.displayAvatarURL({format: 'png'}));
+    if (!result.ok) new Error('Failed to get the avatar!');
+    const avatar = await result.buffer();
+
+    const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
+        : member.username;
 
     return new Canvas(400, 180)
         .setColor("#" + db[id].color)
@@ -182,7 +189,14 @@ function addColor(id, db, avatar, name) {
         .toBuffer();
 }
 
-function addColorGold(id, db, avatar, name) {
+async function addColorGold(id, db, member) {
+
+    const result = await fetch(member.displayAvatarURL({format: 'png'}));
+    if (!result.ok) new Error('Failed to get the avatar!');
+    const avatar = await result.buffer();
+
+    const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
+        : member.username;
 
     return new Canvas(400, 180)
         .setColor("#" + db[id].color)
@@ -211,7 +225,14 @@ function addColorGold(id, db, avatar, name) {
         .toBuffer();
 }
 
-function addImage(id, avatar, name) {
+async function addImage(id, member) {
+
+    const result = await fetch(member.displayAvatarURL({format: 'png'}));
+    if (!result.ok) new Error('Failed to get the avatar!');
+    const avatar = await result.buffer();
+
+    const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
+        : member.username;
 
     return new Canvas(400, 180)
         .addImage(path.join(`database/users/backgrounds/${id}.png`), 84, 0, 316, 180)
@@ -238,7 +259,14 @@ function addImage(id, avatar, name) {
         .toBuffer();
 }
 
-function addImageGold(id, avatar, name) {
+async function addImageGold(id, member) {
+
+    const result = await fetch(member.displayAvatarURL({format: 'png'}));
+    if (!result.ok) new Error('Failed to get the avatar!');
+    const avatar = await result.buffer();
+
+    const name = member.username.length > 9 ? member.username.substring(0, 17) + '...'
+        : member.username;
 
     return new Canvas(400, 180)
         .addImage(path.join(`database/users/backgrounds/${id}.png`), 84, 0, 316, 180)
