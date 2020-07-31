@@ -166,7 +166,7 @@ async function color(message, database, db, member, dataServer) {
     } else {
 
         return new Canvas(400, 180)
-            .setColor("#BF5E45")
+            .setColor("#" + db[member.id].color)
             .addRect(84, 0, 316, 180)
             .setColor("#36393F")
             .addRect(169, 26, 231, 46)
