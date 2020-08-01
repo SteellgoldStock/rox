@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Base](README.md)
+* [Rox Gold](rox-gold.md)
 
 ## Configs
 
@@ -10,4 +11,6 @@
   * [Tags](configs/messages/tags.md)
 
 ## Commands
+
+## Gold
 
