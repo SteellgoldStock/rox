@@ -20,5 +20,5 @@ Now, you can configure one or more roles as **Moderator**
 !roles modRole [mentionRole]
 ```
 
-
+If you want, you can add a **Auto Role**, when a member join your discord, if the bot has permission, it automatically set him
 
