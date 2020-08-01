@@ -21,62 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/binding.gyp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/binding.gyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/DOMMatrix.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/DOMMatrix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/bindings.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/bindings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/context2d.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/context2d.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/jpegstream.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/jpegstream.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/parse-font.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/parse-font.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/pdfstream.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/pdfstream.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/lib/pngstream.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/lib/pngstream.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Backends.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Backends.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Backends.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Backends.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Canvas.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Canvas.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Canvas.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Canvas.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasError.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasError.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasGradient.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasGradient.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasGradient.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasGradient.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasPattern.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasPattern.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasPattern.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasPattern.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasRenderingContext2d.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasRenderingContext2d.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/CanvasRenderingContext2d.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/CanvasRenderingContext2d.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Image.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Image.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Image.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Image.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/ImageData.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/ImageData.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/ImageData.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/ImageData.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/JPEGStream.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/JPEGStream.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/PNG.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/PNG.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Point.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Point.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/Util.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/Util.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/Backend.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/Backend.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/Backend.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/Backend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/ImageBackend.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/ImageBackend.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/ImageBackend.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/ImageBackend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/PdfBackend.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/PdfBackend.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/PdfBackend.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/PdfBackend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/SvgBackend.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/SvgBackend.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/backend/SvgBackend.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/backend/SvgBackend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/closure.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/closure.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/closure.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/closure.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/color.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/color.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/color.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/color.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/dll_visibility.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/dll_visibility.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/init.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/init.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/register_font.cc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/register_font.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/src/register_font.h" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/src/register_font.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/types/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/types/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/types/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/util/has_lib.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/util/has_lib.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/canvas/util/win_jpeg_lookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/canvas/util/win_jpeg_lookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +106,7 @@
       <workItem from="1596033037353" duration="306000" />
       <workItem from="1596107103169" duration="10243000" />
       <workItem from="1596120516565" duration="12356000" />
-      <workItem from="1596277121656" duration="215000" />
+      <workItem from="1596277121656" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

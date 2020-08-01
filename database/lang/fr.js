@@ -105,7 +105,29 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
     INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
-    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`
+    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`,
+
+    MUSC_ALREADY_CONNECTED: "Je suis déjà connecté à un canal vocal",
+    MUSC_NOT_CONNECTED: "Je ne suis pas connecté à un canal vocal",
+    MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
+    MUSIC_NO_QUEUE: (name) => "**" + name + "** n'ont pas de musiques en attente",
+    MUSIC_LEAVE_CHANNEL: (name) => "Je quitte le canal **" + name + "**",
+    MUSIC_NOT_SAME_CHANNEL: "Si vous voulez arrêter la musique, connectez-vous dans le même canal où se trouve le bot",
+    MUSIC_QUEUE_ADD: (name, username) => "J'ai ajouté à la file d'attente **" + name + "** Demandé par **" + username + "**",
+    MUSIC_CHANGE: (name, username) => "Je joue **" + name + "** Demandé par **" + username + "**",
+    MUSIC_NOW_PLAY: "En cours de lecture",
+    MUSIC_REQUEST: "Demandé par",
+    MUSIC_QUEUE: "En attente",
+    MUSIC_SKIP_VOTE_AV: (requi) => "Vous avez déjà voté pour sauter, " + requi + " vote obligatoire pour sauter la chanson",
+    MUSIC_VOTE_SKIP_VOTED: (requi) => "Vous avez voté avec succès pour un saut de musique, " + requi + " vote obligatoire pour sauter la chanson",
+    MUSIC_SKIP: "Je saute la chanson !",
+    MUSIC_VOLUME_LIMIT: "Veuillez donner un nombre supérieur à 0 et inférieur à 500",
+    MUSIC_VOLUME_SET: (volume, songName) => "Vous avez réglé le volume sur **" + volume + "** à la chanson **" + songName + "**",
+    MUSIC_CHOOSE: "Envoyez le numéro que vous souhaitez pour choisir votre musique",
+    MUSIC_PAUSE: (prefix, name) => "A réussi à mettre la musique en pause, à utiliser " + `${prefix}resume` + " pour reprendre la musique",
+    MUSIC_ALREADY_PAUSE: (prefix, name) => "Cette musique est déjà en pause, utilisez " + `${prefix}resume` + " pour reprendre la musique",
+    MUSIC_RESUME: (prefix, name) => "Reprenez la musique avec succès, utilisez " + `${prefix}pause` + " pour mettre la musique en pause",
+    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music"
 };
 
 const translate = (key, ...args) => {
