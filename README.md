@@ -4,28 +4,21 @@ description: >-
   examples of the commands, the uses, all that has in the bot
 ---
 
-# Rox
+# Setup
 
-## Getting Super Powers
+## After inviting the bot
 
-Becoming a super hero is a fairly straight forward process:
+First setup a one or more role being **Admin**
 
+```cpp
+!roles adminRole [mentionRole]
 ```
-$ give me super-powers
-```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+Now, you can configure one or more roles as **Moderator**
 
-Once you're strong enough, save the world:
-
-{% code title="hello.sh" %}
 ```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+!roles adminRole [mentionRole]
 ```
-{% endcode %}
 
 
 

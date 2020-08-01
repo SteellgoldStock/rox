@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Rox](README.md)
+* [Setup](README.md)
 
