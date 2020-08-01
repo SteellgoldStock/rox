@@ -8,17 +8,17 @@ description: >-
 
 ## After inviting the bot
 
-First setup a one or more role being **Admin**
+[•](https://doc.rox.wtf/) First setup a one or more role being **Admin**
 
 ```cpp
 !roles adminRole [mentionRole]
 ```
 
-Now, you can configure one or more roles as **Moderator**
+[•](https://doc.rox.wtf/) Now, you can configure one or more roles as **Moderator**
 
 ```bash
 !roles modRole [mentionRole]
 ```
 
-If you want, you can add a **Auto Role**, when a member join your discord, if the bot has permission, it automatically set him
+[•](https://doc.rox.wtf/) If you want, you can add a **Auto Role**, when a member join your discord, if the bot has permission, it automatically set him
 

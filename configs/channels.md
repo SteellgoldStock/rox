@@ -6,7 +6,7 @@ description: 'Define channels, if you want to receive love messages...❤️'
 
 ![](../.gitbook/assets/image%20%281%29.png)
 
-If you want to send messages, when a member joins your server:
+[•](https://doc.rox.wtf/) If you want to send messages, when a member joins your server:
 
 ```bash
 !channels [joinquit/logs/rox] [mentionChannel]O
@@ -16,7 +16,7 @@ If you want to send messages, when a member joins your server:
 The channel **rox** receive messages from the bot's development team, update announcements, fixes, and a lot of useful information
 {% endhint %}
 
-If you 
+[•](https://doc.rox.wtf/) If you 
 
 {% code title="hello.sh" %}
 ```bash
