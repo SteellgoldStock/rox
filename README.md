@@ -4,7 +4,7 @@ description: >-
   examples of the commands, the uses, all that has in the bot
 ---
 
-# Welcome
+# welcome
 
 ## Getting Super Powers
 
