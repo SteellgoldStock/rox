@@ -9,8 +9,8 @@ const languageData = {
     NOT_YOURSELF: "Vous ne pouvez pas vous bannir vous mêmes",
     NOT_IMG: `Vous n'avez pas envoyé d'image, essayez à nouveau, seulement \`.png\`,\`.jpg\` and \`.jpeg\` est pris en charge pour le moment, attendez une mise à jour s'il vous plaît`,
     NOT_ARGS_LOVE: `Vous n'avez pas envoyé \`@mention 1 and you\` or \`@mention 1 and @mention 2\` or \`user and you\` or \`user 1 and user 2\``,
-    NOT_GOLD_USER: "Vous n'êtes pas un utilisateur de Rox Gold\nhttps://upgrade.chat/checkout/733724420056547338",
-    NOT_GOLD_SERVER: "Ce serveur n'a pas Rox Gold\nhttps://upgrade.chat/checkout/733724420056547338",
+    NOT_GOLD_USER: "Vous n'êtes pas un utilisateur de Rox Gold\n\nSi vous voulez voir les avantages que Rox Gold pour les utilisateurs vous offre, [cliquez ici](https://doc.rox.wtf/rox-gold)",
+    NOT_GOLD_SERVER: "Ce serveur n'a pas Rox Gold\n\nSi vous voulez voir les avantages que Rox Gold pour les serveurs vous offre, [cliquez ici](https://doc.rox.wtf/rox-gold)",
     IS_NAME_ALREADY: "Le serveur se nomme déjà à ce nom, veuillez essayer un autre",
     CHANNELS_ARGS: "Vous n'avez pas saisi de valeur valide, voici les valeurs disponibles: `logs`, `joinquit`",
     MENTION_CHANNEL: "Vous n'avez mentionné aucun salons",
@@ -30,6 +30,7 @@ const languageData = {
     DOWNLANDED: (prefix) => `Bravo, vous avez défini votre arrière plan, pour le voir executer la commande \`${prefix}level\``,
 
     /** EMBED **/
+    HELP_CUST_NOT: (prefix) => `Ce serveur n'a pas de commande personnalisée, pour en ajouter utilisez \`${prefix}custcmds [add/remove] [commandName] [text]\` pour ajouter ou supprimer une commande personnalisée, si vous voulez avoir un message qui sort de l'ordinaire [cliquez ici](https://doc.rox.wtf/configs/messages/tags)`,
     HELP_ADMIN_FIELD: "Administrateur",
     HELP_MOD_FIELD: "Modérateur",
     HELP_FUN_FIELD: "Fun",

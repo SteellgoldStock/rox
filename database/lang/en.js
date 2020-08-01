@@ -9,8 +9,8 @@ const languageData = {
     NOT_YOURSELF: "You can't ban yourself",
     NOT_IMG: `You didn't send an image, try again, only \`.png\`,\`.jpg\` and \`.jpeg\` is supported for now, wait a update please`,
     NOT_ARGS_LOVE: `You didn't send an \`@mention 1 and you\` or \`@mention 1 and @mention 2\` or \`user and you\` or \`user 1 and user 2\``,
-    NOT_GOLD_USER: "You are not a Rox Gold user\nhttps://upgrade.chat/checkout/733724420056547338",
-    NOT_GOLD_SERVER: "This server don't have Rox Gold\nhttps://upgrade.chat/checkout/733724420056547338",
+    NOT_GOLD_USER: "You are not a Rox Gold user\n\nIf you want to see what advantages Rox Gold User has to offer you, [click here](https://doc.rox.wtf/rox-gold)",
+    NOT_GOLD_SERVER: "This server don't have Rox Gold\n\nIf you want to see what advantages Rox Gold Server has to offer you, [click here](https://doc.rox.wtf/rox-gold)",
     IS_NAME_ALREADY: "The server as already this name, please try another",
     CHANNELS_ARGS: "You did not enter a valid value, here are the available values: `logs`, `joinquit`",
     MENTION_CHANNEL: "You didn't mention any channels",
@@ -30,6 +30,7 @@ const languageData = {
     DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command \`${prefix}level\``,
 
     /** EMBED **/
+    HELP_CUST_NOT: (prefix) => `This guild don't have custom command, to add use \`${prefix}custcmds [add/remove] [commandName] [text]\` to add or remove a custom command, if you want have a message out of the ordinary [click here](https://doc.rox.wtf/configs/messages/tags)`,
     HELP_ADMIN_FIELD: "Administrator",
     HELP_MOD_FIELD: "Moderator",
     HELP_FUN_FIELD: "Fun",

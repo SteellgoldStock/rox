@@ -5,6 +5,19 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     if(!message.guild) return;
 
     if(!args[0]){
+        const dbc = JSON.parse(fs.readFileSync("database/ccommands/" + message.guild.id + ".json", "utf8"));
+        if(Object.keys(dbc).length == 0){
+            exports.resp = "This guild don't have custom command, to add use `"+dataServer.prefix+"custcmds add [commandName] [text]`, if you want have a message out of the ordinary click [here](https://doc.rox.wtf/configs/messages/tags)"
+        }else {
+            var item;
+
+            exports.resp = " ";
+
+            for (item in dbc) {
+                exports.resp += "`" + item + "`,"
+            }
+        }
+
         const embed = new Discord.MessageEmbed()
             .setTitle("Rox • Help")
             .setDescription(language("HELP_DESCRIPTION",dataServer.prefix))
@@ -13,7 +26,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`,`memes`,`door`,`challmc`,`achimc`,`8ball`,`choice`,`ascii`, `lovecalc`, `kiss`, `hug`, `punch`")
             .addField(language("HELP_MUSIC_FIELD"),"`play`,`splay`,`stop`,`pause`,`resume`,`skip`,`queue`,`volume`")
             .addField(language("HELP_BASIC_FIELD"),"`help`, `invite`")
-            .addField(language("HELP_CC_FIELD",message.guild.name),"liste des commandes custom du serveur a faire (enfin la j'ai la flemme)")
+            .addField(language("HELP_CC_FIELD",message.guild.name),exports.resp)
             .addField(language("HELP_GOLD_USER_FIELD",message.guild.name),"`background`")
             // .addField(language("HELP_GOLD_SERVER_FIELD",message.guild.name),"`embedconf`")
             .setThumbnail(client.user.avatarURL())
