@@ -8,8 +8,9 @@ const languageData = {
     LANG_NOT_FOUND: (lang, langs) => "La langue `" + lang + "` n'a pas été trouvé s'il vous plaît, définissez une langue valide " + langs,
     NOT_YOURSELF: "Vous ne pouvez pas vous bannir vous mêmes",
     NOT_IMG: `Vous n'avez pas envoyé d'image, essayez à nouveau, seulement \`.png\`,\`.jpg\` and \`.jpeg\` est pris en charge pour le moment, attendez une mise à jour s'il vous plaît`,
-    NOT_GOLD_USER: "Vous n'êtes pas un utilisateur de Rox Gold",
-    NOT_GOLD_SERVER: "Ce serveur n'a pas Rox Gold",
+    NOT_ARGS_LOVE: `Vous n'avez pas envoyé \`@mention 1 and you\` or \`@mention 1 and @mention 2\``,
+    NOT_GOLD_USER: "Vous n'êtes pas un utilisateur de Rox Gold\n||https://upgrade.chat/checkout/733724420056547338||",
+    NOT_GOLD_SERVER: "Ce serveur n'a pas Rox Gold\n||https://upgrade.chat/checkout/733724420056547338||",
     IS_NAME_ALREADY: "Le serveur se nomme déjà à ce nom, veuillez essayer un autre",
     CHANNELS_ARGS: "Vous n'avez pas saisi de valeur valide, voici les valeurs disponibles: `logs`, `joinquit`",
     MENTION_CHANNEL: "Vous n'avez mentionné aucun salons",
@@ -32,6 +33,7 @@ const languageData = {
     HELP_ADMIN_FIELD: "Administrateur",
     HELP_MOD_FIELD: "Modérateur",
     HELP_FUN_FIELD: "Fun",
+    HELP_MUSIC_FIELD: "Musique",
     HELP_XP_FIELD: "Système d'XP",
     HELP_BASIC_FIELD: "Basique",
 
@@ -71,7 +73,10 @@ const languageData = {
     CHOICE_PROGRESS: "Je suis entrain de choisir... hmm est difficile",
     CHOICE_DONE: "Je réponds...",
     DOOR_OPEN: "3ème porte à gauche, au fond tu couloir, c'est la sortie",
-    DOOR_TEAM_NOT: "Tu ne peut pas faire sortir un membre de l'équipe du développement de Rox, sinon il n'y aura plus de nouveautées 🤔",
+    DOOR_TEAM_NOT: "Tu ne peut pas faire sortir un membre de l'équipe du développement de Rox, sinon il n'y aura plus de nouveautées :-|",
+    KISS: (user1, user2) => `${user2}, ${user1} t'embrasse`,
+    HUG: (user1, user2) => `${user2}, ${user1} te fait un calin`,
+    PUNCH: (user1, user2) => `${user2}, ${user1} te donne un coup de poing`,
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `Niveau supérieur du serveur, vous pouvez voir le niveau du serveur avec \`${prefix}server\`, utilisez \`${prefix}server top\` pour voir votre niveau par rapport aux autres serveurs utilisant Rox`,
@@ -99,7 +104,7 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
     INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
-    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`,
+    IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`
 };
 
 const translate = (key, ...args) => {
