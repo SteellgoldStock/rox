@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     let member = message.mentions.users.first();
 
     if(!member){
-        message.channel.send(language("DOOR_OPEN") +  " **"+message.author.username+"**" + "\n\nhttp://exit.rox.wtf");
+        return message.channel.send(language("DOOR_OPEN") +  " **"+message.author.username+"**" + "\n\nhttp://exit.rox.wtf");
     }
 
     if(team.includes(member.id)){
