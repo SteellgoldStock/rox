@@ -3,7 +3,7 @@ const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     let reason;
-    if (message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)) {
+    if (await msg.Role(message.member, "modo", message, dataServer) === true || await msg.Role(message.member, "admin", message, dataServer) === true) {
         const count = args[0];
         if(!count) return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer);
 

@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { client, database, msg, colors, fs} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if (message.member.roles.cache.has(dataServer.adminRole) || message.member.hasPermission('ADMINISTRATOR')) {
+    if (await msg.Role(message.member, "admin", message, dataServer) === true || message.member.hasPermission('ADMINISTRATOR')) {
         if(dataServer.isGold == 0){
             return await msg.sendMsg("NOT_GOLD_SERVER", message, dataServer)
         }

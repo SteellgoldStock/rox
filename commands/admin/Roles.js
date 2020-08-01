@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const { client, database, msg, colors, fs} = require("../../rox");
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
-    if (message.member.roles.cache.has(dataServer.adminRole) || message.member.hasPermission('ADMINISTRATOR')) {
+    if (await msg.Role(message.member, "admin", message, dataServer) === true || message.member.hasPermission('ADMINISTRATOR')) {
         if (!args[0]) {
             return await msg.sendMsg("INVALID_ARGS_ROLES", message, dataServer)
         }
@@ -9,28 +9,79 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         switch (args[0]) {
             case "adminRole":
-                if (!mentionedRole) {
-                    return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+
+                if(args[1] == 'add'){
+
+                    if (!mentionedRole) {
+                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                    }
+                    await update("ar", mentionedRole.id, message.guild.id, "add");
+                    return await msg.sendMsg("UPDATED", message, dataServer);
+
+                } else if (args[1] == 'remove'){
+
+                    if (!mentionedRole) {
+                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                    }
+                    await update("ar", mentionedRole.id, message.guild.id, "remove");
+                    return await msg.sendMsg("UPDATED", message, dataServer);
+
+                } else {
+
+                    return await msg.sendMsg("INVALID_ARGS_BLACKLIST", message, dataServer)
+
                 }
-                await update("ar", mentionedRole.id, message.guild.id);
-                await msg.sendMsg("UPDATED", message, dataServer);
                 break;
             case "modRole":
-                if (!mentionedRole) {
-                    return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                if(args[1] == 'add'){
+
+                    if (!mentionedRole) {
+                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                    }
+                    await update("mr", mentionedRole.id, message.guild.id, "add");
+                    return await msg.sendMsg("UPDATED", message, dataServer);
+                    break;
+
+                } else if (args[1] == 'remove'){
+
+                    if (!mentionedRole) {
+                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                    }
+                    await update("mr", mentionedRole.id, message.guild.id, "remove");
+                    return await msg.sendMsg("UPDATED", message, dataServer);
+                    break;
+
+                } else {
+
+                    return await msg.sendMsg("INVALID_ARGS_BLACKLIST", message, dataServer)
+
                 }
-                await update("mr", mentionedRole.id, message.guild.id);
-                await msg.sendMsg("UPDATED", message, dataServer);
-                break;
             case "autoRole":
-                if (!mentionedRole) {
-                    return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                if(args[1] == 'add'){
+
+                    if (!mentionedRole) {
+                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                    }
+                    await update("aur", mentionedRole.id, message.guild.id, "add");
+                    return await msg.sendMsg("UPDATED", message, dataServer);
+                    break;
+
+                } else if (args[1] == 'remove'){
+
+                    if (!mentionedRole) {
+                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
+                    }
+                    await update("aur", mentionedRole.id, message.guild.id, "remove");
+                    return await msg.sendMsg("UPDATED", message, dataServer);
+                    break;
+
+                } else {
+
+                    return await msg.sendMsg("INVALID_ARGS_BLACKLIST", message, dataServer)
+
                 }
-                await update("aur", mentionedRole.id, message.guild.id);
-                await msg.sendMsg("UPDATED", message, dataServer);
-                break;
             default:
-                await msg.sendMsg("INVALID_ARGS_ROLES", message, dataServer)
+                return await msg.sendMsg("INVALID_ARGS_ROLES", message, dataServer)
                 break;
         }
     } else {
@@ -38,26 +89,92 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     }
 }
 
-async function update(type, id, guildid){
+async function update(type, id, guildid, action){
+
     switch (type) {
         case "ar":
-            var ar = `UPDATE servers SET adminRole = '${id}' WHERE guildid = '${guildid}'`;
-            database.query(ar, function (err) {
-                if (err) throw err;
+            let admin;
+            await database.query(`SELECT * FROM servers WHERE guildid = ${guildid}`, function (error, results, fields) {
+                if (error) {
+                    return false;
+                } else if (results.length > 0) {
+
+                    if(action == "add"){
+
+                        let adm = results[0].modRole.split(' ');
+                        adm.push(id);
+                        admin = adm.join(' ');
+
+                    } else {
+
+                        let adm = results[0].modRole.split(' ');
+                        adm.delete(id);
+                        admin = adm.join(' ');
+
+                    }
+
+                    return database.query(`UPDATE servers SET adminRole = '${admin}' WHERE guildid = '${guildid}'`, function (err) {
+                        if (err) throw err;
+                    });
+                }
             });
             break;
 
         case "mr":
-            var mr = `UPDATE servers SET modRole = '${id}' WHERE guildid = '${guildid}'`;
-            database.query(mr, function (err) {
-                if (err) throw err;
+
+            let modo;
+            await database.query(`SELECT * FROM servers WHERE guildid = ${guildid}`, function (error, results, fields) {
+                if (error) {
+                    return false;
+                } else if (results.length > 0) {
+
+                    if(action == "add"){
+
+                        let mod = results[0].modRole.split(' ');
+                        mod.push(id);
+                        modo = mod.join(' ');
+
+                    } else {
+
+                        let mod = results[0].modRole.split(' ');
+                        mod.delete(id);
+                        modo = mod.join(' ');
+
+                    }
+
+                    return database.query(`UPDATE servers SET modRole = '${modo}' WHERE guildid = '${guildid}'`, function (err) {
+                        if (err) throw err;
+                    });
+                }
             });
             break;
 
         case "aur":
-            var aur = `UPDATE servers SET autoRole = '${id}' WHERE guildid = '${guildid}'`;
-            database.query(aur, function (err) {
-                if (err) throw err;
+
+            let auto;
+            await database.query(`SELECT * FROM servers WHERE guildid = ${guildid}`, function (error, results, fields) {
+                if (error) {
+                    return false;
+                } else if (results.length > 0) {
+
+                    if(action == "add"){
+
+                        let aut = results[0].modRole.split(' ');
+                        aut.push(id);
+                        auto = aut.join(' ');
+
+                    } else {
+
+                        let aut = results[0].modRole.split(' ');
+                        aut.delete(id);
+                        auto = aut.join(' ');
+
+                    }
+
+                    return database.query(`UPDATE servers SET autoRole = '${auto}' WHERE guildid = '${guildid}'`, function (err) {
+                        if (err) throw err;
+                    });
+                }
             });
             break;
     }

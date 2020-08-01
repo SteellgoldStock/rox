@@ -49,6 +49,8 @@ exports.sendMsgA = async(text, message, dataServer = null) => {
     }
 }
 
+
+
 exports.sendMsgI = async(text, member1, member2, image, url, message, dataServer = null) => {
 
     const guildLanguage = dataServer.lang;
@@ -72,6 +74,69 @@ exports.sendMsgI = async(text, member1, member2, image, url, message, dataServer
         }
     } else {
         message.channel.send(language(text, member1, member2), image);
+
+    }
+}
+
+exports.Role = async(member, role, message, dataServer = null) => {
+
+    let count = 0;
+
+    dataServer.adminRole.split(' ').forEach(m => {member.roles.cache.has(m)})
+
+    if(role == "admin"){
+
+        dataServer.adminRole.split(' ').forEach(m => {
+            member.roles.cache.has(m)
+            if(member.roles.cache.has(m)){
+
+                count = count + 1;
+
+            }
+        })
+
+        if(count < 1){
+
+            console.log("Nul")
+
+            return false;
+
+        } else {
+
+            return true;
+
+        }
+
+        console.log(count)
+
+    } else if (role == "modo"){
+
+        dataServer.modRole.split(' ').forEach(m => {
+            member.roles.cache.has(m)
+            if(member.roles.cache.has(m)){
+
+                count = count + 1;
+
+                console.log("Yes")
+
+                return true;
+
+            }
+        })
+
+        if(count < 1){
+
+            console.log("Nul")
+
+            return false;
+
+        } else {
+
+            return true;
+
+        }
+
+        console.log(count)
 
     }
 }

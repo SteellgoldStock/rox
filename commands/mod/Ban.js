@@ -3,7 +3,8 @@ const { client, botConfg, fs, colors,msg} = require("../../rox");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     let reason;
-    if(message.member.roles.cache.has(dataServer.modRole) || message.member.roles.cache.has(dataServer.adminRole)){
+    if (await msg.Role(message.member, "modo", message, dataServer) === true || await msg.Role(message.member, "admin", message, dataServer) === true) {
+
         const user = message.mentions.users.first();
         let reasons = args.slice(1).join(" ");
         const member = message.guild.member(user);
@@ -17,7 +18,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         reason = reasons;
                     }
 
-                    if (message.member.roles.cache.has(dataServer.adminRole)  &&  message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole) || (!message.member.roles.cache.has(dataServer.adminRole) && message.member.roles.cache.has(dataServer.modRole)) && (message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.modRole) || message.guild.member(message.mentions.users.first()).roles.cache.has(dataServer.adminRole))) {
+                    if (await msg.Role(message.member, "admin", message, dataServer) === true  &&  await msg.Role(message.guild.member(message.mentions.users.first()), "admin", message, dataServer) === true || (await msg.Role(message.member, "admin", message, dataServer) === false && await msg.Role(message.member, "modo", message, dataServer) === true) && (await msg.Role(message.guild.member(message.mentions.users.first()), "modo", message, dataServer) === true || await msg.Role(message.guild.member(message.mentions.users.first()), "admin", message, dataServer) === true)) {
 
                         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
 
