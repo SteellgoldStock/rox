@@ -5,7 +5,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     if(!team.includes(message.author.id)) {
         return await msg.sendMsg("TEAM_NOT", message, dataServer);
     }
-    
+
+    message.delete();
     message.channel.send(args.slice(0).join(" "))
 }
 
