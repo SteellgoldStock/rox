@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 await update("quit", args.slice(1).join(" "), message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
                 break;
-            case "lvlUp":
+            case "lvlUpText":
                 if (!args[1]) {
                     return await msg.sendMsgA(language("MISSED_TEXT", dataServer.prefix, "lvlup"), message, dataServer)
                 }
