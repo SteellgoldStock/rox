@@ -6,6 +6,8 @@ description: >-
 
 # Base
 
+![](.gitbook/assets/image%20%282%29.png)
+
 ## After inviting the bot
 
 [•](https://doc.rox.wtf/) First setup a one or more role being **Admin**
