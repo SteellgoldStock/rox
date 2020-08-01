@@ -8,8 +8,9 @@ const languageData = {
     LANG_NOT_FOUND: (lang, langs) => "The lang `" + lang + "` not found please, set a valid lang " + langs,
     NOT_YOURSELF: "You can't ban yourself",
     NOT_IMG: `You didn't send an image, try again, only \`.png\`,\`.jpg\` and \`.jpeg\` is supported for now, wait a update please`,
-    NOT_GOLD_USER: "You are not a Rox Gold user",
-    NOT_GOLD_SERVER: "This server don't have Rox Gold",
+    NOT_ARGS_LOVE: `You didn't send an \`@mention 1 and you\` or \`@mention 1 and @mention 2\` or \`user and you\` or \`user 1 and user 2\``,
+    NOT_GOLD_USER: "You are not a Rox Gold user\nhttps://upgrade.chat/checkout/733724420056547338",
+    NOT_GOLD_SERVER: "This server don't have Rox Gold\nhttps://upgrade.chat/checkout/733724420056547338",
     IS_NAME_ALREADY: "The server as already this name, please try another",
     CHANNELS_ARGS: "You did not enter a valid value, here are the available values: `logs`, `joinquit`",
     MENTION_CHANNEL: "You didn't mention any channels",
@@ -32,8 +33,10 @@ const languageData = {
     HELP_ADMIN_FIELD: "Administrator",
     HELP_MOD_FIELD: "Moderator",
     HELP_FUN_FIELD: "Fun",
+    HELP_MUSIC_FIELD: "Music",
     HELP_XP_FIELD: "XP System",
     HELP_BASIC_FIELD: "Basics",
+    INVITE: "here to invite the discord bot in your server",
 
     WARN_TITLE: "Warns of ",
     WARNS_REASON_FIELD: "Reason: ",
@@ -71,7 +74,10 @@ const languageData = {
     CHOICE_PROGRESS: "I'm choose.. hmm is difficult",
     CHOICE_DONE: "I'm answering it.",
     DOOR_OPEN: "Third door on the left, at the end of the corridor, it's the exit",
-    DOOR_TEAM_NOT: "You can't take a member of Rox's development team out, or there won't be any more news.. 🤔",
+    DOOR_TEAM_NOT: "You can't take a member of Rox's development team out, or there won't be any more news.. :-|",
+    KISS: (user1, user2) => `${user2}, ${user1} just kiss you`,
+    HUG: (user1, user2) => `${user2}, ${user1} just hug you`,
+    PUNCH: (user1, user2) => `${user2}, ${user1} just punch you`,
 
     // SERVER
     LEVEL_SERVER_UP: (prefix) => `The server as level up, you can see your level with \`${prefix}server\`, use \`${prefix}server top\` to see your level compared to other servers using Rox`,
@@ -99,33 +105,7 @@ const languageData = {
     INVALID_ARGUMENT_EMBECONF_0: "You must enter a valid option type, the avaibles option to config is: `on` or `off`",
     INVALID_ARGUMENT_EMBECONF_1: "You must enter a valid option type, the avaibles option to config is: `title`, `color` or `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `To disable the image use the command \`${prefix}embed config imgUrl\` without text following`,
-    IMG_TITLE_DISABLE: (prefix) => `To disable the title use the command \`${prefix}embed config title\` without text following`,
-
-    LIMIT_CARA: "Please, enter a other value, this exceeds 2000 caraters",
-
-    // MUSC
-    MUSIC_NO_VOICE: "Please enter to in a voice channel first",
-    MUSC_ALREADY_CONNECTED: "I'm already connected to a voice channel",
-    MUSC_NOT_CONNECTED: "I'm not connected to a voice channel",
-    MUSIC_NO_LINK: "Please, enter a valid link to a youtube video",
-    MUSIC_NO_QUEUE: (name) => "**" + name + "** don't have musics in queue",
-    MUSIC_LEAVE_CHANNEL: (name) => "I'm leave the channel **" + name + "**",
-    MUSIC_NOT_SAME_CHANNEL: "If you want stop the music, connect in the same channel where is the bot",
-    MUSIC_QUEUE_ADD: (name, username) => "I'm added to the queue **" + name + "** request by **" + username + "**",
-    MUSIC_CHANGE: (name, username) => "I'm playing **" + name + "** request by **" + username + "**",
-    MUSIC_NOW_PLAY: "Now playing",
-    MUSIC_REQUEST: "Requested by",
-    MUSIC_QUEUE: "Queue",
-    MUSIC_SKIP_VOTE_AV: (requi) => "You already voted to skip, " + requi + " required vote to skip the song",
-    MUSIC_VOTE_SKIP_VOTED: (requi) => "Successfully voted to a music skip, " + requi + " required vote to skip the song",
-    MUSIC_SKIP: "I'm skipped the song !",
-    MUSIC_VOLUME_LIMIT: "Please give a number greater than 0 and less than 500",
-    MUSIC_VOLUME_SET: (volume, songName) => "You have set the volume to **" + volume + "** to the song **" + songName + "**",
-    MUSIC_CHOOSE: "Send the number do you want to choose your music",
-    MUSIC_PAUSE: (prefix, name) => "Successfuly paused the music, use " + `${prefix}resume` + " to resume the music",
-    MUSIC_ALREADY_PAUSE: (prefix, name) => "This music is already paused, use " + `${prefix}resume` + " to resume the music",
-    MUSIC_RESUME: (prefix, name) => "Successfuly resume the music, use " + `${prefix}pause` + " to pause the music",
-    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music"
+    IMG_TITLE_DISABLE: (prefix) => `To disable the title use the command \`${prefix}embed config title\` without text following`
 };
 
 const translate = (key, ...args) => {
