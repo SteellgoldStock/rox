@@ -19,20 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Function Level">
-      <change afterPath="$PROJECT_DIR$/commands/fun/Hug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Kiss.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Lovecalc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/fun/Punch.js" afterDir="false" />
+    <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Fun Command &amp; Purge &amp; language &amp; function msg">
+      <change afterPath="$PROJECT_DIR$/commands/basic/Invite.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/fun/8ball.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/8ball.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settings/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Lang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settings/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Prefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/fun/Lovecalc.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/Lovecalc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596194512824</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add Fun Command &amp; Purge &amp; language &amp; function msg">
+      <created>1596266891494</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1596266891494</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +279,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Test" />
     <MESSAGE value="Function Level" />
-    <option name="LAST_COMMIT_MESSAGE" value="Function Level" />
+    <MESSAGE value="Add Fun Command &amp; Purge &amp; language &amp; function msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Fun Command &amp; Purge &amp; language &amp; function msg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595784915186">
@@ -305,10 +305,14 @@
     </state>
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953599724" />
     <state x="301" y="79" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1595681824275" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596194513900">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1596267376353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596194513900" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1596267376353" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596266893501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596266893501" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
