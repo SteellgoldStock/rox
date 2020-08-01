@@ -12,5 +12,3 @@
 
 ## Commands
 
-## Gold
-
