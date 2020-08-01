@@ -20,24 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
-      <change afterPath="$PROJECT_DIR$/refonte/Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Channels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Embed.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Embed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Messages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Roles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Ban.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Kick.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Kick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Mute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Mute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Purge.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Purge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Tmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Tmute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Unmute.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unmute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Unwarn.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Unwarn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Warn.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Warn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/mod/Warns.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/mod/Warns.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settings/Lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Lang.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/settings/Prefix.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/settings/Prefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596270575217</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Edit Perm">
+      <created>1596301012458</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1596301012458</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +293,8 @@
     <MESSAGE value="Function Level" />
     <MESSAGE value="Add Fun Command &amp; Purge &amp; language &amp; function msg" />
     <MESSAGE value="Add Invite &amp; lovecalc user no mention" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Invite &amp; lovecalc user no mention" />
+    <MESSAGE value="Edit Perm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Perm" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595784915186">
@@ -331,18 +323,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1596267376353" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596270576596">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596301015547">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596270576596" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596301015547" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.870@0.0.1600.870" timestamp="1595850430535" />
-    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596292573072">
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596302456660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596292573072" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596302456660" />
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595953598638">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

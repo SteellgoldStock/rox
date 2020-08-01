@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             .addField(language("HELP_MOD_FIELD"),"`kick`,`ban`,`mute`,`tempmute`,`unmute`,`warn`,`warns`,`unwarn`,`purge`")
             .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`,`memes`,`door`,`challmc`,`achimc`,`8ball`,`choice`,`ascii`, `lovecalc`, `kiss`, `hug`, `punch`")
             .addField(language("HELP_MUSIC_FIELD"),"`play`,`splay`,`stop`,`pause`,`resume`,`skip`,`queue`,`volume`")
-            .addField(language("HELP_BASIC_FIELD"),"`help`")
+            .addField(language("HELP_BASIC_FIELD"),"`help`, `invite`")
             .addField(language("HELP_CC_FIELD",message.guild.name),"liste des commandes custom du serveur a faire (enfin la j'ai la flemme)")
             .addField(language("HELP_GOLD_USER_FIELD",message.guild.name),"`background`")
             // .addField(language("HELP_GOLD_SERVER_FIELD",message.guild.name),"`embedconf`")
@@ -43,8 +43,8 @@ async function send(res,message, data){
     }
 
     let embed = new Discord.MessageEmbed()
-        .setTitle("Rox • !" + res.name + " | help")
-        .setDescription(exports.desc + "\n\n» `" + res.usage + "`")
+        .setTitle("Rox • " + data.prefix + res.name + " | help")
+        .setDescription(exports.desc + "\n\n» `" + data.prefix + res.usage + "`")
         .setThumbnail(client.user.avatarURL())
         .setTimestamp()
         .setFooter('Rox • v0.1',client.user.avatarURL())
