@@ -14,6 +14,7 @@ description: Support the bot !
 * Execute commands even if the bot is under maintenance
 * No waiting time between each command use which is 3 seconds.
 * 5000 coins in your bank \(**ECONOMY**\)
+* Access to a special channeks to see the progress of updates on the support discord
 
 **Gold Server**
 
