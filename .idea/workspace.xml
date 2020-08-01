@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
-      <change afterPath="$PROJECT_DIR$/events/member/messageCustomCommands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/admin/Roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Roles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <workItem from="1596107103169" duration="10243000" />
       <workItem from="1596120516565" duration="12356000" />
       <workItem from="1596277121656" duration="2219000" />
-      <workItem from="1596322158431" duration="1098000" />
+      <workItem from="1596322158431" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -355,11 +352,11 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953598638" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1596066881772">
+    <state x="456" y="198" key="run.anything.popup" timestamp="1596323384071">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596046879619" />
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1596066881772" />
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1596323384071" />
     <state x="556" y="218" width="807" height="811" key="search.everywhere.popup" timestamp="1596294495244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
