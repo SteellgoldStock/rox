@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
     </list>
@@ -122,7 +121,7 @@
       <workItem from="1596107103169" duration="10243000" />
       <workItem from="1596120516565" duration="12356000" />
       <workItem from="1596277121656" duration="2219000" />
-      <workItem from="1596322158431" duration="3461000" />
+      <workItem from="1596322158431" duration="3554000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
