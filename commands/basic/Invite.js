@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         const embed = new Discord.MessageEmbed()
             .setTitle("Rox • Invite")
-            .addField("Invitation", `Click [${lien[0]}](https://rox.invite.wtf) ${lien.slice(1).join(' ')}`)
+            .addField("Invitation", `Click [${lien[0]}](https://invite.rox.wtf) ${lien.slice(1).join(' ')}`)
             .setThumbnail(client.user.avatarURL())
             .setTimestamp()
             .setFooter('Rox • ' + msg.version,client.user.avatarURL())
