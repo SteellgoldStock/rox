@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
+      <change afterPath="$PROJECT_DIR$/events/member/messageCustomCommands.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/fun/Door.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/Door.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/events/member" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,17 +75,30 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\mod" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\mod" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -108,7 +122,7 @@
       <workItem from="1596107103169" duration="10243000" />
       <workItem from="1596120516565" duration="12356000" />
       <workItem from="1596277121656" duration="2219000" />
-      <workItem from="1596322158431" duration="300000" />
+      <workItem from="1596322158431" duration="1098000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

@@ -103,7 +103,6 @@ exports.Role = async(member, role, message, dataServer = null) => {
             if(member.roles.cache.has(m)){
                 count = count + 1;
                 return true;
-
             }
         })
 
