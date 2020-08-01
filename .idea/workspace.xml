@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Fun Command &amp; Purge &amp; language &amp; function msg">
-      <change afterPath="$PROJECT_DIR$/commands/basic/Invite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
       <change beforePath="$PROJECT_DIR$/commands/fun/Lovecalc.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/Lovecalc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596266891494</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add Invite &amp; lovecalc user no mention">
+      <created>1596270575217</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1596270575217</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +283,8 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Function Level" />
     <MESSAGE value="Add Fun Command &amp; Purge &amp; language &amp; function msg" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Fun Command &amp; Purge &amp; language &amp; function msg" />
+    <MESSAGE value="Add Invite &amp; lovecalc user no mention" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Invite &amp; lovecalc user no mention" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595784915186">
@@ -309,18 +313,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1596267376353" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596266893501">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596270576596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596266893501" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596270576596" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.870@0.0.1600.870" timestamp="1595850430535" />
-    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596266558528">
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596270549921">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596266558528" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596270549921" />
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595953598638">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

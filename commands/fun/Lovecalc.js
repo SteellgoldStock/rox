@@ -9,18 +9,33 @@ var path = require('path');
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
 
-    let arg;
-
     if(!args[0] && !args[1]){
 
         return msg.sendMsg("NOT_ARGS_LOVE",message,dataServer)
 
     } else if(!args[1]){
 
+        let user = args[0];
+
+        if(args[0].startsWith('<')){
+
+            args[0] = args[0].slice(2, -1);
+
+            if(args[0].startsWith('!')){
+
+                args[0] = args[0].slice(1);
+
+            } else {
+
+                args[0] = args[0];
+
+            }
+        }
+
 
         let member1 = message.author;
 
-        let member2 = message.guild.member(message.mentions.users.first());
+        let member2 = message.guild.member(args[0]);
 
         const random = Math.floor((Math.random() * 100) + 1);
 
@@ -45,11 +60,11 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
             if(random < 31){
 
-                return message.channel.send(`**${member1.username}** + **${args[0]}** = ${random} **%** 💔`)
+                return message.channel.send(`**${member1.username}** + **${user}** = ${random} **%** 💔`)
 
             } else {
 
-                return message.channel.send(`**${member1.username}** + **${args[0]}** = ${random} **%** ❤️`);
+                return message.channel.send(`**${member1.username}** + **${user}** = ${random} **%** ❤️`);
 
             }
 
@@ -57,18 +72,38 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
     } else {
 
-        let user = args[1];
+        let user1 = args[0];
 
-        args[1] = args[1].slice(2, -1);
+        let user2 = args[1];
 
-        if(args[1].startsWith("!")){
+        if(args[0].startsWith('<')){
 
-            args[1] = args[1].slice(1);
+            args[0] = args[0].slice(2, -1);
 
-        } else {
+            if(args[0].startsWith('!')){
 
-            args[1] = args[1];
+                args[0] = args[0].slice(1);
 
+            } else {
+
+                args[0] = args[0];
+
+            }
+        }
+
+        if(args[1].startsWith('<')){
+
+            args[1] = args[1].slice(2, -1);
+
+            if(args[1].startsWith('!')){
+
+                args[1] = args[1].slice(1);
+
+            } else {
+
+                args[1] = args[1];
+
+            }
         }
 
         let member1 = message.guild.member(message.mentions.users.first());
@@ -99,11 +134,11 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
             if(random < 31){
 
-                return message.channel.send(`**${args[0]}** + **${user}** = ${random} **%** 💔`)
+                return message.channel.send(`**${user1}** + **${user2}** = ${random} **%** 💔`)
 
             } else {
 
-                return message.channel.send(`**${args[0]}** + **${user}** = ${random} **%** ❤️`);
+                return message.channel.send(`**${user1}** + **${user2}** = ${random} **%** ❤️`);
 
             }
         }
