@@ -4,7 +4,7 @@ description: 'Define channels, if you want to receive love messages...❤️'
 
 # Channels
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 [•](https://doc.rox.wtf/) If you want to send messages, when a member joins your server:
 
