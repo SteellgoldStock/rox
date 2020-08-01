@@ -17,7 +17,7 @@ First setup a one or more role being **Admin**
 Now, you can configure one or more roles as **Moderator**
 
 ```bash
-!roles adminRole [mentionRole]
+!roles modRole [mentionRole]
 ```
 
 
