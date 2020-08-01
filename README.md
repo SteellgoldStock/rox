@@ -4,7 +4,7 @@ description: >-
   examples of the commands, the uses, all that has in the bot
 ---
 
-# Setup
+# Base
 
 ## After inviting the bot
 
