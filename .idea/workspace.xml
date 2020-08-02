@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add Invite &amp; lovecalc user no mention">
+      <change afterPath="$PROJECT_DIR$/commands/team/BotSaying.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/member/messageTeamSay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/fun/Bon.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/fun/Bon.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,16 +74,16 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\mod" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
   </component>
   <component name="RunManager">
@@ -124,7 +124,7 @@
       <workItem from="1596120516565" duration="12356000" />
       <workItem from="1596277121656" duration="2219000" />
       <workItem from="1596322158431" duration="3659000" />
-      <workItem from="1596359211480" duration="1055000" />
+      <workItem from="1596359211480" duration="1697000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

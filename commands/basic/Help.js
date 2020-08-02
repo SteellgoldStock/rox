@@ -48,7 +48,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 }
 
 async function send(res,message, data){
-    console.log(data.lang);
     if(data.lang === "fr"){
         exports.desc = res.descriptionFr;
     }else{
