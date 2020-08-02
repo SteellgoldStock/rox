@@ -24,6 +24,8 @@ const languageData = {
     INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit` or `logs`",
 
     MISSED_TEXT: (prefix, type) => `You have missed the text, you can add a differents tags to diversify your text, use the \`${prefix}tags ${type}\` to see the avaible tags`,
+    MISSED_TEXTS: "You have missed the text",
+    TOO_MUCH_ARGS: "There are too many characters, the limit is 12",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",

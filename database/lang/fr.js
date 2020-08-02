@@ -24,6 +24,8 @@ const languageData = {
     INVALID_ARGS_CHANNELS: "Vous devez entrer un type de chaîne valide, les chaînes disponibles à configurer sont is: `joinquit` ou `logs`",
 
     MISSED_TEXT: (prefix, type) => `Vous avez oublié(e) d'inserer un texte, vous pouvez ajoutées plusieurs tags dans votre texte, pour voir ceux qui sont disponibles pour ce texte utilisez \`${prefix}tags ${type}\``,
+    MISSED_TEXTS: "Vous avez oublié(e) d'inserer un texte",
+    TOO_MUCH_ARGS: "Il y a trop de caractère la limite est 12",
 
     /** SUCCESS **/
     UPDATED: "Vos modifications ont été sauvegardées avec succès",

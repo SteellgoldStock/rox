@@ -4,7 +4,7 @@ const { client, botConfg, fs, colors,messages, msg} = require("../../rox");
 const { Canvas } = require('canvas-constructor');
 const { MessageAttachment } = require('discord.js');
 const fetch = require('node-fetch');
-var path = require('path');
+const path = require('path');
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;

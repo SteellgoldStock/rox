@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     if(!args[0]){
         const dbc = JSON.parse(fs.readFileSync("database/ccommands/" + message.guild.id + ".json", "utf8"));
         if(Object.keys(dbc).length == 0){
-            exports.resp = "This guild don't have custom command, to add use `"+dataServer.prefix+"custcmds add [commandName] [text]`, if you want have a message out of the ordinary click [here](https://doc.rox.wtf/configs/messages/tags)"
+            exports.resp = "This guild don't have custom command, to add use `" + dataServer.prefix + "custcmds add [commandName] [text]`, if you want have a message out of the ordinary click [here](https://doc.rox.wtf/configs/messages/tags)"
         }else {
             var item;
 
@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             .setDescription(language("HELP_DESCRIPTION",dataServer.prefix))
             .addField(language("HELP_ADMIN_FIELD"),"`prefix`,`lang`,`channels`,`roles`,`messages`")
             .addField(language("HELP_MOD_FIELD"),"`kick`,`ban`,`mute`,`tempmute`,`unmute`,`warn`,`warns`,`unwarn`,`purge`")
-            .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`,`memes`,`door`,`challmc`,`achimc`,`8ball`,`choice`,`ascii`, `lovecalc`, `kiss`, `hug`, `punch`")
+            .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`,`memes`,`door`,`challmc`,`achimc`,`8ball`,`choice`,`ascii`, `lovecalc`, `kiss`, `hug`, `punch`, bontoutou")
             .addField(language("HELP_MUSIC_FIELD"),"`play`,`splay`,`stop`,`pause`,`resume`,`skip`,`queue`,`volume`")
             .addField(language("HELP_BASIC_FIELD"),"`help`, `invite`")
             .addField(language("HELP_CC_FIELD",message.guild.name),exports.resp)
