@@ -23,11 +23,15 @@ client.on('guildMemberAdd', member => {
             }
         }
 
-        member.guild.members.fetch().then(fetchedMembers => {
-            const totalOnline = fetchedMembers.filter(member => member.presence.status === 'online');
-            const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline');
-            exports.online = totalOnline.size;
-            exports.offline = totalOffline.size;
+        message.guild.members.fetch().then(fetchedMembers => {
+            const vert = fetchedMembers.filter(member => member.presence.status === 'online').size;
+            const jaune = fetchedMembers.filter(member => member.presence.status === 'Inactive').size;
+            const rouge = fetchedMembers.filter(member => member.presence.status === 'dnd').size;
+            const blanc = fetchedMembers.filter(member => member.presence.status === 'invisible').size;
+            const totalOnline = vert + jaune + rouge + blanc
+            const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline').size;
+            exports.online = totalOnline;
+            exports.offline = totalOffline;
         });
 
         if (results[0].announceChannel !== "false") {
