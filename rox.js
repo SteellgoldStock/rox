@@ -57,6 +57,7 @@ exports.client.on('ready', () => {
     loadCommand('./commands/team/');
     loadCommand('./commands/fun/');
     loadCommand('./commands/music/');
+    loadCommand('./commands/adventure/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
