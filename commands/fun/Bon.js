@@ -7,7 +7,6 @@ const { MessageAttachment } = require('discord.js');
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
 
     let text = args.shift();
-    console.log(typeof text)
     if (!text) return msg.sendMsg("MISSED_TEXTS", message, dataServer)
     if (text.length > 12) return msg.sendMsg("TOO_MUCH_ARGS", message, dataServer)
     text = text.allReplace({
