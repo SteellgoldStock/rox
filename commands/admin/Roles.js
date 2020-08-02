@@ -80,12 +80,17 @@ async function update(type, id, guildid, action){
                     return false;
                 } else if (results.length > 0) {
                     if(action == "add"){
+
                         let adm = results[0].modRole.split(' ');
-                        adm.push(id);
+                        if (!adm[id]){
+                            adm.push(id);
+                        }
                         admin = adm.join(' ');
                     } else {
                         let adm = results[0].modRole.split(' ');
-                        adm.delete(id);
+                        if (adm[id]){
+                            adm.delete(id);
+                        }
                         admin = adm.join(' ');
                     }
                     return database.query(`UPDATE servers SET adminRole = '${admin}' WHERE guildid = '${guildid}'`, function (err) {
@@ -102,11 +107,15 @@ async function update(type, id, guildid, action){
                 } else if (results.length > 0) {
                     if(action == "add"){
                         let mod = results[0].modRole.split(' ');
-                        mod.push(id);
+                        if (!mod[id]){
+                            mod.push(id);
+                        }
                         modo = mod.join(' ');
                     } else {
                         let mod = results[0].modRole.split(' ');
-                        mod.delete(id);
+                        if (mod[id]){
+                            mod.delete(id);
+                        }
                         modo = mod.join(' ');
                     }
                     return database.query(`UPDATE servers SET modRole = '${modo}' WHERE guildid = '${guildid}'`, function (err) {
@@ -123,11 +132,15 @@ async function update(type, id, guildid, action){
                 } else if (results.length > 0) {
                     if(action == "add"){
                         let aut = results[0].modRole.split(' ');
-                        aut.push(id);
+                        if (!aut[id]){
+                            aut.push(id);
+                        }
                         auto = aut.join(' ');
                     } else {
                         let aut = results[0].modRole.split(' ');
-                        aut.delete(id);
+                        if (aut[id]){
+                            aut.delete(id);
+                        }
                         auto = aut.join(' ');
                     }
                     return database.query(`UPDATE servers SET autoRole = '${auto}' WHERE guildid = '${guildid}'`, function (err) {
