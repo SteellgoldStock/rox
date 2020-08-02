@@ -33,5 +33,3 @@ The tag **{fileMessage}** return the image/file that is attached to this message
 
 ![{sayMessage} example](../../.gitbook/assets/image%20%286%29.png)
 
-![{fileMessage} example](../../.gitbook/assets/image%20%2812%29.png)
-
