@@ -15,6 +15,10 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     return await msg.sendMsgA(language("COMMAND_ALREADY_EXIST", dataServer.prefix, args[1]), message, dataServer)
                 }
 
+                if(Object.keys(dbC).length >= dataServer.limitCC){
+                    return await msg.sendMsgA(language("COMMAND_REACHED_MAXIMUM", dataServer.prefix, args[1]), message, dataServer)
+                }
+
                 if (!args[2]) {
                     return await msg.sendMsg("INVALID_ARGS_TEXT_COMMANDS", message, dataServer)
                 }

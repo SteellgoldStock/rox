@@ -25,6 +25,7 @@ const languageData = {
     INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
 
+    COMMAND_REACHED_MAXIMUM: "This server has reached the custom order limit it can have, to raise this limit to 30 you can take the Rox Gold subscription for this server\n\nhttps://doc.rox.wtf/rox-gold",
     COMMAND_ALREADY_EXIST: (prefix, name) => `This command already exist, you can remove it with \`${prefix}commands remove ${name}\``,
     COMMAND_NOT_EXIST: (prefix, name) => `This command not exist, you can add it with \`${prefix}commands add ${name} [text]\``,
 
