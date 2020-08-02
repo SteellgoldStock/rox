@@ -4,6 +4,8 @@ description: Do you like to have specific roles for your favorite moderator?
 
 # Roles
 
+![](../.gitbook/assets/image%20%2815%29.png)
+
 ## To add a role in a category
 
 Allows you to add a role as administrator or moderator, and you are not limited to one, two or three, well... you can put as many as you want !
