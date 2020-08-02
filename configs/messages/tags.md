@@ -13,7 +13,7 @@ List of tags:
 | {guildName} | All |
 | {userCount} | All |
 | {countOnline} | All |
-| {countOffline} |  |
+| {countOffline} | All |
 | {sayMessage} | Only custom commands |
 | {asciiMessage} | Only custom commands |
 
