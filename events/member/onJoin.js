@@ -25,10 +25,9 @@ client.on('guildMemberAdd', member => {
 
         message.guild.members.fetch().then(fetchedMembers => {
             const vert = fetchedMembers.filter(member => member.presence.status === 'online').size;
-            const jaune = fetchedMembers.filter(member => member.presence.status === 'Inactive').size;
+            const jaune = fetchedMembers.filter(member => member.presence.status === 'idle').size;
             const rouge = fetchedMembers.filter(member => member.presence.status === 'dnd').size;
-            const blanc = fetchedMembers.filter(member => member.presence.status === 'invisible').size;
-            const totalOnline = vert + jaune + rouge + blanc
+            const totalOnline = vert + jaune + rouge
             const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline').size;
             exports.online = totalOnline;
             exports.offline = totalOffline;
