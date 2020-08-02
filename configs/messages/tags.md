@@ -13,9 +13,9 @@ List of tags:
 | {guildName} | All |
 | {userCount} | All |
 | {countOnline} | All |
+| {countOffline} |  |
 | {sayMessage} | Only custom commands |
 | {asciiMessage} | Only custom commands |
-| {fileMessage} | Only custom commands |
 
 {% hint style="info" %}
 The tag **{sayMessage}**, **{asciiMessage}** return the text after the command, here is an exemple   
@@ -24,7 +24,7 @@ The tag **{fileMessage}** return the image/file that is attached to this message
 {% endhint %}
 
 {% hint style="danger" %}
-For **{fileMessage}** only `.png .jpg .jpeg .txt .json` are allowed all other while been refused
+For **{fileMessage}** only `.png .jpg .jpeg` are allowed all other while been refused
 {% endhint %}
 
 ## Exemples:
