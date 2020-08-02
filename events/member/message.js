@@ -17,7 +17,7 @@ client.on("message", message => {
 
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
-        const cmd = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
+        const cmd = client.commands.get(command);
 
         if (!message.member.roles.cache.find(role => role.name === 'MUTE')) {
             if (!cmd) {
@@ -75,11 +75,7 @@ client.on("message", message => {
                     } else if (results.length > 0) {
                         message.reply(language("BLACKLISTED"));
                     } else {
-                        switch (cmd.help.type) {
-                            default:
-                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                                break;
-                        }
+                        cmd.run(client, message, args, fs, colors, database, dataServer, language);
                     }
                 });
             }
