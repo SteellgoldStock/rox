@@ -22,6 +22,11 @@ const languageData = {
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
     INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit` or `logs`",
+    INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
+    INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
+
+    COMMAND_ALREADY_EXIST: (prefix, name) => `This command already exist, you can remove it with \`${prefix}commands remove ${name}\``,
+    COMMAND_NOT_EXIST: (prefix, name) => `This command not exist, you can add it with \`${prefix}commands add ${name} [text]\``,
 
     MISSED_TEXT: (prefix, type) => `You have missed the text, you can add a differents tags to diversify your text, use the \`${prefix}tags ${type}\` to see the avaible tags`,
     MISSED_TEXTS: "You have missed the text",
