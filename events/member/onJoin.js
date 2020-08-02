@@ -23,7 +23,7 @@ client.on('guildMemberAdd', member => {
             }
         }
 
-        message.guild.members.fetch().then(fetchedMembers => {
+        member.guild.members.fetch().then(fetchedMembers => {
             const vert = fetchedMembers.filter(member => member.presence.status === 'online').size;
             const jaune = fetchedMembers.filter(member => member.presence.status === 'idle').size;
             const rouge = fetchedMembers.filter(member => member.presence.status === 'dnd').size;
