@@ -85,6 +85,7 @@ async function update(type, id, guildid, action){
                         if (!adm[id]){
                             adm.push(id);
                         }
+
                         admin = adm.join(' ');
                     } else {
                         let adm = results[0].modRole.split(' ');
