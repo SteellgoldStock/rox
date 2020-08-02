@@ -107,4 +107,5 @@ async function image(text, color) {
 
 module.exports.help = {
     name: "bontoutou",
+    aliases: ['btt', 'toutou']
 };

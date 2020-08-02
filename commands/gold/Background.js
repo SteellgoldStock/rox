@@ -168,5 +168,6 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
 }
 
 exports.help = {
-    name: "background"
+    name: "background",
+    aliases: ['back', 'bckg']
 }
