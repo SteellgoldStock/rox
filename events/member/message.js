@@ -64,6 +64,35 @@ client.on("message", message => {
                             const toAdd = resultsXp[0].xp;
                             let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                             database.query(sqladd);
+                            let user = message.mentions.users.first();
+
+                            if(message.mentions.users.first()){
+
+                                if(user.startsWith('<')){
+
+                                    user = user.slice(2, -1);
+
+                                    if(user.startsWith('!')){
+
+                                        user = user.slice(1);
+
+                                    } else {
+
+                                        user = user;
+
+                                    }
+                                }
+                            }
+                            if(user == "504392983244832780" || user == "558793081663782913"){
+
+                                if (message.author.id != "504392983244832780" && message.author.id != "558793081663782913"){
+
+                                    message.delete()
+
+                                    message.channel.send("You can't mention this user")
+
+                                }
+                            }
                         });
                     }
                 });
