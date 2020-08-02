@@ -13,7 +13,7 @@ Allows you to add a role as administrator or moderator, and you are not limited 
 ```
 
 {% hint style="warning" %}
-The only grade you can't put more than one in is **autoRole**
+The only rank you can't put more than one in is **autoRole**
 {% endhint %}
 
 Oh boy... by joining the waiter Michel didn't get his rank **best person in the world**... how can I?:
