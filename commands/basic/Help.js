@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     if(!args[0]){
         const dbc = JSON.parse(fs.readFileSync("database/ccommands/" + message.guild.id + ".json", "utf8"));
         if(Object.keys(dbc).length == 0){
-            exports.resp = "This guild don't have custom command, to add use `" + dataServer.prefix + "custcmds add [commandName] [text]`, if you want have a message out of the ordinary click [here](https://doc.rox.wtf/configs/messages/tags)"
+            exports.resp = "This guild don't have custom command, to add use `" + dataServer.prefix + "commands add [commandName] [text]`, if you want have a message out of the ordinary click [here](https://doc.rox.wtf/configs/messages/tags)"
         }else {
             var item;
 

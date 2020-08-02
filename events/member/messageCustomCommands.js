@@ -1,4 +1,5 @@
 const { client, colors, botConfg, fs, database, msg} = require("../../rox");
+var figlet = require('figlet');
 
 client.on('message',message => {
     if (!message.guild) return;
@@ -26,12 +27,34 @@ client.on('message',message => {
                     };
 
                     const args = message.content.slice(prefix.length).trim().split(/ +/g);
+
+                    message.guild.members.fetch().then(fetchedMembers => {
+                        const totalOnline = fetchedMembers.filter(member => member.presence.status === 'online');
+                        const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline');
+                        exports.online = totalOnline.size;
+                        exports.offline = totalOffline.size;
+                    });
+
+                    figlet(args.slice(0).join(" "), function(err, data) {
+                        if (err) {
+                            console.log('Something went wrong...');
+                            console.dir(err);
+                            return;
+                        }
+
+                        exports.ascii = data;
+                    });
+
                     message.channel.send(dbC[prop].allReplace(
                         {
                             '{mention}': "<@" + message.author.id + ">",
-                            '{serverName}': message.guild.name,
+                            '{guildName}': message.guild.name,
                             '{username}': message.author.username,
-                            '{sayMessage}': args.slice(1).join(" ")
+                            '{sayMessage}': args.slice(1).join(" "),
+                            '{asciiMessage}': exports.ascii,
+                            '{userCount}': message.guild.memberCount,
+                            '{countOnline}': exports.online,
+                            '{countOffline}': exports.offline
                         }))
                 } else {
 

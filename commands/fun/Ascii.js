@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 const { client, database, msg, colors, fs, team} = require("../../rox");
 const { MessageAttachment } = require('discord.js');
 
-const ascii = require('ascii-art');
-
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if(!args[0]) return await msg.sendMsg("MISSED_ARGUMENTS",message,dataServer);
 

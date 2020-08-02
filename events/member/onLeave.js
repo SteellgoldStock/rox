@@ -22,7 +22,10 @@ client.on('guildMemberRemove', member => {
                 channel.send(results[0].quitText.allReplace({
                     "{mention}": "<@" + member.id + ">",
                     "{username}": member.user.username,
-                    "{guildName}": member.guild.name
+                    "{guildName}": member.guild.name,
+                    '{userCount}': message.guild.memberCount,
+                    '{countOnline}': exports.online,
+                    '{countOffline}': exports.offline
                 }))
             }
         }
