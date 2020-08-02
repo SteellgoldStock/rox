@@ -96,7 +96,7 @@ async function image(text, color) {
         .addText("BON", 10, 180)
 
         .setColor(`${color[0]}`)
-        .setTextFont("85px Bontoutou")
+        .setTextFont("65px Bontoutou")
         .setStroke("#000000")
         .setStrokeWidth(500)
         .addText(text, 1, 250)
