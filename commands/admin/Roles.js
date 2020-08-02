@@ -91,6 +91,7 @@ async function update(type, id, guildid, action){
                         let adm = results[0].modRole.split(' ');
                         if (adm[id]){
                             adm.delete(id);
+                            adm.sort()
                         }
                         admin = adm.join(' ');
                     }
