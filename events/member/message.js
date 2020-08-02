@@ -32,6 +32,23 @@ client.on("message", message => {
                                 return console.error(error.message);
                             }
 
+                            if(!resultsXp[0]){
+
+                                var postXp = {
+                                    guildid: message.guild.id,
+                                    userid: message.author.id,
+                                    xp: 0,
+                                    level: 1,
+                                    messagesCount: 0
+                                };
+
+                                database.query('INSERT INTO servers_xp SET ?', postXp, function (error) {
+                                    if (error) throw error;
+                                    client.guilds.cache.get("733724420056547338").channels.cache.get("737651263612911672").send('Nouvelle donnée d\'xp pour l\'utilisateur **' + message.author.username + '** sur le serveur: **' + message.guild.name + "**");
+                                });
+
+                            }
+
                             const msgToAdd = parseInt(resultsXp[0].messagesCount) + parseInt("1")
                             let sqladdMSg = `UPDATE servers_xp SET messagesCount=${msgToAdd} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                             database.query(sqladdMSg);
