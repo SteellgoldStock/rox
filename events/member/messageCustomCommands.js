@@ -11,6 +11,8 @@ client.on('message',message => {
             return console.error(error.message);
         }
 
+        const dataServer = results[0];
+
         const prefix = results[0].prefix
 
         Object.keys(dbC).forEach(function (prop) {
@@ -45,7 +47,7 @@ client.on('message',message => {
                         exports.ascii = data;
                     });
 
-                    message.channel.send(dbC[prop].allReplace(
+                    msg.sendMsgA(dbC[prop].allReplace(
                         {
                             '{mention}': "<@" + message.author.id + ">",
                             '{guildName}': message.guild.name,
@@ -55,7 +57,7 @@ client.on('message',message => {
                             '{userCount}': message.guild.memberCount,
                             '{countOnline}': exports.online,
                             '{countOffline}': exports.offline
-                        }))
+                        }), message, dataServer)
                 } else {
 
                 }
