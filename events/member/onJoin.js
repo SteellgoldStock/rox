@@ -23,6 +23,13 @@ client.on('guildMemberAdd', member => {
             }
         }
 
+        member.guild.members.fetch().then(fetchedMembers => {
+            const totalOnline = fetchedMembers.filter(member => member.presence.status === 'online');
+            const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline');
+            exports.online = totalOnline.size;
+            exports.offline = totalOffline.size;
+        });
+
         if (results[0].announceChannel !== "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
@@ -30,7 +37,7 @@ client.on('guildMemberAdd', member => {
                     "{mention}": "<@" + member.id + ">",
                     "{username}": member.user.username,
                     "{guildName}": member.guild.name,
-                    '{userCount}': message.guild.memberCount,
+                    '{userCount}': member.guild.memberCount,
                     '{countOnline}': exports.online,
                     '{countOffline}': exports.offline
                 }))

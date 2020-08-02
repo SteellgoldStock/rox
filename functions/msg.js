@@ -14,7 +14,9 @@ exports.sendMsg = async(text, message, dataServer = null) => {
             embed.setTitle(dataServer.embedTitle)
             embed.setDescription(language(text))
 
+            if (dataServer.embedImgURL !== "none") {
                 embed.setThumbnail(dataServer.embedImgURL)
+            }
 
             embed.setColor(dataServer.embedColor)
             embed.setTimestamp()
@@ -35,7 +37,9 @@ exports.sendMsgA = async(text, message, dataServer = null) => {
             embed.setTitle(dataServer.embedTitle)
             embed.setDescription(text)
 
-            embed.setThumbnail(dataServer.embedImgURL)
+            if (dataServer.embedImgURL !== "none") {
+                embed.setThumbnail(dataServer.embedImgURL)
+            }
 
             embed.setColor(dataServer.embedColor)
             embed.setTimestamp()
