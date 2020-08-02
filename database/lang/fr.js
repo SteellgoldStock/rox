@@ -25,6 +25,9 @@ const languageData = {
     INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "Vous n'avez pas saisi de texte que le bot enverra si la personne utilise la commande, si vous voulez avoir des messages plus cool que d'autres utilisent des balises\n\nhttps://tags.rox.wtf",
 
+    COMMAND_ALREADY_EXIST: (prefix, name) => `Cette commande existe déjà, vous pouvez la supprimer avec \`${prefix}commands remove ${name}\``,
+    COMMAND_NOT_EXIST: (prefix, name) => `Cette commande n'existe pas, vous pouvez l'ajouter avec \`${prefix}commands add ${name} [text]\``,
+
     MISSED_TEXT: (prefix, type) => `Vous avez oublié(e) d'inserer un texte, vous pouvez ajoutées plusieurs tags dans votre texte, pour voir ceux qui sont disponibles pour ce texte utilisez \`${prefix}tags ${type}\``,
     MISSED_TEXTS: "Vous avez oublié(e) d'inserer un texte",
     TOO_MUCH_ARGS: "Il y a trop de caractère la limite est 12",
