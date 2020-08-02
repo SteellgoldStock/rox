@@ -15,8 +15,18 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
     let resp = `__**${title}**__\n**${now.songTitle}** -- __${requester}__: **${now.requester}**\n\n__**${queuei}**__\n`
 
-    for (var i = 1; i < queue.length; i++) {
-        resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+    if(queue.length > 30){
+
+        for (var i = 1; i < 30; i++) {
+            resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+        }
+
+    } else {
+
+        for (var i = 1; i < queue.length; i++) {
+            resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+        }
+
     }
 
     return await msg.sendMsgA(resp,message,dataServer);
