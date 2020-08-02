@@ -115,6 +115,8 @@ const languageData = {
     IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
     IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`,
 
+    // MUSIC
+    MUSIC_NO_VOICE: "Tu n'es pas dans un canal vocal",
     MUSC_ALREADY_CONNECTED: "Je suis déjà connecté à un canal vocal",
     MUSC_NOT_CONNECTED: "Je ne suis pas connecté à un canal vocal",
     MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
