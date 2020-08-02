@@ -13,13 +13,13 @@ List of tags:
 | {guildName} | All |
 | {userCount} | All |
 | {countOnline} | All |
-| {countOffline} |  |
+| {countOffline} | All |
 | {sayMessage} | Only custom commands |
 | {asciiMessage} | Only custom commands |
 
 {% hint style="warning" %}
-The tag **{sayMessage}**, **{asciiMessage}** return the text after the command, here is an exemple   
-  
+The tag **{sayMessage}**, **{asciiMessage}** return the text after the command, here is an exemple
+
 The tag **{fileMessage}** return the image/file that is attached to this message.
 {% endhint %}
 
