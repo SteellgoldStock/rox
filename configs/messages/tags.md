@@ -17,14 +17,10 @@ List of tags:
 | {sayMessage} | Only custom commands |
 | {asciiMessage} | Only custom commands |
 
-{% hint style="info" %}
+{% hint style="warning" %}
 The tag **{sayMessage}**, **{asciiMessage}** return the text after the command, here is an exemple   
   
 The tag **{fileMessage}** return the image/file that is attached to this message.
-{% endhint %}
-
-{% hint style="danger" %}
-For **{fileMessage}** only `.png .jpg .jpeg` are allowed all other while been refused
 {% endhint %}
 
 ## Exemples:
