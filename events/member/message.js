@@ -32,7 +32,7 @@ client.on("message", message => {
                                 return console.error(error.message);
                             }
 
-                            if(!resultsXp[0]){
+                            if(resultsXp[0].length === 0){
 
                                 var postXp = {
                                     guildid: message.guild.id,
