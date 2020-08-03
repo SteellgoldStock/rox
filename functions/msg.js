@@ -8,7 +8,7 @@ exports.sendMsg = async(text, message, dataServer = null) => {
     const guildLanguage = dataServer.lang;
     const language = require(`../database/lang/${guildLanguage}`);
 
-    if (dataServer.isGold !== 0) {
+    if (dataServer.isGold === 1) {
         if (dataServer.msgEmbed !== 0) {
             let embed = new Discord.MessageEmbed()
             embed.setTitle(dataServer.embedTitle)
@@ -31,7 +31,7 @@ exports.sendMsg = async(text, message, dataServer = null) => {
 }
 
 exports.sendMsgA = async(text, message, dataServer = null) => {
-    if (dataServer.isGold !== 0) {
+    if (dataServer.isGold === 1) {
         if (dataServer.msgEmbed !== 0) {
             let embed = new Discord.MessageEmbed()
             embed.setTitle(dataServer.embedTitle)
@@ -60,7 +60,7 @@ exports.sendMsgI = async(text, member1, member2, image, url, message, dataServer
     const guildLanguage = dataServer.lang;
     const language = require(`../database/lang/${guildLanguage}`);
 
-    if (dataServer.isGold !== 0) {
+    if (dataServer.isGold === 1) {
         if (dataServer.msgEmbed !== 0) {
             let embed = new Discord.MessageEmbed()
             embed.setTitle(dataServer.embedTitle)

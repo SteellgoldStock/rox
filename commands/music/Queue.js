@@ -15,19 +15,29 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
     let resp = `__**${title}**__\n**${now.songTitle}** -- __${requester}__: **${now.requester}**\n\n__**${queuei}**__\n`
 
-    if(queue.length > 30){
+    if(!args[0]){
 
-        for (var i = 1; i < 30; i++) {
-            resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+        if(queue.length > 30){
+
+            for (var i = 1; i < 30; i++) {
+                resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+            }
+
+        } else {
+
+            for (var i = 1; i < queue.length; i++) {
+                resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+            }
         }
 
-    } else {
+        } else if (args[0] && args[0] > 0){
 
-        for (var i = 1; i < queue.length; i++) {
-            resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+            if(!queue[parseInt(args[0]) - 30]) return await msg.sendMsgA(language("MUSIC_NO_QUEUE_NUMBER",message.guild.name, args[0]),message,dataServer);
+
+            for (var i = parseInt(args[0]) - 30; i < parseInt(args[0]); i++) {
+                resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
+            }
         }
-
-    }
 
     return await msg.sendMsgA(resp,message,dataServer);
 }

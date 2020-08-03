@@ -122,6 +122,7 @@ const languageData = {
     MUSC_NOT_CONNECTED: "I'm not connected to a voice channel",
     MUSIC_NO_LINK: "Please, enter a valid link to a youtube video",
     MUSIC_NO_QUEUE: (name) => "**" + name + "** don't have musics in queue",
+    MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** don't have musics in queue **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "I'm leave the channel **" + name + "**",
     MUSIC_NOT_SAME_CHANNEL: "If you want stop the music, connect in the same channel where is the bot",
     MUSIC_QUEUE_ADD: (name, username) => "I'm added to the queue **" + name + "** request by **" + username + "**",

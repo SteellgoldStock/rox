@@ -122,6 +122,7 @@ const languageData = {
     MUSC_NOT_CONNECTED: "Je ne suis pas connecté à un canal vocal",
     MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
     MUSIC_NO_QUEUE: (name) => "**" + name + "** n'ont pas de musiques en attente",
+    MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** n'ont pas de musiques en attente **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "Je quitte le canal **" + name + "**",
     MUSIC_NOT_SAME_CHANNEL: "Si vous voulez arrêter la musique, connectez-vous dans le même canal où se trouve le bot",
     MUSIC_QUEUE_ADD: (name, username) => "J'ai ajouté à la file d'attente **" + name + "** Demandé par **" + username + "**",

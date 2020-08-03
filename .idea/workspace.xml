@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
+    <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Add only autorole">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/music/Queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Queue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596379743752</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add only autorole">
+      <created>1596439404851</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1596439404851</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +348,8 @@
     <MESSAGE value="Add message lang" />
     <MESSAGE value="Fix no xp" />
     <MESSAGE value="Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
+    <MESSAGE value="Add only autorole" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add only autorole" />
   </component>
   <component name="WindowStateProjectService">
     <state x="530" y="181" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595784915186">
@@ -367,10 +378,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1596267376353" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596379746041">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596439406279">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596379746041" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596439406279" />
     <state x="406" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595850430535">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
