@@ -32,35 +32,20 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     }
                     await update("mr", mentionedRole.id, message.guild.id, "add");
                     return await msg.sendMsg("UPDATED", message, dataServer);
-                    break;
                 } else if (args[1] == 'remove'){
                     if (!mentionedRole) {
                         return await msg.sendMsg("MENTION_ROLE", message, dataServer)
                     }
                     await update("mr", mentionedRole.id, message.guild.id, "remove");
                     return await msg.sendMsg("UPDATED", message, dataServer);
-                    break;
                 } else {
                     return await msg.sendMsg("INVALID_ARGS_BLACKLIST", message, dataServer)
                 }
+                    break;
             case "autoRole":
-                if(args[1] == 'add'){
-                    if (!mentionedRole) {
-                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
-                    }
                     await update("aur", mentionedRole.id, message.guild.id, "add");
                     return await msg.sendMsg("UPDATED", message, dataServer);
                     break;
-                } else if (args[1] == 'remove'){
-                    if (!mentionedRole) {
-                        return await msg.sendMsg("MENTION_ROLE", message, dataServer)
-                    }
-                    await update("aur", mentionedRole.id, message.guild.id, "remove");
-                    return await msg.sendMsg("UPDATED", message, dataServer);
-                    break;
-                } else {
-                    return await msg.sendMsg("INVALID_ARGS_BLACKLIST", message, dataServer)
-                }
             default:
                 return await msg.sendMsg("INVALID_ARGS_ROLES", message, dataServer)
                 break;
@@ -132,19 +117,7 @@ async function update(type, id, guildid, action){
                 if (error) {
                     return false;
                 } else if (results.length > 0) {
-                    if(action == "add"){
-                        let aut = results[0].modRole.split(' ');
-                        if (!aut[id]){
-                            aut.push(id);
-                        }
-                        auto = aut.join(' ');
-                    } else {
-                        let aut = results[0].modRole.split(' ');
-                        if (aut[id]){
-                            aut.delete(id);
-                        }
-                        auto = aut.join(' ');
-                    }
+                        let auto = id;
                     return database.query(`UPDATE servers SET autoRole = '${auto}' WHERE guildid = '${guildid}'`, function (err) {
                         if (err) throw err;
                     });
