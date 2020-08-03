@@ -58,6 +58,10 @@ client.on('guildCreate',(guild) => {
         }
     });
 
+    let dbC = {};
+
+    fs.writeFileSync("database/ccommands/" + guild.id + ".json", JSON.stringify(dbC), "utf-8");
+
 
     /** USERS XP BY SERVER **/
     const list = client.guilds.cache.get(guild.id);

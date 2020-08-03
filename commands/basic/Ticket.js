@@ -1,45 +1,131 @@
 const Discord = require("discord.js");
 const { client, botConfg, fs, colors,msg} = require("../../rox");
-const ms = require("ms");
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
 
     switch (args[0]) {
 
         case "create":
-            if (message.guild.channels.cache.find(channel => channel.name === message.author.tag)) return await msg.sendMsg("ALREADY_CHANNEL", message, dataServer);
-            if(!message.guild.categories.cache.find(cate => cate.name === dataServer.ticketCat)){
-                message.guild.createChannel(dataServer.ticketCat, "category");
+            let create = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
+            if (message.guild.channels.cache.find(channel => channel.name === create)) return await msg.sendMsg("ALREADY_CHANNEL", message, dataServer);
+            if(!message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat)){
+
+                message.guild.channels.create(dataServer.ticketCat, {
+                    type: "category",
+                    position: 0,
+                    topic: `Support ${message.guild.name}`
+                });
+
+                let cat = message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat).id;
+
+                message.guild.channels.create(create, {
+                    type: "text",
+                    parent: cat,
+                    topic: `Support ${message.author.username}`,
+                }).then(c => {
+
+                    c.updateOverwrite(message.author.id, {
+                        SEND_MESSAGES: true,
+                        VIEW_CHANNEL: true,
+                    });
+
+                    dataServer.adminRole.split(' ').forEach(id => {
+                        c.updateOverwrite(id, {
+                            SEND_MESSAGES: true,
+                            VIEW_CHANNEL: true,
+                        });
+                    });
+
+                    dataServer.modRole.split(' ').forEach(id => {
+                        c.updateOverwrite(id, {
+                            SEND_MESSAGES: true,
+                            VIEW_CHANNEL: true,
+                        });
+                    })
+                    c.updateOverwrite(c.guild.roles.everyone, {
+                        SEND_MESSAGES: false,
+                        VIEW_CHANNEL: false,
+                    });
+                });
+                return msg.sendMsg("CREATE_CHANNEL", message, dataServer);
+
+            } else {
+
+                let cat = message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat).id;
+
+                message.guild.channels.create(create, {
+                    type: "text",
+                    parent: cat,
+                    topic: `Support ${message.author.username}`,
+                }).then(c => {
+
+                    c.updateOverwrite(message.author.id, {
+                        SEND_MESSAGES: true,
+                        VIEW_CHANNEL: true,
+                    });
+
+                    dataServer.adminRole.split(' ').forEach(id => {
+                        c.updateOverwrite(id, {
+                            SEND_MESSAGES: true,
+                            VIEW_CHANNEL: true,
+                        });
+                    });
+
+                    dataServer.modRole.split(' ').forEach(id => {
+                        c.updateOverwrite(id, {
+                            SEND_MESSAGES: true,
+                            VIEW_CHANNEL: true,
+                        });
+                    })
+                    c.updateOverwrite(c.guild.roles.everyone, {
+                        SEND_MESSAGES: false,
+                        VIEW_CHANNEL: false,
+                    });
+                });
+                return msg.sendMsg("CREATE_CHANNEL", message, dataServer);
+
             }
-            message.guild.createChannel(message.author.tag, "text");
-            message.guild.channels.cache.find(channel => channel.name === message.author.tag).setParent(message.guild.categories.cache.find(cate => cate.name === dataServer.ticketCat));
-            return msg.sendMsg("CREATE_CHANNEL", message, dataServer);
             break;
         case "delete":
 
+            let dele = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
+
             if(await msg.Role(message.member, "modo", message, dataServer) === true || await msg.Role(message.member, "admin", message, dataServer) === true){
 
-                if (!message.guild.channels.cache.find(channel => channel.name === args[1]) && !message.guild.channels.cache.find(channel => channel.id === args[1])) return await msg.sendMsg("NOT_EXISTS_CHANNEL_MOD", message, dataServer);
+                if (message.guild.channels.cache.find(channel => channel.name === dele)){
 
-                if(message.guild.channels.cache.find(channel => channel.name === args[1])) {
-
-                    message.guild.channelss.cache.find(channel => channel.name === args[1]).delete();
+                    message.guild.channels.cache.find(channel => channel.name === dele).delete();
 
                     return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
 
-                } else if(message.guild.channels.cache.find(channel => channel.id === args[1])) {
+                } else {
 
-                    message.guild.channels.cache.find(channel => channel.id === args[1]).delete();
+                    if(!args[1]) return await msg.sendMsg("NOT_EXISTS_CHANNEL_MOD", message, dataServer);
 
-                    return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
+                    let del = message.guild.member(message.mentions.users.first()).user.tag.replace('#', '').replace(' ', '-').toLowerCase();
 
+                    if (!message.guild.channels.cache.find(channel => channel.name === del) && !message.guild.channels.cache.find(channel => channel.id === args[1])) return await msg.sendMsg("NOT_EXISTS_CHANNEL_MOD", message, dataServer);
+
+                    if(message.guild.channels.cache.find(channel => channel.name === del)) {
+
+                        message.guild.channels.cache.find(channel => channel.name === del).delete();
+
+                        return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
+
+                    } else if(message.guild.channels.cache.find(channel => channel.id === args[1])) {
+
+                        message.guild.channels.cache.find(channel => channel.id === args[1]).delete();
+
+                        return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
+
+                    }
                 }
 
             } else {
 
-                if (!message.guild.channels.cache.find(channel => channel.name === message.author.tag)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
+                if (!message.guild.channels.cache.find(channel => channel.name === dele)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
 
-                    message.guild.channels.cache.find(channel => channel.name === message.author.tag).delete();
+                    message.guild.channels.cache.find(channel => channel.name === dele).delete();
 
                     return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
             }
@@ -47,19 +133,26 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             break;
         case "add":
             const useradd = message.mentions.users.first();
-            const memberadd = message.guild.member(user);
+            const memberadd = message.guild.member(useradd);
             if(!useradd) return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
             if(!memberadd) return await msg.sendMsg("PU_NO_USER", message, dataServer);
-            message.guild.channels.cache.find(channel => channel.name === message.author.tag).updateOverwrite(memberadd.user, { SPEAK: true });
-            message.guild.channels.cache.find(channel => channel.name === message.author.tag).updateOverwrite(memberadd.user, { VIEW_CHANNEL: true });
+            let add = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
+            if (!message.guild.channels.cache.find(channel => channel.name === add)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
+            let channel = message.guild.channels.cache.find(channel => channel.name === add)
+            channel.updateOverwrite(memberadd.user.id, {
+                SEND_MESSAGES: true,
+                VIEW_CHANNEL: true,
+            });
             return msg.sendMsg("UPDATED", message, dataServer);
             break;
         case "remove":
             const userrem = message.mentions.users.first();
-            const memberrem = message.guild.member(user);
+            const memberrem = message.guild.member(userrem);
             if(!userrem) return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
             if(!memberrem) return await msg.sendMsg("PU_NO_USER", message, dataServer);
-            message.guild.channels.cache.find(channel => channel.name === message.author.tag).permissionOverwrites.get(memberrem.user.id).delete();
+            let rem = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
+            if (!message.guild.channels.cache.find(channel => channel.name === rem)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
+            message.guild.channels.cache.find(channel => channel.name === rem).permissionOverwrites.get(memberrem.user.id).delete();
             return msg.sendMsg("UPDATED", message, dataServer);
             break;
 
