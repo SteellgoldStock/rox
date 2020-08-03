@@ -24,6 +24,7 @@ const languageData = {
     INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont is: `joinquit` ou `logs`",
     INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "Vous n'avez pas saisi de texte que le bot enverra si la personne utilise la commande, si vous voulez avoir des messages plus cool que d'autres utilisent des balises\n\nhttps://tags.rox.wtf",
+    INVALID_ARGS_TICKET: "Vous devez saisir un type de option valide, les options disponibles sont : `create`, `delete`,`add` or `remove`",
 
     COMMAND_REACHED_MAXIMUM: "Ce serveur a atteint la limite de commande personnalisée qu'il peut avoir, pour améliorer cette limite à 30 vous pouvez prendre l'abonnement Rox Gold pour ce serveur\n\nhttps://doc.rox.wtf/rox-gold",
     COMMAND_ALREADY_EXIST: (prefix, name) => `Cette commande existe déjà, vous pouvez la supprimer avec \`${prefix}commands remove ${name}\``,
@@ -58,6 +59,7 @@ const languageData = {
 
     // Moderations commands messages
     PUNISH_Y: `Vous ne pouvez pas vous punir`,
+    PUNISH_BOT: `Vous ne pouvez pas me punir`,
     PU_NO_MENTION: "Veuillez entrer une mention d'utilisateur",
     PU_NO_REASON: "Veuillez indiquer une raison",
     PU_NO_ID: "Veuillez saisir une ID valide",
@@ -120,8 +122,9 @@ const languageData = {
     MUSIC_NO_VOICE: "Tu n'es pas dans un canal vocal",
     MUSC_ALREADY_CONNECTED: "Je suis déjà connecté à un canal vocal",
     MUSC_NOT_CONNECTED: "Je ne suis pas connecté à un canal vocal",
-    MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
+    MUSIC_NO_ARGS: "Veuillez entrer un lien valide vers une vidéo Youtube ou effectuer une recherche",
     MUSIC_NO_QUEUE: (name) => "**" + name + "** n'ont pas de musiques en attente",
+    MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** n'ont pas de musiques en attente **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "Je quitte le canal **" + name + "**",
     MUSIC_NOT_SAME_CHANNEL: "Si vous voulez arrêter la musique, connectez-vous dans le même canal où se trouve le bot",
     MUSIC_QUEUE_ADD: (name, username) => "J'ai ajouté à la file d'attente **" + name + "** Demandé par **" + username + "**",
@@ -138,7 +141,15 @@ const languageData = {
     MUSIC_PAUSE: (prefix, name) => "A réussi à mettre la musique en pause, à utiliser " + `${prefix}resume` + " pour reprendre la musique",
     MUSIC_ALREADY_PAUSE: (prefix, name) => "Cette musique est déjà en pause, utilisez " + `${prefix}resume` + " pour reprendre la musique",
     MUSIC_RESUME: (prefix, name) => "Reprenez la musique avec succès, utilisez " + `${prefix}pause` + " pour mettre la musique en pause",
-    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music"
+    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music",
+
+    // TICKET
+    ALREADY_CHANNEL: "Vous avez déjà un ticket ouvert",
+    CREATE_CHANNEL: "Vous venez d'ouvrir un ticket",
+    NOT_EXISTS_CHANNEL_MOD: "Le channel n'existe pas veuillez entrée l'id du channel ou son nom",
+    NOT_EXISTS_CHANNEL: "Vous n'avez pas de ticket ouvert",
+    DELETE_CHANNEL: "Vous venez de fermer votre ticket",
+
 };
 
 const translate = (key, ...args) => {

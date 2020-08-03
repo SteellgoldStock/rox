@@ -29,6 +29,8 @@ client.on('guildCreate',(guild) => {
                 ticketCat: "false",
                 commandsChannel: "false",
 
+                ticketCat: "----- Ticket -----",
+
                 // CONFIG - ROLES
                 adminRole: "none",
                 modRole: "none",

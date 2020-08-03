@@ -4,9 +4,12 @@ const { client, botConfg, fs, colors,msg} = require("../../rox");
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (await msg.Role(message.member, "modo", message, dataServer) === true || await msg.Role(message.member, "admin", message, dataServer) === true) {
         const mentionUser = message.mentions.members.first();
+
         if (!mentionUser) {
             return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
         }
+
+        if (mentionUser.id === "733760070503890994") return await msg.sendMsg("PUNISH_BOT", message, dataServer);
 
         if (await msg.Role(message.member, "admin", message, dataServer) === true  &&  await msg.Role(message.guild.member(message.mentions.users.first()), "admin", message, dataServer) === true || (await msg.Role(message.member, "admin", message, dataServer) === false && await msg.Role(message.member, "modo", message, dataServer) === true) && (await msg.Role(message.guild.member(message.mentions.users.first()), "modo", message, dataServer) === true || await msg.Role(message.guild.member(message.mentions.users.first()), "admin", message, dataServer) === true)) {
 
