@@ -120,7 +120,7 @@ const languageData = {
     MUSIC_NO_VOICE: "Tu n'es pas dans un canal vocal",
     MUSC_ALREADY_CONNECTED: "Je suis déjà connecté à un canal vocal",
     MUSC_NOT_CONNECTED: "Je ne suis pas connecté à un canal vocal",
-    MUSIC_NO_LINK: "Veuillez entrer un lien valide vers une vidéo Youtube",
+    MUSIC_NO_ARGS: "Veuillez entrer un lien valide vers une vidéo Youtube ou effectuer une recherche",
     MUSIC_NO_QUEUE: (name) => "**" + name + "** n'ont pas de musiques en attente",
     MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** n'ont pas de musiques en attente **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "Je quitte le canal **" + name + "**",

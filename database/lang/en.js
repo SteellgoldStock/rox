@@ -120,7 +120,7 @@ const languageData = {
     MUSIC_NO_VOICE: "You are not in a voice channel",
     MUSC_ALREADY_CONNECTED: "I'm already connected to a voice channel",
     MUSC_NOT_CONNECTED: "I'm not connected to a voice channel",
-    MUSIC_NO_LINK: "Please, enter a valid link to a youtube video",
+    MUSIC_NO_ARGS: "Please enter a valid link to a YouTube video or search",
     MUSIC_NO_QUEUE: (name) => "**" + name + "** don't have musics in queue",
     MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** don't have musics in queue **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "I'm leave the channel **" + name + "**",

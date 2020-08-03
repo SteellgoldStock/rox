@@ -2,35 +2,68 @@ const Discord = require("discord.js");
 const { client, database, msg, colors, fs, team, servers, ops} = require("../../rox");
 const { MessageAttachment } = require('discord.js');
 const ytdl = require("ytdl-core");
+const search = require('yt-search')
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language, ) => {
     if(!message.member.voice.channel) return await msg.sendMsg("MUSIC_NO_VOICE",message,dataServer);
-    if(!args[0]) return await msg.sendMsg("MUSIC_NO_LINK",message,dataServer);
+    if(!args[0]) return await msg.sendMsg("MUSIC_NO_ARGS",message,dataServer);
 
     let validate = await ytdl.validateURL(args[0]);
-    if(!args[0]) return await msg.sendMsg("MUSIC_NO_LINK",message,dataServer);
-    if(!validate) return await msg.sendMsg("MUSIC_NO_LINK",message,dataServer);
+    if(!validate){
 
-    let info = await ytdl.getInfo(args[0]);
+         search(args.join(' '), function (err, res) {
+            if(err) return message.channel.send("An error was encurred, contact a administrator \nhttps://discord.gg/NVBwmFz");
 
-    let data = ops.active.get(message.guild.id) || {};
-    if(!data.connection) data.connection = await message.member.voice.channel.join();
-    if(!data.queue) data.queue = [];
-    data.guildID = message.guild.id;
+            let video = res.videos[0].url
 
-    data.queue.push({
-        songTitle: info.videoDetails.title,
-        requester: message.author.tag,
-        url: args[0],
-        channel: message.channel.id
-    });
+            let info = ytdl.getInfo(video);
 
-    if(!data.dispatcher) await play(client,ops,data,language)
-    else{
-        await msg.sendMsgA(language("MUSIC_QUEUE_ADD",info.videoDetails.title,message.author.username),message,dataServer);
+            let data = ops.active.get(message.guild.id) || {};
+            if(!data.connection) data.connection = message.member.voice.channel.join();
+            if(!data.queue) data.queue = [];
+            data.guildID = message.guild.id;
+
+            data.queue.push({
+                songTitle: info.videoDetails.title,
+                requester: message.author.tag,
+                url: video,
+                channel: message.channel.id
+            });
+
+            if(!data.dispatcher) play(client,ops,data,language)
+            else{
+                msg.sendMsgA(language("MUSIC_QUEUE_ADD",info.videoDetails.title,message.author.username),message,dataServer);
+            }
+
+            ops.active.set(message.guild.id, data);
+
+        })
+
+    } else {
+
+        let info = await ytdl.getInfo(args[0]);
+
+        let data = ops.active.get(message.guild.id) || {};
+        if(!data.connection) data.connection = await message.member.voice.channel.join();
+        if(!data.queue) data.queue = [];
+        data.guildID = message.guild.id;
+
+        data.queue.push({
+            songTitle: info.videoDetails.title,
+            requester: message.author.tag,
+            url: args[0],
+            channel: message.channel.id
+        });
+
+        if(!data.dispatcher) await play(client,ops,data,language)
+        else{
+            await msg.sendMsgA(language("MUSIC_QUEUE_ADD",info.videoDetails.title,message.author.username),message,dataServer);
+        }
+
+        ops.active.set(message.guild.id, data);
+
     }
 
-    ops.active.set(message.guild.id, data);
 };
 
 async function play(client, ops, data, lang){
