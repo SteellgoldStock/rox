@@ -15,7 +15,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             if(err) return message.channel.send("An error was encurred, contact a administrator \nhttps://discord.gg/NVBwmFz");
 
             let video = res.videos[0].url
-
             let info = ytdl.getInfo(video);
 
             let data = ops.active.get(message.guild.id) || {};
