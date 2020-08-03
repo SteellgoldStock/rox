@@ -32,9 +32,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         } else if (args[0] && args[0] > 0){
 
-            if(!queue[parseInt(args[0]) - 30]) return await msg.sendMsgA(language("MUSIC_NO_QUEUE_NUMBER",message.guild.name, args[0]),message,dataServer);
+            if(!queue[args[0] - 30]) return await msg.sendMsgA(language("MUSIC_NO_QUEUE_NUMBER",message.guild.name, args[0]),message,dataServer);
 
-            for (var i = parseInt(args[0]) - 30; i < parseInt(args[0]); i++) {
+            for (var i = args[0] * 30 - 30; i < args[0] * 30; i++) {
                 resp += `${i}. **${queue[i].songTitle}** -- __${requester}__: **${queue[i].requester}**\n`
             }
         }
