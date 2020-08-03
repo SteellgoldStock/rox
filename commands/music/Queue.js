@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         } else if (args[0] && args[0] > 0){
 
             let number_Max = args[0] * 30;
-            let number_Min = number - 30
+            let number_Min = number_Max - 29
 
             if(!queue[number_Min]) return await msg.sendMsgA(language("MUSIC_NO_QUEUE_NUMBER",message.guild.name, args[0]),message,dataServer);
 
