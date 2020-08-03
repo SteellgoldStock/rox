@@ -137,6 +137,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             if(!useradd) return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
             if(!memberadd) return await msg.sendMsg("PU_NO_USER", message, dataServer);
             let add = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
+            if (!message.guild.channels.cache.find(channel => channel.name === add)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
             let channel = message.guild.channels.cache.find(channel => channel.name === add)
             channel.updateOverwrite(memberadd.user.id, {
                 SEND_MESSAGES: true,
@@ -150,6 +151,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             if(!userrem) return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
             if(!memberrem) return await msg.sendMsg("PU_NO_USER", message, dataServer);
             let rem = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
+            if (!message.guild.channels.cache.find(channel => channel.name === rem)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
             message.guild.channels.cache.find(channel => channel.name === rem).permissionOverwrites.get(memberrem.user.id).delete();
             return msg.sendMsg("UPDATED", message, dataServer);
             break;
