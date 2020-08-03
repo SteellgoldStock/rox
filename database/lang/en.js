@@ -24,6 +24,7 @@ const languageData = {
     INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit` or `logs`",
     INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
+    INVALID_ARGS_TICKET: "You must enter a valid option type, the avaibles option is: `create`, `delete`,`add` or `remove`",
 
     COMMAND_REACHED_MAXIMUM: "This server has reached the custom order limit it can have, to raise this limit to 30 you can take the Rox Gold subscription for this server\n\nhttps://doc.rox.wtf/rox-gold",
     COMMAND_ALREADY_EXIST: (prefix, name) => `This command already exist, you can remove it with \`${prefix}commands remove ${name}\``,
@@ -140,7 +141,14 @@ const languageData = {
     MUSIC_PAUSE: (prefix, name) => "Successfuly paused the music, use " + `${prefix}resume` + " to resume the music",
     MUSIC_ALREADY_PAUSE: (prefix, name) => "This music is already paused, use " + `${prefix}resume` + " to resume the music",
     MUSIC_RESUME: (prefix, name) => "Successfuly resume the music, use " + `${prefix}pause` + " to pause the music",
-    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music"
+    MUSIC_ALREADY_RESUME: (prefix, name) => "This music is already in playing, use " + `${prefix}pause` + " to pause the music",
+
+    // TICKET
+    ALREADY_CHANNEL: "You already have a ticket open",
+    CREATE_CHANNEL: "You just opened a ticket",
+    NOT_EXISTS_CHANNEL_MOD: "The channel does not exist please enter the channel id or name",
+    NOT_EXISTS_CHANNEL: "You don't have an open ticket",
+    DELETE_CHANNEL: "You just closed your ticket",
 
 };
 
