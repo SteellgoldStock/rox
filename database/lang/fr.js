@@ -34,6 +34,8 @@ const languageData = {
     MISSED_TEXTS: "Vous avez oublié(e) d'inserer un texte",
     TOO_MUCH_ARGS: "Il y a trop de caractère la limite est 12",
 
+    INVALID_CHANNEL_COMMANDS: (id) => "Ce serveur a mis en place un salon pour l'utilisation des commandes, veuillez vous y rendre <#"+id+">",
+
     /** SUCCESS **/
     UPDATED: "Vos modifications ont été sauvegardées avec succès",
     DOWNLANDED: (prefix) => `Bravo, vous avez défini votre arrière plan, pour le voir executer la commande \`${prefix}level\``,

@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +116,7 @@
       <workItem from="1596383173227" duration="346000" />
       <workItem from="1596407409760" duration="1001000" />
       <workItem from="1596461327339" duration="2255000" />
-      <workItem from="1596480566879" duration="124000" />
+      <workItem from="1596480566879" duration="555000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

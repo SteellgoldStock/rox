@@ -86,15 +86,32 @@ client.on("message", message => {
                 });
             } else {
                 if (message.content.indexOf(prefix) !== 0) return;
-                database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
-                    if (error) {
-                        return false;
-                    } else if (results.length > 0) {
-                        message.reply(language("BLACKLISTED"));
-                    } else {
-                        cmd.run(client, message, args, fs, colors, database, dataServer, language);
+
+                if(dataServer.commandsChannel !== "false"){
+                    if(message.channel.id == dataServer.commandsChannel){
+                        database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
+                            if (error) {
+                                return false;
+                            } else if (results.length > 0) {
+                                message.reply(language("BLACKLISTED"));
+                            } else {
+                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                            }
+                        });
+                    }else{
+                        msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", message.channel.id),message,dataServer)
                     }
-                });
+                }else{
+                    database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
+                        if (error) {
+                            return false;
+                        } else if (results.length > 0) {
+                            message.reply(language("BLACKLISTED"));
+                        } else {
+                            cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                        }
+                    });
+                }
             }
         } else {
             message.delete();

@@ -34,6 +34,8 @@ const languageData = {
     MISSED_TEXTS: "You have missed the text",
     TOO_MUCH_ARGS: "There are too many characters, the limit is 12",
 
+    INVALID_CHANNEL_COMMANDS: (id) => "This server has set up a special room to use commands, please go there in <#"+id+">",
+
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
     DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command \`${prefix}level\``,
