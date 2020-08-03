@@ -26,10 +26,8 @@ client.on('guildCreate',(guild) => {
                 joinText: "Welcome to {mention} in {guildName}",
                 quitText: "No.. {username} has leaved {guildName}",
                 announceChannel: "false",
-                ticketCat: "false",
-                commandsChannel: "false",
-
                 ticketCat: "----- Ticket -----",
+                commandsChannel: "false",
 
                 // CONFIG - ROLES
                 adminRole: "none",
