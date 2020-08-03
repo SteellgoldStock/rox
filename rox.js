@@ -31,6 +31,16 @@ exports.database.connect(function(err) {
 });
 
 exports.client.on('ready', () => {
+
+    exports.client.guilds.cache.forEach(g =>{
+
+        if(exports.fs.existsSync("database/ccommands/" + g.id + ".json")) {
+        } else {
+            let dbC = {};
+            exports.fs.writeFileSync("database/ccommands/" + g.id + ".json", JSON.stringify(dbC), "utf-8");
+        }
+    })
+
     /* STATUS */
     setInterval(async () => {
         const statuslist = [
@@ -76,7 +86,6 @@ exports.client.on('ready', () => {
             });
         });
     }
-
     require('./events/listener/eventsRegister');
 })
 
