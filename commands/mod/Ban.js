@@ -11,6 +11,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         if (user){
             if (member){
+                if (member.user.id === "733760070503890994") return await msg.sendMsg("PUNISH_BOT", message, dataServer);
                 if (member.user.id !== message.author.id){
                     if (!reasons){
                         reason = "No reason";

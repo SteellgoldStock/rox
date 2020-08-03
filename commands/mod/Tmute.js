@@ -13,6 +13,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
         if (user) {
             if (member) {
+                if (member.user.id === "733760070503890994") return await msg.sendMsg("PUNISH_BOT", message, dataServer);
                 if (member.user.id !== message.author.id) {
                     if (args[1]) {
                         if (!reasons) {
@@ -46,20 +47,42 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                                 member.roles.add(role)
                                     .then(() => {
-                                        setTimeout(function () {
-                                            member.roles.remove(role);
-                                            message.guild.channels.cache.forEach((channel) => {
-                                                if (channel.type === 'text') {
-                                                    channel.permissionOverwrites.get(member.user.id).delete();
-                                                } else if (channel.type === 'voice') {
-                                                    channel.permissionOverwrites.get(member.user.id).delete();
-                                                }else{
 
-                                                }
-                                            });
-                                            message.channel.send(member.user.username + " can speak again !");
-                                        }, ms(args[1]))
-                                        return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username, member.user.username, reason, args[1]), message, dataServer)
+                                        if(ms(args[1]) > ms("10d")){
+
+                                            setTimeout(function () {
+                                                member.roles.remove(role);
+                                                message.guild.channels.cache.forEach((channel) => {
+                                                    if (channel.type === 'text') {
+                                                        channel.permissionOverwrites.get(member.user.id).delete();
+                                                    } else if (channel.type === 'voice') {
+                                                        channel.permissionOverwrites.get(member.user.id).delete();
+                                                    }else{
+
+                                                    }
+                                                });
+                                                message.channel.send(member.user.username + " can speak again !");
+                                            }, ms("10d"))
+
+                                            return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username, member.user.username, reason, "10d"), message, dataServer)
+
+                                        } else {
+
+                                            setTimeout(function () {
+                                                member.roles.remove(role);
+                                                message.guild.channels.cache.forEach((channel) => {
+                                                    if (channel.type === 'text') {
+                                                        channel.permissionOverwrites.get(member.user.id).delete();
+                                                    } else if (channel.type === 'voice') {
+                                                        channel.permissionOverwrites.get(member.user.id).delete();
+                                                    }else{
+
+                                                    }
+                                                });
+                                                message.channel.send(member.user.username + " can speak again !");
+                                            }, ms(args[1]))
+                                            return msg.sendMsgA(language("SUCCESS_TMUTE", message.author.username, member.user.username, reason, args[1]), message, dataServer)
+                                        }
                                     })
                             } else {
                                 return msg.sendMsgA(language("ALREADY_MUTE", member.user.username), message, dataServer);

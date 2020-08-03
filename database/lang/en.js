@@ -58,6 +58,7 @@ const languageData = {
 
     // Moderations commands messages
     PUNISH_Y: `You can't punish yourself`,
+    PUNISH_BOT: `You can't punish me`,
     PU_NO_MENTION: "Please enter a user mention",
     PU_NO_REASON: "Please enter a reason",
     PU_NO_ID: "Please enter a valid id",
