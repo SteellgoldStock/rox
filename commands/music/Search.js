@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         let videos = res.videos.slice(0, 20);
         let resp = '';
         for (var i in videos){
-            resp += `**[${parseInt(i)+1}]**: `${videos[i].title}`\n`;
+            resp += `**[${parseInt(i)+1}]**: \`${videos[i].title}\`\n`;
         }
         resp += `\n\n${language("MUSIC_CHOOSE")}`;
 
