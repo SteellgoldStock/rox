@@ -155,6 +155,7 @@ const languageData = {
     DELETE_CHANNEL: "You just closed your ticket",
 
     // ADVENTURE
+    ADV_GEMS: "Gems",
     ADV_HOUSE_LEVEL_0: "Fire Camp",
     ADV_HOUSE_LEVEL_1: "Refugee Camp",
     ADV_HOUSE_LEVEL_2: "Tree house",
