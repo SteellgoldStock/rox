@@ -88,22 +88,31 @@ client.on("message", message => {
                 if (message.content.indexOf(prefix) !== 0) return;
 
                 if(dataServer.commandsChannel !== "false"){
-                    if (!msg.Role(message.member, "modo", message, dataServer) === true || !msg.Role(message.member, "admin", message, dataServer) === true || !team.includes(message.channel.id)) {
-                        if(message.channel.id == dataServer.commandsChannel){
-                            database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
-                                if (error) {
-                                    return false;
-                                } else if (results.length > 0) {
-                                    message.reply(language("BLACKLISTED"));
-                                } else {
-                                    cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                                }
-                            });
-                        }else{
-                            msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
+                    if(message.channel.id == dataServer.commandsChannel){
+                        if(msg.Role(message.member, "admin", message, dataServer) === true){
+                            console.log("admin");
                         }
+
+                        if(msg.Role(message.member, "modo", message, dataServer) === true){
+                            console.log("modo");
+                        }
+
+                        if(team.includes(message.author.id)){
+                            console.log("team");
+                        }
+
+
+                        database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
+                            if (error) {
+                                return false;
+                            } else if (results.length > 0) {
+                                message.reply(language("BLACKLISTED"));
+                            } else {
+                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                            }
+                        });
                     }else{
-                        cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                        msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
                     }
                 }else{
                     database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
