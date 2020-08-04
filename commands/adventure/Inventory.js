@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         }else if(results.length > 0){
             let embed = new Discord.MessageEmbed()
             .setTitle("Inventory of " + message.author.username)
-            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}`)
+            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}\n:wrench: ${jobFormater(results[0].job, language)}\n:house: ${houseFormater(results[0].house, language)}\\n`)
 
             message.channel.send(embed)
         }else{
@@ -23,6 +23,40 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
 function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
+}
+
+async function houseFormater(int, language) {
+    switch (int) {
+        case 0:
+            return language("HOUSE_LEVEL_0");
+        case 1:
+            return language("HOUSE_LEVEL_1");
+        case 2:
+            return language("HOUSE_LEVEL_2");
+        case 3:
+            return language("HOUSE_LEVEL_3");
+        case 4:
+            return language("HOUSE_LEVEL_4");
+        case 5:
+            return language("HOUSE_LEVEL_5");
+    }
+}
+
+async function jobFormater(int, language) {
+    switch (int) {
+        case 0:
+            return language("JOB_LEVEL_0");
+        case 1:
+            return language("JOB_LEVEL_1");
+        case 2:
+            return language("JOB_LEVEL_2");
+        case 3:
+            return language("JOB_LEVEL_3");
+        case 4:
+            return language("JOB_LEVEL_4");
+        case 5:
+            return language("JOB_LEVEL_5");
+    }
 }
 
 exports.help = {

@@ -154,6 +154,20 @@ const languageData = {
     NOT_EXISTS_CHANNEL: "You don't have an open ticket",
     DELETE_CHANNEL: "You just closed your ticket",
 
+    // ADVENTURE
+    ADV_HOUSE_LEVEL_0: "Fire Camp",
+    ADV_HOUSE_LEVEL_1: "Refugee Camp",
+    ADV_HOUSE_LEVEL_2: "Tree house",
+    ADV_HOUSE_LEVEL_3: "Stone house",
+    ADV_HOUSE_LEVEL_4: "Stone castle",
+    ADV_HOUSE_LEVEL_5: "Reinforced castle",
+    ADV_JOB_LEVEL_0: "Farmer",
+    ADV_JOB_LEVEL_1: "Librarian",
+    ADV_JOB_LEVEL_2: "Fisherman",
+    ADV_JOB_LEVEL_3: "Seller",
+    ADV_JOB_LEVEL_4: "Negotiator",
+    ADV_JOB_LEVEL_5: "PDG"
+
 };
 
 const translate = (key, ...args) => {

@@ -154,6 +154,14 @@ const languageData = {
     NOT_EXISTS_CHANNEL: "Vous n'avez pas de ticket ouvert",
     DELETE_CHANNEL: "Vous venez de fermer votre ticket",
 
+    // ADVENTURE
+    HOUSE_LEVEL_0: "Feu de camp",
+    HOUSE_LEVEL_1: "Camp de réfugiés",
+    HOUSE_LEVEL_2: "Maison dans l'arbre",
+    HOUSE_LEVEL_3: "Maison en pierre",
+    HOUSE_LEVEL_4: "Château de pierre",
+    HOUSE_LEVEL_5: "Château fort"
+
 };
 
 const translate = (key, ...args) => {
