@@ -65,20 +65,26 @@ async function update(type, id, guildid, action){
                     return false;
                 } else if (results.length > 0) {
                     if(action == "add"){
-
-                        let adm = results[0].modRole.split(' ');
-                        if (!adm[id]){
-                            adm.push(id);
+                        let adm = results[0].adminRoleRole.split(' ');
+                        if(adm.length === 0){
+                            admin = id
+                        } else {
+                            if (!adm[id]){
+                                adm.push(id);
+                            }
+                            admin = adm.join(' ');
                         }
-
-                        admin = adm.join(' ');
                     } else {
-                        let adm = results[0].modRole.split(' ');
-                        if (adm[id]){
-                            adm.delete(id);
-                            adm.sort()
+                        let adm = results[0].adminRoleRole.split(' ');
+                        if(adm.length === 0 || adm.length === 1){
+                            admin = "none"
+                        } else {
+                            if (adm[id]){
+                                adm.delete(id);
+                                adm.sort()
+                            }
+                            admin = adm.join(' ');
                         }
-                        admin = adm.join(' ');
                     }
                     return database.query(`UPDATE servers SET adminRole = '${admin}' WHERE guildid = '${guildid}'`, function (err) {
                         if (err) throw err;
@@ -94,16 +100,25 @@ async function update(type, id, guildid, action){
                 } else if (results.length > 0) {
                     if(action == "add"){
                         let mod = results[0].modRole.split(' ');
-                        if (!mod[id]){
-                            mod.push(id);
+                        if(mod.length === 0){
+                            modo = id
+                        } else {
+                            if (!mod[id]){
+                                mod.push(id);
+                            }
+                            modo = mod.join(' ');
                         }
-                        modo = mod.join(' ');
                     } else {
                         let mod = results[0].modRole.split(' ');
-                        if (mod[id]){
-                            mod.delete(id);
+                        if(mod.length === 0 || mod.length === 1){
+                            modo = "none"
+                        } else {
+                            if (mod[id]){
+                                mod.delete(id);
+                                mod.sort()
+                            }
+                            modo = mod.join(' ');
                         }
-                        modo = mod.join(' ');
                     }
                     return database.query(`UPDATE servers SET modRole = '${modo}' WHERE guildid = '${guildid}'`, function (err) {
                         if (err) throw err;
