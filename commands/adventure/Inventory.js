@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         }else if(results.length > 0){
             let embed = new Discord.MessageEmbed()
             .setTitle("Inventory of " + message.author.username)
-            .addField("Stats:", `<:gems:740261046480142377> `+ language("ADV_GEMS")+`: ${results[0].gems}\n:wrench: `+jobFormater(results[0].job,language)+`\n:house: `+houseFormater(results[0].house,language)+`\n`)
+            .addField("Stats:", `<:gems:740261046480142377> `+ language("ADV_GEMS") + `: ${results[0].gems}\n:wrench: `+jobFormater(results[0].job,language)+`\n:house: `+houseFormater(results[0].house,language)+`\n`)
 
             message.channel.send(embed)
         }else{
