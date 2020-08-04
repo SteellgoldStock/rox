@@ -10,11 +10,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (error) {
             return console.error(error.message);
         }else if(results.length > 0){
-            const tools = ":pick: Pickaxe: Level " + results[0].pickaxeLvl + "\n" + ":axe: Axe: Level " + results[0].axeLvl + "\n" + "<:shovel:739478132024803349> Axe: Level " + results[0].shovelLvl
-
             let embed = new Discord.MessageEmbed()
-                .setTitle("Inventory Bag of "+ message.author.username)
-                .addField("Tools",tools)
+            .setTitle("Inventory of " + message.author.username)
+            .addField("Stats:", `<:gems:740256465117249658> Gems: ${results[0].gems}`)
 
             message.channel.send(embed)
         }else{
