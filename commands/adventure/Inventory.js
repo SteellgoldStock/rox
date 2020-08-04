@@ -10,7 +10,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (error) {
             return console.error(error.message);
         }else if(results.length > 0){
-
             let embed = new Discord.MessageEmbed()
             .setTitle("Inventory of " + message.author.username)
             .addField("Stats:", `<:gems:740256465117249658> Gems: ${results[0].gems}`)
@@ -27,5 +26,5 @@ function kFormatter(num) {
 }
 
 exports.help = {
-    name: 'cmdDev-Inv',
+    name: 'inv',
 };
