@@ -89,6 +89,16 @@ client.on("message", message => {
 
                 if(dataServer.commandsChannel !== "false"){
                     if(message.channel.id == dataServer.commandsChannel){
+                        database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
+                            if (error) {
+                                return false;
+                            } else if (results.length > 0) {
+                                message.reply(language("BLACKLISTED"));
+                            } else {
+                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                            }
+                        });
+                    }else{
                         if(msg.Role(message.member, "admin", message, dataServer) === true){
                             console.log("admin");
                         }
@@ -100,18 +110,7 @@ client.on("message", message => {
                         if(team.includes(message.author.id)){
                             console.log("team");
                         }
-
-
-                        database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
-                            if (error) {
-                                return false;
-                            } else if (results.length > 0) {
-                                message.reply(language("BLACKLISTED"));
-                            } else {
-                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                            }
-                        });
-                    }else{
+                        
                         msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
                     }
                 }else{
