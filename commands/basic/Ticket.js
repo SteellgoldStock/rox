@@ -9,15 +9,14 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             let create = message.author.tag.replace('#', '').replace(' ', '-').toLowerCase();
             if (message.guild.channels.cache.find(channel => channel.name === create)) return await msg.sendMsg("ALREADY_CHANNEL", message, dataServer);
             if(!message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat)){
-
                 message.guild.channels.create(dataServer.ticketCat, {
                     type: "category",
                     position: 0,
                     topic: `Support ${message.guild.name}`
                 });
 
-                let cat = message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat).id;
-
+                let cat = message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat);
+                
                 message.guild.channels.create(create, {
                     type: "text",
                     parent: cat,
@@ -50,7 +49,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 return msg.sendMsg("CREATE_CHANNEL", message, dataServer);
 
             } else {
-
                 let cat = message.guild.channels.cache.find(cate => cate.name === dataServer.ticketCat).id;
 
                 message.guild.channels.create(create, {

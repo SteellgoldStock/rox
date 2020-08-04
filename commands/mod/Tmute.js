@@ -23,9 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         }
 
                         if (await msg.Role(message.member, "admin", message, dataServer) === true  &&  await msg.Role(message.guild.member(message.mentions.users.first()), "admin", message, dataServer) === true || (await msg.Role(message.member, "admin", message, dataServer) === false && await msg.Role(message.member, "modo", message, dataServer) === true) && (await msg.Role(message.guild.member(message.mentions.users.first()), "modo", message, dataServer) === true || await msg.Role(message.guild.member(message.mentions.users.first()), "admin", message, dataServer) === true)) {
-
                             return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
-
                         } else {
 
                             if (!message.guild.roles.cache.find(role => role.name === 'MUTE')) {
@@ -34,7 +32,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             if (!member.roles.cache.find(role => role.name === 'MUTE')) {
                                 message.guild.channels.cache.forEach((channel) => {
                                     if(channel.type === 'text'){
-                                        console.log(channel.name)
                                         channel.updateOverwrite(member.user, { SEND_MESSAGES: false });
                                     }else if(channel.type === 'voice'){
                                         channel.updateOverwrite(member.user, { SPEAK: false });
