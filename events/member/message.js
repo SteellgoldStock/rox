@@ -99,7 +99,7 @@ client.on("message", message => {
                             }
                         });
                     }else{
-                        msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", message.channel.id),message,dataServer)
+                        msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
                     }
                 }else{
                     database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {

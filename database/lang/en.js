@@ -15,13 +15,13 @@ const languageData = {
     CHANNELS_ARGS: "You did not enter a valid value, here are the available values: `logs`, `joinquit`",
     MENTION_CHANNEL: "You didn't mention any channels",
     MENTION_ROLE: "You didn't mention any role",
-    ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, `img` and `server`",
+    ARGS_BACKGROUND: "The argument, is invalid, those that exist are `color`, `img` (and `server` for gold server)",
     ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: https://colors.rox.wtf",
 
     INVALID_ARGS_BLACKLIST: "You must enter a valid option type, the avaibles option to config is: `add` or `remove`",
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
-    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit` or `logs`",
+    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit`, `logs`, `ticket (name of an category)` or `commands`",
     INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "You must enter a valid option type, the avaibles option is: `create`, `delete`,`add` or `remove`",
@@ -35,6 +35,8 @@ const languageData = {
     TOO_MUCH_ARGS: "There are too many characters, the limit is 12",
 
     INVALID_CHANNEL_COMMANDS: (id) => "This server has set up a special room to use commands, please go there in <#"+id+">",
+
+    CATEGORY_NAME_NFOUND: "You did not specify the name of the category that will be used as a ticket mailbox",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",

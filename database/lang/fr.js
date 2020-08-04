@@ -15,16 +15,16 @@ const languageData = {
     CHANNELS_ARGS: "Vous n'avez pas saisi de valeur valide, voici les valeurs disponibles: `logs`, `joinquit`",
     MENTION_CHANNEL: "Vous n'avez mentionné aucun salons",
     MENTION_ROLE: "Vous n'avez mentionné aucun rôle",
-    ARGS_BACKGROUND: "L'argument, n'est pas valable, ceux qui existent sont `color`, `img` and `server`",
+    ARGS_BACKGROUND: "L'argument, n'est pas valable, ceux qui existent sont `color`, `img` (et `server` pour les serveurs gold)",
     ARGS_BACKGROUND_1: "Vous devez entrer un code couleur valide, vous pouvez utiliser ce générateur: https://colors.rox.wtf",
 
     INVALID_ARGS_BLACKLIST: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `add` or `remove`",
     INVALID_ARGS_ROLES: "Vous devez saisir un type de rôle valide, les rôles disponibles à configurer sont: `adminRole`, `modRole` ou `autoRole`",
     INVALID_ARGS_TEXTS: "Vous devez entrer un type de texte valide, les textes disponibles à configurer sont: `joinText`, `quitText` ou `lvlUpText`",
-    INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont is: `joinquit` ou `logs`",
+    INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont is: `joinquit`, `logs`, `ticket [category `",
     INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "Vous n'avez pas saisi de texte que le bot enverra si la personne utilise la commande, si vous voulez avoir des messages plus cool que d'autres utilisent des balises\n\nhttps://tags.rox.wtf",
-    INVALID_ARGS_TICKET: "Vous devez saisir un type de option valide, les options disponibles sont : `create`, `delete`,`add` or `remove`",
+    INVALID_ARGS_TICKET: "Vous devez saisir un type de option valide, les options disponibles sont : `create`, `delete`,`add` ou `remove`",
 
     COMMAND_REACHED_MAXIMUM: "Ce serveur a atteint la limite de commande personnalisée qu'il peut avoir, pour améliorer cette limite à 30 vous pouvez prendre l'abonnement Rox Gold pour ce serveur\n\nhttps://doc.rox.wtf/rox-gold",
     COMMAND_ALREADY_EXIST: (prefix, name) => `Cette commande existe déjà, vous pouvez la supprimer avec \`${prefix}commands remove ${name}\``,
@@ -35,6 +35,8 @@ const languageData = {
     TOO_MUCH_ARGS: "Il y a trop de caractère la limite est 12",
 
     INVALID_CHANNEL_COMMANDS: (id) => "Ce serveur a mis en place un salon pour l'utilisation des commandes, veuillez vous y rendre <#"+id+">",
+
+    CATEGORY_NAME_NFOUND: "Vous n'avez pas précisé le nom de la catégorie qui sera utilisée comme boîte aux lettres pour vos tickets",
 
     /** SUCCESS **/
     UPDATED: "Vos modifications ont été sauvegardées avec succès",

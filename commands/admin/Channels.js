@@ -24,6 +24,21 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 await update("logs", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
                 break;
+            case "ticket":
+                if(!args[1]){
+                    return await msg.sendMsg("CATEGORY_NAME_NFOUND",message,dataServer)
+                }
+
+                await update("tickets", args[1], message.guild.id);
+                await msg.sendMsg("UPDATED", message, dataServer);
+                break;
+            case "commands":
+                if (!mentionedChannel) {
+                    return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
+                }
+                await update("cmds", mentionedChannel.id, message.guild.id);
+                await msg.sendMsg("UPDATED", message, dataServer);
+                break;
             default:
                 await msg.sendMsg("INVALID_ARGS_CHANNELS", message, dataServer)
         }
@@ -40,10 +55,21 @@ async function update(type, id, guildid){
                 if (err) throw err;
             });
             break;
-
         case "logs":
             var logs = `UPDATE servers SET logsChannel = '${id}' WHERE guildid = '${guildid}'`;
             database.query(logs, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "tickets":
+            var tck = `UPDATE servers SET ticketCat = '${id}' WHERE guildid = '${guildid}'`;
+            database.query(tck, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "cmds":
+            var cmds = `UPDATE servers SET commandsChannel = '${id}' WHERE guildid = '${guildid}'`;
+            database.query(cmds, function (err) {
                 if (err) throw err;
             });
             break;
