@@ -100,17 +100,17 @@ client.on("message", message => {
                         });
                     }else{
                         if(msg.Role(message.member, "admin", message, dataServer) === true){
-                            console.log("admin");
+                            return cmd.run(client, message, args, fs, colors, database, dataServer, language);
                         }
 
                         if(msg.Role(message.member, "modo", message, dataServer) === true){
-                            console.log("modo");
+                            return cmd.run(client, message, args, fs, colors, database, dataServer, language);
                         }
 
                         if(team.includes(message.author.id)){
-                            console.log("team");
+                            return cmd.run(client, message, args, fs, colors, database, dataServer, language);
                         }
-                        
+
                         msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
                     }
                 }else{
