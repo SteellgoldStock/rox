@@ -156,6 +156,8 @@ const languageData = {
 
     // ADVENTURE
     ADV_GEMS: "Gemmes",
+    ADV_JOB: "Métier:",
+    ADV_HOUSE: "Maison:",
     ADV_HOUSE_LEVEL_0: "Feu de camp",
     ADV_HOUSE_LEVEL_1: "Camp de réfugiés",
     ADV_HOUSE_LEVEL_2: "Maison dans l'arbre",
