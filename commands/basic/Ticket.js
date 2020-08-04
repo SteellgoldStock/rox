@@ -125,9 +125,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                 if (!message.guild.channels.cache.find(channel => channel.name === dele)) return await msg.sendMsg("NOT_EXISTS_CHANNEL", message, dataServer);
 
-                    message.guild.channels.cache.find(channel => channel.name === dele).delete();
+                message.guild.channels.cache.find(channel => channel.name === dele).delete();
 
-                    return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
+                return msg.sendMsg("DELETE_CHANNEL", message, dataServer);
             }
 
             break;
