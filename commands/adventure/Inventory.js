@@ -10,9 +10,14 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (error) {
             return console.error(error.message);
         }else if(results.length > 0){
+            const job = jobFormater(results[0].job,language);
+            console.log(job);
+            const house = houseFormater(results[0].house,language);
+            console.log(house);
+
             let embed = new Discord.MessageEmbed()
             .setTitle("Inventory of " + message.author.username)
-            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}\n:wrench: ${jobFormater(results[0].job, language)}\n:house: ${houseFormater(results[0].house, language)}\\n`)
+            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}\n:wrench: ${job}\n:house: ${house}\\n`)
 
             message.channel.send(embed)
         }else{
