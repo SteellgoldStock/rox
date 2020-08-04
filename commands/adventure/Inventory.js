@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         }else if(results.length > 0){
             let embed = new Discord.MessageEmbed()
             .setTitle("Inventory of " + message.author.username)
-            .addField("Stats:", `<:gems:740256465117249658> Gems: ${results[0].gems}`)
+            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}`)
 
             message.channel.send(embed)
         }else{
