@@ -33,34 +33,34 @@ function kFormatter(num) {
 async function houseFormater(int, language) {
     switch (int) {
         case 0:
-            return language("HOUSE_LEVEL_0");
+            return language("ADV_HOUSE_LEVEL_0");
         case 1:
-            return language("HOUSE_LEVEL_1");
+            return language("ADV_HOUSE_LEVEL_1");
         case 2:
-            return language("HOUSE_LEVEL_2");
+            return language("ADV_HOUSE_LEVEL_2");
         case 3:
-            return language("HOUSE_LEVEL_3");
+            return language("ADV_HOUSE_LEVEL_3");
         case 4:
-            return language("HOUSE_LEVEL_4");
+            return language("ADV_HOUSE_LEVEL_4");
         case 5:
-            return language("HOUSE_LEVEL_5");
+            return language("ADV_HOUSE_LEVEL_5");
     }
 }
 
 async function jobFormater(int, language) {
     switch (int) {
         case 0:
-            return language("JOB_LEVEL_0");
+            return language("ADV_JOB_LEVEL_0");
         case 1:
-            return language("JOB_LEVEL_1");
+            return language("ADV_JOB_LEVEL_1");
         case 2:
-            return language("JOB_LEVEL_2");
+            return language("ADV_JOB_LEVEL_2");
         case 3:
-            return language("JOB_LEVEL_3");
+            return language("ADV_JOB_LEVEL_3");
         case 4:
-            return language("JOB_LEVEL_4");
+            return language("ADV_JOB_LEVEL_4");
         case 5:
-            return language("JOB_LEVEL_5");
+            return language("ADV_JOB_LEVEL_5");
     }
 }
 

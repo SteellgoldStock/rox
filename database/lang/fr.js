@@ -155,12 +155,18 @@ const languageData = {
     DELETE_CHANNEL: "Vous venez de fermer votre ticket",
 
     // ADVENTURE
-    HOUSE_LEVEL_0: "Feu de camp",
-    HOUSE_LEVEL_1: "Camp de réfugiés",
-    HOUSE_LEVEL_2: "Maison dans l'arbre",
-    HOUSE_LEVEL_3: "Maison en pierre",
-    HOUSE_LEVEL_4: "Château de pierre",
-    HOUSE_LEVEL_5: "Château fort"
+    ADV_HOUSE_LEVEL_0: "Feu de camp",
+    ADV_HOUSE_LEVEL_1: "Camp de réfugiés",
+    ADV_HOUSE_LEVEL_2: "Maison dans l'arbre",
+    ADV_HOUSE_LEVEL_3: "Maison en pierre",
+    ADV_HOUSE_LEVEL_4: "Château de pierre",
+    ADV_HOUSE_LEVEL_5: "Château fort",
+    ADV_JOB_LEVEL_0: "Agriculteur",
+    ADV_JOB_LEVEL_1: "Bibliothécaire",
+    ADV_JOB_LEVEL_2: "Pêcheur",
+    ADV_JOB_LEVEL_3: "Vendeur",
+    ADV_JOB_LEVEL_4: "Négociateur",
+    ADV_JOB_LEVEL_5: "PDG"
 
 };
 
