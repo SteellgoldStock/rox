@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
             let embed = new Discord.MessageEmbed()
             .setTitle("Inventory of " + message.author.username)
-            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}\n:wrench: ${job}\n:house: ${house}\\n`)
+            .addField("Stats:", `<:gems:740261046480142377> Gems: ${results[0].gems}\n:wrench: ${job[0]}\n:house: ${house[0]}`)
 
             message.channel.send(embed)
         }else{
