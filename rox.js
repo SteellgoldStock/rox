@@ -20,9 +20,9 @@ const mysql = require('mysql');
 
 exports.database = mysql.createConnection({
     host     : 'localhost',
-    user     : 'rox',
-    password : 'NAYT/x76(|5m;4nvw7E;',
-    database : 'rox'
+    user     : 'gaetane',
+    password : '9Bp2XNhWigfeJrCm',
+    database : 'gaetane'
 });
 
 exports.database.connect(function(err) {
