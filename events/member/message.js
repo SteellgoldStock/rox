@@ -75,7 +75,7 @@ client.on("message", message => {
                                     "{username}": message.author.name,
                                     "{guildName}": message.guild.name,
                                     "{level}": parseInt(resultsXp[0].level) + parseInt("1")
-                                }), message)
+                                }), message, dataServer)
                             }
 
                             const toAdd = resultsXp[0].xp;
