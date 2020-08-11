@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return await msg.sendMsg("PU_NO_MENTION", message, dataServer);
         }
 
-        database.query(`SELECT * FROM warns WHERE userId=${mentionUser.id}`, function (error, result) {
+        database.query(`SELECT * FROM warns WHERE userId=${mentionUser.id} AND guildid=${message.guild.id}`, function (error, result) {
             if (error) {
                 console.error(error);
                 return;
