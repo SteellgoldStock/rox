@@ -21,7 +21,7 @@ const languageData = {
     INVALID_ARGS_BLACKLIST: "You must enter a valid option type, the avaibles option to config is: `add` or `remove`",
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
-    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit`, `logs`, `ticket (name of an category)` or `commands`",
+    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit`, `logs`, `ticket (name of an category)`, `is (Inter Server MSG)` or `commands`",
     INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "You must enter a valid option type, the avaibles option is: `create`, `delete`,`add` or `remove`",
