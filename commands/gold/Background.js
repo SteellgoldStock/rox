@@ -124,47 +124,33 @@ async function fnS(url, msg, language, attachement, message, dataServer, msgId, 
     const pic = await axios.get(url, {
         responseType: 'arraybuffer',
     })
-
     const model = await nsfw.load()
-    const image = await tf.node.decodeImage(pic.data,3)
+    const image = await tf.node.decodeImage(pic.data, 3)
     const predictions = await model.classify(image)
     image.dispose()
-
-    if(predictions[0].className == "Hentai" || predictions[0].className == "Porn"){
-        if(predictions[0].probability >= 0.5000000000000000){
+    if (predictions[0].className == "Hentai" || predictions[0].className == "Porn") {
+        if (predictions[0].probability >= 0.5000000000000000) {
             client.channels.cache.get(chaId).messages.fetch(msgId).then(message => message.delete())
-
-            return await msg.sendMsg("PICTURE_NOT_ALLOWED",message,dataServer)
+            return await msg.sendMsg("PICTURE_NOT_ALLOWED", message, dataServer)
         }
     }
-
     let db = JSON.parse(fs.readFileSync("database/users/users.json", "utf8"));
-
     message.guild.members.cache.forEach(member => {
-
         database.query(`SELECT * FROM goldUsers WHERE userid = ${member.user.id}`, function (error, results, fields) {
             if (error) {
                 return console.log(error);
             } else if (results.length > 0) {
-
-
-
             } else {
-
-                if(!db[member.id]){
-                    db[member.id] = {type:"color",color:`BF5E45`}
-                }else{
-
+                if (!db[member.id]) {
+                    db[member.id] = {type: "color", color: `BF5E45`}
+                } else {
                 }
-
                 fs.writeFileSync("database/users/users.json", JSON.stringify(db), "utf-8");
-
             }
         });
     });
-
     download(message.attachments.first().url, message.guild.id);
-    return await msg.sendMsgA(language("DOWNLANDED",dataServer.prefix),message,dataServer);
+    return await msg.sendMsgA(language("DOWNLANDED", dataServer.prefix), message, dataServer);
 }
 
 exports.help = {
