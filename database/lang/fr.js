@@ -38,6 +38,8 @@ const languageData = {
 
     CATEGORY_NAME_NFOUND: "Vous n'avez pas précisé le nom de la catégorie qui sera utilisée comme boîte aux lettres pour vos tickets",
 
+    DELETE_IS_CHANNEL: "Pour désactiver les messages inter-serveurs vous devez supprimer le salon !",
+
     /** SUCCESS **/
     UPDATED: "Vos modifications ont été sauvegardées avec succès",
     DOWNLANDED: (prefix) => `Bravo, vous avez défini votre arrière plan, pour le voir executer la commande \`${prefix}level\``,

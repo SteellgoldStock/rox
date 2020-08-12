@@ -45,6 +45,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 }
                 await update("is", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
+                await msg.sendMsg("DELETE_IS_CHANNEL",message,dataServer)
                 break;
             default:
                 await msg.sendMsg("INVALID_ARGS_CHANNELS", message, dataServer)

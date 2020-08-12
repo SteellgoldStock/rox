@@ -38,6 +38,8 @@ const languageData = {
 
     CATEGORY_NAME_NFOUND: "You did not specify the name of the category that will be used as a ticket mailbox",
 
+    DELETE_IS_CHANNEL: "To disable inter-server messages you have to delete the channel !",
+
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",
     DOWNLANDED: (prefix) => `Well done, you have defined your background, to see it do the command \`${prefix}level\``,

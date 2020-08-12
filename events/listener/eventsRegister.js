@@ -3,6 +3,7 @@ const {colors, client,fs} = require('./../../rox')
 
 loadEvent("events/client/");
 loadEvent("events/member/");
+loadEvent("events/guild/");
 
 function loadEvent(path) {
     fs.readdir(path, (err, files) => {

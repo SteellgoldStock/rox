@@ -21,6 +21,16 @@ client.on("message", message => {
 
         if(message.channel.id == results[0].interServerChannel) {
             if (!cmd) {
+                if(message.content.includes("@")){
+                    message.channel.send(message.author.username + " has send a mention")
+                    return false;
+                }
+
+                if(message.content.includes("https://") || message.content.includes("http://")){
+                    message.channel.send(message.author.username + " has send a link")
+                    return false;
+                }
+
                 message.delete();
                 client.guilds.cache.forEach((guild) => {
                     let sql2 = `SELECT * FROM servers WHERE guildid = ${guild.id}`;
@@ -40,7 +50,6 @@ client.on("message", message => {
         }
     });
 });
-
 
 String.prototype.allReplace = function (obj) {
     var retStr = this;
