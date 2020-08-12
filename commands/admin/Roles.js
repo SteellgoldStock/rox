@@ -65,7 +65,7 @@ async function update(type, id, guildid, action){
                     return false;
                 } else if (results.length > 0) {
                     if(action == "add"){
-                        let adm = results[0].adminRoleRole.split(' ');
+                        let adm = results[0].adminRole.split(' ');
                         if(adm.length === 0){
                             admin = id
                         } else {
@@ -75,7 +75,7 @@ async function update(type, id, guildid, action){
                             admin = adm.join(' ');
                         }
                     } else {
-                        let adm = results[0].adminRoleRole.split(' ');
+                        let adm = results[0].adminRole.split(' ');
                         if(adm.length === 0 || adm.length === 1){
                             admin = "none"
                         } else {
