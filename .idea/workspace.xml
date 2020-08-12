@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
+      <change afterPath="$PROJECT_DIR$/commands/admin/XPSystem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/onJoin.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onJoin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/onLeave.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/onLeave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,7 @@
       <workItem from="1596461327339" duration="2255000" />
       <workItem from="1596480566879" duration="5146000" />
       <workItem from="1596552858936" duration="10788000" />
-      <workItem from="1597237432923" duration="11320000" />
+      <workItem from="1597237432923" duration="15335000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

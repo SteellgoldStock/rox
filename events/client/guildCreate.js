@@ -23,8 +23,8 @@ client.on('guildCreate',(guild) => {
                 isBeta: 0,
 
                 // CONFIG - QUIT & JOIN
-                joinText: "Welcome to {mention} in {guildName}",
-                quitText: "No.. {username} has leaved {guildName}",
+                joinText: "V2VsY29tZSB0byB7bWVudGlvbn0gaW4ge2d1aWxkTmFtZX0=",
+                quitText: "Tm8uLiB7dXNlcm5hbWV9IGhhcyBsZWF2ZWQge2d1aWxkTmFtZX0=",
                 interServerChannel: "false",
                 announceChannel: "false",
                 ticketCat: "----- Ticket -----",
@@ -43,7 +43,8 @@ client.on('guildCreate',(guild) => {
 
                 // CONFIG - XP SYSTEM
                 sysXp: 0,
-                levelUpMsg: "Well done soldier, you've passed level {level}",
+                rwStus: 0,
+                levelUpMsg: "V2VsbCBkb25lIHNvbGRpZXIsIHlvdSd2ZSBwYXNzZWQgbGV2ZWwge2xldmVsfQ==",
 
                 // CONFIG - CUSTOM CMDS
                 countCC: 0,

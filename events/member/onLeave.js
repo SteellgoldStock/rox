@@ -30,7 +30,9 @@ client.on('guildMemberRemove', member => {
         if (results[0].announceChannel !== "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
-                channel.send(utf8.encode(Buffer.from(results[0].quitText, 'base64').toString('ascii')).allReplace({
+                const qText = Buffer.from(results[0].quitText, 'base64').toString('utf8');
+                console.log(qText);
+                channel.send(qText.allReplace({
                     "{mention}": "<@" + member.id + ">",
                     "{username}": member.user.username,
                     "{guildName}": member.guild.name,

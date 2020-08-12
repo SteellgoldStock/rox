@@ -71,7 +71,10 @@ client.on("message", message => {
                                 let sqladdlvl = `UPDATE servers_xp SET level=${toAddLvl} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                                 database.query(sqladdlvl);
 
-                                msg.sendMsgA(utf8.encode(Buffer.from(results[0].joinText, 'base64').toString('ascii')).allReplace({
+                                const lUpText = Buffer.from(results[0].levelUpMsg, 'base64').toString('utf8');
+                                console.log(lUpText);
+
+                                msg.sendMsgA(lUpText.allReplace({
                                     "{mention}": "<@" + message.author.id + ">",
                                     "{username}": message.author.name,
                                     "{guildName}": message.guild.name,

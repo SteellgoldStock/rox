@@ -37,7 +37,9 @@ client.on('guildMemberAdd', member => {
         if (results[0].announceChannel !== "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
-                channel.send(utf8.encode(Buffer.from(results[0].joinText, 'base64').toString('ascii')).allReplace({
+                const jText = Buffer.from(results[0].joinText, 'base64').toString('utf8');
+                console.log(jText);
+                channel.send(jText.allReplace({
                     "{mention}": "<@" + member.id + ">",
                     "{username}": member.user.username,
                     "{guildName}": member.guild.name,
