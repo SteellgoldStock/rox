@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const {colors, client, fs, database} = require('../../rox')
+const utf8 = require('utf8');
 
 String.prototype.allReplace = function (obj) {
     var retStr = this;
@@ -29,7 +30,7 @@ client.on('guildMemberRemove', member => {
         if (results[0].announceChannel !== "false") {
             const channel = client.channels.cache.get(`${results[0].announceChannel}`)
             if(channel){
-                channel.send(results[0].quitText.allReplace({
+                channel.send(utf8.encode(Buffer.from(results[0].quitText, 'base64').toString('ascii')).allReplace({
                     "{mention}": "<@" + member.id + ">",
                     "{username}": member.user.username,
                     "{guildName}": member.guild.name,

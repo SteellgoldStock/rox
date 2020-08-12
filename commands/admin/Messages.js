@@ -36,21 +36,23 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     }
 }
 async function update(type, text, guildid){
+    let t = Buffer.from(text).toString('base64')
+
     switch (type) {
         case "join":
-            var j = `UPDATE servers SET joinText = '${text}' WHERE guildid = '${guildid}'`;
+            var j = `UPDATE servers SET joinText = '${t}' WHERE guildid = '${guildid}'`;
             database.query(j, function (err) {
                 if (err) throw err;
             });
             break;
         case "quit":
-            var q = `UPDATE servers SET quitText = '${text}' WHERE guildid = '${guildid}'`;
+            var q = `UPDATE servers SET quitText = '${t}' WHERE guildid = '${guildid}'`;
             database.query(q, function (err) {
                 if (err) throw err;
             });
             break;
         case "lvlUp":
-            var lvl = `UPDATE servers SET lvlUpMsg = '${text}' WHERE guildid = '${guildid}'`;
+            var lvl = `UPDATE servers SET lvlUpMsg = '${t}' WHERE guildid = '${guildid}'`;
             database.query(lvl, function (err) {
                 if (err) throw err;
             });

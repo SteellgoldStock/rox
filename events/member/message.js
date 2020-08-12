@@ -1,4 +1,5 @@
 const { client, colors, botConfg, fs, database, msg, team} = require("../../rox");
+const utf8 = require('utf8');
 
 client.on("message", message => {
     if (!message.guild) return;
@@ -70,7 +71,7 @@ client.on("message", message => {
                                 let sqladdlvl = `UPDATE servers_xp SET level=${toAddLvl} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                                 database.query(sqladdlvl);
 
-                                msg.sendMsgA(results[0].levelUpMsg.allReplace({
+                                msg.sendMsgA(utf8.encode(Buffer.from(results[0].joinText, 'base64').toString('ascii')).allReplace({
                                     "{mention}": "<@" + message.author.id + ">",
                                     "{username}": message.author.name,
                                     "{guildName}": message.guild.name,
