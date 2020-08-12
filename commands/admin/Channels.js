@@ -39,6 +39,13 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 await update("cmds", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
                 break;
+            case "is":
+                if (!mentionedChannel) {
+                    return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
+                }
+                await update("is", mentionedChannel.id, message.guild.id);
+                await msg.sendMsg("UPDATED", message, dataServer);
+                break;
             default:
                 await msg.sendMsg("INVALID_ARGS_CHANNELS", message, dataServer)
         }
@@ -70,6 +77,12 @@ async function update(type, id, guildid){
         case "cmds":
             var cmds = `UPDATE servers SET commandsChannel = '${id}' WHERE guildid = '${guildid}'`;
             database.query(cmds, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "is":
+            var is = `UPDATE servers SET interServerChannel = '${id}' WHERE guildid = '${guildid}'`;
+            database.query(is, function (err) {
                 if (err) throw err;
             });
             break;

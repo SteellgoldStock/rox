@@ -25,6 +25,7 @@ client.on('guildCreate',(guild) => {
                 // CONFIG - QUIT & JOIN
                 joinText: "Welcome to {mention} in {guildName}",
                 quitText: "No.. {username} has leaved {guildName}",
+                interServerChannel: "false",
                 announceChannel: "false",
                 ticketCat: "----- Ticket -----",
                 commandsChannel: "false",
