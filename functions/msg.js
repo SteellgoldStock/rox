@@ -83,9 +83,7 @@ exports.sendMsgI = async(text, member1, member2, image, url, message, dataServer
 }
 
 exports.Role = async(member, role, message, dataServer = null) => {
-
     let count = 0;
-
     dataServer.adminRole.split(' ').forEach(m => {member.roles.cache.has(m)})
 
     if(role == "admin"){
