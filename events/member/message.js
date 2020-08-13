@@ -1,5 +1,4 @@
 const { client, colors, botConfg, fs, database, msg, team} = require("../../rox");
-const utf8 = require('utf8');
 
 client.on("message", message => {
     if (!message.guild) return;
@@ -63,7 +62,11 @@ client.on("message", message => {
                                 database.query(sqladdXpSrv);
                                 let MaxXpSrv = dataServer.level * 150 + dataServer.level * 35
                                 if (dataServer.xp >= MaxXpSrv) {
-                                    msg.sendMsg("LEVEL_SERVER_UP", message, dataServer)
+                                    const levelPLUSSRV = parseInt(dataServer.level) + parseInt("1");
+                                    let sqladdLvlServ = `UPDATE servers SET level=${levelPLUSSRV} WHERE guildid = ${message.guild.id}`
+                                    database.query(sqladdLvlServ);
+
+                                    msg.sendMsgA(language("LEVEL_SERVER_UP",dataServer.prefix), message, dataServer)
                                 }
 
                                 /** USER **/
@@ -72,14 +75,26 @@ client.on("message", message => {
                                 database.query(sqladdlvl);
 
                                 const lUpText = Buffer.from(results[0].levelUpMsg, 'base64').toString('utf8');
-                                console.log(lUpText);
+                                const levelPLUS = parseInt(resultsXp[0].level) + parseInt("1");
 
                                 msg.sendMsgA(lUpText.allReplace({
                                     "{mention}": "<@" + message.author.id + ">",
                                     "{username}": message.author.name,
                                     "{guildName}": message.guild.name,
-                                    "{level}": parseInt(resultsXp[0].level) + parseInt("1")
+                                    "{level}": levelPLUS
                                 }), message, dataServer)
+                                console.log(levelPLUS)
+
+                                let dbR = JSON.parse(fs.readFileSync("database/rlevels/" + message.guild.id + ".json", "utf8"));
+                                if(dataServer.rwStus !== 0){
+                                    let myRole = message.guild.roles.cache.get(`${dbR[levelPLUS]}`);
+                                    if(myRole){
+                                        if(!message.member.roles.cache.has(myRole)) {
+                                            message.member.roles.add(myRole.id)
+                                        }else{
+                                        }
+                                    }
+                                }
                             }
 
                             const toAdd = resultsXp[0].xp;
@@ -99,23 +114,15 @@ client.on("message", message => {
                             } else if (results.length > 0) {
                                 message.reply(language("BLACKLISTED"));
                             } else {
-                                cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                                return cmd.run(client, message, args, fs, colors, database, dataServer, language);
                             }
                         });
                     }else{
-                        if(msg.Role(message.member, "admin", message, dataServer) === true){
-                            return cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                        if(team.includes(message.author.id) || message.member.hasPermission('MANAGE_CHANNELS') || message.member.hasPermission('MANAGE_MESSAGES')){
+                            cmd.run(client, message, args, fs, colors, database, dataServer, language);
+                        }else{
+                            return msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
                         }
-
-                        if(msg.Role(message.member, "modo", message, dataServer) === true){
-                            return cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                        }
-
-                        if(team.includes(message.author.id)){
-                            return cmd.run(client, message, args, fs, colors, database, dataServer, language);
-                        }
-
-                        msg.sendMsgA(language("INVALID_CHANNEL_COMMANDS", dataServer.commandsChannel),message,dataServer)
                     }
                 }else{
                     database.query(`SELECT * FROM blacklist WHERE userid=${message.author.id}`, function (error, results, fields) {
