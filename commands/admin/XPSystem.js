@@ -9,6 +9,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         }
 
         const mentionedRole = message.mentions.roles.first();
+        const levelNumber = args[2];
+
+        let dbR = JSON.parse(fs.readFileSync("database/rlevels/" + message.guild.id + ".json", "utf8"));
 
         switch (args[0]) {
             case "rewards":
@@ -16,50 +19,32 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                 switch (args[1]){
                     case "add":
-                        if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_ADD", message, dataServer) }
+                        if(!levelNumber){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_ADD", message, dataServer) }
+                        if (Object.keys(dbR).includes(args[2])) {return await msg.sendMsg("XP_LEVEL_EXIST", message, dataServer) }
+                        if(!mentionedRole){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_ADD", message, dataServer) }
 
-                        database.query(`SELECT * FROM rewards_level WHERE lvlNum = ${args[2]} AND guildId = ${message.guild.id}`, async function (error, results, fields) {
-                            if (error) {
-                                return false;
-                            } else if (results.length > 0) {
-                                return msg.sendMsg("XP_LEVEL_EXIST", message, dataServer);
-                            } else {
-                                if(!mentionedRole){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_ADD", message, dataServer) }
-                                return await update("add",args[2],mentionedRole.id, message.guild.id)
-                            }
-                        });
+                        await update("add",levelNumber,mentionedRole.id,message.guild.id, dbR);
+                        await msg.sendMsg("UPDATED", message, dataServer);
                         break;
                     case "update":
-                        if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_UPDATE", message, dataServer) }
+                        if(!levelNumber){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_UPDATE", message, dataServer) }
+                        if (!Object.keys(dbR).includes(args[2])) {return await msg.sendMsg("XP_LEVEL_NOT_FOUND", message, dataServer) }
+                        if(!mentionedRole){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_UPDATE", message, dataServer) }
 
-                        database.query(`SELECT * FROM rewards_level WHERE lvlNum = ${args[2]} AND guildId = ${message.guild.id}`, async function (error, results, fields) {
-                            if (error) {
-                                return false;
-                            } else if (results.length > 0) {
-                                if(!mentionedRole){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_UPDATE", message, dataServer) }
-                                return await update("update",args[2],mentionedRole.id, message.guild.id)
-                            } else {
-                                return msg.sendMsg("XP_LEVEL_NOT_FOUND", message, dataServer);
-                            }
-                        });
+                        await update("update",levelNumber,mentionedRole.id,message.guild.id, dbR);
+                        await msg.sendMsg("UPDATED", message, dataServer);
                         break;
                     case "remove":
-                        if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_ADD", message, dataServer) }
+                        if(!levelNumber){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_REMOVE", message, dataServer) }
+                        if (!Object.keys(dbR).includes(args[2])) {return await msg.sendMsg("XP_LEVEL_NOT_FOUND", message, dataServer) }
 
-                        database.query(`SELECT * FROM rewards_level WHERE lvlNum = ${args[2]} AND guildId = ${message.guild.id}`, async function (error, results, fields) {
-                            if (error) {
-                                return false;
-                            } else if (results.length > 0) {
-                                if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_REMOVE", message, dataServer) }
-                                return await update("remove",args[2],mentionedRole.id, message.guild.id)
-                            } else {
-                                return msg.sendMsg("XP_LEVEL_NOT_FOUND", message, dataServer);
-                            }
-                        });
+                        await update("remove",levelNumber,"",message.guild.id, dbR);
+                        await msg.sendMsg("UPDATED", message, dataServer);
                         break;
                     default:
                         return await msg.sendMsg("INVALID_ARGS_XP_1", message, dataServer)
                 }
+                break;
             case "status":
                 break;
             default:
@@ -70,30 +55,19 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     }
 }
 
-async function update(type, lvlNum, roleId, guildid) {
+async function update(type, lvlNum, roleId = null, guildid, dbR) {
     switch (type) {
         case "add":
-            var add = {
-                guildId: guildid,
-                level: lvlNum,
-                roleId: roleId
-            };
-
-            database.query('INSERT INTO rewards_level SET ?', add, function (error, results, fields) {
-                if (error) throw error;
-            });
+            dbR[lvlNum] = roleId;
+            fs.writeFileSync("database/rlevels/" + guildid + ".json", JSON.stringify(dbR), "utf-8");
             break;
         case "update":
-            var update = `UPDATE rewards_level SET roleId = '${roleId}' WHERE guildId = '${guildid}'`;
-            database.query(update, function (err) {
-                if (err) throw err;
-            });
+            dbR[lvlNum] = roleId;
+            fs.writeFileSync("database/rlevels/" + guildid + ".json", JSON.stringify(dbR), "utf-8");
             break;
         case "remove":
-            var remove = `DELETE FROM rewards_level WHERE guildId = '${guildid}' AND level = '${lvlNum}'`;
-            database.query(remove, function (err) {
-                if (err) throw err;
-            });
+            delete dbR[lvlNum];
+            fs.writeFileSync("database/rlevels/" + guildid + ".json", JSON.stringify(dbR), "utf-8");
             break;
     }
 }

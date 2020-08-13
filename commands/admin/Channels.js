@@ -10,6 +10,30 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const mentionedChannel = message.mentions.channels.first();
 
         switch (args[0]) {
+            case "unset":
+                switch (args[1]){
+                    case "joinquit":
+                        await unset("jq", " ", message.guild.id);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                    case "logs":
+                        await unset("logs", " ", message.guild.id);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                    case "ticket":
+                        await unset("ticket", " ", message.guild.id);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                    case "commands":
+                        await unset("cmds", " ", message.guild.id);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                    case "is":
+                        await unset("is", " ", message.guild.id);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                }
+                break;
             case "joinquit":
                 if (!mentionedChannel) {
                     return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
@@ -45,7 +69,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 }
                 await update("is", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
-                await msg.sendMsg("DELETE_IS_CHANNEL",message,dataServer)
                 break;
             default:
                 await msg.sendMsg("INVALID_ARGS_CHANNELS", message, dataServer)
@@ -83,6 +106,40 @@ async function update(type, id, guildid){
             break;
         case "is":
             var is = `UPDATE servers SET interServerChannel = '${id}' WHERE guildid = '${guildid}'`;
+            database.query(is, function (err) {
+                if (err) throw err;
+            });
+            break;
+    }
+}
+async function unset(type, id, guildid){
+    switch (type) {
+        case "jq":
+            var jq = `UPDATE servers SET announceChannel = 'false' WHERE guildid = '${guildid}'`;
+            database.query(jq, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "logs":
+            var logs = `UPDATE servers SET logsChannel = 'false' WHERE guildid = '${guildid}'`;
+            database.query(logs, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "tickets":
+            var tck = `UPDATE servers SET ticketCat = '----- Ticket -----' WHERE guildid = '${guildid}'`;
+            database.query(tck, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "cmds":
+            var cmds = `UPDATE servers SET commandsChannel = 'false' WHERE guildid = '${guildid}'`;
+            database.query(cmds, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "is":
+            var is = `UPDATE servers SET interServerChannel = 'false' WHERE guildid = '${guildid}'`;
             database.query(is, function (err) {
                 if (err) throw err;
             });
