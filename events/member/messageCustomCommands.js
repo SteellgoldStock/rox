@@ -56,7 +56,7 @@ client.on('message',message => {
                             '{guildName}': message.guild.name,
                             '{username}': message.author.username,
                             '{sayMessage}': args.slice(1).join(" "),
-                            '{asciiMessage}': exports.ascii,
+                            '{asciiMessage}': "```" + exports.ascii + "```",
                             '{userCount}': message.guild.memberCount,
                             '{countOnline}': exports.online,
                             '{countOffline}': exports.offline
