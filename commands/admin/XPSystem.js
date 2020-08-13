@@ -28,6 +28,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                 return await update("add",args[2],mentionedRole.id, message.guild.id)
                             }
                         });
+                        break;
                     case "update":
                         if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_UPDATE", message, dataServer) }
 
@@ -41,6 +42,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                 return msg.sendMsg("XP_LEVEL_NOT_FOUND", message, dataServer);
                             }
                         });
+                        break;
                     case "remove":
                         if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_LEVEL_ADD", message, dataServer) }
 
@@ -54,6 +56,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                 return msg.sendMsg("XP_LEVEL_NOT_FOUND", message, dataServer);
                             }
                         });
+                        break;
                     default:
                         return await msg.sendMsg("INVALID_ARGS_XP_1", message, dataServer)
                 }
