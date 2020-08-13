@@ -20,9 +20,9 @@ const mysql = require('mysql');
 
 exports.database = mysql.createConnection({
     host     : 'localhost',
-    user     : 'rox',
-    password : 'NAYT/x76(|5m;4nvw7E;',
-    database : 'rox'
+    user     : 'gaetane',
+    password : '9Bp2XNhWigfeJrCm',
+    database : 'gaetane'
 });
 
 exports.database.connect(function(err) {
@@ -31,14 +31,77 @@ exports.database.connect(function(err) {
 });
 
 exports.client.on('ready', () => {
-
     exports.client.guilds.cache.forEach(g =>{
-
         if(exports.fs.existsSync("database/ccommands/" + g.id + ".json")) {
+
         } else {
             let dbC = {};
             exports.fs.writeFileSync("database/ccommands/" + g.id + ".json", JSON.stringify(dbC), "utf-8");
         }
+
+        if(exports.fs.existsSync("database/rlevels/" + g.id + ".json")) {
+
+        } else {
+            let dbC = {};
+            exports.fs.writeFileSync("database/rlevels/" + g.id + ".json", JSON.stringify(dbC), "utf-8");
+        }
+
+        exports.database.query(`SELECT * FROM servers WHERE guildid = ${g.id}`, function (error, results, fields) {
+            if (error) {
+                return false;
+            } else if (results.length > 0) {
+                let guildName = Buffer.from(g.name).toString('base64')
+                var sql = `UPDATE servers SET name = '${guildName}' WHERE guildid = '${g.id}'`;
+                exports.database.query(sql, function (err) {
+                    if (err) throw err;
+                });
+            } else {
+                var postServer = {
+                    tag: Buffer.from(" ").toString('base64'),
+                    name: Buffer.from(g.name).toString('base64'),
+                    guildid: g.id,
+                    lang: "en",
+                    prefix: "!",
+                    isGold: 0,
+                    isBeta: 0,
+
+                    // CONFIG - QUIT & JOIN
+                    joinText: "V2VsY29tZSB0byB7bWVudGlvbn0gaW4ge2d1aWxkTmFtZX0=",
+                    quitText: "Tm8uLiB7dXNlcm5hbWV9IGhhcyBsZWF2ZWQge2d1aWxkTmFtZX0=",
+                    interServerChannel: "false",
+                    announceChannel: "false",
+                    logsChannel: "false",
+                    ticketCat: "----- Ticket -----",
+                    commandsChannel: "false",
+
+                    // CONFIG - ROLES
+                    adminRole: "none",
+                    modRole: "none",
+                    autoRole: "none",
+
+                    // CONFIG - EMBED ( GOLD SERVER )
+                    msgEmbed: 0,
+                    embedImgURL: "none",
+                    embedColor: "none",
+                    embedTitle: "none",
+
+                    // CONFIG - XP SYSTEM
+                    sysXp: 0,
+                    rwStus: 0,
+                    levelUpMsg: "V2VsbCBkb25lIHNvbGRpZXIsIHlvdSd2ZSBwYXNzZWQgbGV2ZWwge2xldmVsfQ==",
+
+                    // CONFIG - CUSTOM CMDS
+                    countCC: 0,
+                    limitCC: 15,
+
+                    level: 1,
+                    xp: 0
+                };
+                exports.database.query('INSERT INTO servers SET ?', postServer, function (error, results, fields) {
+                    if (error) throw error;
+                });
+            }
+        });
     })
 
     /* STATUS */
