@@ -19,6 +19,10 @@ const languageData = {
     ARGS_BACKGROUND_1: "You must enter a valid color code, you can use this generator: https://colors.rox.wtf",
 
     INVALID_ARGS_BLACKLIST: "You must enter a valid option type, the avaibles option to config is: `add` or `remove`",
+    INVALID_ARGS_XP: "You must enter a valid option type, the available options to configure are: `rewards` or `status`",
+    INVALID_ARGS_XP_1: "You must enter a valid option type, the available options to configure are: `add` or `remove`",
+    INVALID_ARGS_XP_2: "You must enter a valid option type, the available options to configure are: `on` or `off`",
+    INVALID_ARGS_XP_LEVEL_MISSING: "You must enter the number of the level where the reward will be removed.",
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
     INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit`, `logs`, `ticket (name of an category)`, `is (Inter Server MSG)` or `commands`",

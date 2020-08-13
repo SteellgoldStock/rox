@@ -18,11 +18,15 @@ const languageData = {
     ARGS_BACKGROUND: "L'argument, n'est pas valable, ceux qui existent sont `color`, `img` (et `server` pour les serveurs gold)",
     ARGS_BACKGROUND_1: "Vous devez entrer un code couleur valide, vous pouvez utiliser ce générateur: https://colors.rox.wtf",
 
-    INVALID_ARGS_BLACKLIST: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `add` or `remove`",
+    INVALID_ARGS_BLACKLIST: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `add` ou `remove`",
+    INVALID_ARGS_XP: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `rewards` ou `status`",
+    INVALID_ARGS_XP_1: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `add` ou `remove`",
+    INVALID_ARGS_XP_2: "Vous devez saisir un type de option valide, les options disponibles à configurer sont: `on` ou `off`",
+    INVALID_ARGS_XP_LEVEL_MISSING: "Vous devez entrer le numéro du niveaux au quel supprimé la récompense",
     INVALID_ARGS_ROLES: "Vous devez saisir un type de rôle valide, les rôles disponibles à configurer sont: `adminRole`, `modRole` ou `autoRole`",
     INVALID_ARGS_TEXTS: "Vous devez entrer un type de texte valide, les textes disponibles à configurer sont: `joinText`, `quitText` ou `lvlUpText`",
     INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont is: `joinquit`, `logs`, `ticket [category name]`, `is (Salon de message inter-serveurs)` ou `commands`",
-    INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` or `update`",
+    INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` ou `update`",
     INVALID_ARGS_TEXT_COMMANDS: "Vous n'avez pas saisi de texte que le bot enverra si la personne utilise la commande, si vous voulez avoir des messages plus cool que d'autres utilisent des balises\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "Vous devez saisir un type de option valide, les options disponibles sont : `create`, `delete`,`add` ou `remove`",
 
@@ -118,9 +122,9 @@ const languageData = {
     BLACKLIST_REMOVE: "Tu as supprimé ce membre de la blacklist",
 
     // EMBED CONF
-    INVALID_ARGUMENT_EMBECONF: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `config` or `status`",
-    INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` or `off`",
-    INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` or `imgUrl`",
+    INVALID_ARGUMENT_EMBECONF: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `config` ou `status`",
+    INVALID_ARGUMENT_EMBECONF_1: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `on` ou `off`",
+    INVALID_ARGUMENT_EMBECONF_0: "Vous devez entrer un type d'option valide, l'option disponible à configurer est: `title`, `color` ou `imgUrl`",
     IMG_URL_DISABLE: (prefix) => `Pour désactiver l'image faite la commande \`${prefix}embed config imgUrl\` sans texte à la suite`,
     IMG_TITLE_DISABLE: (prefix) => `Pour désactiver le titre faite la commande \`${prefix}embed config title\` sans texte à la suite`,
 
