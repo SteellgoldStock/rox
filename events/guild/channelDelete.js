@@ -33,4 +33,20 @@ client.on('channelDelete', channel => {
 
         }
     });
+
+    database.query(`SELECT * FROM servers WHERE logsChannel = ${channel.id}`, function (error, results, fields) {
+        if (error) {
+            return false;
+        } else if (results.length > 0) {
+
+            if(results[0].logsChannel == channel.id){
+                var eventCHANNELDELETE = `UPDATE servers SET logsChannel = 'false' WHERE logsChannel = '${channel.id}'`;
+                return database.query(eventCHANNELDELETE, function (err) {
+                    if (err) throw err;
+                });
+            }
+        } else {
+
+        }
+    });
 });

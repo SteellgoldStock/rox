@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const {colors, client, fs, database} = require('../../rox')
-const utf8 = require('utf8');
 
 String.prototype.allReplace = function (obj) {
     var retStr = this;
