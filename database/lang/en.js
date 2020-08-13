@@ -29,7 +29,7 @@ const languageData = {
     XP_LEVEL_EXIST: "A reward is already associated with this level, modify it, or delete it before doing anything",
     INVALID_ARGS_ROLES: "You must enter a valid role type, the avaibles roles to config is: `adminRole`, `modRole` or `autoRole`",
     INVALID_ARGS_TEXTS: "You must enter a valid text type, the avaibles texts to config is: `joinText`, `quitText` or `lvlUpText`",
-    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit`, `logs`, `ticket (name of an category)`, `is (Inter Server MSG)` or `commands`",
+    INVALID_ARGS_CHANNELS: "You must enter a valid channel type, the avaibles channels to config is: `joinquit`, `logs`, `ticket (name of an category)`, `is (Inter Server MSG)` or `commands` if you want to de-select a channel add `unset' before putting the option",
     INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "You must enter a valid option type, the avaibles option is: `create`, `delete`,`add` or `remove`",
@@ -42,11 +42,26 @@ const languageData = {
     MISSED_TEXTS: "You have missed the text",
     TOO_MUCH_ARGS: "There are too many characters, the limit is 12",
 
-    INVALID_CHANNEL_COMMANDS: (id) => "This server has set up a special room to use commands, please go there in <#"+id+">",
+    INVALID_CHANNEL_COMMANDS: (id) => "This server has set up a special room to use commands, please go there in <#"+id+"> only members with one of these permissions `ADMINISTRATOR`, `MANAGE MESSAGES`, `MANAGE CHANNELS` can bypass this system",
 
     CATEGORY_NAME_NFOUND: "You did not specify the name of the category that will be used as a ticket mailbox",
-
     DELETE_IS_CHANNEL: "To disable inter-server messages you have to delete the channel !",
+
+    TOP_XP_ARGUMENTS: (prefix) => `You must enter a valid argument if you want display the top of this guild use \`${prefix}top\` or if you want display top all of guilds level where rox is here use \`${prefix}top server\``,
+    FOOTER_TOP_XP: (prefix) => `Use \`${prefix}top [null/server]\` for change display`,
+    TITLE_TOP_XP_GUILDS: `Top of highest level guilds`,
+    TITLE_TOP_XP_USERS: `Top of this guild's highest level users`,
+    DESCRIPTION_TOP_XP: (level, xp) => `is level **${level}** with a total of **${xp}** xp`,
+    DESCRIPTION_TOP_XP_U: (level, xp, messages) => `is level **${level}** with a total of **${xp}** xp, with more than **${messages}** sended messages`,
+
+    LEVEL: "Level",
+    LEVEL_TEXT: (level) => "You are level **"+level+"**",
+    LEVEL_TEXT_O: (level) => "This member is level **"+level+"**",
+    XP: "XP(s)",
+    XP_TEXT: (xp) => "With more than **"+ xp +"** xp",
+    XP_TEXT_O: (xp) => "This member have **"+xp+"** xp",
+    MSGS_SEND: "Messages send",
+    MSGS_TEXT: (msgs) => "With more than **"+msgs+"** messages sent to the server since Rox's join.",
 
     /** SUCCESS **/
     UPDATED: "Your changes have been successfully saved",

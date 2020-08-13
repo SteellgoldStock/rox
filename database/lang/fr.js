@@ -29,7 +29,7 @@ const languageData = {
     XP_LEVEL_EXIST: "Une récompense est déjà associée à ce niveau, changez-la ou supprimez-la avant de faire quoi que ce soit",
     INVALID_ARGS_ROLES: "Vous devez saisir un type de rôle valide, les rôles disponibles à configurer sont: `adminRole`, `modRole` ou `autoRole`",
     INVALID_ARGS_TEXTS: "Vous devez entrer un type de texte valide, les textes disponibles à configurer sont: `joinText`, `quitText` ou `lvlUpText`",
-    INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont is: `joinquit`, `logs`, `ticket [category name]`, `is (Salon de message inter-serveurs)` ou `commands`",
+    INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont: `joinquit`, `logs`, `ticket (Nom d'une catégorie)`, `is (Salon de message inter-serveurs)` ou `commands`, si vous voulez dé-sélectionner un salon rajoutez `unset` avant de mettre l'option",
     INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` ou `update`",
     INVALID_ARGS_TEXT_COMMANDS: "Vous n'avez pas saisi de texte que le bot enverra si la personne utilise la commande, si vous voulez avoir des messages plus cool que d'autres utilisent des balises\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "Vous devez saisir un type de option valide, les options disponibles sont : `create`, `delete`,`add` ou `remove`",
@@ -42,11 +42,27 @@ const languageData = {
     MISSED_TEXTS: "Vous avez oublié(e) d'inserer un texte",
     TOO_MUCH_ARGS: "Il y a trop de caractère la limite est 12",
 
-    INVALID_CHANNEL_COMMANDS: (id) => "Ce serveur a mis en place un salon pour l'utilisation des commandes, veuillez vous y rendre <#"+id+">",
+    INVALID_CHANNEL_COMMANDS: (id) => "Ce serveur a mis en place un salon pour l'utilisation des commandes, veuillez vous y rendre <#"+id+"> seul les membres ayant une de ces permissions `Administrateur`, `Gérer les messages`, `Gérer les salons` peuvent contourner ce système",
 
     CATEGORY_NAME_NFOUND: "Vous n'avez pas précisé le nom de la catégorie qui sera utilisée comme boîte aux lettres pour vos tickets",
 
     DELETE_IS_CHANNEL: "Pour désactiver les messages inter-serveurs vous devez supprimer le salon !",
+
+    TOP_XP_ARGUMENTS: (prefix) => `Vous devez entrer un argument valable si vous voulez afficher le haut de cette utilisation de la guilde, utilisez \`${prefix}top\` ou si vous voulez afficher le niveau supérieur de toutes les guildes où se trouve rox ici, utilisez \`${prefix}top server\``,
+    FOOTER_TOP_XP: (prefix) => `Utilisez \`${prefix}top [null/server]\` pour changer l'affichage`,
+    TITLE_TOP_XP_GUILDS: `Le sommet des guildes de haut niveau`,
+    TITLE_TOP_XP_USERS: `Top des utilisateurs de haut niveau de cette guilde`,
+    DESCRIPTION_TOP_XP: (level, xp) => `est niveau **${level}** avec un total de **${xp}** xp`,
+    DESCRIPTION_TOP_XP_U: (level, xp, messages) => `est niveau **${level}** avec un total de **${xp}** xp, avec plus de **${messages}** messages envoyés`,
+
+    LEVEL: "Niveau",
+    LEVEL_TEXT: (level) => "Vous êtes niveau: **"+level+"**",
+    LEVEL_TEXT_O: (level) => "Ce membre est niveau **"+level+"**",
+    XP: "XP(s)",
+    XP_TEXT: (xp) => "Vous avez: **"+xp+"** xp",
+    XP_TEXT_O: (xp) => "Ce membre à **"+xp+"** xp",
+    MSGS_SEND: "Messages envoyé(e)s",
+    MSGS_TEXT: (msgs) => "Avec plus de **"+msgs+"** messages envoyées sur le serveur depuis l'arrivé de Rox",
 
     /** SUCCESS **/
     UPDATED: "Vos modifications ont été sauvegardées avec succès",
