@@ -86,13 +86,13 @@ async function updateS(type, guildid, database) {
     switch (type) {
         case "on":
             var on = `UPDATE servers SET sysXp = '1' WHERE guildid = '${guildid}'`;
-            database.query(cmds, function (err) {
+            database.query(on, function (err) {
                 if (err) throw err;
             });
             break;
         case "off":
             var off = `UPDATE servers SET sysXp = '0' WHERE guildid = '${guildid}'`;
-            database.query(cmds, function (err) {
+            database.query(off, function (err) {
                 if (err) throw err;
             });
             break;

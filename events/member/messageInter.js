@@ -21,16 +21,6 @@ client.on("message", message => {
 
         if(message.channel.id == results[0].interServerChannel) {
             if (!cmd) {
-                if(message.content.includes("@")){
-                    message.channel.send(message.author.username + " has send a mention")
-                    return false;
-                }
-
-                if(message.content.includes("https://") || message.content.includes("http://")){
-                    message.channel.send(message.author.username + " has send a link")
-                    return false;
-                }
-
                 message.delete();
                 console.log(colors.cyan("(IS) " + message.author.username + " : " + message.content));
                 client.guilds.cache.forEach((guild) => {
@@ -41,7 +31,7 @@ client.on("message", message => {
                         }
 
                         if (results2[0].interServerChannel !== "false") {
-                            guild.channels.cache.get(`${results2[0].interServerChannel}`).send("[" + message.guild.name + "] - " + message.author.username + "**:** " + message.content);
+                            guild.channels.cache.get(`${results2[0].interServerChannel}`).send(Buffer.from(dataServer.tag, 'base64').toString('utf8') + isTeam(message.author.id) + " `" + correctName(message.author.id, message.author.username) + "`: " + isIn(message.content));
                         }
                     });
                 });
@@ -59,3 +49,134 @@ String.prototype.allReplace = function (obj) {
     }
     return retStr;
 };
+
+function isTeam(id){
+    if(team.includes(id)){
+        return "<:rox:737051270980042783>";
+    }else{
+        return "";
+    }
+}
+
+function correctName(id, name){
+    if(id == 504392983244832780){
+        return "Gaëtan";
+    }else{
+        return name;
+    }
+}
+
+function isIn(msg) {
+    return msg.allReplace({
+        "https://": " ",
+        "http://": " ",
+        "@": " ",
+        "tg": " ",
+        "Tg": " ",
+        "tG": " ",
+        "fTG": " ",
+        "Sex": " ",
+        "sex": " ",
+        "FtG": " ",
+        "FTg": " ",
+        "FTG": " ",
+        "Ftg": " ",
+        "fTg": " ",
+        "ftG": " ",
+        "cory chase": " ",
+        "mia khalifa": " ",
+        "xvideos": " ",
+        "xhamster": " ",
+        "xxx": " ",
+        "fuck": " ",
+        "merde": " ",
+        "grosse merde": " ",
+        "youporn": " ",
+        "porn": " ",
+        "pornhub": " ",
+        "fuck you": " ",
+        "ftg": " ",
+        "tg": " ",
+        "ntm": " ",
+        "ta mere": " ",
+        "fils de pute": " ",
+        "squirt": " ",
+        "bdsm": " ",
+        "teen": " ",
+        "lesbienne": " ",
+        "gay": " ",
+        "hentai": " ",
+        "orgamses": " ",
+        "milf": " ",
+        "bondage": " ",
+        "gangbang": " ",
+        "bite": " ",
+        "queue": " ",
+        "chibre": " ",
+        "dick": " ",
+        "chatte": " ",
+        "pussy": " ",
+        "orgasm": " ",
+        "ejaculation": " ",
+        "éjac": " ",
+        "ejac": " ",
+        "masturbation": " ",
+        "branlette": " ",
+        "pipe": " ",
+        "pénétration": " ",
+        "penetration": " ",
+        "seins": " ",
+        "boobs": " ",
+        "tits": " ",
+        "tit": " ",
+        "gode": " ",
+        "sex toy": " ",
+        "bukkake": " ",
+        "fist": " ",
+        "fister": " ",
+        "porno": " ",
+        "fisting": " ",
+        "doigtage": " ",
+        "péné": " ",
+        "bisexuel": " ",
+        "trans": " ",
+        "transgenre": " ",
+        "fantasmes": " ",
+        "orgie": " ",
+        "orgi": " ",
+        "sodo": " ",
+        "sodomie": " ",
+        "streaptease": " ",
+        "anal": " ",
+        "bbw": " ",
+        "shemale": " ",
+        "tukiff": " ",
+        "tukif": " ",
+        "xnxx": " ",
+        "jacquie michel": " ",
+        "nudes": " ",
+        "nude": " ",
+        "sexe": " ",
+        "erotique": " ",
+        "erotic": " ",
+        "voyeur": " ",
+        "ass": " ",
+        "couilles": " ",
+        "sperme": " ",
+        "mange tes morts": " ",
+        "batard": " ",
+        "enculé": " ",
+        "fils de putte": " ",
+        "fdp": " ",
+        "mange morts": " ",
+        "pute": " ",
+        "trainer": " ",
+        "salope": " ",
+        "biatch": " ",
+        "connard": " ",
+        "connasse": " ",
+        "putain": " ",
+        "salop": " ",
+        "attardé": " ",
+    })
+}
