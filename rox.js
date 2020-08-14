@@ -98,8 +98,8 @@ exports.client.on('ready', () => {
     /* STATUS */
     setInterval(async () => {
         const statuslist = [
+            `${kFormatter(membersCount())} users`,
             `${exports.client.guilds.cache.size} servers`,
-            `${exports.client.users.cache.size} users`,
         ];
         const random = Math.floor(Math.random() * statuslist.length);
 
@@ -109,7 +109,7 @@ exports.client.on('ready', () => {
         catch (error) {
             console.error(error);
         }
-    }, 3000);
+    }, 2000);
 
     /* COMMANDS LOADER */
     loadCommand('./commands/basic/');
@@ -144,3 +144,25 @@ exports.client.on('ready', () => {
 })
 
 exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxH1UQ.KHWUKwM9KkLMe111pilR8WBKIKE");
+
+function membersCount(){
+    let number = 0;
+    let guild = exports.client.guilds.cache;
+    guild.forEach(m => {
+
+        m.members.fetch().then(fetchedMembers => {
+            const vert = fetchedMembers.filter(member => member.presence.status === 'online').size;
+            const jaune = fetchedMembers.filter(member => member.presence.status === 'idle').size;
+            const rouge = fetchedMembers.filter(member => member.presence.status === 'dnd').size;
+            const totalOnline = vert + jaune + rouge
+            const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline').size;
+            number = number + totalOnline + totalOffline;
+            exports.total = number;
+        });
+    })
+    return exports.total;
+}
+
+function kFormatter(num) {
+    return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
+}
