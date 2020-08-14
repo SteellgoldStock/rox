@@ -90,16 +90,16 @@ async function image(text, color) {
     return new Canvas(256, 256)
         .addImage(path.join(`database/users/bontoutou.png`), 0, 0, 256, 256)
         .setColor(`#FFFFFF`)
-        .setTextFont("italic 55px Bontoutou")
+        .setTextFont("italic 45px Bontoutou")
         .setStroke("#000000")
         .setStrokeWidth(500)
         .addText("BON", 10, 180)
 
         .setColor(`${color[0]}`)
-        .setTextFont("65px Bontoutou")
+        .setTextFont("55px Bontoutou")
         .setStroke("#000000")
         .setStrokeWidth(500)
-        .addText(text, 1, 250)
+        .addText(text, 1, 225)
 
         .toBufferAsync();
 };
