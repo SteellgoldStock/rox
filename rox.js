@@ -30,6 +30,23 @@ exports.database.connect(function(err) {
     console.log(exports.colors.green('Connected to the Rox Database with id :  ' + exports.database.threadId));
 });
 
+function Onmember(){
+    let number = 0;
+    let guild = client.guilds.cache;
+    guild.forEach(m => {
+   m.members.fetch().then(fetchedMembers => {
+                        const vert = fetchedMembers.filter(member => member.presence.status === 'online').size;
+                        const jaune = fetchedMembers.filter(member => member.presence.status === 'idle').size;
+                        const rouge = fetchedMembers.filter(member => member.presence.status === 'dnd').size;
+                        const totalOnline = vert + jaune + rouge
+                        const totalOffline = fetchedMembers.filter(member => member.presence.status === 'offline').size;
+                        number = number + totalOnline + totalOffline;
+exports.total = number;
+                    });
+})
+return exports.total;
+}
+
 exports.client.on('ready', () => {
     exports.client.guilds.cache.forEach(g =>{
         if(exports.fs.existsSync("database/ccommands/" + g.id + ".json")) {
@@ -108,7 +125,7 @@ exports.client.on('ready', () => {
     setInterval(async () => {
         const statuslist = [
             `${exports.client.guilds.cache.size} servers`,
-            `${exports.client.users.cache.size} users`,
+            Onmember() + ' ' + 'users',
         ];
         const random = Math.floor(Math.random() * statuslist.length);
 
