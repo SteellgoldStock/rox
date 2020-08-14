@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { client, database, msg, colors, fs} = require("../../rox");
-const langs = ["fr","en","es"]
+
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (await msg.Role(message.member, "admin", message, dataServer) === true || message.member.hasPermission('ADMINISTRATOR')) {
 
@@ -46,9 +46,19 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 }
                 break;
             case "status":
+                if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_2", message, dataServer) }
+
+                switch(args[2]){
+                    case "on":
+                        await updateS("on",message.guild.id,database);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                    case "off":
+                        await updateS("off",message.guild.id,database);
+                        await msg.sendMsg("UPDATED", message, dataServer);
+                        break;
+                }
                 break;
-            default:
-                await msg.sendMsg("INVALID_ARGS_CHANNELS", message, dataServer)
         }
     }else{
         return await msg.sendMsg("PERMISSION_DENIED", message, dataServer);
@@ -68,6 +78,23 @@ async function update(type, lvlNum, roleId = null, guildid, dbR) {
         case "remove":
             delete dbR[lvlNum];
             fs.writeFileSync("database/rlevels/" + guildid + ".json", JSON.stringify(dbR), "utf-8");
+            break;
+    }
+}
+
+async function updateS(type, guildid, database) {
+    switch (type) {
+        case "on":
+            var on = `UPDATE servers SET sysXp = '1' WHERE guildid = '${guildid}'`;
+            database.query(cmds, function (err) {
+                if (err) throw err;
+            });
+            break;
+        case "off":
+            var off = `UPDATE servers SET sysXp = '0' WHERE guildid = '${guildid}'`;
+            database.query(cmds, function (err) {
+                if (err) throw err;
+            });
             break;
     }
 }
