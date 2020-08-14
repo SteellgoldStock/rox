@@ -34,17 +34,8 @@ exports.client.on('ready', () => {
     exports.client.guilds.cache.forEach(g =>{
         if(exports.fs.existsSync("database/ccommands/" + g.id + ".json")) {
 
-        } else {
-            let dbC = {};
-            exports.fs.writeFileSync("database/ccommands/" + g.id + ".json", JSON.stringify(dbC), "utf-8");
-        }
-
-        if(exports.fs.existsSync("database/rlevels/" + g.id + ".json")) {
-
-        } else {
-            let dbC = {};
-            exports.fs.writeFileSync("database/rlevels/" + g.id + ".json", JSON.stringify(dbC), "utf-8");
-        }
+        } else { let dbC = {}; exports.fs.writeFileSync("database/ccommands/" + g.id + ".json", JSON.stringify(dbC), "utf-8");}
+        if(exports.fs.existsSync("database/rlevels/" + g.id + ".json")) { } else { let dbC = {}; exports.fs.writeFileSync("database/rlevels/" + g.id + ".json", JSON.stringify(dbC), "utf-8"); }
 
         exports.database.query(`SELECT * FROM servers WHERE guildid = ${g.id}`, function (error, results, fields) {
             if (error) {
@@ -152,4 +143,4 @@ exports.client.on('ready', () => {
     require('./events/listener/eventsRegister');
 })
 
-exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxIcqg.Q_H6caapjiGjo-zoxYbq6vMstKU");
+exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxH1UQ.KHWUKwM9KkLMe111pilR8WBKIKE");
