@@ -32,8 +32,7 @@ client.on("message", message => {
                                 return console.error(error.message);
                             }
 
-                            if(resultsXp[0].length === 0){
-
+                            if(resultsXp[0] == null){
                                 var postXp = {
                                     guildid: message.guild.id,
                                     userid: message.author.id,
@@ -46,7 +45,6 @@ client.on("message", message => {
                                     if (error) throw error;
                                     client.guilds.cache.get("733724420056547338").channels.cache.get("737651263612911672").send('Nouvelle donnée d\'xp pour l\'utilisateur **' + message.author.username + '** sur le serveur: **' + message.guild.name + "**");
                                 });
-
                             }
 
                             const msgToAdd = parseInt(resultsXp[0].messagesCount) + parseInt("1")

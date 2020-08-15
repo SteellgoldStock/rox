@@ -93,6 +93,33 @@ exports.client.on('ready', () => {
                 });
             }
         });
+
+        exports.client.guilds.cache.forEach((guild) => {
+            const list = exports.client.guilds.cache.get(guild.id);
+            list.members.cache.forEach(member => {
+                if (member.user.bot) return;
+                exports.database.query(`SELECT * FROM servers_xp WHERE guildid = ${guild.id} AND userid = ${member.id}`, function (error, results, fields) {
+                    if (error) {
+                        return false;
+                    } else if (results.length > 0) {
+
+                    }else{
+                        console.log("Nouvelle donnée d'xp pour " + member.user.username + " sur " + guild.name);
+                        var postXp = {
+                            guildid: guild.id,
+                            userid: member.id,
+                            xp: 0,
+                            level: 1,
+                            messagesCount: 0
+                        };
+
+                        exports.database.query('INSERT INTO servers_xp SET ?', postXp, function (error) {
+                            if (error) throw error;
+                        });
+                    }
+                });
+            });
+        });
     })
 
     /* STATUS */
