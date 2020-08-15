@@ -46,9 +46,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 }
                 break;
             case "status":
-                if(!args[2]){ return await msg.sendMsg("INVALID_ARGS_XP_2", message, dataServer) }
+                if(!args[1]){ return await msg.sendMsg("INVALID_ARGS_XP_2", message, dataServer) }
 
-                switch(args[2]){
+                switch(args[1]){
                     case "on":
                         await updateS("on",message.guild.id,database);
                         await msg.sendMsg("UPDATED", message, dataServer);
