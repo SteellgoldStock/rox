@@ -8,14 +8,14 @@ exports.team = [
     "504392983244832780",
     "558793081663782913",
     "354170113294991364",
-    "660921972271611924"
+    "660921972271611924",
+    "163678654952374272"
 ];
 
 const active = new Map();
 exports.ops = {
     active: active
 }
-
 const mysql = require('mysql');
 
 exports.database = mysql.createConnection({
@@ -48,11 +48,7 @@ exports.client.on('ready', () => {
             if (error) {
                 return false;
             } else if (results.length > 0) {
-                let guildName = Buffer.from(g.name).toString('base64')
-                var sql = `UPDATE servers SET name = '${guildName}' WHERE guildid = '${g.id}'`;
-                exports.database.query(sql, function (err) {
-                    if (err) throw err;
-                });
+
             } else {
                 var postServer = {
                     tag: Buffer.from(" ").toString('base64'),
@@ -99,31 +95,6 @@ exports.client.on('ready', () => {
                     if (error) throw error;
                 });
             }
-        });
-
-        const list = exports.client.guilds.cache.get(g.id);
-        list.members.cache.forEach(member => {
-            if (member.user.bot) return;
-            exports.database.query(`SELECT * FROM servers_xp WHERE guildid = ${g.id} AND userid = ${member.id}`, function (error, results, fields) {
-                if (error) {
-                    return false;
-                } else if (results.length > 0) {
-
-                } else {
-                    console.log("Nouvelle donnée d'xp pour " + member.user.username + " sur " + g.name);
-                    var postXp = {
-                        guildid: g.id,
-                        userid: member.id,
-                        xp: 0,
-                        level: 1,
-                        messagesCount: 0
-                    };
-
-                    exports.database.query('INSERT INTO servers_xp SET ?', postXp, function (error) {
-                        if (error) throw error;
-                    });
-                }
-            });
         });
     });
 

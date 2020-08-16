@@ -51,14 +51,14 @@ client.on("message", message => {
                             let sqladdMSg = `UPDATE servers_xp SET messagesCount=${msgToAdd} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                             database.query(sqladdMSg);
 
-                            let MaxXp = resultsXp[0].level * 150 + resultsXp[0].level * 35
+                            let MaxXp = resultsXp[0].level * 300 + resultsXp[0].level * 40
 
                             if (resultsXp[0].xp >= MaxXp) {
                                 /** SERVEUR **/
                                 let toAddSrvXp = dataServer.xp;
                                 let sqladdXpSrv = `UPDATE servers SET xp=${toAddSrvXp} + 15 WHERE guildid = ${message.guild.id}`
                                 database.query(sqladdXpSrv);
-                                let MaxXpSrv = dataServer.level * 150 + dataServer.level * 35
+                                let MaxXpSrv = dataServer.level * 250 + dataServer.level * 40
                                 if (dataServer.xp >= MaxXpSrv) {
                                     const levelPLUSSRV = parseInt(dataServer.level) + parseInt("1");
                                     let sqladdLvlServ = `UPDATE servers SET level=${levelPLUSSRV} WHERE guildid = ${message.guild.id}`
@@ -77,11 +77,10 @@ client.on("message", message => {
 
                                 msg.sendMsgA(lUpText.allReplace({
                                     "{mention}": "<@" + message.author.id + ">",
-                                    "{username}": message.author.name,
+                                    "{username}": message.author.username,
                                     "{guildName}": message.guild.name,
                                     "{level}": levelPLUS
                                 }), message, dataServer)
-                                console.log(levelPLUS)
 
                                 let dbR = JSON.parse(fs.readFileSync("database/rlevels/" + message.guild.id + ".json", "utf8"));
                                 if(dataServer.rwStus !== 0){
@@ -95,8 +94,8 @@ client.on("message", message => {
                                 }
                             }
 
-                            const toAdd = resultsXp[0].xp;
-                            let sqladd = `UPDATE servers_xp SET xp=${toAdd} + 1 WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                            const xpPLUS = parseInt(resultsXp[0].xp) + getRandomInt(3);
+                            let sqladd = `UPDATE servers_xp SET xp=${xpPLUS} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                             database.query(sqladd);
                         });
                     }
@@ -148,3 +147,7 @@ String.prototype.allReplace = function (obj) {
     }
     return retStr;
 };
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}

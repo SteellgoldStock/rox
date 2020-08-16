@@ -70,6 +70,7 @@ function isIn(msg) {
     return msg.allReplace({
         "https://": " ",
         "http://": " ",
+        "discord.gg": " ",
         "@": " ",
         "tg": " ",
         "Tg": " ",

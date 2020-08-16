@@ -59,8 +59,8 @@ const languageData = {
     LEVEL_TEXT: (level) => "Vous êtes niveau: **"+level+"**",
     LEVEL_TEXT_O: (level) => "Ce membre est niveau **"+level+"**",
     XP: "XP(s)",
-    XP_TEXT: (xp) => "Vous avez: **"+xp+"** xp",
-    XP_TEXT_O: (xp) => "Ce membre à **"+xp+"** xp",
+    XP_TEXT: (xp,maxXP) => "Vous avez: **"+xp+"**/**"+maxXP+"** xp",
+    XP_TEXT_O: (xp, maxXp) => "Ce membre à **"+xp+"**/**"+maxXp+"** xp",
     MSGS_SEND: "Messages envoyé(e)s",
     MSGS_TEXT: (msgs) => "Avec plus de **"+msgs+"** messages envoyées sur le serveur depuis l'arrivé de Rox",
 
