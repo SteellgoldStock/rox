@@ -4,7 +4,7 @@ description: Do you like to have specific roles for your favorite moderator?
 
 # Roles
 
-![](../.gitbook/assets/image%20%2815%29.png)
+![](../../.gitbook/assets/image%20%2815%29.png)
 
 ## To add a role in a category
 
