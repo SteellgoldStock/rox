@@ -62,6 +62,7 @@ exports.client.on('ready', () => {
                     // CONFIG - QUIT & JOIN
                     joinText: "V2VsY29tZSB0byB7bWVudGlvbn0gaW4ge2d1aWxkTmFtZX0=",
                     quitText: "Tm8uLiB7dXNlcm5hbWV9IGhhcyBsZWF2ZWQge2d1aWxkTmFtZX0=",
+                    interServerNetwork: "false",
                     interServerChannel: "false",
                     announceChannel: "false",
                     logsChannel: "false",
@@ -95,6 +96,30 @@ exports.client.on('ready', () => {
                     if (error) throw error;
                 });
             }
+        });
+        const list = exports.client.guilds.cache.get(g.id);
+        list.members.cache.forEach(member => {
+            if (member.user.bot) return;
+            exports.database.query(`SELECT * FROM servers_xp WHERE guildid = ${g.id} AND userid = ${member.id}`, function (error, results, fields) {
+                if (error) {
+                    return false;
+                } else if (results.length > 0) {
+
+                } else {
+                    console.log("Nouvelle donnée d'xp pour " + member.user.username + " sur " + g.name);
+                    var postXp = {
+                        guildid: g.id,
+                        userid: member.id,
+                        xp: 0,
+                        level: 1,
+                        messagesCount: 0
+                    };
+
+                    exports.database.query('INSERT INTO servers_xp SET ?', postXp, function (error) {
+                        if (error) throw error;
+                    });
+                }
+            });
         });
     });
 

@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         });
     } else {
         if (option == "server") {
-            database.query(`SELECT * FROM servers ORDER BY level DESC, xp DESC LIMIT 20`, function (error, result) {
+            database.query(`SELECT * FROM servers ORDER BY level DESC, xp DESC LIMIT 10`, function (error, result) {
                 if (error) {
                     console.error(error);
                     return;

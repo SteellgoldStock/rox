@@ -94,7 +94,7 @@ client.on("message", message => {
                                 }
                             }
 
-                            const xpPLUS = parseInt(resultsXp[0].xp) + getRandomInt(3);
+                            const xpPLUS = parseInt(resultsXp[0].xp) + getRandomInt(2);
                             let sqladd = `UPDATE servers_xp SET xp=${xpPLUS} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
                             database.query(sqladd);
                         });

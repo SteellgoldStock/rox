@@ -29,6 +29,7 @@ client.on('guildCreate',(guild) => {
                 // CONFIG - QUIT & JOIN
                 joinText: "V2VsY29tZSB0byB7bWVudGlvbn0gaW4ge2d1aWxkTmFtZX0=",
                 quitText: "Tm8uLiB7dXNlcm5hbWV9IGhhcyBsZWF2ZWQge2d1aWxkTmFtZX0=",
+                interServerNetwork: "false",
                 interServerChannel: "false",
                 announceChannel: "false",
                 logsChannel: "false",

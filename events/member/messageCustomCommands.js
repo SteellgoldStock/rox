@@ -20,7 +20,6 @@ client.on('message',message => {
 
             if (message.content.startsWith(prefix + exports.commandName)) {
                 if (Object.keys(dbC).includes(exports.commandName)) {
-
                     String.prototype.allReplace = function (obj) {
                         var retStr = this;
                         for (var x in obj) {

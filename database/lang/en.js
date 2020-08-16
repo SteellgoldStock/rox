@@ -179,6 +179,16 @@ const languageData = {
     NOT_EXISTS_CHANNEL: "You don't have an open ticket",
     DELETE_CHANNEL: "You just closed your ticket",
 
+    // INTER SERVER
+    IS_INFO_LINE_TITLE: "__How the interserver works ?__",
+    IS_INFO_LINE_1: "- To start you need to define the chat room that will be the discussion point with `!is channel [channel]` replace `[channel]` by a channel mention !",
+    IS_INFO_LINE_2: "- In order not to have problems with the limits of the api, there is in place a system of \"réseaux\", chaque serveur sera sur un nombre, chaque groupe sera limité à 5 serveurs maximum, **a expliquer plus tard**",
+    IS_INFO_LINE_3: "- By default all messages received will remain in the language in which they will be sent, if you want to change this run the command `!is lang [fr/en/es/auto]`",
+    IS_INFO_LINE_LANG_FR: "× `fra`: Messages will be translated into French",
+    IS_INFO_LINE_LANG_EN: "× `en`: Messages will be translated into English",
+    IS_INFO_LINE_LANG_SP: "× `sp`: Messages will be translated into Spanish",
+    IS_INFO_LINE_LANG_AU: "× `auto`: Les messages ne seront pas traduit, ils resteront comme ils le sont",
+
     // ADVENTURE
     ADV_GEMS: "Gems",
     ADV_JOB: "Job:",

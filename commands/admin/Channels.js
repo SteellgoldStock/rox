@@ -67,6 +67,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 if (!mentionedChannel) {
                     return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
                 }
+
                 await update("is", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
                 break;
@@ -140,6 +141,11 @@ async function unset(type, id, guildid){
             break;
         case "is":
             var is = `UPDATE servers SET interServerChannel = 'false' WHERE guildid = '${guildid}'`;
+            database.query(is, function (err) {
+                if (err) throw err;
+            });
+
+            var isID = `UPDATE servers SET interServerNetwork =  WHERE guildid = '${guildid}'`;
             database.query(is, function (err) {
                 if (err) throw err;
             });

@@ -180,6 +180,16 @@ const languageData = {
     NOT_EXISTS_CHANNEL: "Vous n'avez pas de ticket ouvert",
     DELETE_CHANNEL: "Vous venez de fermer votre ticket",
 
+    // INTER SERVER
+    IS_INFO_LINE_TITLE: "__Comment fonctionne l'interserver ?__",
+    IS_INFO_LINE_1: "- Pour commencer vous devez définir le salon qui sera le point de discussion avec `!is channel [channel]` remplacez `[channel]` par une mention de salon !",
+    IS_INFO_LINE_2: "- Pour ne pas avoir des problèmes avec les limites de l'api, il y a en place un système de \"réseaux\", chaque serveur sera sur un nombre, chaque groupe sera limité à 5 serveurs maximum, **a expliquer plus tard**",
+    IS_INFO_LINE_3: "- Par défaut tout les messages reçu restera dans la langue à la quel sera envoyé, si vous voulez changer cela exécutez la commande `!is lang [fr/en/es/auto]`",
+    IS_INFO_LINE_LANG_FR: "× `fra`: Les messages seront traduits en Français",
+    IS_INFO_LINE_LANG_EN: "× `en`: Les messages seront traduits en Anglais",
+    IS_INFO_LINE_LANG_SP: "× `sp`: Les messages seront traduits en Espagnol",
+    IS_INFO_LINE_LANG_AU: "× `auto`: Les messages ne seront pas traduit, ils resteront comme ils le sont",
+
     // ADVENTURE
     ADV_GEMS: "Gemmes",
     ADV_JOB: "Métier:",

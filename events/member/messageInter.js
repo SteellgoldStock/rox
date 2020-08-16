@@ -13,8 +13,6 @@ client.on("message", message => {
         const prefix = results[0].prefix
         const dataServer = results[0];
 
-        const language = require('../../database/lang/' + dataServer.lang)
-
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
         const cmd = client.commands.get(command);
@@ -30,8 +28,10 @@ client.on("message", message => {
                             return console.error(error.message);
                         }
 
-                        if (results2[0].interServerChannel !== "false") {
-                            guild.channels.cache.get(`${results2[0].interServerChannel}`).send(Buffer.from(dataServer.tag, 'base64').toString('utf8') + isTeam(message.author.id) + " `" + correctName(message.author.id, message.author.username) + "`: " + isIn(message.content));
+                        if(results2[0].interServerNetwork == dataServer.interServerNetwork){
+                            if (results2[0].interServerChannel !== "false") {
+                                guild.channels.cache.get(`${results2[0].interServerChannel}`).send(Buffer.from(dataServer.tag, 'base64').toString('utf8') + isTeam(message.author.id) + " `" + correctName(message.author.id, message.author.username) + "`: " + isIn(message.content));
+                            }
                         }
                     });
                 });
