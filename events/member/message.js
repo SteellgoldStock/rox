@@ -94,9 +94,23 @@ client.on("message", message => {
                                 }
                             }
 
-                            const xpPLUS = parseInt(resultsXp[0].xp) + getRandomInt(2);
-                            let sqladd = `UPDATE servers_xp SET xp=${xpPLUS} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
-                            database.query(sqladd);
+                            let timersXP = JSON.parse(fs.readFileSync("database/timersXP.json", "utf8"));
+                            if(!timersXP[message.author.id]){
+                                timersXP[message.author.id] = {
+                                    time: Date.now() + 5000
+                                }
+
+                                fs.writeFileSync("database/timersXP.json", JSON.stringify(timersXP), "utf-8");
+                            }
+
+                            if(Date.now() >= timersXP[message.author.id].time){
+                                timersXP[message.author.id].time = Date.now() + 5000;
+                                fs.writeFileSync("database/timersXP.json", JSON.stringify(timersXP), "utf-8");
+
+                                const xpPLUS = parseInt(resultsXp[0].xp) + getRandomInt(2);
+                                let sqladd = `UPDATE servers_xp SET xp=${xpPLUS} WHERE userid = ${message.author.id} AND guildid = ${message.guild.id}`
+                                database.query(sqladd);
+                            }
                         });
                     }
                 });

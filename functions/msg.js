@@ -53,6 +53,32 @@ exports.sendMsgA = async(text, message, dataServer = null) => {
     }
 }
 
+exports.sendMsgL = async(text, message, dataServer = null, channelID, guildID) => {
+    let guildTo = client.guilds.cache.get(guildID);
+    let channelTo = guildTo.channels.cache.get(channelID);
+
+    if (dataServer.isGold === 1) {
+        if (dataServer.msgEmbed !== 0) {
+            let embed = new Discord.MessageEmbed()
+            embed.setTitle(dataServer.embedTitle)
+            embed.setDescription(text)
+
+            if (dataServer.embedImgURL !== "none") {
+                embed.setThumbnail(dataServer.embedImgURL)
+            }
+
+            embed.setColor(dataServer.embedColor)
+            embed.setTimestamp()
+            embed.setFooter('Rox • ' + exports.version, client.user.avatarURL())
+            channelTo.send(embed);
+        } else {
+            channelTo.send(text);
+        }
+    } else {
+        channelTo.send(text);
+    }
+}
+
 
 
 exports.sendMsgI = async(text, member1, member2, image, url, message, dataServer = null) => {

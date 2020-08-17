@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const embed = new Discord.MessageEmbed()
             .setTitle("Rox • Help")
             .setDescription(language("HELP_DESCRIPTION",dataServer.prefix))
-            .addField(language("HELP_ADMIN_FIELD"),"`prefix`,`lang`,`channels`,`roles`,`messages`")
+            .addField(language("HELP_ADMIN_FIELD"),"`prefix`,`lang`,`channels`,`roles`,`messages`,`interserver`")
             .addField(language("HELP_MOD_FIELD"),"`kick`,`ban`,`mute`,`tempmute`,`unmute`,`warn`,`warns`,`unwarn`,`purge`")
             .addField(language("HELP_FUN_FIELD"),"`cat`,`dog`,`memes`,`door`,`challmc`,`achimc`,`8ball`,`choice`,`ascii`, `lovecalc`, `kiss`, `hug`, `punch`, `btt`")
             .addField(language("HELP_MUSIC_FIELD"),"`play`,`splay`,`stop`,`pause`,`resume`,`skip`,`queue`,`volume`")

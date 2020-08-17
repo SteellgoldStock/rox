@@ -29,10 +29,13 @@ const languageData = {
     XP_LEVEL_EXIST: "Une récompense est déjà associée à ce niveau, changez-la ou supprimez-la avant de faire quoi que ce soit",
     INVALID_ARGS_ROLES: "Vous devez saisir un type de rôle valide, les rôles disponibles à configurer sont: `adminRole`, `modRole` ou `autoRole`",
     INVALID_ARGS_TEXTS: "Vous devez entrer un type de texte valide, les textes disponibles à configurer sont: `joinText`, `quitText` ou `lvlUpText`",
-    INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont: `joinquit`, `logs`, `ticket (Nom d'une catégorie)`, `is (Salon de message inter-serveurs)` ou `commands`, si vous voulez dé-sélectionner un salon rajoutez `unset` avant de mettre l'option",
+    INVALID_ARGS_CHANNELS: "Vous devez entrer un type de d'argument valide, les arguments disponibles à configurer sont: `joinquit`, `logs`, `ticket (Nom d'une catégorie)` ou `commands`, si vous voulez dé-sélectionner un salon rajoutez `unset` avant de mettre l'option",
     INVALID_ARGS_COMMANDS: "Vous devez entrer un type d'argument valide, les arguments disponibles à configurer sont: `add`, `remove` ou `update`",
     INVALID_ARGS_TEXT_COMMANDS: "Vous n'avez pas saisi de texte que le bot enverra si la personne utilise la commande, si vous voulez avoir des messages plus cool que d'autres utilisent des balises\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "Vous devez saisir un type de option valide, les options disponibles sont : `create`, `delete`,`add` ou `remove`",
+    INVALID_ARGS_IS: "Vous devez saisir un type de option valide, les options disponibles sont : `channel` ou `network`",
+    NETWORK_FULL_IS: "Ce réseau est plein, veuillez en choisir un autre",
+    NETWORK_ALREADY: "Vous êtes déjà dans ce réseau !",
 
     COMMAND_REACHED_MAXIMUM: "Ce serveur a atteint la limite de commande personnalisée qu'il peut avoir, pour améliorer cette limite à 30 vous pouvez prendre l'abonnement Rox Gold pour ce serveur\n\nhttps://doc.rox.wtf/rox-gold",
     COMMAND_ALREADY_EXIST: (prefix, name) => `Cette commande existe déjà, vous pouvez la supprimer avec \`${prefix}commands remove ${name}\``,
@@ -181,6 +184,19 @@ const languageData = {
     DELETE_CHANNEL: "Vous venez de fermer votre ticket",
 
     // INTER SERVER
+    IS_CHOOSE_SERVER: (prefix, n1, n1p,n2, n2p,n3, n3p,n4, n4p,n5, n5p,n6, n6p,n7, n7p,n8, n8p,n9, n9p,n10, n10p) => "Voici la liste des réseaux disponibles pour l'interserver:\n" +
+        `\`1\`: **${n1}**/**5** avec un ping de ${n1p}ms :flag_fr:\n` +
+        `\`2\`: **${n2}**/**5** avec un ping de ${n2p}ms :flag_fr:\n` +
+        `\`3\`: **${n3}**/**5** avec un ping de ${n3p}ms :flag_de:\n` +
+        `\`4\`: **${n4}**/**5** avec un ping de ${n4p}ms :flag_de:\n` +
+        `\`5\`: **${n5}**/**5** avec un ping de ${n5p}ms :flag_de:\n` +
+        `\`6\`: **${n6}**/**5** avec un ping de ${n6p}ms :flag_fr:\n` +
+        `\`7\`: **${n7}**/**5** avec un ping de ${n7p}ms :flag_us:\n` +
+        `\`8\`: **${n8}**/**5** avec un ping de ${n8p}ms :flag_be:\n` +
+        `\`9\`: **${n9}**/**5** avec un ping de ${n9p}ms :flag_us:\n` +
+        `\`10\`: **${n10}**/**5** avec un ping de ${n10p} :flag_us:` +
+        `\n\nChoisissez un réseau avec \`${prefix}is network [ID]\``,
+
     IS_INFO_LINE_TITLE: "__Comment fonctionne l'interserver ?__",
     IS_INFO_LINE_1: "- Pour commencer vous devez définir le salon qui sera le point de discussion avec `!is channel [channel]` remplacez `[channel]` par une mention de salon !",
     IS_INFO_LINE_2: "- Pour ne pas avoir des problèmes avec les limites de l'api, il y a en place un système de \"réseaux\", chaque serveur sera sur un nombre, chaque groupe sera limité à 5 serveurs maximum, **a expliquer plus tard**",

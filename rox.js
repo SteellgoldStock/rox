@@ -9,7 +9,7 @@ exports.team = [
     "558793081663782913",
     "354170113294991364",
     "660921972271611924",
-    "163678654952374272"
+    "163678654952374272",
 ];
 
 const active = new Map();
@@ -133,7 +133,7 @@ exports.client.on('ready', () => {
         const random = Math.floor(Math.random() * statuslist.length);
 
         try {
-            await exports.client.user.setActivity(`${statuslist[random]} • v0.1`);
+            await exports.client.user.setActivity(`${statuslist[random]} • ` + exports.msg.version);
         }
         catch (error) {
             console.error(error);

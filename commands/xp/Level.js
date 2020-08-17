@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             let embed = new Discord.MessageEmbed()
                 .setTitle(isTeam(message.author.id) + correctName(message.author.id,message.author.username))
                 .addField(language("LEVEL"),language("LEVEL_TEXT",result[0].level))
-                .addField(language("XP"),language("XP_TEXT",kFormatter(result[0].xp), MaxXpU1))
+                .addField(language("XP"),language("XP_TEXT",result[0].xp, MaxXpU1))
                 .addField(language("MSGS_SEND"),language("MSGS_TEXT",kFormatter(result[0].messagesCount)))
                 .setTimestamp()
                 .setColor("#4e64b5")

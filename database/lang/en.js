@@ -33,6 +33,9 @@ const languageData = {
     INVALID_ARGS_COMMANDS: "You must enter a valid channel type, the avaibles channels to config is: `add` or `remove` or `update`",
     INVALID_ARGS_TEXT_COMMANDS: "You haven't entered any text that the bot will send to if the person uses the command, if you want to have cooler messages than others use tags\n\nhttps://tags.rox.wtf",
     INVALID_ARGS_TICKET: "You must enter a valid option type, the avaibles option is: `create`, `delete`,`add` or `remove`",
+    INVALID_ARGS_IS: "You must enter a valid option type, the avaibles option is: `channel` or `network`",
+    NETWORK_FULL_IS: "This network is full, please choose another one",
+    NETWORK_ALREADY: "You're already in this network !",
 
     COMMAND_REACHED_MAXIMUM: "This server has reached the custom order limit it can have, to raise this limit to 30 you can take the Rox Gold subscription for this server\n\nhttps://doc.rox.wtf/rox-gold",
     COMMAND_ALREADY_EXIST: (prefix, name) => `This command already exist, you can remove it with \`${prefix}commands remove ${name}\``,
@@ -180,6 +183,19 @@ const languageData = {
     DELETE_CHANNEL: "You just closed your ticket",
 
     // INTER SERVER
+    IS_CHOOSE_SERVER: (prefix, n1, n1p,n2, n2p,n3, n3p,n4, n4p,n5, n5p,n6, n6p,n7, n7p,n8, n8p,n9, n9p,n10, n10p) => "Here is the list of networks available for the interserver:\n" +
+        `\`1\`: **${n1}**/**5** with a ping of ${n1p}ms :flag_fr:\n` +
+        `\`2\`: **${n2}**/**5** with a ping of ${n2p}ms :flag_fr:\n` +
+        `\`3\`: **${n3}**/**5** with a ping of ${n3p}ms :flag_de:\n` +
+        `\`4\`: **${n4}**/**5** with a ping of ${n4p}ms :flag_de:\n` +
+        `\`5\`: **${n5}**/**5** with a ping of ${n5p}ms :flag_de:\n` +
+        `\`6\`: **${n6}**/**5** with a ping of ${n6p}ms :flag_fr:\n` +
+        `\`7\`: **${n7}**/**5** with a ping of ${n7p}ms :flag_us:\n` +
+        `\`8\`: **${n8}**/**5** with a ping of ${n8p}ms :flag_be:\n` +
+        `\`9\`: **${n9}**/**5** with a ping of ${n9p}ms :flag_us:\n` +
+        `\`10\`: **${n10}**/**5** with a ping of ${n10p} :flag_us:` +
+        `\n\nChoose a network with \`${prefix}is network [ID]\``,
+
     IS_INFO_LINE_TITLE: "__How the interserver works ?__",
     IS_INFO_LINE_1: "- To start you need to define the chat room that will be the discussion point with `!is channel [channel]` replace `[channel]` by a channel mention !",
     IS_INFO_LINE_2: "- In order not to have problems with the limits of the api, there is in place a system of \"réseaux\", chaque serveur sera sur un nombre, chaque groupe sera limité à 5 serveurs maximum, **a expliquer plus tard**",

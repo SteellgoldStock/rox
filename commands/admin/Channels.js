@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { client, database, msg, colors, fs} = require("../../rox");
+const { client, database, msg, colors, fs, team} = require("../../rox");
 const langs = ["fr","en","es"]
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (await msg.Role(message.member, "admin", message, dataServer) === true || message.member.hasPermission('ADMINISTRATOR')) {
@@ -61,16 +61,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
                 }
                 await update("cmds", mentionedChannel.id, message.guild.id);
-                await msg.sendMsg("UPDATED", message, dataServer);
-                break;
-            case "is":
-                if (!mentionedChannel) {
-                    return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
-                }
-
-                if(!team.includes(message.author.id)) return message.channel.send("Cette fonctionnalitées a été temporairement désactiver nous mettons à jour notre système d'interserver !");
-
-                await update("is", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
                 break;
             default:
@@ -138,17 +128,6 @@ async function unset(type, id, guildid){
         case "cmds":
             var cmds = `UPDATE servers SET commandsChannel = 'false' WHERE guildid = '${guildid}'`;
             database.query(cmds, function (err) {
-                if (err) throw err;
-            });
-            break;
-        case "is":
-            var is = `UPDATE servers SET interServerChannel = 'false' WHERE guildid = '${guildid}'`;
-            database.query(is, function (err) {
-                if (err) throw err;
-            });
-
-            var isID = `UPDATE servers SET interServerNetwork =  WHERE guildid = '${guildid}'`;
-            database.query(is, function (err) {
                 if (err) throw err;
             });
             break;
