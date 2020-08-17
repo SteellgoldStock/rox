@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
+exports.client = new Discord.Client({disableEveryone: true});
 exports.fs = require('fs');
 exports.colors = require("colors");
-exports.client = new Discord.Client({disableEveryone: true});
 exports.msg = require("./functions/msg");
 exports.client.commands = new Discord.Collection();
 exports.team = [

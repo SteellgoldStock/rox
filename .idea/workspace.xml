@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/commands/team/Google.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Channels.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +137,7 @@
       <workItem from="1597411096983" duration="8520000" />
       <workItem from="1597426343694" duration="8387000" />
       <workItem from="1597491521680" duration="20617000" />
-      <workItem from="1597586137156" duration="17509000" />
+      <workItem from="1597586137156" duration="18050000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
