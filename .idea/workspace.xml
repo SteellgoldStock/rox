@@ -20,16 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
+      <change afterPath="$PROJECT_DIR$/commands/team/Google.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/admin/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Channels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/client/guildCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/client/guildCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageCustomCommands.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageCustomCommands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +63,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/basic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/team" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,16 +75,16 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\basic" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\basic" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
     </key>
   </component>
   <component name="RunManager">
@@ -146,7 +139,7 @@
       <workItem from="1597411096983" duration="8520000" />
       <workItem from="1597426343694" duration="8387000" />
       <workItem from="1597491521680" duration="20617000" />
-      <workItem from="1597586137156" duration="11741000" />
+      <workItem from="1597586137156" duration="17509000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

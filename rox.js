@@ -128,6 +128,7 @@ exports.client.on('ready', () => {
         const statuslist = [
             `${kFormatter(membersCount())} users`,
             `${exports.client.guilds.cache.size} servers`,
+            `${membersCount()} users`,
         ];
         const random = Math.floor(Math.random() * statuslist.length);
 

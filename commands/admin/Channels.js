@@ -68,6 +68,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     return await msg.sendMsg("MENTION_CHANNEL", message, dataServer)
                 }
 
+                if(!team.includes(message.author.id)) return message.channel.send("Cette fonctionnalitées a été temporairement désactiver nous mettons à jour notre système d'interserver !");
+
                 await update("is", mentionedChannel.id, message.guild.id);
                 await msg.sendMsg("UPDATED", message, dataServer);
                 break;
