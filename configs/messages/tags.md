@@ -19,8 +19,6 @@ List of tags:
 
 {% hint style="warning" %}
 The tag **{sayMessage}**, **{asciiMessage}** return the text after the command, here is an exemple
-
-The tag **{fileMessage}** return the image/file that is attached to this message.
 {% endhint %}
 
 ## Exemples:
