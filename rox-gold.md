@@ -10,7 +10,7 @@ description: Support the bot !
 * Earn more xp by talking if the server to activate XP
 * You have access to special channels on the discord support server of the bot, where you will have news in advance.
 * You can skip the music without having to wait for people to vote.
-* Access to a special channeks to see the progress of updates on the support discord
+* Access to a special channels to see the progress of updates on the support discord
 
 **Gold Server**
 
