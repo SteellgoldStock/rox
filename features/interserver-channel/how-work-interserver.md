@@ -4,5 +4,7 @@
 
 
 
-Is there an badwords blocker?
+## Is there an badwords blocker?
+
+Yes the bot has a list of more than 300 blocked words on this page has been written.
 
