@@ -11,10 +11,20 @@ description: >-
 Define a room where messages will be received:
 
 ```c
-!is channel [mention]
+!interserver channel [mention]
 ```
 
 {% hint style="info" %}
  Replace \[mention\] to be a channel mention
+{% endhint %}
+
+![](../../.gitbook/assets/image%20%2817%29.png)
+
+```c
+!interserver network [ID]
+```
+
+{% hint style="danger" %}
+If you find a bug, please come and report it immediately!
 {% endhint %}
 
