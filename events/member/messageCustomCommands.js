@@ -52,10 +52,15 @@ client.on('message',message => {
 
                     msg.sendMsgA(dbC[prop].allReplace(
                         {
+                            '@here': 'ping',
+                            '@everyone': 'ping',
                             '{mention}': "<@" + message.author.id + ">",
                             '{guildName}': message.guild.name,
                             '{username}': message.author.username,
-                            '{sayMessage}': args.slice(1).join(" "),
+                            '{sayMessage}': args.slice(1).join(" ").allReplace({
+                                '@here': 'ping',
+                                '@everyone': 'ping',
+                            }),
                             '{asciiMessage}': "```" + exports.ascii + "```",
                             '{userCount}': message.guild.memberCount,
                             '{countOnline}': exports.online,

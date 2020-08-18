@@ -20,12 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/commands/adventure/items/Backpack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/items/Backpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/items/Backpack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/messageCustomCommands.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageCustomCommands.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,10 +78,6 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\items" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
@@ -89,15 +85,21 @@
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,7 +143,8 @@
       <workItem from="1597426343694" duration="8387000" />
       <workItem from="1597491521680" duration="20617000" />
       <workItem from="1597586137156" duration="18878000" />
-      <workItem from="1597663096378" duration="31113000" />
+      <workItem from="1597663096378" duration="31358000" />
+      <workItem from="1597748786072" duration="4477000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>

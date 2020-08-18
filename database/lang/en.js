@@ -207,7 +207,7 @@ const languageData = {
 
     // ADVENTURE
     ADV_GEMS: "gems in the backpack",
-    ADV_BANK: " gems in bank",
+    ADV_BANK: (prefix) => ` gems in bank \`(${prefix}adv_bank)\``,
 
     ADV_INV_FIELD_ECONOMY: "Economy",
     ADV_INV_FIELD_STATS: "Statistics",

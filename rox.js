@@ -7,10 +7,19 @@ exports.client.commands = new Discord.Collection();
 exports.team = [
     "504392983244832780",
     "558793081663782913",
-    "354170113294991364",
     "660921972271611924",
     "163678654952374272",
 ];
+
+exports.beta = [
+    "504392983244832780",
+    "558793081663782913",
+    "660921972271611924",
+    "163678654952374272",
+    "550271684691886090",
+    "637007577154191362"
+];
+
 exports.red = "#b04949";
 exports.green = "#449849";
 exports.blue = "#4a5aac";
@@ -24,7 +33,7 @@ const mysql = require('mysql');
 exports.database = mysql.createConnection({
     host     : 'localhost',
     user     : 'gaetane',
-    password : '9Bp2XNhWigfeJrCm',
+    password : 'v5yX46muJ78Wq9V8MNk6Yq',
     database : 'gaetane'
 });
 
@@ -176,7 +185,7 @@ exports.client.on('ready', () => {
     require('./events/listener/eventsRegister');
 })
 
-exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxH1UQ.KHWUKwM9KkLMe111pilR8WBKIKE");
+exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxH1UQ.Q1A1Jpj-wcpYnOaVPQOXmmhZEB0");
 
 function membersCount(){
     let number = 0;

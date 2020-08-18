@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { client, botConfg, fs, colors,messages, team, msg, green, red} = require("../../../rox");
+const { client, botConfg, fs, colors,messages, team, msg, green, red, beta} = require("../../../rox");
 
 const bpSizes = {
     "BP_0": 500,
@@ -20,7 +20,7 @@ const bpPrice = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!team.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
+    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {

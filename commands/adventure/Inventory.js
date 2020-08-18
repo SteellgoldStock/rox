@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { client, botConfg, fs, colors,messages, team, msg} = require("../../rox");
+const { client, botConfg, fs, colors,messages, team, msg, beta} = require("../../rox");
 
 const bpSizes = {
     "BP_0": 500,
@@ -12,7 +12,7 @@ const bpSizes = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!team.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
+    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {
@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             embed.setDescription(language("ADV_INVENTORY_DESCRIPTION", results[0].backpackLvl, getSizeBP(results[0].backpackLvl), dataServer.prefix))
 
             embed.addField(language("ADV_INV_FIELD_ECONOMY"),"• "+ results[0].gems + " "+language("ADV_GEMS") +"\n"+
-                "• "+ results[0].bank + language("ADV_BANK"))
+                "• "+ results[0].bank + language("ADV_BANK",dataServer.prefix   ))
 
             message.channel.send(embed)
         } else {
