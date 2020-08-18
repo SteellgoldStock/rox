@@ -11,6 +11,9 @@ exports.team = [
     "660921972271611924",
     "163678654952374272",
 ];
+exports.red = "#b04949";
+exports.green = "#449849";
+exports.blue = "#4a5aac";
 
 const active = new Map();
 exports.ops = {
@@ -151,6 +154,7 @@ exports.client.on('ready', () => {
     loadCommand('./commands/fun/');
     loadCommand('./commands/music/');
     loadCommand('./commands/adventure/');
+    loadCommand('./commands/adventure/items/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {

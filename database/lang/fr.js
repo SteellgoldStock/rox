@@ -195,7 +195,7 @@ const languageData = {
         `\`8\`: **${n8}**/**5** avec un ping de ${n8p}ms :flag_be:\n` +
         `\`9\`: **${n9}**/**5** avec un ping de ${n9p}ms :flag_us:\n` +
         `\`10\`: **${n10}**/**5** avec un ping de ${n10p} :flag_us:` +
-        `\n\nChoisissez un réseau avec \`${prefix}is network [ID]\``,
+        `\n\nChoisissez un réseau avec \`${prefix}interserver network [ID]\``,
 
     IS_INFO_LINE_TITLE: "__Comment fonctionne l'interserver ?__",
     IS_INFO_LINE_1: "- Pour commencer vous devez définir le salon qui sera le point de discussion avec `!is channel [channel]` remplacez `[channel]` par une mention de salon !",
@@ -207,22 +207,22 @@ const languageData = {
     IS_INFO_LINE_LANG_AU: "× `auto`: Les messages ne seront pas traduit, ils resteront comme ils le sont",
 
     // ADVENTURE
-    ADV_GEMS: "Gemmes",
-    ADV_JOB: "Métier:",
-    ADV_HOUSE: "Maison:",
-    ADV_HOUSE_LEVEL_0: "Feu de camp",
-    ADV_HOUSE_LEVEL_1: "Camp de réfugiés",
-    ADV_HOUSE_LEVEL_2: "Maison dans l'arbre",
-    ADV_HOUSE_LEVEL_3: "Maison en pierre",
-    ADV_HOUSE_LEVEL_4: "Château de pierre",
-    ADV_HOUSE_LEVEL_5: "Château fort",
-    ADV_JOB_LEVEL_0: "Agriculteur",
-    ADV_JOB_LEVEL_1: "Bibliothécaire",
-    ADV_JOB_LEVEL_2: "Pêcheur",
-    ADV_JOB_LEVEL_3: "Vendeur",
-    ADV_JOB_LEVEL_4: "Négociateur",
-    ADV_JOB_LEVEL_5: "PDG"
+    ADV_GEMS: "gemmes dans le sac à dos",
+    ADV_BANK: " gemmes en banque",
 
+    ADV_INV_FIELD_ECONOMY: "Économie",
+    ADV_INV_FIELD_STATS: "Statistiques",
+    ADV_INV_FIELD_INFOS: "Informations",
+
+    ADV_GEMS_NOT: (gems) => "Vous n'avez pas assez de gemmes, il vous en manque un total de `" + gems + "`",
+
+    ADV_BACKPACK_LEVEL_UP: (nLvl, nItem, prefix) => `Vous avez améliorer votre sac à dos au niveau \`${nLvl}\` vous pouvez maintenant contenir un maximum de \`${nItem}\`. \n\n- N'oubliez pas que pour liberez du stockage vous pouvez envoyer vos gemmes dans la banque avec la commande \`${prefix}adv_bank add [count]\``,
+
+    ADV_NOT_IN: (prefix) => `Vous n'avez pas commencé une aventure, pour en débuter une, utilisez \`${prefix}adv start\``,
+
+    ADV_INVENTORY_TITLE: "Inventaire de ",
+    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\`, vous pouvez donc ontenir un maximum de \`${maxItems}\` items dans votre inventaire, vous pouvez l'améliorer avec \`${prefix}adv_backpack\``,
+    ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Votre inventaire est de niveau \`${level}\` améliorez le avec \`${prefix}adv_backpack upg\` pour avoir un maximum de \`${maxNItems}\` d'items disponible\n\nCoût de l'amélioration: \`${price}\` gemmes`
 };
 
 const translate = (key, ...args) => {

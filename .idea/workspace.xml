@@ -20,15 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/commands/admin/Interserver.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/adventure/items/Backpack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/admin/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/admin/Channels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/xp/Level.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/xp/Level.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/msg.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/msg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/team" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/adventure/items" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,16 +78,16 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\items" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\basic" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\events\member" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\admin" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\fun" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
   </component>
   <component name="RunManager">
@@ -144,7 +141,7 @@
       <workItem from="1597426343694" duration="8387000" />
       <workItem from="1597491521680" duration="20617000" />
       <workItem from="1597586137156" duration="18878000" />
-      <workItem from="1597663096378" duration="15158000" />
+      <workItem from="1597663096378" duration="31113000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -423,10 +420,10 @@
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596046879619" />
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1597421982725" />
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1597504527905">
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1597711142152">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596044818219" />
+    <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1597711142152" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1600.870@0.0.1600.870" timestamp="1597504527905" />
     <state x="556" y="218" width="807" height="811" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596294495244" />
   </component>

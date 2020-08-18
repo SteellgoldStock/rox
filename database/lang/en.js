@@ -194,7 +194,7 @@ const languageData = {
         `\`8\`: **${n8}**/**5** with a ping of ${n8p}ms :flag_be:\n` +
         `\`9\`: **${n9}**/**5** with a ping of ${n9p}ms :flag_us:\n` +
         `\`10\`: **${n10}**/**5** with a ping of ${n10p} :flag_us:` +
-        `\n\nChoose a network with \`${prefix}is network [ID]\``,
+        `\n\nChoose a network with \`${prefix}interserver network [ID]\``,
 
     IS_INFO_LINE_TITLE: "__How the interserver works ?__",
     IS_INFO_LINE_1: "- To start you need to define the chat room that will be the discussion point with `!is channel [channel]` replace `[channel]` by a channel mention !",
@@ -206,22 +206,22 @@ const languageData = {
     IS_INFO_LINE_LANG_AU: "× `auto`: Les messages ne seront pas traduit, ils resteront comme ils le sont",
 
     // ADVENTURE
-    ADV_GEMS: "Gems",
-    ADV_JOB: "Job:",
-    ADV_HOUSE: "House:",
-    ADV_HOUSE_LEVEL_0: "Fire Camp",
-    ADV_HOUSE_LEVEL_1: "Refugee Camp",
-    ADV_HOUSE_LEVEL_2: "Tree house",
-    ADV_HOUSE_LEVEL_3: "Stone house",
-    ADV_HOUSE_LEVEL_4: "Stone castle",
-    ADV_HOUSE_LEVEL_5: "Reinforced castle",
-    ADV_JOB_LEVEL_0: "Farmer",
-    ADV_JOB_LEVEL_1: "Librarian",
-    ADV_JOB_LEVEL_2: "Fisherman",
-    ADV_JOB_LEVEL_3: "Seller",
-    ADV_JOB_LEVEL_4: "Negotiator",
-    ADV_JOB_LEVEL_5: "PDG"
+    ADV_GEMS: "gems in the backpack",
+    ADV_BANK: " gems in bank",
 
+    ADV_INV_FIELD_ECONOMY: "Economy",
+    ADV_INV_FIELD_STATS: "Statistics",
+    ADV_INV_FIELD_INFOS: "Information",
+
+    ADV_GEMS_NOT: (gems) => "You don't have enough gems, you're missing a total of `" + gems + "`",
+
+    ADV_BACKPACK_LEVEL_UP: (nLvl, nItem, prefix) => `You've improved your backpack in terms of \`${nLvl}\` you can now hold a maximum of \`${nItem}\`. \n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank add [count]\``,
+
+    ADV_NOT_IN: (prefix) => `You don't have started a adventure, to start use \`${prefix}adv start\``,
+
+    ADV_INVENTORY_TITLE: "Inventory of ",
+    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Your inventory is level \`${level}\`, so you can keep a maximum number of \`${maxItems}\` items in your inventory, you can improve it with \`${prefix}adv_backpack\``,
+    ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Your inventory is level \`${level}\` improve it with \`${prefix}adv_backpack upg\` for have a maximum \`${maxNItems}\` of items available\n\nCost of upgrade: \`${price}\` gems`
 };
 
 const translate = (key, ...args) => {

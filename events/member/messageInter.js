@@ -20,7 +20,7 @@ client.on("message", message => {
         if(message.channel.id == results[0].interServerChannel) {
             if (!cmd) {
                 message.delete();
-                console.log(colors.cyan("(IS) " + message.author.username + " : " + message.content));
+                console.log(colors.cyan("(IS " + results[0].interServerNetwork +") " + message.author.username + " : " + message.content));
                 client.guilds.cache.forEach((guild) => {
                     let sql2 = `SELECT * FROM servers WHERE guildid = ${guild.id}`;
                     database.query(sql2, (error, results2, fields) => {

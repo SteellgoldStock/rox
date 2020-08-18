@@ -1,22 +1,34 @@
 const Discord = require("discord.js");
-const { client, botConfg, fs, colors,messages, team} = require("../../rox");
+const { client, botConfg, fs, colors,messages, team, msg} = require("../../rox");
+
+const bpSizes = {
+    "BP_0": 500,
+    "BP_1": 2500,
+    "BP_2": 5000,
+    "BP_3": 7500,
+    "BP_4": 9000,
+    "BP_5": 11000,
+}
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if(!team.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
+    if (!team.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {
         if (error) {
             return console.error(error.message);
-        }else if(results.length > 0){
+        } else if (results.length > 0) {
             let embed = new Discord.MessageEmbed()
-            .setTitle("Inventory of " + message.author.username)
-            .addField("Stats:", `<:gems:740261046480142377> `+ language("ADV_GEMS") + `: ${kFormatter(results[0].gems)}\n:wrench: `+language("ADV_JOB") + " " +jobFormater(results[0].job,language)+`\n:house: `+language("ADV_HOUSE") + " " + houseFormater(results[0].house,language)+`\n`)
+            embed.setTitle(language("ADV_INVENTORY_TITLE") + message.author.username)
+            embed.setDescription(language("ADV_INVENTORY_DESCRIPTION", results[0].backpackLvl, getSizeBP(results[0].backpackLvl), dataServer.prefix))
+
+            embed.addField(language("ADV_INV_FIELD_ECONOMY"),"• "+ results[0].gems + " "+language("ADV_GEMS") +"\n"+
+                "• "+ results[0].bank + language("ADV_BANK"))
 
             message.channel.send(embed)
-        }else{
-            message.channel.send("Vous n'existez pas dans l'aventure")
+        } else {
+            msg.sendMsg("ADV_NOT_IN", message, dataServer)
         }
     });
 }
@@ -25,40 +37,10 @@ function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
 }
 
-function houseFormater(int, language) {
-    switch (int) {
-        case 0:
-            return language("ADV_HOUSE_LEVEL_0");
-        case 1:
-            return language("ADV_HOUSE_LEVEL_1");
-        case 2:
-            return language("ADV_HOUSE_LEVEL_2");
-        case 3:
-            return language("ADV_HOUSE_LEVEL_3");
-        case 4:
-            return language("ADV_HOUSE_LEVEL_4");
-        case 5:
-            return language("ADV_HOUSE_LEVEL_5");
-    }
-}
-
-function jobFormater(int, language) {
-    switch (int) {
-        case 0:
-            return language("ADV_JOB_LEVEL_0");
-        case 1:
-            return language("ADV_JOB_LEVEL_1");
-        case 2:
-            return language("ADV_JOB_LEVEL_2");
-        case 3:
-            return language("ADV_JOB_LEVEL_3");
-        case 4:
-            return language("ADV_JOB_LEVEL_4");
-        case 5:
-            return language("ADV_JOB_LEVEL_5");
-    }
+function getSizeBP(bpLvl){
+    return bpSizes["BP_"+bpLvl];
 }
 
 exports.help = {
-    name: 'inv',
+    name: 'adv_inv',
 };
