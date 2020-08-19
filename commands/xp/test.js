@@ -9,9 +9,9 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     const canvas = Canvas.createCanvas(934, 282);
     const ctx = canvas.getContext('2d');
 
-    client.db.query(`SELECT * FROM user WHERE userid = '${message.author.id}'`, async(err, rows) => {
+    database.query(`SELECT * FROM servers_xp WHERE userid = '${message.author.id}' AND guildid = '${message.guild.id}'`, async(err, rows) => {
         let level = rows[0].level;
-        let xp = rows[0].userxp;
+        let xp = rows[0].xp;
 
         let barxp = (xp * 700) / 200;
         if (barxp > 700) barxp = 700;
@@ -49,13 +49,13 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         ctx.fillText(message.author.username, 570, 140);
 
         ctx.font = "30px 'rose'";
-        ctx.fillText(`${xp}`, 110, 234);
+        ctx.fillText(`${kFormatter(xp)}`, 110, 234);
 
         ctx.fillText(`200`, 725, 234);
 
         ctx.beginPath();
         ctx.lineWidth = 11;
-        ctx.strokeStyle = "#4945BB";
+        ctx.strokeStyle = "#4945bb";
         ctx.shadowBlur = 20;
         ctx.shadowColor = "black";
         ctx.arc(455, 115, 75, 0, Math.PI * 2, true);
@@ -69,6 +69,10 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         const attach = new Discord.MessageAttachment(canvas.toBuffer(), 'test.jpg');
         await message.channel.send(attach);
     });
+}
+
+function kFormatter(num) {
+    return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
 }
 
 module.exports.help = {
