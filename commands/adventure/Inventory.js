@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { client, botConfg, fs, colors,messages, team, msg, beta} = require("../../rox");
+const { client, botConfg, fs, colors,messages, team, msg, beta, embedBuilder} = require("../../rox");
 
 const bpSizes = {
     "BP_0": 500,
@@ -19,14 +19,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         if (error) {
             return console.error(error.message);
         } else if (results.length > 0) {
-            let embed = new Discord.MessageEmbed()
-            embed.setTitle(language("ADV_INVENTORY_TITLE") + message.author.username)
-            embed.setDescription(language("ADV_INVENTORY_DESCRIPTION", results[0].backpackLvl, getSizeBP(results[0].backpackLvl), dataServer.prefix))
-
-            embed.addField(language("ADV_INV_FIELD_ECONOMY"),"• "+ results[0].gems + " "+language("ADV_GEMS") +"\n"+
-                "• "+ results[0].bank + language("ADV_BANK",dataServer.prefix   ))
-
-            message.channel.send(embed)
+            embedBuilder.embed1Field(message.channel,language("ADV_INVENTORY_TITLE") + message.author.username,language("ADV_INVENTORY_DESCRIPTION", results[0].backpackLvl, getSizeBP(results[0].backpackLvl), dataServer.prefix),embedBuilder.bColor,language("ADV_INV_FIELD_ECONOMY"),"• "+ results[0].gems + " "+language("ADV_GEMS") +"\n"+ "• "+ results[0].bank + language("ADV_BANK",dataServer.prefix),embedBuilder.bFooter)
         } else {
             msg.sendMsg("ADV_NOT_IN", message, dataServer)
         }
