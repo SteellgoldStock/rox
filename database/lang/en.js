@@ -209,19 +209,50 @@ const languageData = {
     ADV_GEMS: "gems in the backpack",
     ADV_BANK: (prefix) => ` gems in bank \`(${prefix}adv_bank)\``,
 
+    ADV_BANK_TYPE_1: "Leather",
+    ADV_BANK_TYPE_2: "Steel",
+    ADV_BANK_TYPE_3: "Diamond",
+
     ADV_INV_FIELD_ECONOMY: "Economy",
     ADV_INV_FIELD_STATS: "Statistics",
     ADV_INV_FIELD_INFOS: "Information",
+    ADV_BANK_FIELD_NOT: "Account prices",
+    ADV_BANK_FIELD_HAVE: "Your account",
 
     ADV_GEMS_NOT: (gems) => "You don't have enough gems, you're missing a total of `" + gems + "`",
+    ADV_TRANSFER_TIME: "Please be patient (10 minutes) between each bank transfer",
 
-    ADV_BACKPACK_LEVEL_UP: (nLvl, nItem, prefix) => `You've improved your backpack in terms of \`${nLvl}\` you can now hold a maximum of \`${nItem}\`. \n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank add [count]\``,
+    ADV_BACKPACK_LEVEL_UP: (nLvl, nItem, prefix) => `You've improved your backpack in terms of \`${nLvl}\` you can now hold a maximum of \`${nItem}\` items\n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank deposit [count]\``,
+    ADV_BANK_LEVEL_UP: (nLvl, nItem) => `You've improved your bank account in terms of \`${nLvl}\` you can now hold a maximum of \`${nItem}\` gems`,
 
     ADV_NOT_IN: (prefix) => `You don't have started a adventure, to start use \`${prefix}adv start\``,
+    ADV_NOT_IN_0: `This member hasn't started an adventure`,
+    ADV_USER_NOT_GEM: `This member doesn't have any gems on him`,
+
+    ADV_ROBBED: (gems, username) => `You just robbed \`${gems}\` gems to \`${username}\`, you must now wait \`24 hours\` before stealing back a member`,
+
+    ADV_ROB_MEMBER_TITLE: "Rob a member",
+    ADV_ROB_COOLDOWN: "Please wait a day to re-rob a member",
 
     ADV_INVENTORY_TITLE: "Inventory of ",
+    ADV_BANK_TITLE: "Banque de ",
     ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Your inventory is level \`${level}\`, so you can keep a maximum number of \`${maxItems}\` items in your inventory, you can improve it with \`${prefix}adv_backpack\``,
-    ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Your inventory is level \`${level}\` improve it with \`${prefix}adv_backpack upg\` for have a maximum \`${maxNItems}\` of items available\n\nCost of upgrade: \`${price}\` gems`
+    ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Your inventory is level \`${level}\` so you can keep a maximum number of \`${maxItems}\` items in your inventory\n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank deposit [count]\``,
+    ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Your inventory is level \`${level}\` improve it with \`${prefix}adv_backpack upg\` for have a maximum \`${maxNItems}\` of items available\n\nCost of upgrade: \`${price}\` gems`,
+    ADV_BACKPACK_FULL: "Your backpack is full",
+
+    ADV_GEMS_NOT_ENOUGH_BANK: "Your account does not have enough gems to take the amount of your request",
+    ADV_GEMS_NOT_ENOUGH: "You don't have enough gems to send the amount you wrote down",
+    ADV_BANK_NOT_ENOUGH: (max, prefix) => `Your account is not large enough to hold more than \`${max}\` gemmes, improve it with the command \`${prefix}adv_bank upg\``,
+
+    ADV_TAKE_SUCCESS: (gems) => `You've just withdrawn \`${gems}\` gems from your account, please wait 10 minutes before your next transfer.`,
+    ADV_TRANSFER_SUCCESS: (gems) => `You now have \`${gems}\` gems in your bank account, wait 10 minutes before you make your next transfer.`,
+    ADV_TRANSFER_SUCCESS_0: (gems) => `You now have \`${gems}\` gems in your backpack, wait 10 minutes before you make your next transfer.`,
+
+    ADV_BANK_DESCRIPTION: `Welcome to the bank, store your gems, to free up storage in your backpack, so you have less chance of having your gems stolen. !`,
+    ADV_BANK_NOT: `You don't have a bank account, here are the prices:\n\n- Leather account: 500 <:gems:740261046480142377>, for a storage of one hundred thousand gems\n- Steel account: 1.000 <:gems:740261046480142377>, for a storage of a million gems.\n- Diamond account: 5.000 <:gems:740261046480142377>, for a storage of ten million gems`,
+    ADV_BANK_BUY: (gems, prefix) => `Thank you, you can now stock up to \`${gems}\` in your bank, if you want to improve the type of account you're using \`${prefix}adv_bank upg\``,
+    ADV_BANK_ACCOUNT: (gems, max, type, rest) => `Your bank account is of type \`${type}\` and contains \`${gems}\` gems, and out of a maximum of \`${max}\`\n\n- So you can still store a total of \`${rest}\` gems.`
 };
 
 const translate = (key, ...args) => {

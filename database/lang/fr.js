@@ -210,19 +210,49 @@ const languageData = {
     ADV_GEMS: "gemmes dans le sac à dos",
     ADV_BANK: (prefix) => ` gemmes en banque \`(${prefix}adv_bank)\``,
 
+    ADV_BANK_TYPE_1: "Cuir",
+    ADV_BANK_TYPE_2: "Argent",
+    ADV_BANK_TYPE_3: "Diamant",
+
     ADV_INV_FIELD_ECONOMY: "Économie",
     ADV_INV_FIELD_STATS: "Statistiques",
     ADV_INV_FIELD_INFOS: "Informations",
+    ADV_BANK_FIELD_NOT: "Prix des comptes",
+    ADV_BANK_FIELD_HAVE: "Votre compte",
 
     ADV_GEMS_NOT: (gems) => "Vous n'avez pas assez de gemmes, il vous en manque un total de `" + gems + "`",
 
-    ADV_BACKPACK_LEVEL_UP: (nLvl, nItem, prefix) => `Vous avez améliorer votre sac à dos au niveau \`${nLvl}\` vous pouvez maintenant contenir un maximum de \`${nItem}\`. \n\n- N'oubliez pas que pour liberez du stockage vous pouvez envoyer vos gemmes dans la banque avec la commande \`${prefix}adv_bank add [count]\``,
+    ADV_BACKPACK_LEVEL_UP: (nLvl, nItem, prefix) => `Vous avez améliorer votre sac à dos au niveau \`${nLvl}\` vous pouvez maintenant contenir un maximum de \`${nItem}\` items\n\n- N'oubliez pas que pour liberez du stockage vous pouvez envoyer vos gemmes dans la banque avec la commande \`${prefix}adv_bank deposit [count]\``,
+    ADV_BANK_LEVEL_UP: (nLvl, nItem) => `Vous avez améliorer votre compte au niveau \`${nLvl}\` vous pouvez maintenant contenir un maximum de \`${nItem}\` gemmes`,
 
     ADV_NOT_IN: (prefix) => `Vous n'avez pas commencé une aventure, pour en débuter une, utilisez \`${prefix}adv start\``,
+    ADV_NOT_IN_0: `Ce membre n'a pas commencé d'aventure`,
+    ADV_USER_NOT_GEM: `Ce membre n'a pas de gemmes sur lui`,
+
+    ADV_ROBBED: (gems, username) => `Vous venez de voler \`${gems}\` gemmes à \`${username}\`, vous devez maintenant patienter \`24 heures\` avant de re-voler un membre`,
+
+    ADV_ROB_MEMBER_TITLE: "Voler un membre",
+    ADV_ROB_COOLDOWN: "Veuillez patienter un jour pour re-voler un membre",
 
     ADV_INVENTORY_TITLE: "Inventaire de ",
-    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\`, vous pouvez donc ontenir un maximum de \`${maxItems}\` items dans votre inventaire, vous pouvez l'améliorer avec \`${prefix}adv_backpack\``,
-    ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Votre inventaire est de niveau \`${level}\` améliorez le avec \`${prefix}adv_backpack upg\` pour avoir un maximum de \`${maxNItems}\` d'items disponible\n\nCoût de l'amélioration: \`${price}\` gemmes`
+    ADV_BANK_TITLE: "Banque de ",
+    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\`, vous pouvez donc contenir un maximum de \`${maxItems}\` items dans votre inventaire, vous pouvez l'améliorer avec \`${prefix}adv_backpack\``,
+    ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\` vous pouvez contenir jusqu'à \`${maxItems}\` items dans votre inventaire\n\n- N'oubliez pas que pour liberez du stockage vous pouvez envoyer vos gemmes dans la banque avec la commande \`${prefix}adv_bank deposit [count]\``,
+    ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Votre inventaire est de niveau \`${level}\` améliorez le avec \`${prefix}adv_backpack upg\` pour avoir un maximum de \`${maxNItems}\` d'items disponible\n\nCoût de l'amélioration: \`${price}\` gemmes`,
+    ADV_BACKPACK_FULL: "Votre sac à dos est plein !",
+
+    ADV_GEMS_NOT_ENOUGH_BANK: "Votre compte ne dispose pas de suffisamment de gemmes pour prendre le montant de votre demande",
+    ADV_GEMS_NOT_ENOUGH: "Vous n'avez pas assez de gemmes pour envoyer le montant que vous avez noter",
+    ADV_BANK_NOT_ENOUGH: (max, prefix) => `Votre compte n'est pas assez développer pour contenir plus de \`${max}\` gemmes, améliorer le avec la commande \`${prefix}adv_bank upg\``,
+
+    ADV_TAKE_SUCCESS: (gems) => `Vous venez de retirer \`${gems}\` gemmes de votre compte, veuillez attendre 10 minutes avant votre prochain transfert`,
+    ADV_TRANSFER_SUCCESS: (gems) => `Vous avez maintenant \`${gems}\` gemmes sur votre compte bancaire, attendez 10 minutes avant d'effectuer votre prochain transfert.`,
+    ADV_TRANSFER_SUCCESS_0: (gems) => `Vous avez maintenant \`${gems}\` gemmes dans votre sac à dos, attendez 10 minutes avant d'effectuer votre prochain transfert.`,
+
+    ADV_BANK_DESCRIPTION: `Bienvenue dans la banque, stockez vos gemmes, pour liberez du stockage dans votre sac à dos, ainsi d'avoir moins de chance de se faire voler vos gemmes !`,
+    ADV_BANK_NOT: `Vous n'avez pas de compte banquaire, voici les prix:\n\n- Compte cuir: \`500\` <:gems:740261046480142377>, pour un stockage de cent mille gemmes\n- Compte argent: \`1.000\` <:gems:740261046480142377>, pour un stockage d'un million de gemmes maximum\n- Compte diamant: \`5.000\` <:gems:740261046480142377>, pour un stockage de dix millions de gemmes maximum`,
+    ADV_BANK_BUY: (gems, prefix) => `Merci, vous pouvez des à présent stocker juqu'à ${gems} dans votre banque, si vous voulez améliorer votre type de compte utliser \`${prefix}adv_bank upg\``,
+    ADV_BANK_ACCOUNT: (gems, max, type, rest) => `Votre compte bancaire est de type \`${type}\` et contient \`${gems}\` gemmes, sur un maximum de \`${max}\`\n\n- Vous pouvez donc encore stocker un total de \`${rest}\` gemme(s).`
 };
 
 const translate = (key, ...args) => {
