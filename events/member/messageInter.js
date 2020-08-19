@@ -30,7 +30,7 @@ client.on("message", message => {
 
                         if(results2[0].interServerNetwork == dataServer.interServerNetwork){
                             if (results2[0].interServerChannel !== "false") {
-                                guild.channels.cache.get(`${results2[0].interServerChannel}`).send(Buffer.from(dataServer.tag, 'base64').toString('utf8') + isTeam(message.author.id) + " `" + correctName(message.author.id, message.author.username) + "`: " + isIn(message.content));
+                                guild.channels.cache.get(`${results2[0].interServerChannel}`).send(Buffer.from(dataServer.tag, 'base64').toString('utf8') + isTeam(message.author.id) + " " + correctName(message.author.id, message.author.username) + ": " + isIn(message.content));
                             }
                         }
                     });
@@ -60,9 +60,11 @@ function isTeam(id){
 
 function correctName(id, name){
     if(id == 504392983244832780){
-        return "Gaëtan";
+        return "`Gaëtan`";
+    }else if(id == 457144873859022858){
+        return `<:gems:740261046480142377> \`${name}\``;
     }else{
-        return name;
+        return "`name`";
     }
 }
 
