@@ -3,6 +3,10 @@ exports.client = new Discord.Client({disableEveryone: true});
 exports.fs = require('fs');
 exports.colors = require("colors");
 exports.msg = require("./functions/msg");
+exports.advGems = require("./functions/adventure/gems");
+exports.advBank = require("./functions/adventure/bank");
+exports.advBp = require("./functions/adventure/backpack");
+exports.embedBuilder = require("./functions/embed");
 exports.client.commands = new Discord.Collection();
 exports.team = [
     "504392983244832780",
@@ -17,7 +21,8 @@ exports.beta = [
     "660921972271611924",
     "163678654952374272",
     "550271684691886090",
-    "637007577154191362"
+    "637007577154191362",
+    "711930203605303317"
 ];
 
 exports.red = "#b04949";
@@ -164,6 +169,8 @@ exports.client.on('ready', () => {
     loadCommand('./commands/music/');
     loadCommand('./commands/adventure/');
     loadCommand('./commands/adventure/items/');
+    loadCommand('./commands/adventure/system/');
+    loadCommand('./commands/adventure/member/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {

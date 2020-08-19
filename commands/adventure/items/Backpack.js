@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
-const { client, botConfg, fs, colors,messages, team, msg, green, red, beta} = require("../../../rox");
+const { client, botConfg, fs, colors,messages, team, msg, green, red, beta, embedBuilder, advBank, advGems, advBp} = require("../../../rox");
 
+const bpMax = 5;
 const bpSizes = {
     "BP_0": 500,
     "BP_1": 2500,
@@ -28,32 +29,26 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return console.error(error.message);
         } else if (results.length > 0) {
             if (!args[0]) {
-                let embed = new Discord.MessageEmbed()
-                embed.setTitle(language("ADV_INVENTORY_TITLE") + message.author.username)
-                embed.setDescription(language("ADV_BACKPACK_UP", results[0].backpackLvl, getSizeBP(results[0].backpackLvl), getPriceBP(results[0].backpackLvl), dataServer.prefix))
-                message.channel.send(embed)
+                if (results[0].backpackLvl == bpMax) {
+                    embedBuilder.embed0Field(message.channel,language("ADV_INVENTORY_TITLE") + message.author.username,language("ADV_BACKPACK_MAX",results[0].backpackLvl, getASizeBP(results[0].backpackLvl), dataServer.prefix),embedBuilder.bColor,embedBuilder.bFooter)
+                }else{
+                    embedBuilder.embed0Field(message.channel,language("ADV_INVENTORY_TITLE") + message.author.username,language("ADV_BACKPACK_UP", results[0].backpackLvl, getSizeBP(results[0].backpackLvl), getPriceBP(results[0].backpackLvl), dataServer.prefix),embedBuilder.bColor,embedBuilder.bFooter)
+                }
             } else {
                 switch (args[0]) {
                     case "upg":
-                        if(results[0].gems >= getPriceBP(results[0].backpackLvl)){
-                            let bpLvl = parseInt(results[0].backpackLvl) + parseInt("1");
-                            let gemsN = parseInt(results[0].gems) - parseInt(getPriceBP(results[0].backpackLvl));
-                            var sql = `UPDATE adventure SET backpackLvl = '${bpLvl}' WHERE userid = '${message.author.id}'`;
-                            var sql2 = `UPDATE adventure SET gems = '${gemsN}' WHERE userid = '${message.author.id}'`;
-                            database.query(sql, function (err) { if (err) throw err; });
-                            database.query(sql2, function (err) { if (err) throw err; });
+                        if (results[0].backpackLvl == bpMax) {
+                            return message.channel.send("max");
+                        }
 
-                            let embed = new Discord.MessageEmbed()
-                            embed.setTitle(language("ADV_INVENTORY_TITLE") + message.author.username)
-                            embed.setDescription(language("ADV_BACKPACK_LEVEL_UP",bpLvl, getSizeBP(results[0].backpackLvl), dataServer.prefix));
-                            embed.setColor(green);
-                            message.channel.send(embed)
-                        }else{
-                            let embed = new Discord.MessageEmbed()
-                            embed.setTitle(language("ADV_INVENTORY_TITLE") + message.author.username)
-                            embed.setDescription(language("ADV_GEMS_NOT",getPriceBP(results[0].backpackLvl) - results[0].gems));
-                            embed.setColor(red);
-                            message.channel.send(embed)
+                        if (results[0].gems >= getPriceBP(results[0].backpackLvl)) {
+                            let bpLvl = parseInt(results[0].backpackLvl) + parseInt("1");
+
+                            advBp.setBackpackLevel(message.author.id,bpLvl,database)
+                            advGems.removeGems(message.author.id,results[0].gems,getPriceBP(results[0].backpackLvl),database)
+                            embedBuilder.embed0Field(message.channel, language("ADV_INVENTORY_TITLE") + message.author.username, language("ADV_BACKPACK_LEVEL_UP", bpLvl, getSizeBP(results[0].backpackLvl), dataServer.prefix), green, embedBuilder.bFooter);
+                        } else {
+                            embedBuilder.embed0Field(message.channel, language("ADV_INVENTORY_TITLE") + message.author.username, language("ADV_GEMS_NOT", getPriceBP(results[0].backpackLvl) - results[0].gems), red, embedBuilder.bFooter);
                         }
                         break;
                 }
@@ -71,6 +66,10 @@ function kFormatter(num) {
 function getSizeBP(bpLvl){
     let n = bpLvl + 1;
     return bpSizes["BP_"+n];
+}
+
+function getASizeBP(bpLvl){
+    return bpSizes["BP_"+bpLvl];
 }
 
 function getPriceBP(bpLvl){

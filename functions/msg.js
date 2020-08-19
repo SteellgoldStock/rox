@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { client, botConfg, fs, colors, database} = require("../rox");
-exports.nameversion = "Rox • v0.1";
-exports.pversion = " • v0.1";
+exports.nameversion = "Rox • v1.0";
+exports.pversion = " • v1.0";
 exports.version = "v1.0";
 
 exports.sendMsg = async(text, message, dataServer = null) => {
