@@ -1,9 +1,9 @@
-const Discord = require('discord.js');
-const Canvas = require('canvas');
+const Discord = require("discord.js");
+const { client, database, msg, colors, fs, team} = require("../../rox");
 
-module.exports.run = async(client, message) => {
+module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
 
-    Canvas.registerFont('././assets/fonts/aAbsoluteEmpire.ttf', { family: "rose" });
+    Canvas.registerFont('././assets/fonts/aAbsoluteEmpire.otf', { family: "rose" });
 
     const canvas = Canvas.createCanvas(934, 282);
     const ctx = canvas.getContext('2d');
