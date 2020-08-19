@@ -134,5 +134,5 @@ function kFormatter(num) {
 }
 
 module.exports.help = {
-    name: "lvl"
+    name: "level"
 }
