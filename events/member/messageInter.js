@@ -64,7 +64,7 @@ function correctName(id, name){
     }else if(id == 457144873859022858){
         return `<:gems:740261046480142377> \`${name}\``;
     }else{
-        return "`name`";
+        return `\`${name}\``;
     }
 }
 
