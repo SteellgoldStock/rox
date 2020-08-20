@@ -209,15 +209,41 @@ const languageData = {
     ADV_GEMS: "gems in the backpack",
     ADV_BANK: (prefix) => ` gems in bank \`(${prefix}adv_bank)\``,
 
+    ADV_ENERGY: "Energy",
+
     ADV_BANK_TYPE_1: "Leather",
     ADV_BANK_TYPE_2: "Steel",
     ADV_BANK_TYPE_3: "Diamond",
 
-    ADV_INV_FIELD_ECONOMY: "Economy",
+    ADV_INV_FIELD_PROFIL: "Profil de Jeu",
     ADV_INV_FIELD_STATS: "Statistics",
     ADV_INV_FIELD_INFOS: "Information",
+    ADV_INV_FIELD_ITEMS: "Items",
+    ADV_INV_FIELD_ORES: "Resources",
     ADV_BANK_FIELD_NOT: "Account prices",
     ADV_BANK_FIELD_HAVE: "Your account",
+
+    ADV_STONE: "stone",
+    ADV_GOLD: "gold",
+    ADV_IRON: "iron",
+    ADV_OBSIDIAN: "obsidian",
+    ADV_GEMS_0: "gems",
+    ADV_WOOD: "wood",
+
+    ADV_MINE: (count, type) => `You have breaked \`x${count}\` \`${type}\``,
+    ADV_AXED: (count, type) => `You cut \`x${count}\` \`${type}\``,
+
+    ADV_MINER_HELMET_LEVEL: (level) => `Your miner helmet level is \`${level}\``,
+    ADV_MINER_HELMET_NOT: (prefix) => `You don't have a miner helmet \`(${prefix}adv_helmet)\``,
+
+    ADV_RING_LEVEL: (level) => `Your ring level is \`${level}\``,
+    ADV_RING_NOT: (prefix) => `You don't have a ring \`(${prefix}adv_ring)\``,
+
+    ADV_PICKAXE_LEVEL: (level) => `Your pickace level is \`${level}\``,
+    ADV_PICKAXE_NOT: (prefix) => `You don't have pickaxe \`(${prefix}adv_pick)\``,
+
+    ADV_AXE_LEVEL: (level) => `Your axe level is \`${level}\``,
+    ADV_AXE_NOT: (prefix) => `You don't have a axe \`(${prefix}adv_axe)\``,
 
     ADV_GEMS_NOT: (gems) => "You don't have enough gems, you're missing a total of `" + gems + "`",
     ADV_TRANSFER_TIME: "Please be patient (10 minutes) between each bank transfer",
@@ -240,6 +266,12 @@ const languageData = {
     ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Your inventory is level \`${level}\` so you can keep a maximum number of \`${maxItems}\` items in your inventory\n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank deposit [count]\``,
     ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Your inventory is level \`${level}\` improve it with \`${prefix}adv_backpack upg\` for have a maximum \`${maxNItems}\` of items available\n\nCost of upgrade: \`${price}\` gems`,
     ADV_BACKPACK_FULL: "Your backpack is full",
+    ADV_INVENTORY_ORES: (wood, stone, iron, gold, obsidian) => "Here are your resources:\n" +
+        `Wood: \`${wood}\`\n` +
+        `Stone: \`${stone}\`\n` +
+        `Iron: \`${iron}\`\n`+
+        `Gold: \`${gold}\`\n`+
+        `Obsidian: \`${obsidian}\`\n`,
 
     ADV_GEMS_NOT_ENOUGH_BANK: "Your account does not have enough gems to take the amount of your request",
     ADV_GEMS_NOT_ENOUGH: "You don't have enough gems to send the amount you wrote down",

@@ -210,15 +210,41 @@ const languageData = {
     ADV_GEMS: "gemmes dans le sac à dos",
     ADV_BANK: (prefix) => ` gemmes en banque \`(${prefix}adv_bank)\``,
 
+    ADV_ENERGY: "d'Énergie",
+
     ADV_BANK_TYPE_1: "Cuir",
     ADV_BANK_TYPE_2: "Argent",
     ADV_BANK_TYPE_3: "Diamant",
 
-    ADV_INV_FIELD_ECONOMY: "Économie",
+    ADV_INV_FIELD_PROFIL: "Profil de Jeu",
     ADV_INV_FIELD_STATS: "Statistiques",
     ADV_INV_FIELD_INFOS: "Informations",
+    ADV_INV_FIELD_ITEMS: "Objets",
+    ADV_INV_FIELD_ORES: "Ressources",
     ADV_BANK_FIELD_NOT: "Prix des comptes",
     ADV_BANK_FIELD_HAVE: "Votre compte",
+
+    ADV_STONE: "pierre",
+    ADV_GOLD: "or",
+    ADV_IRON: "fer",
+    ADV_OBSIDIAN: "obsidienne",
+    ADV_GEMS_0: "gemmes",
+    ADV_WOOD: "bois",
+
+    ADV_MINE: (count, type, emoji) => `Vous avez miner \`x${count}\` de \`${type}\` ${emoji}`,
+    ADV_AXED: (count, type, emoji) => `Vous avez bûcher \`x${count}\` de \`${type}\` ${emoji}`,
+
+    ADV_MINER_HELMET_LEVEL: (level) => `Votre casque de mineur est niveau \`${level}\``,
+    ADV_MINER_HELMET_NOT: (prefix) => `Aucun casque de mineur \`(${prefix}adv_helmet)\``,
+
+    ADV_RING_LEVEL: (level) => `Votre anneau est de niveau \`${level}\``,
+    ADV_RING_NOT: (prefix) => `Vous n'avez pas d'anneau \`(${prefix}adv_ring)\``,
+
+    ADV_PICKAXE_LEVEL: (level) => `Votre pioche est niveau \`${level}\``,
+    ADV_PICKAXE_NOT: (prefix) => `Vous n'avez pas de pioche \`(${prefix}adv_pick)\``,
+
+    ADV_AXE_LEVEL: (level) => `Votre hache est niveau \`${level}\``,
+    ADV_AXE_NOT: (prefix) => `Vous n'avez pas de hache \`(${prefix}adv_axe)\``,
 
     ADV_GEMS_NOT: (gems) => "Vous n'avez pas assez de gemmes, il vous en manque un total de `" + gems + "`",
 
@@ -240,6 +266,12 @@ const languageData = {
     ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\` vous pouvez contenir jusqu'à \`${maxItems}\` items dans votre inventaire\n\n- N'oubliez pas que pour liberez du stockage vous pouvez envoyer vos gemmes dans la banque avec la commande \`${prefix}adv_bank deposit [count]\``,
     ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Votre inventaire est de niveau \`${level}\` améliorez le avec \`${prefix}adv_backpack upg\` pour avoir un maximum de \`${maxNItems}\` d'items disponible\n\nCoût de l'amélioration: \`${price}\` gemmes`,
     ADV_BACKPACK_FULL: "Votre sac à dos est plein !",
+    ADV_INVENTORY_ORES: (wood, stone, iron, gold, obsidian) => "Voici vos ressources:\n" +
+        `<:wood:745648872415559712> Bois: \`${wood}\`\n` +
+        `<:stone:745706191857909860> Pierre: \`${stone}\`\n` +
+        `<:iron:745648871815774380> Fer: \`${iron}\`\n`+
+        `<:gold:745648873300557855> Or: \`${gold}\`\n`+
+        `<:obsidian:745728200998518905> Obsidienne: \`${obsidian}\`\n`,
 
     ADV_GEMS_NOT_ENOUGH_BANK: "Votre compte ne dispose pas de suffisamment de gemmes pour prendre le montant de votre demande",
     ADV_GEMS_NOT_ENOUGH: "Vous n'avez pas assez de gemmes pour envoyer le montant que vous avez noter",
