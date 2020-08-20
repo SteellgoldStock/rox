@@ -5,6 +5,8 @@ exports.colors = require("colors");
 exports.msg = require("./functions/msg");
 exports.advGems = require("./functions/adventure/gems");
 exports.advBank = require("./functions/adventure/bank");
+exports.advResources = require("./functions/adventure/resources");
+exports.advEnergy = require("./functions/adventure/energy");
 exports.advBp = require("./functions/adventure/backpack");
 exports.embedBuilder = require("./functions/embed");
 exports.client.commands = new Discord.Collection();
@@ -22,7 +24,8 @@ exports.beta = [
     "163678654952374272",
     "550271684691886090",
     "637007577154191362",
-    "711930203605303317"
+    "711930203605303317",
+    "457144873859022858"
 ];
 
 exports.red = "#b04949";
