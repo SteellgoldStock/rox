@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
+      <change afterPath="$PROJECT_DIR$/commands/adventure/system/Resource.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/adventure/energy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/adventure/resources.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/embed.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/embed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/functions/adventure" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,27 +81,29 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions\adventure" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\assets" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\items" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\basic" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\functions\adventure" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\assets" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions\adventure" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\items" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\basic" />
-    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +151,7 @@
       <workItem from="1597748786072" duration="10301000" />
       <workItem from="1597759594266" duration="25000" />
       <workItem from="1597760720156" duration="24666000" />
+      <workItem from="1597868003352" duration="12767000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -413,11 +425,11 @@
     </state>
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953598638" />
     <state x="573" y="308" width="622" height="557" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870@0.0.1600.870" timestamp="1597349405604" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1597788087746">
+    <state x="456" y="198" key="run.anything.popup" timestamp="1597877652310">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596046879619" />
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1597788087746" />
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1597877652310" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1597783120190">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
