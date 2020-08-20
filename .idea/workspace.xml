@@ -20,16 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/commands/adventure/system/Resource.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/adventure/energy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/adventure/resources.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/embed.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/embed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/items/Backpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/items/Backpack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/system/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/system/Resource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/adventure/resources.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/adventure/resources.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,21 +89,6 @@
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -152,6 +132,7 @@
       <workItem from="1597759594266" duration="25000" />
       <workItem from="1597760720156" duration="24666000" />
       <workItem from="1597868003352" duration="12767000" />
+      <workItem from="1597925226213" duration="7153000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -425,11 +406,11 @@
     </state>
     <state x="573" y="308" width="621" height="284" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1595953598638" />
     <state x="573" y="308" width="622" height="557" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1600.870@0.0.1600.870" timestamp="1597349405604" />
-    <state x="456" y="198" key="run.anything.popup" timestamp="1597877652310">
+    <state x="456" y="198" key="run.anything.popup" timestamp="1597930333191">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="456" y="198" key="run.anything.popup/0.0.1600.870/1600.0.1600.870@0.0.1600.870" timestamp="1596046879619" />
-    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1597877652310" />
+    <state x="456" y="198" key="run.anything.popup/0.0.1600.870@0.0.1600.870" timestamp="1597930333191" />
     <state x="463" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1597783120190">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

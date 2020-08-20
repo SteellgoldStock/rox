@@ -80,3 +80,14 @@ exports.removeWood = async(userid, enA, enB, database) => {
         if (err) throw err;
     });
 }
+
+exports.getCount = async (res) => {
+    if(res.minerHelmetLvl >= 1){
+        exports.mi = 1;
+    }else{exports.mi = 0;}
+    if(res.ringLvl >= 1){
+        exports.ri = 1;
+    }else{exports.ri = 0;}
+
+    return parseInt(res.gems) + parseInt(res.wood) + parseInt(res.stone) + parseInt(res.iron) + parseInt(res.gold) + parseInt(res.obsidian) + parseInt("2") + parseInt(exports.mi) + parseInt(exports.ri);
+}

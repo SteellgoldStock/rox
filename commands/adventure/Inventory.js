@@ -7,7 +7,12 @@ const bpSizes = {
     "BP_2": 5000,
     "BP_3": 7500,
     "BP_4": 9000,
-    "BP_5": 11000,
+    "BP_5": 10000,
+    "BP_6": 50000,
+    "BP_7": 100000,
+    "BP_8": 1000000,
+    "BP_9": 10000000,
+    "BP_10": 1000000000,
 }
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
@@ -61,6 +66,16 @@ function getBpEmoji(level){
         return "<:backpack4:745755347372998657>";
     }else if(level == 5){
         return "<:backpack5:745755347431456809>";
+    }else if(level == 6){
+        return "<:backpack5:745755347431456809>";
+    }else if(level == 7){
+        return "<:backpack5:745755347431456809>";
+    }else if(level == 8){
+        return "<:backpack5:745755347431456809>";
+    }else if(level == 9){
+        return "<:backpack5:745755347431456809>";
+    }else if(level == 10){
+        return "<:backpack5:745755347431456809>";
     }else{
         return "<:backpack0:745755704425578563>";
     }
@@ -87,7 +102,7 @@ function getPickaxe(level, lang, prefix){
     }
 }
 function getAxe(level, lang, prefix){
-    if(level == 0 ){
+    if(level == 0){
         return lang("ADV_AXE_NOT",prefix)
     }else{
         return lang("ADV_AXE_LEVEL",level)

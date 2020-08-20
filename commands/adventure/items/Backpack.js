@@ -1,14 +1,19 @@
 const Discord = require("discord.js");
 const { client, botConfg, fs, colors,messages, team, msg, green, red, beta, embedBuilder, advBank, advGems, advBp} = require("../../../rox");
 
-const bpMax = 5;
+const bpMax = 10;
 const bpSizes = {
     "BP_0": 500,
     "BP_1": 2500,
     "BP_2": 5000,
     "BP_3": 7500,
     "BP_4": 9000,
-    "BP_5": 11000,
+    "BP_5": 10000,
+    "BP_6": 50000,
+    "BP_7": 100000,
+    "BP_8": 1000000,
+    "BP_9": 10000000,
+    "BP_10": 1000000000,
 }
 const bpPrice = {
     "BP_0": 300,
@@ -17,6 +22,11 @@ const bpPrice = {
     "BP_3": 1600,
     "BP_4": 2400,
     "BP_5": 3200,
+    "BP_6": 5000,
+    "BP_7": 10000,
+    "BP_8": 15000,
+    "BP_9": 20000,
+    "BP_10": 30000,
 }
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
