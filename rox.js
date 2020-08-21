@@ -18,14 +18,17 @@ exports.team = [
 ];
 
 exports.beta = [
-    "504392983244832780",
-    "558793081663782913",
-    "660921972271611924",
-    "163678654952374272",
-    "550271684691886090",
-    "637007577154191362",
-    "711930203605303317",
-    "457144873859022858"
+    "504392983244832780", // Gaetan
+    "558793081663782913", // KiMi
+    "660921972271611924", // Jordan
+    "163678654952374272", // Akumaru
+    "711930203605303317", // UnNyanCat
+    "457144873859022858", // Arclegrandroi
+    "635205630570790936", // Panda Trop chou
+    "737731555627237418", // Wiltom Nautique
+    "743028307238584350", // HELOOOO
+    "483563685244043265", // Toz
+    "472294019691708416" // SINOX
 ];
 
 exports.red = "#b04949";
@@ -161,19 +164,13 @@ exports.client.on('ready', () => {
     }, 2000);
 
     /* COMMANDS LOADER */
-    loadCommand('./commands/basic/');
-    loadCommand('./commands/settings/');
-    loadCommand('./commands/xp/');
-    loadCommand('./commands/mod/');
-    loadCommand('./commands/admin/');
-    loadCommand('./commands/gold/');
-    loadCommand('./commands/team/');
-    loadCommand('./commands/fun/');
-    loadCommand('./commands/music/');
     loadCommand('./commands/adventure/');
     loadCommand('./commands/adventure/items/');
+    loadCommand('./commands/adventure/items/');
+    loadCommand('./commands/adventure/items/ressources/');
     loadCommand('./commands/adventure/system/');
     loadCommand('./commands/adventure/member/');
+    loadCommand('./commands/adventure/shop/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {
@@ -195,7 +192,7 @@ exports.client.on('ready', () => {
     require('./events/listener/eventsRegister');
 })
 
-exports.client.login("NzMzNzYwMDcwNTAzODkwOTk0.XxH1UQ.Q1A1Jpj-wcpYnOaVPQOXmmhZEB0");
+exports.client.login("NzM0NTM3MzI5MzUxMzI3ODI3.XxTJMg.44i-O37exf13kJbpQnH6WahmpdA");
 
 function membersCount(){
     let number = 0;
