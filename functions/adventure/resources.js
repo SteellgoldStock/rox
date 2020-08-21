@@ -50,7 +50,7 @@ exports.removeStone = async(userid, enA, enB, database) => {
 }
 
 exports.removeIron = async(userid, enA, enB, database) => {
-    let e = parseInt(enA) + parseInt(enB);
+    let e = parseInt(enA) - parseInt(enB);
     const sql = `UPDATE adventure SET iron = '${e}' WHERE userid = '${userid}'`;
     database.query(sql, function (err) {
         if (err) throw err;
@@ -58,7 +58,7 @@ exports.removeIron = async(userid, enA, enB, database) => {
 }
 
 exports.removeGold = async(userid, enA, enB, database) => {
-    let e = parseInt(enA) + parseInt(enB);
+    let e = parseInt(enA) - parseInt(enB);
     const sql = `UPDATE adventure SET gold = '${e}' WHERE userid = '${userid}'`;
     database.query(sql, function (err) {
         if (err) throw err;
@@ -66,7 +66,7 @@ exports.removeGold = async(userid, enA, enB, database) => {
 }
 
 exports.removeObsidian = async(userid, enA, enB, database) => {
-    let e = parseInt(enA) + parseInt(enB);
+    let e = parseInt(enA) - parseInt(enB);
     const sql = `UPDATE adventure SET obsidian = '${e}' WHERE userid = '${userid}'`;
     database.query(sql, function (err) {
         if (err) throw err;
@@ -74,20 +74,9 @@ exports.removeObsidian = async(userid, enA, enB, database) => {
 }
 
 exports.removeWood = async(userid, enA, enB, database) => {
-    let e = parseInt(enA) + parseInt(enB);
+    let e = parseInt(enA) - parseInt(enB);
     const sql = `UPDATE adventure SET wood = '${e}' WHERE userid = '${userid}'`;
     database.query(sql, function (err) {
         if (err) throw err;
     });
-}
-
-exports.getCount = async (res) => {
-    if(res.minerHelmetLvl >= 1){
-        exports.mi = 1;
-    }else{exports.mi = 0;}
-    if(res.ringLvl >= 1){
-        exports.ri = 1;
-    }else{exports.ri = 0;}
-
-    return parseInt(res.gems) + parseInt(res.wood) + parseInt(res.stone) + parseInt(res.iron) + parseInt(res.gold) + parseInt(res.obsidian) + parseInt("2") + parseInt(exports.mi) + parseInt(exports.ri);
 }
