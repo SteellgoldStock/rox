@@ -88,7 +88,7 @@ const languageData = {
     HELP_CC_FIELD: (serverName) => "Commandes personnalisées (**" + serverName + "**)",
     HELP_GOLD_USER_FIELD: "Avantages pour l'utilisateur Gold",
     HELP_GOLD_SERVER_FIELD: "Avantages du serveur Gold",
-    HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> Pour mieux vous aider, vous pouvez utiliser la commande \`${prefix}help [command]\` pour obtenir les usages, les arguments, la description tout ce qui peut vous aider à utiliser le bot`,
+    HELP_DESCRIPTION: (prefix) => `<:rox:746093259432001687> Pour mieux vous aider, vous pouvez utiliser la commande \`${prefix}help [command]\` pour obtenir les usages, les arguments, la description tout ce qui peut vous aider à utiliser le bot`,
 
     // Moderations commands messages
     PUNISH_Y: `Vous ne pouvez pas vous punir`,
@@ -262,16 +262,16 @@ const languageData = {
 
     ADV_INVENTORY_TITLE: "Inventaire de ",
     ADV_BANK_TITLE: "Banque de ",
-    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\`, vous pouvez donc contenir un maximum de \`${maxItems}\` items dans votre inventaire, vous pouvez l'améliorer avec \`${prefix}adv_backpack\``,
+    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Le sac à dos est de niveau \`${level}\`, l'inventaire peut donc contenir jusqu'à \`${maxItems}\` items dans le sac à dos, l'inventaire peut être améliorer avec \`${prefix}adv_inv upg\``,
     ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Votre inventaire est de niveau \`${level}\` vous pouvez contenir jusqu'à \`${maxItems}\` items dans votre inventaire\n\n- N'oubliez pas que pour liberez du stockage vous pouvez envoyer vos gemmes dans la banque avec la commande \`${prefix}adv_bank deposit [count]\``,
     ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Votre inventaire est de niveau \`${level}\` améliorez le avec \`${prefix}adv_backpack upg\` pour avoir un maximum de \`${maxNItems}\` d'items disponible\n\nCoût de l'amélioration: \`${price}\` gemmes`,
     ADV_BACKPACK_FULL: "Votre sac à dos est plein !",
     ADV_INVENTORY_ORES: (wood, stone, iron, gold, obsidian) => "Voici vos ressources:\n" +
-        `<:wood:745648872415559712> Bois: \`${wood}\`\n` +
-        `<:stone:745706191857909860> Pierre: \`${stone}\`\n` +
-        `<:iron:745648871815774380> Fer: \`${iron}\`\n`+
-        `<:gold:745648873300557855> Or: \`${gold}\`\n`+
-        `<:obsidian:745728200998518905> Obsidienne: \`${obsidian}\`\n`,
+        `<:wood:746093053068050504> Bois: \`${wood}\`\n` +
+        `<:stone:746093115202338867> Pierre: \`${stone}\`\n` +
+        `<:iron:746093114996817920> Fer: \`${iron}\`\n`+
+        `<:gold:746093115265384622> Or: \`${gold}\`\n`+
+        `<:obsidian:746097330276794369> Obsidienne: \`${obsidian}\`\n`,
 
     ADV_GEMS_NOT_ENOUGH_BANK: "Votre compte ne dispose pas de suffisamment de gemmes pour prendre le montant de votre demande",
     ADV_GEMS_NOT_ENOUGH: "Vous n'avez pas assez de gemmes pour envoyer le montant que vous avez noter",
@@ -281,8 +281,20 @@ const languageData = {
     ADV_TRANSFER_SUCCESS: (gems) => `Vous avez maintenant \`${gems}\` gemmes sur votre compte bancaire, attendez 10 minutes avant d'effectuer votre prochain transfert.`,
     ADV_TRANSFER_SUCCESS_0: (gems) => `Vous avez maintenant \`${gems}\` gemmes dans votre sac à dos, attendez 10 minutes avant d'effectuer votre prochain transfert.`,
 
+    ADV_SELLED: (c, emoji) => `Vous venez de vendre \`x${c}\`${emoji}`,
+    ADV_BUYED: (c, emoji) => `Vous venez d'acheter \`x${c}\`${emoji}`,
+    ADV_ITEMS_SELL: "Voici les items que vous pouvez vendre, `wood`, `stone`, `iron`, `gold`, `obsidian`",
+    ADV_ITEMS_BUY: "Voici les items que vous pouvez acheter, \nResources: `wood`, `stone`, `iron`, `gold`, `obsidian`",
+
+    ADV_NOT_HAVE_TO_SELL: (count) => `Vous n'avez pas assez de resources pour en vendre \`x${count}\``,
+    ADV_NOT_HAVE_TO_BUY: (count) => `Vous n'avez pas assez de gemmes pour acheter \`x${count}\` de cette ressources`,
+
+    ADV_SHOP_USE_SELL: (prefix) => `Pour \`[acheter/vendre]\` vous devez utilisez: \`${prefix}[buy/sell] [type] [count]\``,
+
+    ADV_ITEMS_INFO: (name, util, fab) => `__Informations de **${name}**__\n__Utilité__: ${util}\n\n__Coût de fabrication__: ${fab}`,
+
     ADV_BANK_DESCRIPTION: `Bienvenue dans la banque, stockez vos gemmes, pour liberez du stockage dans votre sac à dos, ainsi d'avoir moins de chance de se faire voler vos gemmes !`,
-    ADV_BANK_NOT: `Vous n'avez pas de compte banquaire, voici les prix:\n\n- Compte cuir: \`500\` <:gems:740261046480142377>, pour un stockage de cent mille gemmes\n- Compte argent: \`1.000\` <:gems:740261046480142377>, pour un stockage d'un million de gemmes maximum\n- Compte diamant: \`5.000\` <:gems:740261046480142377>, pour un stockage de dix millions de gemmes maximum`,
+    ADV_BANK_NOT: `Vous n'avez pas de compte banquaire, voici les prix:\n\n- Compte cuir: \`500\` <:gems:746098225785864263>, pour un stockage de cent mille gemmes\n- Compte argent: \`1.000\` <:gems:746098225785864263>, pour un stockage d'un million de gemmes maximum\n- Compte diamant: \`5.000\` <:gems:746098225785864263>, pour un stockage de dix millions de gemmes maximum`,
     ADV_BANK_BUY: (gems, prefix) => `Merci, vous pouvez des à présent stocker juqu'à ${gems} dans votre banque, si vous voulez améliorer votre type de compte utliser \`${prefix}adv_bank upg\``,
     ADV_BANK_ACCOUNT: (gems, max, type, rest) => `Votre compte bancaire est de type \`${type}\` et contient \`${gems}\` gemmes, sur un maximum de \`${max}\`\n\n- Vous pouvez donc encore stocker un total de \`${rest}\` gemme(s).`
 };

@@ -59,7 +59,7 @@ async function send(res,message, data){
         .setDescription(exports.desc + "\n\n» `" + data.prefix + res.usage + "`")
         .setThumbnail(client.user.avatarURL())
         .setTimestamp()
-        .setFooter('Rox • v0.1',client.user.avatarURL())
+        .setFooter('Rox • v1.0',client.user.avatarURL())
     message.channel.send(embed)
 }
 

@@ -87,7 +87,7 @@ const languageData = {
     HELP_CC_FIELD: (serverName) => "Customs Command (**" + serverName + "**)",
     HELP_GOLD_USER_FIELD: "Gold User benefits",
     HELP_GOLD_SERVER_FIELD: "Gold Server benefits",
-    HELP_DESCRIPTION: (prefix) => `<:rox:737051270980042783> To help you better you can use the \`${prefix}help [command]\` to get the uses, arguments, description all that can help you to use the bot`,
+    HELP_DESCRIPTION: (prefix) => `<:rox:746093259432001687> To help you better you can use the \`${prefix}help [command]\` to get the uses, arguments, description all that can help you to use the bot`,
 
     // Moderations commands messages
     PUNISH_Y: `You can't punish yourself`,
@@ -262,16 +262,16 @@ const languageData = {
 
     ADV_INVENTORY_TITLE: "Inventory of ",
     ADV_BANK_TITLE: "Banque de ",
-    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `Your inventory is level \`${level}\`, so you can keep a maximum number of \`${maxItems}\` items in your inventory, you can improve it with \`${prefix}adv_backpack\``,
+    ADV_INVENTORY_DESCRIPTION: (level, maxItems, prefix) => `The backpack is level \`${level}\`, the inventory can therefore contain up to \`${maxItems}\` items in the backpack, inventory can be improved with \`${prefix}adv_inv upg\``,
     ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Your inventory is level \`${level}\` so you can keep a maximum number of \`${maxItems}\` items in your inventory\n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank deposit [count]\``,
     ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Your inventory is level \`${level}\` improve it with \`${prefix}adv_backpack upg\` for have a maximum \`${maxNItems}\` of items available\n\nCost of upgrade: \`${price}\` gems`,
     ADV_BACKPACK_FULL: "Your backpack is full",
     ADV_INVENTORY_ORES: (wood, stone, iron, gold, obsidian) => "Here are your resources:\n" +
-        `Wood: \`${wood}\`\n` +
-        `Stone: \`${stone}\`\n` +
-        `Iron: \`${iron}\`\n`+
-        `Gold: \`${gold}\`\n`+
-        `Obsidian: \`${obsidian}\`\n`,
+        `<:wood:746093053068050504> Wood: \`${wood}\`\n` +
+        `<:stone:746093115202338867> Stone: \`${stone}\`\n` +
+        `<:iron:746093114996817920> Iron: \`${iron}\`\n`+
+        `<:gold:746093115265384622> Gold: \`${gold}\`\n`+
+        `<:obsidian:746097330276794369> Obsidian: \`${obsidian}\`\n`,
 
     ADV_GEMS_NOT_ENOUGH_BANK: "Your account does not have enough gems to take the amount of your request",
     ADV_GEMS_NOT_ENOUGH: "You don't have enough gems to send the amount you wrote down",
@@ -280,6 +280,19 @@ const languageData = {
     ADV_TAKE_SUCCESS: (gems) => `You've just withdrawn \`${gems}\` gems from your account, please wait 10 minutes before your next transfer.`,
     ADV_TRANSFER_SUCCESS: (gems) => `You now have \`${gems}\` gems in your bank account, wait 10 minutes before you make your next transfer.`,
     ADV_TRANSFER_SUCCESS_0: (gems) => `You now have \`${gems}\` gems in your backpack, wait 10 minutes before you make your next transfer.`,
+
+    ADV_SELLED: (c, emoji) => `You just sold \`x${c}\`${emoji}`,
+    ADV_BUYED: (c, emoji) => `You just bought \`x${c}\`${emoji}`,
+
+    ADV_ITEMS_SELL: "Here are the items you can sell, `wood`, `stone`, `iron`, `gold`, `obsidian`",
+    ADV_ITEMS_BUY: "Here are the items you can buy, `wood`, `stone`, `iron`, `gold`, `obsidian`",
+
+    ADV_NOT_HAVE_TO_SELL: (count) => `You don't have enough resources to sell it \`x${count}\``,
+    ADV_NOT_HAVE_TO_BUY: (count) => `You don't have enough gems to buy \`x${count}\` of this resources`,
+
+    ADV_SHOP_USE_SELL: (prefix) => `To \`[buy/sell]\` you must use: \`${prefix}[buy/sell] [type] [count]\``,
+
+    ADV_ITEMS_INFO: (name, util, fab) => `__Information from **${name}**__\n__Utility__: ${util}\n\n__Manufacturing cost__: ${fab}`,
 
     ADV_BANK_DESCRIPTION: `Welcome to the bank, store your gems, to free up storage in your backpack, so you have less chance of having your gems stolen. !`,
     ADV_BANK_NOT: `You don't have a bank account, here are the prices:\n\n- Leather account: 500 <:gems:740261046480142377>, for a storage of one hundred thousand gems\n- Steel account: 1.000 <:gems:740261046480142377>, for a storage of a million gems.\n- Diamond account: 5.000 <:gems:740261046480142377>, for a storage of ten million gems`,
