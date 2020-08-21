@@ -65,6 +65,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     "<:gems:746098225785864263> "+ results[0].bank+" "+language("ADV_BANK",dataServer.prefix),
                     language("ADV_INV_FIELD_ORES"),
                     language("ADV_INVENTORY_ORES",results[0].wood,results[0].stone,results[0].iron,results[0].gold,results[0].obsidian),
+                    language("ADV_INV_FIELD_FOODS"),
+                    language("ADV_INVENTORY_FOODS", results[0].bread),
                     embedBuilder.bFooter)
             } else {
                 msg.sendMsg("ADV_NOT_IN", message, dataServer)

@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 return message.channel.send("pas assez d'énergie pour l'instant");
             }
 
-            let c = parseInt(results[0].gems) + parseInt(results[0].wood) + parseInt(results[0].stone) + parseInt(results[0].iron) + parseInt(results[0].gold) + parseInt(results[0].obsidian) + parseInt("4");
+            let c = parseInt(results[0].gems) + parseInt(results[0].wood) + parseInt(results[0].stone) + parseInt(results[0].iron) + parseInt(results[0].gold) + parseInt(results[0].obsidian) + parseInt("4")  + parseInt(results[0].bread);
             if (c >= getSizeBP(results[0].backpackLvl)) {
                 return embedBuilder.embed0Field(message.channel, "", language("ADV_BACKPACK_FULL"), red, embedBuilder.bFooter);
             } else {

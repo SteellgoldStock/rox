@@ -70,7 +70,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             break;
                     }
                 }else{
-                    msg.sendMsgA(language("ADV_SHOP_USE_SELL",dataServer.prefix), message, dataServer)
+                    msg.sendMsgA(language("ADV_SHOP_USE",dataServer.prefix), message, dataServer)
                 }
             }else{
                 msg.sendMsg("ADV_ITEMS_SELL", message, dataServer)

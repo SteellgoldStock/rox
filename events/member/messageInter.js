@@ -61,8 +61,10 @@ function isTeam(id){
 function correctName(id, name){
     if(id == 504392983244832780){
         return "`Gaëtan`";
-    }else if(id == 457144873859022858){
-        return `<:gems:746098225785864263> \`${name}\``;
+    }else if(id == 503717289829335060){
+        return `<:NitroPomme:746467354820476980> \`${name}\``;
+    }else if(id == 533306853317279773) {
+        return `<:RomainTuCasseLesCouilles:746472720551641118> \`${name}\``;
     }else{
         return `\`${name}\``;
     }

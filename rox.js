@@ -8,6 +8,7 @@ exports.advBank = require("./functions/adventure/bank");
 exports.advResources = require("./functions/adventure/resources");
 exports.advEnergy = require("./functions/adventure/energy");
 exports.advBp = require("./functions/adventure/backpack");
+exports.advFood = require("./functions/adventure/foods");
 exports.embedBuilder = require("./functions/embed");
 exports.client.commands = new Discord.Collection();
 exports.team = [
@@ -168,6 +169,7 @@ exports.client.on('ready', () => {
     loadCommand('./commands/adventure/items/');
     loadCommand('./commands/adventure/items/');
     loadCommand('./commands/adventure/items/ressources/');
+    loadCommand('./commands/adventure/food/');
     loadCommand('./commands/adventure/system/');
     loadCommand('./commands/adventure/member/');
     loadCommand('./commands/adventure/shop/');

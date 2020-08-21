@@ -220,6 +220,7 @@ const languageData = {
     ADV_INV_FIELD_INFOS: "Information",
     ADV_INV_FIELD_ITEMS: "Items",
     ADV_INV_FIELD_ORES: "Resources",
+    ADV_INV_FIELD_FOODS: "Consumables",
     ADV_BANK_FIELD_NOT: "Account prices",
     ADV_BANK_FIELD_HAVE: "Your account",
 
@@ -266,12 +267,12 @@ const languageData = {
     ADV_BACKPACK_MAX: (level, maxItems, prefix) => `Your inventory is level \`${level}\` so you can keep a maximum number of \`${maxItems}\` items in your inventory\n\n- Don't forget that to free up storage you can send your gems to the bank with the command \`${prefix}adv_bank deposit [count]\``,
     ADV_BACKPACK_UP: (level, maxNItems, price, prefix) => `Your inventory is level \`${level}\` improve it with \`${prefix}adv_backpack upg\` for have a maximum \`${maxNItems}\` of items available\n\nCost of upgrade: \`${price}\` gems`,
     ADV_BACKPACK_FULL: "Your backpack is full",
-    ADV_INVENTORY_ORES: (wood, stone, iron, gold, obsidian) => "Here are your resources:\n" +
-        `<:wood:746093053068050504> Wood: \`${wood}\`\n` +
+    ADV_INVENTORY_ORES: (wood, stone, iron, gold, obsidian) => `<:wood:746093053068050504> Wood: \`${wood}\`\n` +
         `<:stone:746093115202338867> Stone: \`${stone}\`\n` +
         `<:iron:746093114996817920> Iron: \`${iron}\`\n`+
         `<:gold:746093115265384622> Gold: \`${gold}\`\n`+
         `<:obsidian:746097330276794369> Obsidian: \`${obsidian}\`\n`,
+    ADV_INVENTORY_FOODS: (bread) => `<:bread1:746155191715364976> Bread: \`${bread}\``,
 
     ADV_GEMS_NOT_ENOUGH_BANK: "Your account does not have enough gems to take the amount of your request",
     ADV_GEMS_NOT_ENOUGH: "You don't have enough gems to send the amount you wrote down",
@@ -290,14 +291,18 @@ const languageData = {
     ADV_NOT_HAVE_TO_SELL: (count) => `You don't have enough resources to sell it \`x${count}\``,
     ADV_NOT_HAVE_TO_BUY: (count) => `You don't have enough gems to buy \`x${count}\` of this resources`,
 
-    ADV_SHOP_USE_SELL: (prefix) => `To \`[buy/sell]\` you must use: \`${prefix}[buy/sell] [type] [count]\``,
+    ADV_SHOP_USE: (prefix) => `To \`[buy/sell]\` you must use: \`${prefix}[buy/sell] [type] [count]\``,
 
     ADV_ITEMS_INFO: (name, util, fab) => `__Information from **${name}**__\n__Utility__: ${util}\n\n__Manufacturing cost__: ${fab}`,
 
     ADV_BANK_DESCRIPTION: `Welcome to the bank, store your gems, to free up storage in your backpack, so you have less chance of having your gems stolen. !`,
     ADV_BANK_NOT: `You don't have a bank account, here are the prices:\n\n- Leather account: 500 <:gems:740261046480142377>, for a storage of one hundred thousand gems\n- Steel account: 1.000 <:gems:740261046480142377>, for a storage of a million gems.\n- Diamond account: 5.000 <:gems:740261046480142377>, for a storage of ten million gems`,
     ADV_BANK_BUY: (gems, prefix) => `Thank you, you can now stock up to \`${gems}\` in your bank, if you want to improve the type of account you're using \`${prefix}adv_bank upg\``,
-    ADV_BANK_ACCOUNT: (gems, max, type, rest) => `Your bank account is of type \`${type}\` and contains \`${gems}\` gems, and out of a maximum of \`${max}\`\n\n- So you can still store a total of \`${rest}\` gems.`
+    ADV_BANK_ACCOUNT: (gems, max, type, rest) => `Your bank account is of type \`${type}\` and contains \`${gems}\` gems, and out of a maximum of \`${max}\`\n\n- So you can still store a total of \`${rest}\` gems`,
+
+    ADV_BREAD_NOT: "You don't have any bread to regenerate your energy, you can get some by opening daily boxes",
+    ADV_BREADED: "You've eaten a loaf of bread, you've just picked up `5` <:energy:746093115043086336>",
+    ADV_BREADED_MAX: "You have already `50` <:energy:746093115043086336>, you can't get any more"
 };
 
 const translate = (key, ...args) => {
