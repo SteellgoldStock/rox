@@ -52,7 +52,7 @@ String.prototype.allReplace = function (obj) {
 
 function isTeam(id){
     if(team.includes(id)){
-        return "<:rox:737051270980042783>";
+        return "<:rox:746093259432001687>";
     }else{
         return "";
     }
@@ -62,7 +62,7 @@ function correctName(id, name){
     if(id == 504392983244832780){
         return "`Gaëtan`";
     }else if(id == 457144873859022858){
-        return `<:gems:740261046480142377> \`${name}\``;
+        return `<:gems:746098225785864263> \`${name}\``;
     }else{
         return `\`${name}\``;
     }
