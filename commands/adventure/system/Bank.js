@@ -44,6 +44,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 }
             } else {
                 switch (args[0]) {
+                    case "dep":
                     case "deposit":
                         if(!args[1]){ return msg.sendMsg("MISSED_ARGUMENTS",message,dataServer);}
                         if(args[1] > results[0].gems){
@@ -76,6 +77,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         embedBuilder.embed0Field(message.channel,"",language("ADV_TRANSFER_SUCCESS_0",args[1]),green,embedBuilder.bFooter)
                         break;
                     case "upg":
+                    case "upgrade":
                         if (results[0].bankLvl == bkMax) {
                             return message.channel.send("max");
                         }
