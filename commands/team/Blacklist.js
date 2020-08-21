@@ -15,7 +15,6 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     }
 
     if(args[0] === "add"){
-
         var post = {
             userid: args[1],
         };
