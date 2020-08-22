@@ -160,8 +160,8 @@ const languageData = {
     MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** n'ont pas de musiques en attente **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "Je quitte le canal **" + name + "**",
     MUSIC_NOT_SAME_CHANNEL: "Si vous voulez arrêter la musique, connectez-vous dans le même canal où se trouve le bot",
-    MUSIC_QUEUE_ADD: (name, username) => "J'ai ajouté à la file d'attente **" + name + "** Demandé par **" + username + "**",
-    MUSIC_CHANGE: (name, username) => "Je joue **" + name + "** Demandé par **" + username + "**",
+    MUSIC_QUEUE_ADD: (name, username) => "J'ai ajouté à la file d'attente `" + name + "` demandé par **" + username + "**",
+    MUSIC_CHANGE: (name, username) => "Je joue `" + name + "` demandé par **" + username + "**",
     MUSIC_NOW_PLAY: "En cours de lecture",
     MUSIC_REQUEST: "Demandé par",
     MUSIC_QUEUE: "En attente",
@@ -169,7 +169,7 @@ const languageData = {
     MUSIC_VOTE_SKIP_VOTED: (requi) => "Vous avez voté avec succès pour un saut de musique, " + requi + " vote obligatoire pour sauter la chanson",
     MUSIC_SKIP: "Je saute la chanson !",
     MUSIC_VOLUME_LIMIT: "Veuillez donner un nombre supérieur à 0 et inférieur à 500",
-    MUSIC_VOLUME_SET: (volume, songName) => "Vous avez réglé le volume sur **" + volume + "** à la chanson **" + songName + "**",
+    MUSIC_VOLUME_SET: (volume, songName) => "Vous avez réglé le volume sur **" + volume + "** à la chanson `" + songName + "`",
     MUSIC_CHOOSE: "Envoyez le numéro que vous souhaitez pour choisir votre musique",
     MUSIC_PAUSE: (prefix, name) => "A réussi à mettre la musique en pause, à utiliser " + `${prefix}resume` + " pour reprendre la musique",
     MUSIC_ALREADY_PAUSE: (prefix, name) => "Cette musique est déjà en pause, utilisez " + `${prefix}resume` + " pour reprendre la musique",
@@ -242,9 +242,23 @@ const languageData = {
     ADV_RING_NOT: (prefix) => `Vous n'avez pas d'anneau \`(${prefix}adv_ring)\``,
 
     ADV_PICKAXE_LEVEL: (level) => `Votre pioche est niveau \`${level}\``,
+    ADV_PICKAXE_DESCRIPTION: (level) => `(<:pickaxe:746096695066230815>) __Pioche__:\n- Utilité: Permet d'améliorer la chance d'obtenir des gemmes en minant\n\n- Niveaux:\n\n`+
+        `• **1**: Chance de **10%** d'obtenir une gemme\n`+
+        `• **2**: Chance de **25%** d'obtenir une gemme (Coût de fabrication: 5.000<:iron:746093114996817920> , 500<:gold:746093115265384622>)\n`+
+        `• **3**: Chance de **50%** d'obtenir une gemme (Coût de fabrication: 25.000<:iron:746093114996817920> , 2.500<:gold:746093115265384622>, 3 energy)\n`+
+        `• **4**: Chance de **85%** d'obtenir une gemme (Coût de fabrication: 50.000<:iron:746093114996817920> , 5.000<:gold:746093115265384622>)\n`+
+        `• **5**: Chance de **100%** pour obtenir une gemme (Coût de fabrication: 100.000<:iron:746093114996817920> , 10.000<:gold:746093115265384622>, 4 energy)\n\n`+
+        "\n\n" + `__Votre pioche__ est de niveau **${level}**`,
     ADV_PICKAXE_NOT: (prefix) => `Vous n'avez pas de pioche \`(${prefix}adv_pick)\``,
 
     ADV_AXE_LEVEL: (level) => `Votre hache est niveau \`${level}\``,
+    ADV_AXE_DESCRIPTION: (level) => `(<:axe1:746093114996949104>) __Hache__:\n- Utilité: Permet d'avoir une chance de doubler le bois bûcher\n\n- Niveaux:\n\n`+
+        `• **1**: Chance de **10%** d'obtenir le double de bois\n`+
+        `• **2**: Chance de **25%** d'obtenir le double de bois (Coût de fabrication: 100<:iron:746093114996817920> , 200<:gold:746093115265384622>)\n`+
+        `• **3**: Chance de **50%** d'obtenir le double de bois (Coût de fabrication: 500<:iron:746093114996817920> , 300<:gold:746093115265384622>, 1 d'énergie)\n`+
+        `• **4**: Chance de **85%** d'obtenir le double de bois (Coût de fabrication: 1.000<:iron:746093114996817920> , 600<:gold:746093115265384622>)\n`+
+        `• **5**: Chance de **100%** d'obtenir le double de bois (Coût de fabrication: 2.500<:iron:746093114996817920> , 1.000<:gold:746093115265384622>, 3 d'énergie)\n\n`+
+        "\n\n" + `__Votre hache__ est de niveau **${level}**`,
     ADV_AXE_NOT: (prefix) => `Vous n'avez pas de hache \`(${prefix}adv_axe)\``,
 
     ADV_GEMS_NOT: (gems) => "Vous n'avez pas assez de gemmes, il vous en manque un total de `" + gems + "`",
@@ -294,14 +308,17 @@ const languageData = {
 
     ADV_ITEMS_INFO: (name, util, fab) => `__Informations de **${name}**__\n__Utilité__: ${util}\n\n__Coût de fabrication__: ${fab}`,
 
-    ADV_BANK_DESCRIPTION: `Bienvenue dans la banque, stockez vos gemmes, pour liberez du stockage dans votre sac à dos, ainsi d'avoir moins de chance de se faire voler vos gemmes !`,
+    ADV_BANK_DESCRIPTION: `Bienvenue dans la banque, stockez vos gemmes, pour liberez du stockage dans votre sac à dos, ainsi d'avoir moins de Chance de se faire voler vos gemmes !`,
     ADV_BANK_NOT: `Vous n'avez pas de compte banquaire, voici les prix:\n\n- Compte cuir: \`500\` <:gems:746098225785864263>, pour un stockage de cent mille gemmes\n- Compte argent: \`1.000\` <:gems:746098225785864263>, pour un stockage d'un million de gemmes maximum\n- Compte diamant: \`5.000\` <:gems:746098225785864263>, pour un stockage de dix millions de gemmes maximum`,
     ADV_BANK_BUY: (gems, prefix) => `Merci, vous pouvez des à présent stocker juqu'à ${gems} dans votre banque, si vous voulez améliorer votre type de compte utliser \`${prefix}adv_bank upg\``,
     ADV_BANK_ACCOUNT: (gems, max, type, rest) => `Votre compte bancaire est de type \`${type}\` et contient \`${gems}\` gemmes, sur un maximum de \`${max}\`\n\n- Vous pouvez donc encore stocker un total de \`${rest}\` gemme(s)`,
 
     ADV_BREAD_NOT: "Vous n'avez pas de pain pour régénérer votre énergie, vous pouvez en obtenir en ouvrant des boîtes quotidiennes",
     ADV_BREADED: "Vous avez consumer un pain, vous venez de récuperer `5` <:energy:746093115043086336>",
-    ADV_BREADED_MAX: "Vous avez déjà `50` <:energy:746093115043086336>, vous ne pouvez pas en avoir plus"
+    ADV_BREADED_MAX: "Vous avez déjà `50` <:energy:746093115043086336>, vous ne pouvez pas en avoir plus",
+
+    MAX: "Cette action n'est pas possible, cette objet est déjà niveau maximum",
+    ENERGY_NULL: "Vous n'avez pas l'énergie nécessaire pour continuer vos actions, allez faire autre chose pendant que votre énergie se rétablit",
 };
 
 const translate = (key, ...args) => {

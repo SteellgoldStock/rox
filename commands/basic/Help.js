@@ -27,6 +27,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             .addField(language("HELP_MUSIC_FIELD"),"`play`,`splay`,`stop`,`pause`,`resume`,`skip`,`queue`,`volume`")
             .addField(language("HELP_BASIC_FIELD"),"`help`, `invite`, `ticket`")
             .addField(language("HELP_CC_FIELD",message.guild.name),exports.resp)
+            .addField("Adventure","Contact a member team of the bot to have chance to enter in the beta")
             // .addField(language("HELP_GOLD_USER_FIELD",message.guild.name),"`background`")
             // .addField(language("HELP_GOLD_SERVER_FIELD",message.guild.name),"`embedconf`")
             .setThumbnail(client.user.avatarURL())

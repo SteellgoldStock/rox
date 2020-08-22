@@ -1,5 +1,13 @@
 const { client, colors, botConfg, fs, database, msg, team} = require("../../rox");
 
+const nitro = [
+    "471869514817208330", // MYMA
+    "648025989753995264", // PABS
+    "676554115299672065", // SHOCO
+    "503717289829335060", // AYZRIX
+    "537615215953707039", // GANI
+]
+
 client.on("message", message => {
     if (!message.guild) return;
     if (message.author.bot) return;
@@ -61,7 +69,7 @@ function isTeam(id){
 function correctName(id, name){
     if(id == 504392983244832780){
         return "`Gaëtan`";
-    }else if(id == 503717289829335060){
+    }else if(nitro.includes(id)){
         return `<:NitroPomme:746467354820476980> \`${name}\``;
     }else if(id == 533306853317279773) {
         return `<:RomainTuCasseLesCouilles:746472720551641118> \`${name}\``;

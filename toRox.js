@@ -166,15 +166,15 @@ exports.client.on('ready', () => {
     }, 2000);
 
     /* COMMANDS LOADER */
-    loadCommand('./commands/adventure/');
-    loadCommand('./commands/adventure/items/');
-    loadCommand('./commands/adventure/items/');
-    loadCommand('./commands/adventure/items/ressources/');
-    loadCommand('./commands/adventure/food/');
-    loadCommand('./commands/adventure/system/');
-    loadCommand('./commands/adventure/member/');
-    loadCommand('./commands/adventure/shop/');
-    loadCommand('./commands/adventure/items/tools/');
+    loadCommand('./commands/admin/');
+    loadCommand('./commands/basic/');
+    loadCommand('./commands/fun/');
+    loadCommand('./commands/gold/');
+    loadCommand('./commands/mod/');
+    loadCommand('./commands/music/');
+    loadCommand('./commands/settings/');
+    loadCommand('./commands/team/');
+    loadCommand('./commands/xp/');
 
     function loadCommand(path)  {
         exports.fs.readdir(path, (err, files) => {

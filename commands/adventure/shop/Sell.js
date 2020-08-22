@@ -11,7 +11,6 @@ const types = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {
@@ -24,7 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
 
                     switch (args[0]){
                         case "wood":
-                            if(args[1] >= results[0].wood){
+                            if(parseInt(results[0].wood) >= args[1]){
                                 advGems.addGems(message.author.id,results[0].gems,c,database);
                                 advResources.removeWood(message.author.id,results[0].wood,args[1],database)
                                 return embedBuilder.embed0Field(message.channel,"",language("ADV_SELLED",args[1],getEMJType(args[0])),green,embedBuilder.bFooter);
@@ -33,7 +32,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             }
                             break;
                         case "stone":
-                            if(args[1] >= results[0].stone){
+                            if(parseInt(results[0].stone) >= args[1]){
                                 advGems.addGems(message.author.id,results[0].gems,c,database);
                                 advResources.removeStone(message.author.id,results[0].stone,args[1],database)
                                 return embedBuilder.embed0Field(message.channel,"",language("ADV_SELLED",args[1],getEMJType(args[0])),green,embedBuilder.bFooter);
@@ -42,7 +41,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             }
                             break;
                         case "iron":
-                            if(args[1] >= results[0].iron){
+                            if(parseInt(results[0].iron) >= args[1]){
                                 advGems.addGems(message.author.id,results[0].gems,c,database);
                                 advResources.removeIron(message.author.id,results[0].iron,args[1],database)
                                 return embedBuilder.embed0Field(message.channel,"",language("ADV_SELLED",args[1],getEMJType(args[0])),green,embedBuilder.bFooter);
@@ -51,7 +50,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             }
                             break;
                         case "gold":
-                            if(args[1] >= results[0].gold){
+                            if(parseInt(results[0].gold) >= args[1]){
                                 advGems.addGems(message.author.id,results[0].gems,c,database);
                                 advResources.removeGold(message.author.id,results[0].gold,args[1],database)
                                 return embedBuilder.embed0Field(message.channel,"",language("ADV_SELLED",args[1],getEMJType(args[0])),green,embedBuilder.bFooter);
@@ -60,7 +59,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             }
                             break;
                         case "obsidian":
-                            if(parseInt(results[0].obsidian) >= args[1]){
+                            if(parseInt(results[0].oabsidian) >= args[1]){
                                 advGems.addGems(message.author.id,results[0].gems,c,database);
                                 advResources.removeObsidian(message.author.id,results[0].obsidian,args[1],database)
                                 return embedBuilder.embed0Field(message.channel,"",language("ADV_SELLED",args[1],getEMJType(args[0])),green,embedBuilder.bFooter);

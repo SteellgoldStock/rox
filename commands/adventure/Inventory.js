@@ -32,7 +32,6 @@ const bpPrice = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     if(args[0] !== "upg"){
         const user = message.mentions.users.first();
@@ -76,7 +75,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
         let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
         database.query(sql, (error, results) => {
             if (results[0].backpackLvl == bpMax) {
-                return message.channel.send("max");
+                return embedBuilder.embed0Field(message.channel,"",language("MAX"),red,embedBuilder.bFooter);
             }
 
             if (results[0].gems >= getPriceBP(results[0].backpackLvl)) {

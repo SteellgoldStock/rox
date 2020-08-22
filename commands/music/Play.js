@@ -12,9 +12,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     if(!validate){
         search(args.join(' '), function (err, res) {
             if(err) return message.channel.send("An error was encurred, contact a administrator \nhttps://discord.gg/NVBwmFz");
-
             launch(res.videos[0].url, message, language, dataServer);
-
         });
     } else {
 
@@ -44,7 +42,9 @@ async function launch(args, message, language, dataServer){
 
         if(!data.dispatcher) await play(client,ops,data,language)
         else{
-            await msg.sendMsgA(language("MUSIC_QUEUE_ADD",info.videoDetails.title,message.author.username),message,dataServer);
+            await msg.sendMsgA(language("MUSIC_QUEUE_ADD",info.videoDetails.title.allReplace({
+                "@everyone":"ping"
+            }),message.author.username),message,dataServer);
         }
 
         ops.active.set(message.guild.id, data);
@@ -75,6 +75,14 @@ async function finish(client,ops,dispatcher,lang){
         if(vc) vc.leave();
     }
 }
+
+String.prototype.allReplace = function (obj) {
+    var retStr = this;
+    for (var x in obj) {
+        retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
+    }
+    return retStr;
+};
 
 exports.help = {
     name: "play",

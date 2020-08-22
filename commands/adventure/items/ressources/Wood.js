@@ -11,7 +11,6 @@ const axeChc = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {
@@ -29,7 +28,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     embedBuilder.embed0Field(message.channel, "", language("ADV_AXED", c, language("ADV_WOOD"), "<:wood:746093053068050504>"), embedBuilder.bColor, embedBuilder.bFooter);
                     axeChance(results[0].pickaxeLvl,c, message.author.id, results[0], database)
                 } else {
-                    return message.channel.send("pas assez d'énergie pour l'instant");
+                    return embedBuilder.embed0Field(message.channel,"",language("ENERGY_NULL"),red,embedBuilder.bFooter);
                 }
             }
         } else {

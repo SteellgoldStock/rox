@@ -20,18 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/commands/adventure/food/Bread.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/adventure/shop/Buy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/adventure/foods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/adventure/items/tools/Axe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/adventure/items/tools/Pickaxe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toRox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/food/Bread.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/food/Bread.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/adventure/items/ressources/Ores.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/items/ressources/Ores.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/adventure/items/ressources/Wood.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/items/ressources/Wood.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/member/Rob.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/member/Rob.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/shop/Buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/shop/Buy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/adventure/shop/Sell.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/shop/Sell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/adventure/system/Bank.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/system/Bank.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/music/Play.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/embed.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/embed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +77,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/functions/adventure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/commands/adventure/items/tools" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,33 +89,18 @@
     <property name="ts.external.directory.path" value="C:\Users\steel\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\items\tools" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions\adventure" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\shop" />
+      <recent name="C:\Users\steel\Documents\GitHub\Rox\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\steel\Documents\GitHub\Rox\functions\adventure" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\refonte" />
       <recent name="C:\Users\steel\Documents\GitHub\Rox\database\users\backgrounds" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\functions\adventure" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\shop" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\assets" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\adventure\items" />
-      <recent name="C:\Users\steel\Documents\GitHub\Rox\commands\team" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -156,7 +146,8 @@
       <workItem from="1597760720156" duration="24666000" />
       <workItem from="1597868003352" duration="12767000" />
       <workItem from="1597925226213" duration="19384000" />
-      <workItem from="1598009276684" duration="18788000" />
+      <workItem from="1598009276684" duration="26264000" />
+      <workItem from="1598091837749" duration="4065000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
@@ -429,6 +420,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596375387809" />
+    <state x="92" y="92" width="1416" height="686" key="dock-window-1" timestamp="1598045044237">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="92" y="92" width="1416" height="686" key="dock-window-1/0.0.1600.870@0.0.1600.870" timestamp="1598045044237" />
     <state x="573" y="308" width="622" height="557" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1597349405604">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

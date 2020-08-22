@@ -25,7 +25,6 @@ const bpSizes = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {

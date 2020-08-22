@@ -159,8 +159,8 @@ const languageData = {
     MUSIC_NO_QUEUE_NUMBER: (name, number) => "**" + name + "** don't have musics in queue **" + number + "**",
     MUSIC_LEAVE_CHANNEL: (name) => "I'm leave the channel **" + name + "**",
     MUSIC_NOT_SAME_CHANNEL: "If you want stop the music, connect in the same channel where is the bot",
-    MUSIC_QUEUE_ADD: (name, username) => "I'm added to the queue **" + name + "** request by **" + username + "**",
-    MUSIC_CHANGE: (name, username) => "I'm playing **" + name + "** request by **" + username + "**",
+    MUSIC_QUEUE_ADD: (name, username) => "I'm added to the queue `" + name + "` request by **" + username + "**",
+    MUSIC_CHANGE: (name, username) => "I'm playing `" + name + "` request by **" + username + "**",
     MUSIC_NOW_PLAY: "Now playing",
     MUSIC_REQUEST: "Requested by",
     MUSIC_QUEUE: "Queue",
@@ -168,7 +168,7 @@ const languageData = {
     MUSIC_VOTE_SKIP_VOTED: (requi) => "Successfully voted to a music skip, " + requi + " required vote to skip the song",
     MUSIC_SKIP: "I'm skipped the song !",
     MUSIC_VOLUME_LIMIT: "Please give a number greater than 0 and less than 500",
-    MUSIC_VOLUME_SET: (volume, songName) => "You have set the volume to **" + volume + "** to the song **" + songName + "**",
+    MUSIC_VOLUME_SET: (volume, songName) => "You have set the volume to **" + volume + "** to the song `" + songName + "`",
     MUSIC_CHOOSE: "Send the number do you want to choose your music",
     MUSIC_PAUSE: (prefix, name) => "Successfuly paused the music, use " + `${prefix}resume` + " to resume the music",
     MUSIC_ALREADY_PAUSE: (prefix, name) => "This music is already paused, use " + `${prefix}resume` + " to resume the music",
@@ -241,9 +241,23 @@ const languageData = {
     ADV_RING_NOT: (prefix) => `You don't have a ring \`(${prefix}adv_ring)\``,
 
     ADV_PICKAXE_LEVEL: (level) => `Your pickace level is \`${level}\``,
+    ADV_PICKAXE_DESCRIPTION: (level) => `(<:pickaxe:746096695066230815>) __Pickaxe__:\n- Utility: Allows to improve the chance to obtain gems by undermining\n\n- Levels:\n\n`+
+        `• **1**: Chance of **10%** to get a gem\n`+
+        `• **2**: Chance of **25%** to get a gem (Manufacturing cost: 5.000<:iron:746093114996817920> , 500<:gold:746093115265384622>)\n`+
+        `• **3**: Chance of **50%** to get a gem (Manufacturing cost: 25.000<:iron:746093114996817920> , 2.500<:gold:746093115265384622>, 3 energy)\n`+
+        `• **4**: Chance of **85%** to get a gem (Manufacturing cost: 50.000<:iron:746093114996817920> , 5.000<:gold:746093115265384622>)\n`+
+        `• **5**: Chance of **100%** to get a gem (Manufacturing cost: 100.000<:iron:746093114996817920> , 10.000<:gold:746093115265384622>, 4 energy)\n\n`+
+        "\n\n" + `__Your pickaxe__ is level **${level}**`,
     ADV_PICKAXE_NOT: (prefix) => `You don't have pickaxe \`(${prefix}adv_pick)\``,
 
     ADV_AXE_LEVEL: (level) => `Your axe level is \`${level}\``,
+    ADV_AXE_DESCRIPTION: (level) => `(<:axe1:746093114996949104>) __Axe__:\n- Utility: Gives you a chance to double the wood at the stake\n\n- Levels:\n\n`+
+    `• **1**: Chance of **10%** to get twice as much wood\n`+
+    `• **2**: Chance of **25%** to get twice as much wood (Manufacturing cost: 100<:iron:746093114996817920> , 200<:gold:746093115265384622>)\n`+
+    `• **3**: Chance of **50%** to get twice as much wood (Manufacturing cost: 500<:iron:746093114996817920> , 300<:gold:746093115265384622>, 1 energy)\n`+
+    `• **4**: Chance of **85%** to get twice as much wood (Manufacturing cost: 1.000<:iron:746093114996817920> , 600<:gold:746093115265384622>)\n`+
+    `• **5**: Chance of **100%** to get twice as much wood (Manufacturing cost: 2.500<:iron:746093114996817920> , 1.000<:gold:746093115265384622>, 3 energy)\n\n`+
+    "\n\n" + `__Your axe__ is level **${level}**`,
     ADV_AXE_NOT: (prefix) => `You don't have a axe \`(${prefix}adv_axe)\``,
 
     ADV_GEMS_NOT: (gems) => "You don't have enough gems, you're missing a total of `" + gems + "`",
@@ -302,7 +316,10 @@ const languageData = {
 
     ADV_BREAD_NOT: "You don't have any bread to regenerate your energy, you can get some by opening daily boxes",
     ADV_BREADED: "You've eaten a loaf of bread, you've just picked up `5` <:energy:746093115043086336>",
-    ADV_BREADED_MAX: "You have already `50` <:energy:746093115043086336>, you can't get any more"
+    ADV_BREADED_MAX: "You have already `50` <:energy:746093115043086336>, you can't get any more",
+
+    MAX: "This action is not possible, this object is already maximum level",
+    ENERGY_NULL: "You don't have the energy to continue your actions, go do something else while your energy recovers.",
 };
 
 const translate = (key, ...args) => {

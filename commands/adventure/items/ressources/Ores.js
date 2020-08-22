@@ -16,7 +16,6 @@ const pickaxeChc = {
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
-    if (!beta.includes(message.author.id)) return message.channel.send("This command is not avaible, is only for the staff, is a feature avaible in really, really, really, long time");
 
     let sql = `SELECT * FROM adventure WHERE userid = ${message.author.id}`;
     database.query(sql, (error, results, fields) => {
@@ -40,7 +39,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_STONE"), "<:stone:746093115202338867>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
                         } else {
-                            return message.channel.send("pas assez d'énergie pour l'instant");
+                            return embedBuilder.embed0Field(message.channel,"",language("ENERGY_NULL"),red,embedBuilder.bFooter);
                         }
                         break;
                     case 1:
@@ -51,7 +50,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_IRON"), "<:iron:746093114996817920>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
                         } else {
-                            return message.channel.send("pas assez d'énergie pour l'instant");
+                            return embedBuilder.embed0Field(message.channel,"",language("ENERGY_NULL"),red,embedBuilder.bFooter);
                         }
                         break;
                     case 2:
@@ -62,7 +61,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_GOLD"), "<:gold:746093115265384622>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
                         } else {
-                            return message.channel.send("pas assez d'énergie pour l'instant");
+                            return embedBuilder.embed0Field(message.channel,"",language("ENERGY_NULL"),red,embedBuilder.bFooter);
                         }
                         break;
                     case 3:
@@ -73,7 +72,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_OBSIDIAN"), "<:obsidian:746097330276794369>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
                         } else {
-                            return message.channel.send("pas assez d'énergie pour l'instant");
+                            return embedBuilder.embed0Field(message.channel,"",language("ENERGY_NULL"),red,embedBuilder.bFooter);
                         }
                         break;
                 }
