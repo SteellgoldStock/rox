@@ -6,7 +6,7 @@ const types = {
     "stone": 1,
     "iron": 3,
     "gold": 5,
-    "obsidian": 50,
+    "obsidian": 10,
 }
 
 const bpSizes = {
@@ -39,6 +39,10 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                     if(args[1]){
                         let c = types[args[0]] * args[1];
 
+                        if(results[0].gems == 0){
+                            return;
+                        }
+
                         if(!results[0].gems >= c){
                             embedBuilder.embed0Field(message.channel, "", language("ADV_GEMS_NOT", c - parseInt(results[0].gems)), red, embedBuilder.bFooter);
                         }
@@ -47,31 +51,31 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             case "wood":
                                 advGems.removeGems(message.author.id, results[0].gems, c, database);
                                 advResources.addWood(message.author.id, results[0].wood, args[1], database)
-                                embedBuilder.embed0Field(message.channel, "", language("ADV_SELLED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
+                                embedBuilder.embed0Field(message.channel, "", language("ADV_BUYED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
                                 break;
                             case "iron":
                                 advGems.removeGems(message.author.id, results[0].gems, c, database);
                                 advResources.addIron(message.author.id, results[0].iron, args[1], database)
-                                embedBuilder.embed0Field(message.channel, "", language("ADV_SELLED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
+                                embedBuilder.embed0Field(message.channel, "", language("ADV_BUYED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
                                 break;
                             case "stone":
                                 advGems.removeGems(message.author.id, results[0].gems, c, database);
                                 advResources.addStone(message.author.id, results[0].stone, args[1], database)
-                                embedBuilder.embed0Field(message.channel, "", language("ADV_SELLED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
+                                embedBuilder.embed0Field(message.channel, "", language("ADV_BUYED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
                                 break;
                             case "gold":
                                 advGems.removeGems(message.author.id, results[0].gems, c, database);
                                 advResources.addGold(message.author.id, results[0].gold, args[1], database)
-                                embedBuilder.embed0Field(message.channel, "", language("ADV_SELLED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
+                                embedBuilder.embed0Field(message.channel, "", language("ADV_BUYED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
                                 break;
                             case "obsidian":
                                 advGems.removeGems(message.author.id, results[0].gems, c, database);
                                 advResources.addObsidian(message.author.id, results[0].obsidian, args[1], database)
-                                embedBuilder.embed0Field(message.channel, "", language("ADV_SELLED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
+                                embedBuilder.embed0Field(message.channel, "", language("ADV_BUYED", args[1], getEMJType(args[0])), green, embedBuilder.bFooter);
                                 break;
                         }
                     }else{
-                        msg.sendMsgA(language("ADV_SHOP_USE_SELL",dataServer.prefix), message, dataServer)
+                        msg.sendMsgA(language("ADV_SHOP_USE",dataServer.prefix), message, dataServer)
                     }
                 }else{
                     msg.sendMsg("ADV_ITEMS_SELL", message, dataServer)

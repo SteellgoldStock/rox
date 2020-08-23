@@ -319,6 +319,9 @@ const languageData = {
 
     MAX: "Cette action n'est pas possible, cette objet est déjà niveau maximum",
     ENERGY_NULL: "Vous n'avez pas l'énergie nécessaire pour continuer vos actions, allez faire autre chose pendant que votre énergie se rétablit",
+
+    ADV_UPGRADED: (n) => `Bien joué ! cette item est passé niveau \`${n}\` avec cette amélioration`,
+    ADV_RESSOURCE_MISSING: (count, emoji) => `Vous manquez de \`${count}\` ${emoji}`,
 };
 
 const translate = (key, ...args) => {

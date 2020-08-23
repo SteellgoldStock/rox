@@ -6,7 +6,7 @@ const types = {
     "stone": 1,
     "iron": 2,
     "gold": 3,
-    "obsidian": 30,
+    "obsidian": 5,
 }
 
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
@@ -59,7 +59,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                             }
                             break;
                         case "obsidian":
-                            if(parseInt(results[0].oabsidian) >= args[1]){
+                            if(parseInt(results[0].obsidian) >= args[1]){
                                 advGems.addGems(message.author.id,results[0].gems,c,database);
                                 advResources.removeObsidian(message.author.id,results[0].obsidian,args[1],database)
                                 return embedBuilder.embed0Field(message.channel,"",language("ADV_SELLED",args[1],getEMJType(args[0])),green,embedBuilder.bFooter);

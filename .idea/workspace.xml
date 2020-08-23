@@ -20,24 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45cdb6b4-7abe-4d2b-8785-56f043f59ff1" name="Default Changelist" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/commands/adventure/items/tools/Axe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/adventure/items/tools/Pickaxe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toRox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/Inventory.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/Inventory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/food/Bread.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/food/Bread.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/items/ressources/Ores.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/items/ressources/Ores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/items/ressources/Wood.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/items/ressources/Wood.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/member/Rob.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/member/Rob.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/shop/Buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/shop/Buy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/shop/Sell.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/shop/Sell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/adventure/system/Bank.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/adventure/system/Bank.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/basic/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/basic/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/music/Play.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/music/Play.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/lang/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/member/messageInter.js" beforeDir="false" afterPath="$PROJECT_DIR$/events/member/messageInter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rox.js" beforeDir="false" afterPath="$PROJECT_DIR$/rox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +130,8 @@
       <workItem from="1597868003352" duration="12767000" />
       <workItem from="1597925226213" duration="19384000" />
       <workItem from="1598009276684" duration="26264000" />
-      <workItem from="1598091837749" duration="4065000" />
+      <workItem from="1598091837749" duration="4704000" />
+      <workItem from="1598110344938" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1596011586817</created>
