@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                         if(results[0].energy >= 3){
                                             advResources.removeIron(message.author.id,results[0].iron, 25000, database);
                                             advResources.removeGold(message.author.id,results[0].gold, 2500, database);
-                                            advEnergy.removeEnergy(message.author.id,results[0].energy, 3, database);
+                                            advEnergy.removeEnergy(message.author.id,results[0].energy, ringEnergy(results[0].ringLvl, 3), database);
                                             advBp.setPickaxeLevel(message.author.id,3,database)
                                             return embedBuilder.embed0Field(message.channel,"",language("ADV_UPGRADED",3),green,embedBuilder.bFooter)
                                         }else{
@@ -82,7 +82,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                                         if(results[0].energy >= 4){
                                             advResources.removeIron(message.author.id,results[0].iron, 100000, database);
                                             advResources.removeGold(message.author.id,results[0].gold, 10000, database);
-                                            advEnergy.removeEnergy(message.author.id,results[0].energy, 4, database);
+                                            advEnergy.removeEnergy(message.author.id,results[0].energy, ringEnergy(results[0].ringLvl, 4), database);
                                             advBp.setPickaxeLevel(message.author.id,5,database)
                                             return embedBuilder.embed0Field(message.channel,"",language("ADV_UPGRADED",5),green,embedBuilder.bFooter)
                                         }else{
@@ -104,6 +104,22 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             msg.sendMsg("ADV_NOT_IN", message, dataServer)
         }
     });
+}
+
+function ringEnergy(level, count){
+    const chc = {
+        "LEVEL_1": 10,
+        "LEVEL_2": 25,
+        "LEVEL_3": 50,
+        "LEVEL_4": 85,
+        "LEVEL_5": 100
+    }
+
+    if(probability(chc["LEVEL_"+level])){
+        return level - 1;
+    }else{
+        return count;
+    }
 }
 
 exports.help = {

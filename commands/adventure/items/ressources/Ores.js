@@ -14,6 +14,16 @@ const pickaxeChc = {
     "LEVEL_5": 100
 }
 
+const helmetChance = {
+    "LEVEL_1": 10,
+    "LEVEL_2": 25,
+    "LEVEL_3": 50,
+    "LEVEL_4": 85,
+    "LEVEL_5": 90,
+    "LEVEL_6": 100,
+    "LEVEL_7": 0
+}
+
 module.exports.run = async (client, message, args, fs, colors, database, dataServer, language) => {
     if (!message.guild) return;
 
@@ -23,7 +33,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             return console.error(error.message);
         } else if (results.length > 0) {
             if (!results[0].energy >= 4) {
-                return message.channel.send("pas assez d'énergie pour l'instant");
+                return embedBuilder.embed0Field(message.channel,"",language("ENERGY_NULL"),red,embedBuilder.bFooter);
             }
 
             let c = parseInt(results[0].gems) + parseInt(results[0].wood) + parseInt(results[0].stone) + parseInt(results[0].iron) + parseInt(results[0].gold) + parseInt(results[0].obsidian) + parseInt("4")  + parseInt(results[0].bread);
@@ -33,8 +43,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                 switch (getRandomInt(0, 4)) {
                     case 0:
                         if (results[0].energy >= 4) {
-                            let c = getRandomInt(60, 151)
-                            advEnergy.removeEnergy(message.author.id, results[0].energy, 4, database)
+                            let c = getRandomInt(60, 151, results[0].minerHelmetLvl);
+                            advEnergy.removeEnergy(message.author.id, results[0].energy, ringEnergy(results[0].ringLvl,4), database)
                             advResources.addStone(message.author.id, results[0].stone, c, database)
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_STONE"), "<:stone:746093115202338867>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
@@ -44,8 +54,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         break;
                     case 1:
                         if (results[0].energy >= 5) {
-                            let c = getRandomInt(20, 51)
-                            advEnergy.removeEnergy(message.author.id, results[0].energy, 5, database)
+                            let c = getRandomInt(20, 51, results[0].minerHelmetLvl);
+                            advEnergy.removeEnergy(message.author.id, results[0].energy, ringEnergy(results[0].ringLvl,5), database)
                             advResources.addIron(message.author.id, results[0].iron, c, database)
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_IRON"), "<:iron:746093114996817920>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
@@ -55,8 +65,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         break;
                     case 2:
                         if (results[0].energy >= 5) {
-                            let c = getRandomInt(30, 121)
-                            advEnergy.removeEnergy(message.author.id, results[0].energy, 5, database)
+                            let c = getRandomInt(30, 121, results[0].minerHelmetLvl);
+                            advEnergy.removeEnergy(message.author.id, results[0].energy, ringEnergy(results[0].ringLvl,5), database)
                             advResources.addGold(message.author.id, results[0].gold, c, database)
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_GOLD"), "<:gold:746093115265384622>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
@@ -66,8 +76,8 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
                         break;
                     case 3:
                         if (results[0].energy >= 10) {
-                            let c = getRandomInt(40, 101)
-                            advEnergy.removeEnergy(message.author.id, results[0].energy, 10, database)
+                            let c = getRandomInt(40, 101, results[0].minerHelmetLvl);
+                            advEnergy.removeEnergy(message.author.id, results[0].energy, ringEnergy(results[0].ringLvl,10), database)
                             advResources.addObsidian(message.author.id, results[0].obsidian, c, database)
                             embedBuilder.embed0Field(message.channel, "", language("ADV_MINE", c, language("ADV_OBSIDIAN"), "<:obsidian:746097330276794369>"), embedBuilder.bColor, embedBuilder.bFooter);
                             pickaxeChance(results[0].pickaxeLvl, message.author.id, results[0], database)
@@ -83,8 +93,20 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
     });
 }
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+function getRandomInt(min, max, helmetLvl) {
+    let num = Math.floor(Math.random() * (max - min)) + min;
+    
+    if(helmetLvl == 7){
+        return num * 3;
+    }else if(helmetLvl == 6){
+        return num * 2;
+    }else{
+        if(probability(helmetChance["LEVEL_" + helmetLvl])){
+            return num * 2;
+        }else{
+            return num;
+        }
+    }
 }
 
 function pickaxeChance(lvl, id, results, database) {
@@ -95,6 +117,22 @@ function pickaxeChance(lvl, id, results, database) {
 
 function probability(n){
     return Math.random() < n;
+}
+
+function ringEnergy(level, count){
+    const chc = {
+        "LEVEL_1": 10,
+        "LEVEL_2": 25,
+        "LEVEL_3": 50,
+        "LEVEL_4": 85,
+        "LEVEL_5": 100
+    }
+
+    if(probability(chc["LEVEL_"+level])){
+        return level - 1;
+    }else{
+        return count;
+    }
 }
 
 const bpSizes = {

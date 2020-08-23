@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             } else {
                 if (results[0].energy >= 2) {
                     let c = getRandomInt(10, 81)
-                    advEnergy.removeEnergy(message.author.id, results[0].energy, 2, database)
+                    advEnergy.removeEnergy(message.author.id, results[0].energy, ringEnergy(results[0].ringLvl, 2), database)
                     advResources.addWood(message.author.id, results[0].wood, c, database)
                     embedBuilder.embed0Field(message.channel, "", language("ADV_AXED", c, language("ADV_WOOD"), "<:wood:746093053068050504>"), embedBuilder.bColor, embedBuilder.bFooter);
                     axeChance(results[0].pickaxeLvl,c, message.author.id, results[0], database)
@@ -63,6 +63,22 @@ const bpSizes = {
     "BP_8": 1000000,
     "BP_9": 10000000,
     "BP_10": 1000000000,
+}
+
+function ringEnergy(level, count){
+    const chc = {
+        "LEVEL_1": 10,
+        "LEVEL_2": 25,
+        "LEVEL_3": 50,
+        "LEVEL_4": 85,
+        "LEVEL_5": 100
+    }
+
+    if(probability(chc["LEVEL_"+level])){
+        return level - 1;
+    }else{
+        return count;
+    }
 }
 
 function getSizeBP(bpLvl){
