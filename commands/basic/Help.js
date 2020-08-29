@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args, fs, colors, database, dataSer
             // .addField(language("HELP_GOLD_SERVER_FIELD",message.guild.name),"`embedconf`")
             .setThumbnail(client.user.avatarURL())
             .setTimestamp()
-            .setFooter('Rox • ' + msg.version,client.user.avatarURL())
+            .setFooter('Rox • ' + msg.version,message.author.avatarURL({dynamic:true}))
 
         message.channel.send(embed)
     }else{
